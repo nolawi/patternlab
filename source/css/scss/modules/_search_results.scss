@@ -1,0 +1,29 @@
+/**
+Search Results
+
+Demonstration of how to display listings of results
+
+Styleguide 112
+*/
+/**
+Basic Listing
+
+**UNFINISHED**
+
+Markup:
+<div class="ng-media">
+    <a href="#" class="ng-media-img">
+        <img src="http://lorempixel.com/100/75" alt="This is the result title" title="This is the result title" width="100" height="75" />
+    </a>
+    <div class="ng-media-body">
+        <h3 class="ng-margin-bottom-remove"><a href="#">Arctic Seafloor</a> <small>Map</small></h3>
+        <ul class="ng-list ng-list-space">
+            <li>Grades 5-12+ (Ages 10+) <span class="ng-badge">Social Studies</span>, Science, Geography</li>
+            <li><p>Geologic oceanography helps cartographers map the seafloor, such as this area of the Arctic Ocean. The bathymetric data in this map compares the elevation of the Arctic seafloor in the early 2000s with the same area in the 1970s. This information may help oceanographers study geologic activity or sea level rise.</p></li>
+            <li><strong>Choose your version:</strong> Teachers Informal Educators</li>
+        </ul>
+    </div>
+</div>
+
+Styleguide 112.01
+*/

@@ -1,0 +1,301 @@
+$navbar-background:                              #eee !default;
+$navbar-color:                                   #444 !default;
+$navbar-link-color:                              #07D !default;
+$navbar-link-hover-color:                        #059 !default;
+
+$navbar-nav-height:                              40px !default;
+$navbar-nav-line-height:                         $navbar-nav-height !default;
+$navbar-nav-padding-horizontal:                  15px !default;
+$navbar-nav-color:                               #444 !default;
+$navbar-nav-font-size:                           14px !default;
+$navbar-nav-font-weight:                         normal !default;
+$navbar-nav-font-family:                         "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$navbar-nav-hover-background:                    #f5f5f5 !default;
+$navbar-nav-hover-color:                         #444 !default;
+$navbar-nav-onclick-background:                  #ddd !default;
+$navbar-nav-onclick-color:                       #444 !default;
+$navbar-nav-active-background:                   #f5f5f5 !default;
+$navbar-nav-active-color:                        #444 !default;
+$navbar-nav-subtitle-font-size:                  10px !default;
+$navbar-nav-subtitle-offset:                     2px !default;
+
+$navbar-brand-font-size:                         18px !default;
+$navbar-brand-color:                             #444 !default;
+$navbar-brand-hover-color:                       #444 !default;
+
+$navbar-toggle-font-size:                        18px !default;
+$navbar-toggle-color:                            #444 !default;
+$navbar-toggle-hover-color:                      #444 !default;
+$navbar-toggle-icon:                             "\f0c9" !default;
+$navbar-toggle-icon-alt:                         "\f002" !default;
+
+
+.ng-header-container {
+    .ng-nav-container {
+        @extend .ng-background-blue-6, .ng-clearfix;
+        position: relative;
+    }
+    .ng-search-wrapper {
+        position: relative;
+        .ng-search-container {
+            position: absolute;
+            top: -15px;
+            right: 0;
+        }
+    }
+    #mobilenav {
+        a.menu-dropdown {
+            color: black;
+        }
+        .ng-dropdown {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            padding-top: 0;
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+    .ng-header-nav {
+        display: inline-block;
+        float: left;
+        margin: 0 0 0 5px;
+        padding: 0;
+        width: 100%;
+        .ng-kids {
+            float: right;
+            padding: 13px 9px 0 0;
+            margin-right: 10px;
+            .logo {
+                width: 63px;
+            }
+            .arrow {
+                width: 8px;
+                vertical-align: top;
+            }
+        }
+        .ng-audience-navbar {
+            background: none;
+            padding: none;
+            ul.ng-navbar-nav {
+                margin-left: auto;
+                margin-right: auto;
+                & > li {
+                    padding-top: 4px;
+                    background: inherit;
+                    &:first-child a {
+                        border-bottom-left-radius: 0;
+                    }
+                    a {
+                        font-size: 15px;
+                        color: #8FD5E4;
+                        margin: 0 1px;
+                        padding: 0 7px;
+                    }
+                    &:hover > a,
+                    & > a:focus,
+                    &.ng-open > a {
+                        color: white;
+                        border: 0;
+                        border-bottom: solid 10px #ffcc00;
+                    }
+                    &, a, li, ul {
+                        border: none;
+                        background: white;
+                        box-shadow: none;
+                        a {
+                            background: inherit;
+                        }
+                        &, * {
+                            background: inherit;
+                        }
+                    }
+                    ul.ng-navmenu {
+                        li {
+                            padding: 7px 14px;
+                        }
+                    }
+                    ul.ng-nav-dropdown {
+                        li {
+                            padding: 0 14px;
+                        }
+                    }
+                    ul.ng-navmenu, ul.ng-nav-dropdown {
+                        width: inherit;
+                        min-width: 200px;
+                        height: auto;
+                        background-color: white;
+                        border: solid 1px #D1D1D1;
+                        border-top: 0;
+                        border-bottom: solid 10px #ffcc00;
+                        margin-top: 7px;
+                        padding: 7px 0;
+                        li {
+                            a {
+                                color: black;
+                                font-size: 15px;
+                            }
+                            &:hover,
+                            &.ng-open,
+                            &.ng-active {
+                                a:hover {
+                                    color: $blue-6;
+                                }
+                            }
+                            .ng-navslide {
+                                @extend .ng-background-blue-6;
+                                margin: 0;
+                                .ng-panel {
+                                    margin: 0;
+                                    dl {
+                                        dt {
+                                            font-weight: bold;
+                                            padding-left: 0;
+                                            padding: 7px 14px 7px 0;
+                                        }
+                                        dd {
+                                            padding: 7px 14px 7px 0;
+                                            a {
+                                                color: #8FD5E4;
+                                            }
+                                            &:hover,
+                                            &.ng-open,
+                                            &.ng-active {
+                                                a:hover {
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ng-global-header {
+        .ng-logo-wrapper {
+            a {
+                color: black;
+                &:hover {
+                    text-decoration: none;
+                    color: #999999;
+                }
+            }
+        }
+        .ng-header-nav {
+            margin-left: 20px;
+            padding: 0 20px;
+            border-left: 1px solid #ddd;
+            .ng-audience-navbar {
+                float: left;
+            }
+        }
+    }
+}
+
+@media (min-width: 987px) {
+    ul.ng-navbar-nav {
+        & > li {
+            margin-right: 36px;
+        }
+    }
+}
+
+@media (max-width: 987px) {
+    ul.ng-navbar-nav {
+        & > li {
+            margin-right: 29px;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    ul.ng-navbar-nav {
+        & > li {
+            margin-right: 14px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    ul.ng-navbar-nav {
+        & > li {
+            margin-right: 0;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    ul.ng-navbar-nav {
+        background-color: white;
+        & > li {
+            &:hover > a,
+            & > a:focus,
+            &.ng-open > a {
+                color: black;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-medium) {
+    .ng-search-field, .ng-search-field-rounded {
+        width: 0 !important;
+    }
+    .ng-search {
+        &:hover {
+            .ng-search-field,
+            .ng-search-field-rounded {
+                width: 150px !important;
+            }
+        }
+        .ng-search-field:hover,
+        .ng-search-field:focus,
+        .ng-search-field-rounded:hover,
+        .ng-search-field-rounded:focus {
+            width: 150px !important;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .ng-search-field, .ng-search-field-rounded {
+        width: 0 !important;
+    }
+    .ng-search {
+        &:hover {
+            .ng-search-field,
+            .ng-search-field-rounded {
+                width: 100px !important;
+            }
+        }
+        .ng-search-field:hover,
+        .ng-search-field:focus,
+        .ng-search-field-rounded:hover,
+        .ng-search-field-rounded:focus {
+            width: 100px !important;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .ng-search-field, .ng-search-field-rounded {
+        width: 0 !important;
+    }
+    .ng-search {
+        &:hover {
+            .ng-search-field,
+            .ng-search-field-rounded {
+                width: 90px !important;
+            }
+        }
+        .ng-search-field:hover,
+        .ng-search-field:focus,
+        .ng-search-field-rounded:hover,
+        .ng-search-field-rounded:focus {
+            width: 90px !important;
+        }
+    }
+}

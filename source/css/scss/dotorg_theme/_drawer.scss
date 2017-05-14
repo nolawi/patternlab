@@ -1,0 +1,37 @@
+$drawer-border:                                    $global-border !default;
+$drawer-border-width:                              1px !default;
+$drawer-padding-horizontal:                        12px !default;
+$drawer-padding-vertical:                          8px !default;
+$drawer-padding-top:                               $drawer-padding-vertical !default;
+$drawer-padding-bottom:                            $drawer-padding-vertical !default;
+$drawer-margin-horizontal:                         5px !default;
+$drawer-margin-vertical:                           5px !default;
+$drawer-color:                                     $global-link-color !default;
+$drawer-background:                                $global-default-muted-background !default;
+$drawer-text-shadow:                               $global-text-shadow !default;
+$drawer-hover-border:                              $global-border !default;
+$drawer-hover-background:                          $global-default-background !default;
+$drawer-hover-color:                               $global-link-hover-color !default;
+$drawer-active-border:                             $global-border !default;
+$drawer-active-background:                         $global-background !default;
+$drawer-active-color:                              $global-color !default;
+$drawer-disabled-color:                            $global-muted-color !default;
+$drawer-trigger-open:                              "\203a" !default; //$fa-var-chevron-right
+$drawer-trigger-closed:                            "\2039" !default; //$fa-var-chevron-left
+$drawer-trigger-alt-open:                          "\f0da" !default; //$fa-var-caret-right
+$drawer-trigger-alt-closed:                        "\f0d9" !default; //$fa-var-caret-left
+
+
+@mixin hook-drawer(){}
+@mixin hook-drawer-tab(){
+    a {
+        border-bottom: none;
+    }
+}
+@mixin hook-drawer-icon-trigger-open(){}
+@mixin hook-drawer-icon-trigger-closed(){}
+@mixin hook-drawer-icon-trigger-alt-open(){}
+@mixin hook-drawer-icon-trigger-alt-closed(){}
+@mixin hook-drawer-misc(){}
+
+@import "customcomponents/drawer";

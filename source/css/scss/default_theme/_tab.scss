@@ -1,0 +1,104 @@
+$tab-border:                                    $global-border !default;
+$tab-border-width:                              1px !default;
+$tab-padding-horizontal:                        12px !default;
+$tab-padding-vertical:                          8px !default;
+$tab-padding-top:                               $tab-padding-vertical !default;
+$tab-padding-bottom:                            $tab-padding-vertical !default;
+$tab-margin-horizontal:                         5px !default;
+$tab-margin-vertical:                           5px !default;
+$tab-color:                                     $global-link-color !default;
+$tab-background:                                $global-default-muted-background !default;
+$tab-text-shadow:                               $global-text-shadow !default;
+$tab-hover-border:                              $global-border !default;
+$tab-hover-background:                          $global-default-background !default;
+$tab-hover-color:                               $global-link-hover-color !default;
+$tab-active-border:                             $global-border !default;
+$tab-active-background:                         $global-background !default;
+$tab-active-color:                              $global-color !default;
+$tab-disabled-color:                            $global-muted-color !default;
+
+.ng-tab-border {background: $tab-border;color: #fff}
+.ng-tab-color {background: $tab-color;color: #fff}
+.ng-tab-text-shadow {background: $tab-text-shadow;}
+.ng-tab-hover-border {background: $tab-hover-border;color: #fff}
+.ng-tab-hover-background {background: $tab-hover-background;}
+.ng-tab-hover-color {background: $tab-hover-color;color: #fff}
+.ng-tab-background {background: $tab-background;}
+.ng-tab-active-border {background: $tab-active-border;color: #fff}
+.ng-tab-active-background {background: $tab-active-background;}
+.ng-tab-active-color {background: $tab-active-color;color: #fff}
+.ng-tab-disabled-color {background: $tab-disabled-color;color: #fff}
+
+@mixin hook-tab(){
+    border-radius: $global-border-radius $global-border-radius 0 0;
+    @if $tab-text-shadow {
+        text-shadow: 0 1px 0 $tab-text-shadow;
+    }
+    background: $tab-background;
+    margin-bottom: $tab-border-width;
+    padding-bottom: $tab-padding-bottom - $tab-border-width;
+}
+@mixin hook-tab-hover(){
+
+}
+@mixin hook-tab-active(){
+    margin-bottom: 0;
+    padding-bottom: $tab-padding-bottom;
+    background: #fff;
+}
+@mixin hook-tab-disabled(){}
+@mixin hook-tab-misc(){
+    .ng-tab > li.ng-disabled > a:hover, .ng-tabbar > li.ng-disabled > a:hover,
+    .ng-tab > li.ng-disabled > a:focus, .ng-tabbar > li.ng-disabled > a:focus,
+    .ng-tab > li.ng-disabled.ng-active > a, .ng-tabbar > li.ng-disabled.ng-active > a {
+        border-color: $tab-border;
+    }
+    .ng-tab-bottom > li > a {
+        border-radius: 0 0 $global-border-radius $global-border-radius;
+    }
+
+    .ng-tabbar {
+        @extend .ng-tab;
+        @extend .ng-tab-grid;
+        margin-left: 0;
+        border: $tab-border-width solid $tab-border;
+
+        > li > a {
+            border: 0;
+            border-left: $tab-border-width solid $tab-border;
+            border-radius: 0;
+        }
+        > li:first-child > a {
+            margin-left: 0;
+            border-left: 0;
+        }
+        >li:nth-child(n+2) > a {
+            margin-left: 0;
+        }
+    }
+
+    .ng-tabbar-attached {
+        border-left:0;
+        border-right:0;
+        border-radius:0;
+    }
+
+    @media (min-width: $breakpoint-medium) {
+
+        /*
+         * Modifier: `ng-tab-left'
+         */
+
+        .ng-tab-left > li > a { border-radius: $global-border-radius 0 0 $global-border-radius; }
+
+        /*
+         * Modifier: `ng-tab-right'
+         */
+
+        .ng-tab-right > li > a { border-radius: 0 $global-border-radius $global-border-radius 0; }
+
+    }
+
+}
+
+@import "core/tab";

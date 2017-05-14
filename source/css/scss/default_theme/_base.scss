@@ -1,0 +1,165 @@
+/* Importing existing variables for reference */
+$base-body-background:                          $global-background !default;
+$base-body-font-family:                         'Helvetica Neue', Helvetica, Arial, 'Nimbus Sans L', sans-serif !default;
+$base-body-font-weight:                         normal !default;
+$base-body-font-size:                           $global-font-size !default;
+$base-body-line-height:                         $global-line-height !default;
+$base-body-color:                               $global-color !default;
+
+$base-link-color:                               $global-link-color !default;
+$base-link-text-decoration:                     none !default;
+$base-link-hover-color:                         $global-link-hover-color !default;
+$base-link-hover-text-decoration:               underline !default;
+$base-em-color:                                 $base-body-color !default;
+$base-ins-background:                           #ffa !default;
+$base-ins-color:                                $base-body-color !default;
+$base-mark-background:                          $base-ins-background !default;
+$base-mark-color:                               $base-ins-color !default;
+$base-quote-font-style:                         italic !default;
+$base-selection-background:                     #39f !default;
+$base-selection-color:                          #fff !default;
+
+$base-margin-vertical:                          $global-margin !default;
+
+$base-heading-font-family:                      $base-body-font-family;  //Verlag
+$base-heading-font-weight:                      bold !default;
+$base-heading-color:                            $base-body-color !default;
+$base-heading-text-transform:                   none !default;
+$base-heading-margin-top:                       $global-large-margin !default;
+$base-h1-font-size:                             round($global-font-size * 2.57) !default;
+$base-h1-line-height:                           round($base-h1-font-size * 1.16) !default;
+$base-h2-font-size:                             round($global-font-size * 1.71) !default;
+$base-h2-line-height:                           round($base-h2-font-size * 1.25) !default;
+$base-h3-font-size:                             round($global-font-size * 1.28) !default;
+$base-h3-line-height:                           round($base-h3-font-size * 1.33) !default;
+$base-h4-font-size:                             round($global-font-size * 1.14) !default;
+$base-h4-line-height:                           round($base-h4-font-size * 1.37) !default;
+$base-h5-font-size:                             $global-font-size !default;
+$base-h5-line-height:                           $global-line-height !default;
+$base-h6-font-size:                             round($global-font-size * 0.85) !default;
+$base-h6-line-height:                           round($base-h6-font-size * 1.5) !default;
+
+$base-list-padding-left:                        $global-margin * 2 !default;
+
+$base-hr-border:                                $global-border !default;
+$base-hr-border-width:                          1px !default;
+
+$base-blockquote-padding-left:                  $global-margin !default;
+$base-blockquote-border:                        $global-border !default;
+$base-blockquote-border-width:                  5px !default;
+$base-blockquote-small-color:                   $global-muted-color !default;
+$base-blockquote-font-size:                     round($global-font-size * 1.14) !default;
+$base-blockquote-line-height:                   round($base-blockquote-font-size * 1.37) !default;
+
+$base-code-color:                               $base-body-color !default;
+$base-code-font-size:                           round($global-font-size * 0.857) !default;
+$base-code-font-family:                         Consolas, monospace, serif !default;
+$base-code-border:                              $global-border;
+$base-code-background:                          $global-default-muted-background;
+
+$base-pre-padding:                              10px !default;
+$base-pre-background:                           #f5f5f5 !default;
+$base-pre-color:                                $base-body-color !default;
+$base-pre-font-family:                          $base-code-font-family !default;
+$base-pre-font-size:                            round($global-font-size * 0.857) !default;
+$base-pre-line-height:                          round($base-pre-font-size * 0.9) !default;
+$base-pre-border:                               $global-border;
+
+.ng-base-body-color {background: $base-body-color; color: #fff}
+.ng-base-link-color {background: $base-link-color; color: #fff}
+.ng-base-link-hover-color {background: $base-link-hover-color; color: #fff}
+.ng-base-em-color {background: $base-em-color; color: #fff}
+.ng-base-ins-background {background: $base-ins-background}
+.ng-base-ins-color {background: $base-ins-color; color: #fff}
+.ng-base-mark-background {background: $base-mark-background}
+.ng-base-mark-color {background: $base-mark-color; color: #fff}
+.ng-base-selection-background {background: $base-selection-background; color: #fff}
+.ng-base-selection-color {background: $base-selection-color; color: #fff}
+.ng-base-heading-color {background: $base-heading-color; color: #fff}
+.ng-base-hr-border {background: $base-hr-border; color: #fff}
+.ng-base-blockquote-border {background: $base-blockquote-border; color: #fff}
+.ng-base-blockquote-small-color {background: $base-blockquote-small-color; color: #fff}
+.ng-base-code-color {background: $base-code-color; color: #fff}
+.ng-base-code-border {background: $base-code-border; color: #fff}
+.ng-base-code-background {background: $base-code-background}
+.ng-base-pre-background {background: $base-pre-background}
+.ng-base-pre-color {background: $base-pre-color; color: #fff}
+.ng-base-pre-border {background: $base-pre-border; color: #fff}
+
+@mixin hook-base-link() {}
+@mixin hook-base-link-hover() {}
+@mixin hook-base-h() {}
+@mixin hook-base-h1() {}
+@mixin hook-base-h2() {}
+@mixin hook-base-h3() {}
+@mixin hook-base-h4() {}
+@mixin hook-base-h5() {}
+@mixin hook-base-h6() {}
+@mixin hook-base-hr() {}
+@mixin hook-base-blockquote() {}
+@mixin hook-base-body(){}
+@mixin hook-base-code(){}
+@mixin hook-base-pre(){
+    border: 1px solid $base-pre-border;
+    border-radius: 3px;
+}
+@mixin hook-base-misc(){
+    a.ng-unstyled {
+        color: inherit !important;
+        text-decoration: inherit;
+    }
+    a.ng-unstyled:hover {
+        text-decoration: inherit;
+    }
+
+    a.ng-nohover:hover {
+        text-decoration: inherit;
+    }
+
+    /*
+     * Abbreviation and definition
+     */
+
+    abbr[title],
+    dfn[title] {
+        cursor: help;
+        border-bottom: 1px dotted;
+        font-style: normal;
+    }
+
+    /*
+     * Keeps the first paragraph right underneath the header
+     */
+    h1, h2, h3, h4, h5, h6,
+    .ng-h1, .ng-h2, .ng-h3, .ng-h4, .ng-h5, .ng-h6 {
+        margin-bottom: 0;
+    }
+    h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+    .ng-h1 + p, .ng-h2 + p, .ng-h3 + p, .ng-h4 + p, .ng-h5 + p, .ng-h6 + p,
+    h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+    .ng-h1 + ul, .ng-h2 + ul, .ng-h3 + ul, .ng-h4 + ul, .ng-h5 + ul, .ng-h6 + ul,
+    h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol,
+    .ng-h1 + ol, .ng-h2 + ol, .ng-h3 + ol, .ng-h4 + ol, .ng-h5 + ol, .ng-h6 + ol {
+        margin-top: 0
+    }
+
+    ul {
+        padding: 0;
+        list-style: disc;
+        list-style-position: outside;
+        padding-left: $base-list-padding-left;
+    }
+
+    /* Small print for identifying the source */
+    blockquote small {
+        display: block;
+        color: $base-blockquote-small-color;
+        font-style: normal;
+    }
+
+    /* Smaller margin if `small` follows */
+    blockquote p:last-of-type { margin-bottom: 5px; }
+
+}
+
+@import "core/base";

@@ -1,0 +1,13 @@
+$breadcrumb-font-size:                          1rem !default;
+
+$breadcrumb-divider:                            "/" !default;
+$breadcrumb-divider-margin:                     8px !default;
+$breadcrumb-disabled-color:                     $global-muted-color !default;
+
+.ng-breadcrumb-disabled-color {background: $breadcrumb-disabled-color; color: #fff}
+
+@mixin hook-breadcrumb(){}
+@mixin hook-breadcrumb-divider(){}
+@mixin hook-breadcrumb-misc(){}
+
+@import "core/breadcrumb";

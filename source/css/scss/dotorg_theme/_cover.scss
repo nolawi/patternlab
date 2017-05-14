@@ -1,0 +1,7 @@
+@mixin hook-cover-misc() {
+    a.ng-position-cover {
+        border-bottom: none;
+    }
+}
+
+@import "core/cover";

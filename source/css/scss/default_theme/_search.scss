@@ -1,0 +1,124 @@
+$search-width:                                  180px !default;
+$search-focus-width:                            180px !default;
+$search-height:                                 $global-height !default;
+$search-padding:                                30px !default;
+$search-padding-small:                          25px !default;
+$search-padding-large:                          40px !default;
+$search-border:                                 rgba(0,0,0,0.3) !default;
+$search-border-width:                           1px !default;
+$search-background:                             rgba(255,255,255,0.9) !default;
+$search-color:                                  $global-color !default;
+$search-placeholder-color:                      $global-muted-color !default;
+
+$search-icon:                                   "\f002" !default;
+$search-icon-size:                              $global-font-size !default;
+$search-icon-color:                             rgba(0,0,0,0.2) !default;
+
+// Dropdown modifier
+$dropdown-search-width:                          300px !default;
+$dropdown-search-margin-top:                     0 !default;
+$dropdown-search-background:                     #f5f5f5 !default;
+$dropdown-search-color:                          $global-color !default;
+$dropdown-search-animation:                      ng-slide-top-fixed !default;
+$dropdown-search-navbar-margin-top:              5px !default;
+$dropdown-search-navbar-margin-right:            -15px !default;
+
+// Nav modifier
+$nav-search-color:                               $global-color !default;
+$nav-search-active-background:                   $global-primary-background !default;
+$nav-search-active-color:                        $global-contrast-color !default;
+$nav-search-header-color:                        $global-muted-color !default;
+$nav-search-divider-border:                      $global-border !default;
+$nav-search-divider-border-width:                1px !default;
+$nav-search-nested-color:                        $global-link-color !default;
+$nav-search-nested-hover-color:                  $global-link-hover-color !default;
+
+// Search in offcanvas
+$offcanvas-search-margin:                        20px 15px !default;
+$offcanvas-search-background:                    #1a1a1a !default;
+$offcanvas-search-border:                        rgba(0,0,0,0) !default;
+$offcanvas-search-color:                         #ccc !default;
+$offcanvas-search-placeholder-color:             #777 !default;
+$offcanvas-search-icon-color:                    #777 !default;
+
+.ng-search-border {background: $search-border}
+.ng-search-background {background: $search-background}
+.ng-search-color {background: $search-color; color: #fff}
+.ng-search-placeholder-color {background: $search-placeholder-color; color: #fff}
+.ng-search-icon-color {background: $search-icon-color; color: #fff}
+.ng-search-icon {font-family: FontAwesome}
+.ng-dropdown-search-background{background: $dropdown-search-background}
+.ng-dropdown-search-color{background: $dropdown-search-color;color: #fff}
+.ng-nav-search-color{background: $nav-search-color;color: #fff}
+.ng-nav-search-active-background{background: $nav-search-active-background;color: #fff}
+.ng-nav-search-header-color{background: $nav-search-header-color;color: #fff}
+.ng-nav-search-divider-border{background: $nav-search-divider-border;color: #fff}
+.ng-nav-search-nested-color{background: $nav-search-nested-color;color: #fff}
+.ng-nav-search-nested-hover-color{background: $nav-search-nested-hover-color;color: #fff}
+.ng-offcanvas-search-background{background: $offcanvas-search-background;color: #fff}
+.ng-offcanvas-search-border{background: $offcanvas-search-border}
+.ng-offcanvas-search-color{background: $offcanvas-search-color;color: #fff}
+.ng-offcanvas-search-placeholder-color{background: $offcanvas-search-placeholder-color;color: #fff}
+.ng-offcanvas-search-icon-color{background: $offcanvas-search-icon-color;color: #fff}
+
+@mixin hook-search(){}
+@mixin hook-search-icon(){}
+@mixin hook-search-field(){
+    &.ng-form-small {
+        height: $form-small-height !important;
+        padding: 0 $search-padding-small !important;
+        font-size: $form-small-font-size;
+    }
+
+    &.ng-form-large {
+        height: $form-large-height !important;
+        padding: 0 $search-padding-large !important;
+        font-size: $form-large-font-size;
+    }
+    &.ng-form-width-large {
+        width: $form-large-width;
+        &:focus {
+            width: $form-large-width;
+        }
+    }
+}
+@mixin hook-search-field-focus(){}
+
+@mixin hook-dropdown-search(){}
+@mixin hook-nav-search(){
+    text-shadow: none;
+}
+@mixin hook-nav-search-active(){
+    box-shadow: inset 0 2px 4px $nav-search-active-box-shadow;
+    text-shadow: 0 -1px 0 $nav-search-active-text-shadow;
+}
+@mixin hook-nav-search-header(){
+    text-shadow: none;
+}
+@mixin hook-nav-search-divider(){}
+@mixin hook-offcanvas-search-field(){}
+
+@mixin hook-search-misc(){
+    .ng-search.ng-form-small:before {
+        height: $form-small-height !important;
+        font-size: $form-small-font-size;
+        width: $search-padding-small;
+        line-height: $form-small-height;
+        left: 3px;
+        top: 3px;
+    }
+    .ng-search.ng-form-large:before {
+        height: $form-large-height !important;
+        font-size: $form-large-font-size;
+        line-height: $form-large-height;
+        width: $search-padding-large;
+        left: 6px;
+        top: 8px;
+    }
+    .ng-search-field-rounded {
+        @extend .ng-search-field;
+        border-radius: $search-height / 2;
+    }
+}
+
+@import "components/search";

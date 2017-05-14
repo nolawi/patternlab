@@ -1,0 +1,31 @@
+@mixin hook-slider-misc() {
+	.ng-slider-container {  }
+}
+
+@import "components/slider";
+
+
+/**
+Slider
+
+This is the most Basic Implementation of a Slider/Carousel, and is the basis of the Content Carousel.
+
+Markup:    
+<div class="ng-slider-container ng-slidenav-position" data-ng-slider>            
+    <ul class="ng-slider ng-grid-width-small-1-3">
+        <li>
+            <img src="http://lorempixel.com/400/400/" width="400" height="400" />
+        </li>
+        <li>
+            <img src="http://lorempixel.com/400/400/" width="400" height="400" />
+        </li>
+        <li>
+            <img src="http://lorempixel.com/400/400/" width="400" height="400" />
+        </li>
+    </ul>
+    <a href="#" class="ng-slidenav ng-slidenav-contrast ng-slidenav-previous" data-ng-slider-item="previous"></a>
+    <a href="#" class="ng-slidenav ng-slidenav-contrast ng-slidenav-next" data-ng-slider-item="next"></a>
+</div>
+
+Styleguide Components.ContentCarousel.1
+*/

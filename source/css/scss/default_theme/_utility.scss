@@ -1,0 +1,111 @@
+$utility-container-max-width:                   $breakpoint-large !default;
+$utility-container-padding-horizontal:          $global-grid-gutter !default;
+
+$utility-container-large-max-width:             $breakpoint-xlarge !default;
+$utility-container-large-padding-horizontal:    $global-grid-large-gutter !default;
+
+$utility-align-horizontal:                      $global-margin !default;
+$utility-align-vertical:                        $global-margin !default;
+
+$utility-height-viewport-min-height:            600px;
+
+$utility-margin:                                $global-margin !default;
+$utility-margin-small:                          5px !default;
+$utility-margin-large:                          50px !default;
+
+$utility-border-rounded:                        5px !default;
+
+$utility-heading-large-font-size:               round($global-font-size * 3.71) !default; // 52px
+$utility-heading-large-line-height:             round($utility-heading-large-font-size * 1.23) !default; // 64px
+
+$utility-link-muted-color:                      $global-color !default;
+$utility-link-muted-hover-color:                $global-color !default;
+
+$utility-scrollable-text-height:                300px !default;
+
+$utility-scrollable-box-height:                 250px !default;
+$utility-scrollable-box-padding:                0px !default;
+$utility-scrollable-box-border:                 $global-border !default;
+$utility-scrollable-box-border-width:           1px !default;
+
+.ng-utility-link-muted-color {background: $utility-link-muted-color;color: #fff}
+.ng-utility-link-muted-hover-color {background: $utility-link-muted-hover-color;color: #fff}
+.ng-utility-scrollable-box-border {background: $utility-scrollable-box-border;color: #fff}
+
+@mixin hook-container(){}
+@mixin hook-scrollable-box(){
+    border-radius: 3px;
+}
+@mixin hook-utility-misc(){
+    .ng-border-add {
+        border: 1px solid $global-border !important;
+    }
+    .ng-border-remove {
+        border: 0 !important;
+    }
+    .ng-padding { padding: $utility-margin; }
+
+    .ng-padding-top, .ng-padding-vertical { padding-top: $utility-margin !important; }
+    .ng-padding-bottom, .ng-padding-vertical { padding-bottom: $utility-margin !important; }
+    .ng-padding-left, .ng-padding-horizontal { padding-left: $utility-margin !important; }
+    .ng-padding-right, .ng-padding-horizontal { padding-right: $utility-margin !important; }
+
+
+    .ng-padding-large { padding: $utility-margin-large; }
+
+    .ng-padding-large-top, .ng-padding-large-vertical { padding-top: $utility-margin-large !important; }
+    .ng-padding-large-bottom, .ng-padding-large-vertical { padding-bottom: $utility-margin-large !important; }
+    .ng-padding-large-left, .ng-padding-large-horizontal { padding-left: $utility-margin-large !important; }
+    .ng-padding-large-right, .ng-padding-large-horizontal { padding-right: $utility-margin-large !important; }
+
+
+    .ng-padding-small { padding: $utility-margin-small; }
+
+    .ng-padding-small-top, .ng-padding-small-vertical { padding-top: $utility-margin-small !important; }
+    .ng-padding-small-bottom, .ng-padding-small-vertical { padding-bottom: $utility-margin-small !important; }
+    .ng-padding-small-left, .ng-padding-small-horizontal { padding-left: $utility-margin-small !important; }
+    .ng-padding-small-right, .ng-padding-small-horizontal { padding-right: $utility-margin-small !important; }
+
+
+    .ng-padding-remove { padding: 0 !important; }
+    .ng-padding-top-remove { padding-top: 0 !important; }
+    .ng-padding-bottom-remove { padding-bottom: 0 !important; }
+
+    @media (min-width: $breakpoint-large) {
+        .ng-visible-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-medium-max) {
+        .ng-visible-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-small-max) {
+        .ng-visible-mini { display: none !important; }
+        .ng-visible-medium { display: none !important; }
+        .ng-visible-large { display: none !important; }
+        .ng-hidden-small { display: none !important; }
+    }
+    @media (max-width: $breakpoint-mini-max) {
+        .ng-hidden-mini { display: none !important; }
+        .ng-visible-medium { display: none !important; }
+        .ng-visible-large { display: none !important; }
+        .ng-visible-small { display: none !important; }
+    }
+    @media (max-width: $breakpoint-small-max) {
+        .ng-visible-medium-large { display: none !important; }
+        .ng-hidden-small-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-medium) {
+        .ng-hidden-medium-large { display: none !important; }
+        .ng-visible-small-mini { display: none !important; }
+    }
+
+    .ng-escape {
+        margin-left: -1 * $global-margin !important;
+        margin-right: -1 * $global-margin !important;
+    }
+
+    .ng-transparent {
+        background: transparent;
+    }
+}
+
+@import "core/utility";

@@ -1,0 +1,188 @@
+/**
+Hero Carousel
+
+Styleguide Components.HeroCarousel
+*/
+
+/**
+Hero Carousel
+
+Markup:
+<div id="herocarousel-item-151674" class="ng-slide-image-container lazyloaded">
+    <figure class="ng-overlay ng-width-1-1" style="height:100%;">
+      <figcaption class="ng-overlay-panel ng-overlay-bottom ng-overlay-gradient-0-100" style="height: 50%;">
+            <div>
+                <div class="ng-overlay-text-container ng-align-right ng-margin-right ng-text-right ng-contrast">
+                    <h1 class="ng-margin-bottom ng-margin-top-remove ng-h3">
+                        Sarah Parcak: Space&nbsp;Archaeologist
+                    </h1>
+                    <div class="ng-promo-title">Sarah Parcak is using technology and citizen scientists in a groundbreaking archaeology project.</div>
+                            <a class="ng-button ng-button-large ng-button-overlay" href="http://www.nationalgeographic.org/projects/space-archaeology/">
+                                Join the Team
+                            </a>
+                </div>
+            </div>
+        </figcaption>
+    </figure>
+</div>
+
+Weight: 1
+
+Styleguide Components.HeroCarousel
+*/
+
+/* Leave this here unless duplicated elsewhere in another component later. */
+.ng-hero-carousel .ng-slide-image-container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+/* Button Overrides to white-on-black regardless of contrast styles */
+.ng-hero-carousel .ng-button-large {
+    background-color: black;
+    color: #FFF;
+}
+
+
+/* Text Overlay Overrides - Layout and font color */
+.ng-hero-carousel .ng-overlay-panel {
+    color: #000;
+}
+.ng-hero-carousel .ng-overlay-text-container {
+    margin-bottom: 90px;
+    max-width: 750px;
+}
+/* This needs changed  need to be standardized */
+.ng-hero-carousel .ng-overlay-text-container.ng-margin-left {
+    margin-left: 190px !important;
+}
+.ng-hero-carousel .ng-overlay-text-container.ng-margin-right {
+    margin-right: 190px !important;
+}
+.ng-hero-carousel .ng-promo-title {
+    margin-bottom: 20px;
+    max-width: 550px;
+}
+.ng-hero-carousel .ng-overlay-text-container.ng-align-left h1 {
+    margin-left: -52px !important;
+}
+.ng-hero-carousel .ng-overlay-text-container.ng-align-right h1 {
+    border-left-width: 0px !important;
+    border-right-width: 4px !important;
+    border-right-style: solid;
+    margin-right: -52px !important;
+    padding-left: 0px !important;
+    padding-right: 45px !important;
+}
+.ng-hero-carousel .ng-overlay-text-container.ng-align-left h1.hero-title-sm {
+    border-left-width: 3px !important;
+}
+.ng-hero-carousel .ng-overlay-text-container.ng-align-right h1.hero-title-sm {
+    border-right-width: 3px !important;
+}
+
+.hero-title-sm {
+  font-size: calculateRem(55px) ;
+  font-weight: 400;
+  line-height: 1.2 ;
+  letter-spacing: .12em ;
+  word-spacing: .07em ;
+}
+
+@media (max-width: $breakpoint-medium-max) {
+
+    /* Text Overlay Overrides */
+    .ng-hero-carousel .ng-overlay-text-container {
+        margin-bottom: 40px;
+        max-width: 75%;
+    }
+    /* This needs changed  need to be standardized */
+    .ng-hero-carousel .ng-overlay-text-container.ng-margin-left {
+        margin-left: 35px !important;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-margin-right {
+        margin-right: 35px !important;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left h1,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left h1.hero-title-sm{
+        border-left-width: 2px !important;
+        margin-left : 0px !important;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right h1,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right h1.hero-title-sm {
+        border-right-width: 2px !important;
+        margin-right: 0px !important;
+    }
+
+    .hero-title-sm {
+        font-size: calculateRem(40px) ;
+        font-weight: 300 ;
+        line-height: 1.3 ;
+        letter-spacing: .12em ;
+        word-spacing: .07em ;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left .ng-promo-title,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left .ng-button,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left .ng-article-kicker {
+        margin-left: 50px;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right .ng-promo-title,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right .ng-button,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right .ng-article-kicker {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .ng-hero-carousel .ng-overlay-text-container .ng-promo-title {
+    display: none;
+  }
+
+  /* Text Overlay Overrides */
+  .ng-hero-carousel .ng-overlay-text-container {
+    float: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .ng-hero-carousel .ng-overlay-text-container.ng-margin-left {
+    margin-left: 0px !important;
+  }
+  .ng-hero-carousel .ng-overlay-text-container.ng-margin-right {
+    margin-right: 0px !important;
+  }
+  .ng-hero-carousel .ng-overlay-text-container.ng-align-left h1,
+  .ng-hero-carousel .ng-overlay-text-container.ng-align-left h1.hero-title-sm {
+    border-left-width: 2px !important;
+    margin-left: 0 !important;
+    padding-left: 25px !important;
+  }
+  .ng-hero-carousel .ng-overlay-text-container.ng-align-right h1,
+  .ng-hero-carousel .ng-overlay-text-container.ng-align-right h1.hero-title-sm {
+    border-right-width: 2px !important;
+    margin-right: 0 !important;
+    padding-right: 25px !important;
+  }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left .ng-button,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-left .ng-article-kicker {
+        margin-left: 30px;
+    }
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right .ng-button,
+    .ng-hero-carousel .ng-overlay-text-container.ng-align-right .ng-article-kicker {
+        margin-right: 30px;
+    }
+  .hero-title-sm {
+    font-size: 1.750em;
+    font-weight: 300 ;
+    line-height: 1.3 ;
+    letter-spacing: .12em ;
+    word-spacing: .07em ;
+  }
+}
+
+

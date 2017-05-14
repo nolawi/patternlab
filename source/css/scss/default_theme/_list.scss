@@ -1,0 +1,158 @@
+$list-nested-padding-left:                      20px !default;
+
+$list-line-margin-top:                          5px !default;
+$list-line-border:                              $global-border !default;
+.ng-list-line-border {background: $list-line-border}
+$list-line-border-width:                        1px !default;
+
+$list-striped-padding-vertical:                 5px !default;
+$list-striped-padding-horizontal:               5px !default;
+$list-striped-background:                       $global-default-muted-background !default;
+.ng-list-striped-background {background: $list-striped-background}
+$list-striped-border:                           $global-border !default;
+.ng-list-striped-border {background: $list-striped-border}
+
+$list-space-margin-top:                         10px !default;
+
+@mixin hook-list-line(){
+    @extend .ng-list;
+}
+@mixin hook-list-striped(){
+    @extend .ng-list;
+    border-bottom: 1px solid $list-striped-border;
+    background: #fff;
+}
+@mixin hook-list-misc(){
+    .ng-icon-bullet:before { content: "\2022";}
+    .ng-icon-fw { @extend .ng-icon-justify; }
+
+    .ng-list-striped > li:first-child { border-top: 1px solid $list-striped-border; }
+
+    .ng-list-bullet {
+        list-style: disc;
+        list-style-position: outside;
+        margin-left: $global-margin;
+        /*
+         * Nested lists
+         */
+        ul {
+            list-style: disc;
+            list-style-position: outside;
+            // margin-left: $global-margin;
+        }
+    }
+
+    .ng-list-inline {
+        padding-left: 0;
+        margin-left: -5px;
+        list-style: none;
+        li {
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+    }
+
+
+    .ng-list-tree {
+        @extend .ng-list;
+    }
+    li.ng-list-treebranch {
+        font-weight: bold;
+        list-style: none;
+        li.ng-list-treebranch {
+        }
+    }
+    li.ng-list-treeleaf {
+        font-weight: normal;
+        list-style: disc;
+    }
+
+
+
+    /* Special thanks to onetrickpony for this:
+    http://stackoverflow.com/questions/14922247/how-to-get-a-tree-in-html-using-pure-css
+    */
+
+    $list-collapsible-open-icon:    '.ng-icon-minus-square-o' !default;
+    $list-collapsible-closed-icon:  '.ng-icon-plus-square-o' !default;
+    $list-collapsible-leaf-icon:    '.ng-icon-bullet' !default;
+    $list-collapsible-padding-left: (20em / 14) !default;
+
+    .ng-icon-list-collapsible {
+        position: absolute;
+        left: $list-collapsible-padding-left * -1;
+        width: $list-collapsible-padding-left;
+        top: (2em / 14);
+    }
+
+    .ng-list-collapsible {
+        @extend .ng-list;
+        padding-left: 0;
+        margin-left: $list-collapsible-padding-left;
+        list-style-type: none;
+        > li { position: relative; }
+
+        position: relative;
+
+        /* Nested lists */
+        ul, ol {
+            list-style: none;
+            padding: 0;
+            position: relative;
+            margin-left: $list-collapsible-padding-left;
+            list-style-type: none;
+            > li { position: relative; }
+        }
+
+        // li li{
+        //     margin: 0;
+        //     position: relative;
+        //     &::before, &::after {
+        //         content: '';
+        //         position: absolute;
+        //         left: (30em / 14) * -1.5; //$fa-li-width * -1.5
+        //     }
+        //     /* horizontal line on inner list items */
+        //     &::before{
+        //         border-top: 1px solid $global-border;
+        //         top: 10px;
+        //         width: (30em / 14) * .6; //$fa-li-width * .6;
+        //         height: 0;
+        //     }
+        //     /* vertical line on list items */
+        //     &::after{
+        //         border-left: 1px solid $global-border;
+        //         height: 100%;
+        //         width: 0px;
+        //         top: -10px;
+        //     }
+        //     &:first-child::after {
+        //         height: 1.7rem;
+        //         top: -1rem;
+        //     }
+        //     &:last-child::after {
+        //         height: 1.7rem;
+        //         top: -1rem;
+        //     }
+        // }
+        li > .ng-icon-list-collapsible {
+            @extend #{$list-collapsible-leaf-icon};
+            cursor:auto;
+        }
+        li.ng-open {
+        }
+        li.ng-open > .ng-icon-list-collapsible {
+            @extend #{$list-collapsible-open-icon};
+            cursor:pointer;
+        }
+
+        li.ng-closed > .ng-icon-list-collapsible {
+            @extend #{$list-collapsible-closed-icon};
+            cursor:pointer;
+        }
+    }
+
+}
+
+@import "core/list";

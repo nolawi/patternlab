@@ -1,0 +1,302 @@
+$nav-padding-vertical:                          12px !default;
+$nav-padding-horizontal:                        25px !default;
+
+$nav-header-padding-vertical:                   14px !default;
+$nav-header-padding-horizontal:                 $nav-padding-horizontal !default;
+$nav-header-font-size:                          14px !default;
+$nav-header-font-weight:                        500 !default;
+$nav-header-text-transform:                     uppercase !default;
+$nav-header-margin-top:                         $global-margin !default;
+
+$nav-divider-margin-vertical:                   14px !default;
+$nav-divider-margin-horizontal:                 $nav-padding-horizontal !default;
+
+$nav-subtitle-font-size:                        round($global-font-size * 0.85) !default;
+$nav-subtitle-line-height:                      round($nav-subtitle-font-size * 1.5) !default;
+
+$nav-nested-padding-left:                       10px !default;
+$nav-nested-padding-vertical:                   5px !default;
+$nav-nested-padding-horizontal:                 5px !default;
+
+$nav-sub-padding-vertical:                      5px !default;
+$nav-sub-padding-left:                          $nav-padding-horizontal * 2 !default;
+
+$nav-parent-icon:                               "\1f893" !default;
+$nav-parent-open-icon:                          "\1f891" !default;
+$nav-parent-icon-width:                         20px !default;
+$nav-parent-icon-margin-right:                  -10px !default;
+
+$nav-side-color:                                $global-color !default;
+$nav-side-hover-background:                     #f2f2f2 !default;
+$nav-side-hover-color:                          $global-color !default;
+$nav-side-hover-text-shadow:                    $global-text-shadow !default;
+$nav-side-active-background:                    $global-background !default;
+$nav-side-active-color:                         $theme-color !default;
+$nav-side-active-text-shadow:                   $global-contrast-text-shadow !default;
+$nav-side-active-box-shadow:                    rgba(0,0,0,0.2) !default;
+$nav-side-header-color:                         $global-muted-color !default;
+$nav-side-divider-border:                       $global-border !default;
+$nav-side-divider-border-width:                 1px !default;
+$nav-side-nested-color:                         $global-link-color !default;
+$nav-side-nested-hover-color:                   $global-link-hover-color !default;
+
+$nav-dropdown-color:                            $global-color !default;
+$nav-dropdown-hover-background:                 $global-background !default;
+$nav-dropdown-hover-color:                      $theme-color !default;
+$nav-dropdown-hover-text-shadow:                $global-contrast-text-shadow !default;
+$nav-dropdown-hover-box-shadow:                 rgba(0,0,0,0.2) !default;
+$nav-dropdown-header-color:                     $global-muted-color !default;
+$nav-dropdown-divider-border:                   $global-border !default;
+$nav-dropdown-divider-border-width:             1px !default;
+$nav-dropdown-nested-color:                     $global-link-color !default;
+$nav-dropdown-nested-hover-color:               $global-link-hover-color !default;
+
+$nav-navbar-color:                              #666 !default;
+$nav-navbar-hover-background:                   #f2f2f2 !default;
+$nav-navbar-hover-color:                        $theme-color !default;
+$nav-navbar-hover-text-shadow:                  $global-contrast-text-shadow !default;
+$nav-navbar-hover-box-shadow:                   rgba(0,0,0,0.2) !default;
+$nav-navbar-header-color:                       $global-muted-color !default;
+$nav-navbar-divider-border:                     $global-border !default;
+$nav-navbar-divider-border-width:               1px !default;
+$nav-navbar-nested-color:                       $global-link-color !default;
+$nav-navbar-nested-hover-color:                 $global-link-hover-color !default;
+
+$nav-search-color:                              $global-color !default;
+$nav-search-active-background:                  $global-primary-background !default;
+$nav-search-active-color:                       $global-contrast-color !default;
+$nav-search-active-text-shadow:                 $global-contrast-text-shadow !default;
+$nav-search-active-box-shadow:                  rgba(0,0,0,0.2) !default;
+$nav-search-header-color:                       $global-muted-color !default;
+$nav-search-divider-border:                     $global-border !default;
+$nav-search-divider-border-width:               1px !default;
+$nav-search-nested-color:                       $global-link-color !default;
+$nav-search-nested-hover-color:                 $global-link-hover-color !default;
+
+$nav-offcanvas-padding-vertical:                10px;
+$nav-offcanvas-padding-horizontal:              15px;
+$nav-offcanvas-color:                           $offcanvas-panel-link-color;
+$nav-offcanvas-text-shadow:                     $offcanvas-panel-text-shadow;
+$nav-offcanvas-hover-background:                lighten($offcanvas-bar-background, 5%);
+$nav-offcanvas-hover-color:                     $offcanvas-panel-link-hover-color;
+$nav-offcanvas-active-background:               darken($offcanvas-bar-background, 10%);
+$nav-offcanvas-active-color:                    $offcanvas-panel-link-hover-color;
+$nav-offcanvas-header-color:                    $offcanvas-panel-color;
+$nav-offcanvas-header-background:               lighten($offcanvas-bar-background, 5%);
+$nav-offcanvas-divider-border:                  rgba(255,255,255,0.01);
+$nav-offcanvas-divider-border-width:            1px;
+$nav-offcanvas-divider-background:              rgba(0,0,0,0.2);
+$nav-offcanvas-nested-color:                    $offcanvas-panel-link-color;
+$nav-offcanvas-nested-hover-color:              $offcanvas-panel-link-hover-color;
+
+.ng-nav-parent-icon, .ng-nav-parent-open-icon {font-family: FontAwesome, $base-body-font-family}
+
+.ng-nav-side-color {background: $nav-side-color;color: #fff}
+.ng-nav-side-hover-background {background: $nav-side-hover-background;}
+.ng-nav-side-hover-color {background: $nav-side-hover-color;color: #fff}
+.ng-nav-side-hover-text-shadow {background: $nav-side-hover-text-shadow;}
+.ng-nav-side-active-background {background: $nav-side-active-background;color: #fff}
+.ng-nav-side-active-color {background: $nav-side-active-color;}
+.ng-nav-side-active-text-shadow {background: $nav-side-active-text-shadow;color: #fff}
+.ng-nav-side-active-box-shadow {background: $nav-side-active-box-shadow;color: #fff}
+.ng-nav-side-header-color {background: $nav-side-header-color;color: #fff}
+.ng-nav-side-divider-border {background: $nav-side-divider-border;color: #fff}
+.ng-nav-side-nested-color {background: $nav-side-nested-color;color: #fff}
+.ng-nav-side-nested-hover-color {background: $nav-side-nested-hover-color;color: #fff}
+
+.ng-nav-dropdown-color {background: $nav-dropdown-color;color: #fff}
+.ng-nav-dropdown-hover-background {background: $nav-dropdown-hover-background;color: #fff}
+.ng-nav-dropdown-hover-color {background: $nav-dropdown-hover-color;}
+.ng-nav-dropdown-hover-text-shadow {background: $nav-dropdown-hover-text-shadow;color: #fff}
+.ng-nav-dropdown-hover-box-shadow {background: $nav-dropdown-hover-box-shadow;color: #fff}
+.ng-nav-dropdown-header-color {background: $nav-dropdown-header-color;color: #fff}
+.ng-nav-dropdown-divider-border {background: $nav-dropdown-divider-border;color: #fff}
+.ng-nav-dropdown-nested-color {background: $nav-dropdown-nested-color;color: #fff}
+.ng-nav-dropdown-nested-hover-color {background: $nav-dropdown-nested-hover-color;color: #fff}
+
+.ng-nav-navbar-color {background: $nav-navbar-color;color: #fff}
+.ng-nav-navbar-hover-background {background: $nav-navbar-hover-background;color: #fff}
+.ng-nav-navbar-hover-color {background: $nav-navbar-hover-color;}
+.ng-nav-navbar-hover-text-shadow {background: $nav-navbar-hover-text-shadow;color: #fff}
+.ng-nav-navbar-hover-box-shadow {background: $nav-navbar-hover-box-shadow;color: #fff}
+.ng-nav-navbar-header-color {background: $nav-navbar-header-color;color: #fff}
+.ng-nav-navbar-divider-border {background: $nav-navbar-divider-border;color: #fff}
+.ng-nav-navbar-nested-color {background: $nav-navbar-nested-color;color: #fff}
+.ng-nav-navbar-nested-hover-color {background: $nav-navbar-nested-hover-color;color: #fff}
+
+.ng-nav-search-color {background: $nav-search-color;color: #fff}
+.ng-nav-search-active-background {background: $nav-search-active-background;color: #fff}
+.ng-nav-search-active-color {background: $nav-search-active-color}
+.ng-nav-search-active-text-shadow {background: $nav-search-active-text-shadow;color: #fff}
+.ng-nav-search-active-box-shadow {background: $nav-search-active-box-shadow;color: #fff}
+.ng-nav-search-header-color {background: $nav-search-header-color;color: #fff}
+.ng-nav-search-divider-border {background: $nav-search-divider-border;color: #fff}
+.ng-nav-search-nested-color {background: $nav-search-nested-color;color: #fff}
+.ng-nav-search-nested-hover-color {background: $nav-search-nested-hover-color;color: #fff}
+
+.ng-nav-offcanvas-color {background: $nav-offcanvas-color;color: #fff}
+.ng-nav-offcanvas-text-shadow {background: $nav-offcanvas-text-shadow;color: #fff}
+.ng-nav-offcanvas-hover-background {background: $nav-offcanvas-hover-background;color: #fff}
+.ng-nav-offcanvas-hover-color {background: $nav-offcanvas-hover-color}
+.ng-nav-offcanvas-active-background {background: $nav-offcanvas-active-background;color: #fff}
+.ng-nav-offcanvas-active-color {background: $nav-offcanvas-active-color;}
+.ng-nav-offcanvas-header-color {background: $nav-offcanvas-header-color;color: #fff}
+.ng-nav-offcanvas-header-background {background: $nav-offcanvas-header-background;color: #fff}
+.ng-nav-offcanvas-divider-border {background: $nav-offcanvas-divider-border;}
+.ng-nav-offcanvas-divider-background {background: $nav-offcanvas-divider-background;color: #fff}
+.ng-nav-offcanvas-nested-color {background: $nav-offcanvas-nested-color;color: #fff}
+.ng-nav-offcanvas-nested-hover-color {background: $nav-offcanvas-nested-hover-color;}
+
+
+@mixin hook-nav-header(){
+    letter-spacing: 0.03em;
+}
+@mixin hook-nav-divider(){}
+@mixin hook-nav-sub(){
+    & li a{border-bottom: none;}
+    & li a:hover {
+        color: $global-color;
+        background-color: $nav-side-hover-background;
+    }
+    & > .ng-nav-header {
+        padding-left: $nav-nested-padding-horizontal;
+    }
+    & > .ng-nav-divider {
+        margin-left: $nav-nested-padding-horizontal;
+    }
+}
+@mixin hook-nav-parent-icon(){
+    font-family: icon-society;
+}
+
+@mixin hook-nav-side(){
+    border-bottom: none;
+}
+@mixin hook-nav-side-hover(){
+    // box-shadow: inset 0 0 1px rgba(0,0,0,0.1);
+    border-bottom: none;
+}
+@mixin hook-nav-side-active(){}
+@mixin hook-nav-side-header(){}
+@mixin hook-nav-side-divider(){
+    box-shadow: 0 1px 0 $nav-side-hover-text-shadow;
+
+}
+
+@mixin hook-nav-dropdown(){
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    padding: $nav-padding-vertical 0;
+    margin-left: $nav-padding-horizontal;
+}
+@mixin hook-nav-dropdown-hover(){}
+@mixin hook-nav-dropdown-header(){}
+@mixin hook-nav-dropdown-divider(){}
+
+@mixin hook-nav-navbar(){
+    border-bottom: none;
+}
+@mixin hook-nav-navbar-hover(){}
+@mixin hook-nav-navbar-header(){}
+@mixin hook-nav-navbar-divider(){}
+
+@mixin hook-nav-offcanvas(){
+    border-top: 1px solid rgba(0,0,0,0.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    text-shadow: 0 1px 0 $nav-offcanvas-text-shadow;
+}
+@mixin hook-nav-offcanvas-hover(){}
+@mixin hook-nav-offcanvas-active(){
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+@mixin hook-nav-offcanvas-header(){
+    margin-top: 0;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    background: $nav-offcanvas-header-background;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    text-shadow: 0 1px 0 $nav-offcanvas-text-shadow;
+}
+@mixin hook-nav-offcanvas-divider(){
+    margin: 0;
+    height: 4px;
+    background: $nav-offcanvas-divider-background;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+}
+
+@mixin hook-nav-misc(){
+    // Nav Header but as a link!
+    .ng-nav-header-link {
+        color: #000 !important;
+        text-transform: $nav-header-text-transform;
+        font-weight: $nav-header-font-weight;
+        font-size: $nav-header-font-size;
+        letter-spacing: 0.03em;
+    }
+    .ng-nav-navbar > li > a.ng-nav-header-link {
+        color: #000;
+        letter-spacing: 0.08em;
+        line-height: 1.5rem;
+    }
+    .ng-nav-side ul a {
+        color: #666;
+    }
+    // Remove focus color when not hovering:
+    .ng-nav-side > li > a:focus {
+        background: transparent;
+    }
+
+    // Allowing spans for active or disabled nav items
+    .ng-nav li > span {
+        display: block;
+        text-decoration: none;
+    }
+
+    /* .ng-has-subnav is used for dropdown subnavs */
+
+    .ng-nav > li > span,
+    .ng-has-subnav .ng-nav > li > a,
+    .ng-has-subnav .ng-nav > li > span { padding: $nav-padding-vertical $nav-padding-horizontal; }
+
+    .ng-nav ul span { padding: $nav-nested-padding-vertical $nav-nested-padding-horizontal; }
+
+    .ng-nav li > span > div {
+        font-size: $nav-subtitle-font-size;
+        line-height: $nav-subtitle-line-height;
+    }
+    .ng-has-subnav > .ng-dropdown > .ng-nav-dropdown > li > a {
+        color: $nav-dropdown-color;
+    }
+    .ng-has-subnav .ng-nav-navbar > li > a:hover,
+    .ng-has-subnav .ng-nav-navbar > li > a:focus { // 1
+        background: $nav-navbar-hover-background;
+        color: $nav-navbar-hover-color;
+        /* 2 */
+        outline: none;
+        box-shadow: inset 0 2px 4px $nav-navbar-hover-box-shadow;
+        text-shadow: 0 -1px 0 $nav-navbar-hover-text-shadow;
+    }
+    /*
+     * Modifier `ng-nav-offcanvas`
+     */
+
+    .ng-nav-offcanvas {
+        border-bottom: 1px solid rgba(0,0,0,0.3);
+        box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    /*
+     * Sub-object: `ng-nav-sub`
+     */
+
+    .ng-nav-offcanvas .ng-nav-sub {
+        border-top: 1px solid rgba(0,0,0,0.3);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .ng-nav li > a {
+      transition: background-color 0.4s ease !important;
+    }
+
+}
+
+@import "core/nav";

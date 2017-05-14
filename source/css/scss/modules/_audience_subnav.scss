@@ -1,0 +1,220 @@
+/**
+Audience Variations Available
+
+###Basic Structure
+To show which audiences an item is appropriate for, you will add the
+`.ng-subnav-audience` class to a `<ul>`. Each available audience is wrapped in
+an `<li>` and `<a>` tag.
+
+###Audience blocks
+The audience block is created by wrapping the audience abbreviation character in
+a `<span class="ng-swatch">` tag. To provide the correct background, you add the
+appropriate class:
+
+<table class="ng-table">
+<tr><th>Audience</th><th>CSS Class</th></tr>
+<tr><td>Teachers</td><td>`te-background`</td></tr>
+<tr><td>Informal Educators</td><td>`ie-background`</td></tr>
+<tr><td>Families</td><td>`fm-background`</td></tr>
+<tr><td>Stuents</td><td>`st-background`</td></tr>
+<tr><td>Kids</td><td>`kd-background`</td></tr>
+<tr><td>Not Available</td><td>`ng-not-available`</td></tr>
+</table>
+
+###Showing audiences that are not available
+In listings, it is nice to see the audiences line up vertically. In these cases,
+use `.ng-subnav-audience-fixed` to force a constant width and use the
+`.ng-not-available` class to remove the background and border. When an item is
+by itself, it is not necessary to leave space for the missing audiences.
+
+Markup:
+<div class="ng-grid">
+<div class="ng-panel ng-width-1-3">
+    <ul class="ng-subnav-audience-fixed">
+        <li>
+            <a href="#">
+                <span class="ng-swatch te-background">T</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ie-background">I</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">F</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">K</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="ng-subnav-audience-fixed">
+        <li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">T</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">I</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch fm-background">F</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch kd-background">K</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="ng-subnav-audience-fixed">
+        <li>
+            <a href="#">
+                <span class="ng-swatch te-background">T</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">I</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">F</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ng-not-available">K</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="ng-panel ng-width-1-3">
+    <ul class="ng-subnav-audience">
+        <li>
+            <a href="#">
+                <span class="ng-swatch te-background">T</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch ie-background">I</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="ng-subnav-audience">
+        <li>
+            <a href="#">
+                <span class="ng-swatch fm-background">F</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch kd-background">K</span>
+            </a>
+        </li>
+    </ul>
+    <ul class="ng-subnav-audience">
+        <li>
+            <a href="#">
+                <span class="ng-swatch te-background">T</span>
+            </a>
+        </li><li>
+            <a href="#">
+                <span class="ng-swatch st-background">S</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+Styleguide Components.ArticleHeading.04
+*/
+
+/**
+Audience Subnav
+
+Markup:
+<p class="ng-margin-bottom-remove">Audience versions of this page:</p>
+<ul class="ng-subnav-audience" data-ng-subnavaccordion>
+    <li>
+        <a href="#">
+            <span class="ng-swatch te-background">T</span> Teachers
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="ng-swatch ie-background">I</span> Informal Educators
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="ng-swatch fm-background">F</span> Families
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="ng-swatch st-background">S</span> Students
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <span class="ng-swatch kd-background">K</span> Kids
+        </a>
+    </li>
+</ul>
+
+Styleguide Components.ArticleHeading.05
+*/
+
+.ng-subnav-audience, .ng-subnav-audience-fixed {
+    @extend .ng-subnav-accordion;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-top:5px;
+    display: block;
+    > li{
+        > a {
+            font-size: 13px;
+            color: $global-color;
+        }
+    }
+}
+.ng-subnav-audience-fixed {
+    width: 126px;
+}
+
+.ng-swatch {
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    border: 1px solid $global-border;
+    &.ng-not-available {
+        border: 1px solid transparent;
+        color: transparent;
+    }
+}

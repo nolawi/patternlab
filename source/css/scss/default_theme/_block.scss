@@ -1,0 +1,21 @@
+$block-padding-vertical:                        20px !default;
+$block-padding-vertical-large:                  50px !default;
+
+$block-large-padding-vertical:                  $block-padding-vertical !default;
+$block-large-padding-vertical-medium:           $block-padding-vertical-large !default;
+$block-large-padding-vertical-large:            100px !default;
+
+$block-default-background:                      $global-background !default;
+$block-muted-background:                        #f9f9f9 !default;
+$block-primary-background:                      #00a8e6 !default;
+$block-secondary-background:                    #222 !default;
+
+
+@mixin hook-block() {}
+@mixin hook-block-default() {}
+@mixin hook-block-muted() {}
+@mixin hook-block-secondary() {}
+@mixin hook-block-primary() {}
+@mixin hook-block-misc() {}
+
+@import "core/block";

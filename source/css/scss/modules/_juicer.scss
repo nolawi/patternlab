@@ -1,0 +1,580 @@
+// selector prefix so this CSS is more specific than what's loaded from Juicer;
+
+.jucier-modal-open{
+  overflow: hidden;
+}
+.juicer-feed.image-grid li.feed-item.words .j-text {
+    background-color:#666 !important;
+}
+
+.juicer-feed.image-grid .j-text, .juicer-feed.slider .j-text, .juicer-feed.hip .j-text{
+
+  a{
+    color:white !important;
+  }
+}
+
+.juicer-feed.white li.feed-item, .juicer-feed.user li.feed-item, .juicer-feed.juicer-widget li.feed-item, .juicer-feed.colors li.feed-item, .juicer-feed.colored-icons li.feed-item, .juicer-feed.gray li.feed-item{
+  border-left:1px solid #e5e5e5 !important;
+  border-top:1px solid #e5e5e5 !important;
+}
+
+.juicer-feed ul.j-filters li.all::before{
+  content:"" !important;
+}
+
+
+body {
+  // generic class applied to muliple elements;
+
+  .juicer-feed {
+    font-size: 1rem;
+    line-height: 1.7;
+    word-spacing: .05em;
+    font-family: $base-body-font-family;
+
+
+
+    a.j-paginate{
+      background: #fc0;
+      color: #000;
+      border: 0;
+      margin: 50px auto;
+      text-transform: inherit !important;
+      font-size: 14px;
+      letter-spacing: normal;
+
+      &:hover {
+        background: #FFE066;
+        color: #000;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .j-meta{
+      a:hover{
+        color: #FFCC00 !important;
+      }
+    }
+
+
+
+    // reset social icons to use theme font;
+    .j-facebook,
+    .j-instagram,
+    .j-twitter,
+    .j-googleplus,
+    .j-pinterest,
+    .j-linkedin,
+    .j-email {
+      background: transparent;
+
+    }
+
+    .j-email::before{
+      color: black;
+      content:"\f003" !important;
+      top: 1px !important;
+    }
+
+    ul.j-share{
+      a.j-facebook::before {
+        color: #3b5998;
+        content: "\f082";
+      }
+
+      a.j-instagram::before {
+        color: #3b5998;
+      }
+
+      a.j-twitter::before {
+        color: #55acee;
+      }
+
+      a.j-googleplus::before {
+        color: #dd4b39;
+      }
+
+      a.j-pinterest::before {
+        color: #cb2028;
+      }
+
+      a.j-linkedin::before {
+        color: #007bb6;
+      }
+
+      .j-email {
+        color: black;
+        content:"\f003" !important;
+        top: 1px !important;
+      }
+    }
+
+
+
+
+    // filter buttons (on top of the image grid);
+    ul.j-filters {
+
+      padding-left: 0;
+      
+      li {
+        box-sizing: border-box;
+        display: inline-block;
+        border-radius: 100%;
+        background: #fff;
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        //transition: background-color 0.4s ease;
+        width: 50px;
+        height: 50px;
+        line-height: 30px;
+        margin-left: 5px;
+        font-size: 0;
+        text-overflow: inherit;
+        overflow: hidden;
+
+
+        /* Small Devices, Tablets */
+        @media only screen and (min-width : 768px) {
+          width: 70px;
+          height: 70px;
+        }
+
+        /* Medium Devices, Desktops */
+        @media only screen and (min-width : 992px) {
+          width: 80px;
+          height: 80px;
+        }
+
+
+        &:hover{
+          background-color: #e6e6e6 !important;
+        }
+
+        &.all{
+          content: "ALL";
+          font-size: 18px;
+          line-height: 28px;
+          background-color: white !important;
+          &:hover{
+            background-color: #e6e6e6 !important;
+          }
+
+          /* Small Devices, Tablets */
+          @media only screen and (min-width : 768px) {
+            font-size: 24px;
+            line-height: 48px;
+          }
+
+          /* Medium Devices, Desktops */
+          @media only screen and (min-width : 992px) {
+            font-size: 26px;
+            line-height: 58px;
+          }
+        }
+
+
+        &::before {
+          //font-family: icon-society;
+          font-weight: normal;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          line-height: 30px;
+          font-size: 26px;
+          margin: 0 auto;
+          display: inline-block;
+
+          /* Small Devices, Tablets */
+          @media only screen and (min-width : 768px) {
+            line-height: 50px;
+            font-size: 32px;
+          }
+
+          /* Medium Devices, Desktops */
+          @media only screen and (min-width : 992px) {
+            line-height: 60px;
+            font-size: 36px;
+          }
+        }
+
+        &.j-facebook::before{
+          content: "\f09a";
+          color: #3b5998;
+        }
+
+        &.j-twitter::before {
+          color: #55acee;
+        }
+
+        &.j-instagram::before {
+          color: #3b5998;
+        }
+
+
+        // hide the hover and on state indicators;
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+
+
+    // list of feeds that focuses on the photo;
+    &.image-grid {
+      .j-text {
+        // make links in the image grid the same color as the text;
+        .j-message a {
+          color: inherit;
+        }
+      }
+    }
+  }
+//
+  
+  .j-overlay-content .j-message>p {
+    display: inline-block !important;
+  }
+
+  //target tweet text only to update font
+  .j-overlay-content .j-message p {
+    @extend .base-body-p;
+    font-family: $base-body-font-family;
+  }
+
+  // links in body content (includes modal);
+  .j-message {
+    p:nth-child(2), p:nth-child(3), p:nth-child(4), p:nth-child(5) {
+      display: none;
+    }
+    a {
+    font-weight: normal !important;
+    transition: none !important;
+    color: #000 !important;
+    border-bottom: 1px solid #FFCC00;
+
+    &:hover {
+      color: #000 !important;
+      border-bottom: 1px solid #000 !important;
+    }
+    }
+  }
+
+  // modal;
+  .j-overlay {
+    padding-top: 0;
+
+    .j-message {
+      //max-height: 250px;
+      //overflow-y:auto;
+    }
+
+    // close button (upper right);
+    a.j-close-ng {
+      position: absolute;
+      margin: 0;
+      top: 16px;
+      right: 16px;
+      border-bottom: 0;
+      z-index: 3;
+      cursor:pointer;
+
+      @media (max-width: 800px){
+        top:20px;
+      }
+
+      &::before {
+        font-family: icon-society;
+        content: "×";
+        color: #afafaf;
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+        font-weight: 100;
+      }
+
+      span{
+        display: none;
+      }
+    }
+
+    // full content wrapper (image and text);
+
+    .j-overlay-content {
+      width: 100% !important;
+      padding: 20px;
+      box-sizing: border-box;
+      //overflow-y: visible;
+      position: relative;
+    }
+
+    // above tablet the modal isn't full width;
+    @media (min-width: 800px) {
+      padding-top: 40px;
+
+      .j-overlay-content {
+        width: 75% !important;
+      }
+    }
+
+    @media (max-width: 800px){
+      .j-overlay-content {
+        max-height: 100%;
+      }
+    }
+
+  }
+// conditional css to update for .ng-artcle-kicker if avatar general sibling combinator //
+    .j-stacker-wrapper .j-poster  a img ~ h3 {
+      border:none;
+      padding-left:10px !important;
+      margin-left:0px !important;
+    }
+
+
+  // modal (more specific??);
+  .j-post-overlay.juicer-feed {
+    //overflow: visible; // so the absolutely positioned pagination links are visible;
+
+    // conditional css to update for .ng-artcle-kicker if avatar general sibling combinator //
+    .j-poster  a img ~ h3 {
+      border:none;
+      padding-left:10px !important;
+      margin-left:0px !important;
+    }
+
+      .j-message .j-title p {
+        @extend .ng-modal-title;
+      }
+
+    // text content wrapper;
+    .j-overlay-text {
+      padding: 20px 0 0;
+
+      @media (min-width: 800px) {
+        padding: 40px 0 0 40px;
+      }
+    }
+
+
+
+    @media (max-width: 800px){
+      .j-meta{
+        margin:15px 0 15px;
+      }
+    }
+
+    // `view on ...` button;
+    a.juicer-button {
+      background: #fc0;
+      color: #000;
+      border: 0;
+      margin: 0 0 30px;
+      font-size: 14px;
+      letter-spacing: normal;
+
+      &:hover {
+        background: #FFE066;
+        color: #000;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    // social link colors;
+    ul.j-share {
+
+      display: block;
+      clear: both;
+      float: inherit;
+      margin-left: 0;
+      padding-left: 0;
+
+      @media (max-width: 800px){
+        position: relative !important;
+      }
+
+      a {
+        font-weight: normal;
+        border-bottom:none;
+
+        &:hover{
+          border:none !important;
+        }
+
+        &:link{
+          text-decoration: none !important;
+        }
+
+        &.facebook::before {
+          color: #3B5998;
+        }
+
+        &.twitter::before {
+          color: #55ACEE;
+        }
+
+        &.googleplus::before {
+          color: #DD4B39;
+        }
+
+        &.pinterest::before {
+          color: #CB2028;
+        }
+
+        &.linkedin::before {
+          color: #007bb6;
+        }
+
+        &.j-email::before {
+          color: black;
+        }
+
+        &::before {
+          //font-family: icon-society;
+          font-family: "fontawesome-webfont", Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          font-size:20px !important;
+          font-weight: normal;
+        }
+      }
+    }
+
+
+    .image{
+      @media (max-width: 800px){
+        margin-top:34px;
+      }
+    }
+
+    // modal pagination controls;
+    .j-navigate {
+      a.j-previous::before {
+        font-family: icon-society;
+        content: "\1f890";
+      }
+
+      a.j-next::before {
+        font-family: icon-society;
+        content: "\1f892";
+      }
+
+
+     // above tablet, the pagination controls are to the left/right of the modal;
+     @media (min-width: 800px) {
+       position: absolute;
+       right: 50px;
+       top: 0;
+
+       a.j-next,
+       a.j-previous {
+         //position: absolute;
+         //top: 50%;
+         //transform: translateY(-50%);
+
+         &::before {
+           font-size: 24px;
+           line-height: 24px;
+         }
+       }
+
+     }
+      @media (max-width: 800px) {
+        position: absolute;
+        left: -5px;
+        top: 0;
+        height: 50px !important;
+        width: 60px !important;
+
+        a.j-next,
+        a.j-previous {
+          //position: absolute;
+          //top: 50%;
+          //transform: translateY(-50%);
+
+          &::before {
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+
+      }
+   }
+
+
+  }
+  /*ie only hack to make wall li even to be 505px to the right  */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .juicer-feed.living-wall {
+      /*first child-doesnt showup for some reason in IE*/
+      li.feed-item {
+        &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10), &:nth-child(12), &:nth-child(14),&:nth-child(16),&:nth-child(18) {
+          left: 505px !important;
+        }
+        &:nth-child(2) {
+          left: 0 !important;
+          top: 0 !important;
+        }
+        &:nth-child(3), &:nth-child(4) {
+          top: 0 !important;
+          left: 505px !important;
+        }
+        &:nth-child(5), &:nth-child(6) {
+          top: 505px !important;
+        }
+        &:nth-child(7), &:nth-child(8) {
+          top: 1010px !important;
+        }
+        &:nth-child(9), &:nth-child(10) {
+          top: 1515px !important;
+        }
+        &:nth-child(11), &:nth-child(12) {
+          top: 2020px !important;
+        }
+        &:nth-child(13), &:nth-child(14){
+            top: 2525px !important;
+        }
+
+        &:nth-child(15), &:nth-child(16) {
+          top: 3030px !important;
+        }
+        &:nth-child(17), &:nth-child(18) {
+             top: 3535px !important;
+      }
+    }
+  }
+}
+
+  // user who made the post (content at the top of the modal);
+  .j-poster h3 {
+    @extend .ng-article-kicker !optional;
+    margin-bottom: 10px !important;
+    max-width: 75% !important;
+  }
+
+  .juicer-feed .j-message .j-title p {
+    @extend .ng-article-subhead ;
+
+    @media (max-width: 800px){
+      font-size: 2rem;
+    }
+  }
+}
+  .j-message > p{
+     @extend .base-body-p !optional;
+  }
+
+
+/*powered by juicer hide*/
+h1.referral {
+   display: none !important;
+}

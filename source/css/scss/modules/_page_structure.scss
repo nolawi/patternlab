@@ -1,0 +1,103 @@
+/**
+Page Structure
+
+Styleguide PageStructure
+*/
+/**
+Configuration
+
+Styleguide PageStructure.Configuration
+*/
+/**
+XLarge and Large Responsive Configuration
+
+- x-large (#{$breakpoint-xlarge} and greater)
+- large (#{$breakpoint-large} - #{$breakpoint-large-max})
+
+<table class="settings">
+    <tr>
+        <td>Container width</td>
+        <td>990px</td>
+    </tr>
+    <tr>
+        <td>Inner padding</td>
+        <td>20px each side</td>
+    </tr>
+    <tr>
+        <td>Content width</td>
+        <td>950px</td>
+    </tr>
+</table>
+
+
+Styleguide PageStructure.Configuration.01
+*/
+/**
+Medium, Small and Mini Responsive Configuration
+
+- medium (#{$breakpoint-medium} - #{$breakpoint-medium-max})
+- small (#{$breakpoint-small} - #{$breakpoint-small-max})
+- mini (up to #{$breakpoint-mini-max})
+
+<table class="settings">
+    <tr>
+        <td>Container width</td>
+        <td>viewport width</td>
+    </tr>
+    <tr>
+        <td>Inner padding</td>
+        <td>20px each side</td>
+    </tr>
+    <tr>
+        <td>Content width</td>
+        <td>viewport width - 40px</td>
+    </tr>
+</table>
+
+Styleguide PageStructure.Configuration.02
+*/
+/**
+Page Modules
+
+A page module is a part of a page that is independent of content. These modules
+may change state based on the current content (for example, navigation indicating which
+section or page you are on).
+
+- Global Navigation Heading
+- Page Heading
+- Navigation
+- Sharing
+- Page Footer
+
+Styleguide PageStructure.PageModules
+*/
+
+/**
+Content Modules
+
+A content module is a part of the primary content displayed on the page, or
+content that is directly dependent on the content. Not all content modules are
+applicable to all types of content.
+
+Each module is defined first by what it contains (for example the article heading
+might contain a headline and subheadline) for each content type. Secondly it
+defines methods of presenting the content based on our various NGKit styles,
+and interaction on the page at different responsive breakpoints.
+
+- Article Heading
+- Different versions of document (language and audience content)
+- Downloads
+- Attached resources and media (currently the RC)
+- Main content
+- Supporting material for main content (e.g. objectives and preperation in an activity, quizzes)
+- Side bars (e.g. Tips and tricks, fast facts)
+- Vocabulary
+- Key Concepts
+- Credits
+- User Permissions
+- Related Content
+- Content Ratings
+- Content Reviews and discussion
+
+Styleguide PageStructure.ContentModules
+*/

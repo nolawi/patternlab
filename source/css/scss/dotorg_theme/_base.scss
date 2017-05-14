@@ -1,0 +1,714 @@
+/* Importing existing variables for reference */
+$base-body-background: $global-background !default;
+$base-body-font-family: Montserrat, Helvetica, Arial, sans-serif !default;
+$base-body-font-weight: 200 !default;
+$base-body-bold-weight: 600 !default;
+$base-body-font-size: $global-font-size !default;
+$base-body-line-height: $global-line-height !default;
+$base-body-color: $global-color !default;
+
+$base-link-color: $global-link-color !default;
+$base-link-text-decoration: none !default;
+$base-link-hover-color: $global-link-color !default;
+$base-link-hover-text-decoration: none !default;
+$base-em-color: $base-body-color !default;
+$base-ins-background: #ffa !default;
+$base-ins-color: $base-body-color !default;
+$base-mark-background: $base-ins-background !default;
+$base-mark-color: $base-ins-color !default;
+$base-quote-font-style: italic !default;
+$base-selection-background: #39f !default;
+$base-selection-color: #fff !default;
+$base-heading-border: 4px solid;
+$base-heading-border-padleft: 35px;
+$base-margin-vertical: $global-margin !default;
+
+$base-heading-font-family: Verlag, Helvetica, Arial, sans-serif !default;
+$base-heading-font-weight: normal !default;
+$base-heading-color: $base-body-color !default;
+$base-heading-text-transform: uppercase !default;
+$base-heading-margin-top: $global-large-margin !default;
+$base-h1-font-size: 4.275rem !default;
+//70px
+$base-h1-line-height: 1.2 !default;
+$base-h2-font-size: 3.55rem !default;
+$base-h2-line-height: 1.2 !default;
+$base-h3-font-size: 3.375rem !default;
+$base-h3-line-height: 1.2 !default;
+$base-h3-font-letter-spacing: -.01em !default;
+$base-h4-font-size: 2.1875rem !default;
+$base-h4-line-height: 1.5 !default;
+$base-h4-font-letter-spacing: .13em !default;
+$base-h5-font-size: $base-h4-font-size !default;
+$base-h5-line-height: 1.4 !default;
+$base-h6-font-size: 1.25rem !default;
+$base-h6-line-height: 1.5 !default;
+$base-h6-font-weight: bold !default;
+
+$base-list-padding-left: $global-margin * 2 !default;
+
+$base-hr-border: $global-border !default;
+$base-hr-border-width: 1px !default;
+
+$base-blockquote-border: #999 !default;
+$base-blockquote-border-width: 1px !default;
+$base-blockquote-color: #999 !default;
+$base-blockquote-small-color: $global-muted-color !default;
+$base-blockquote-font-family: $base-heading-font-family;
+$base-blockquote-font-size: 1.25rem !default;
+$base-blockquote-font-style: inherit !default;
+$base-blockquote-line-height: 2 !default;
+$base-blockquote-margin-bottom: 50px !default;
+$base-blockquote-margin-top: 40px !default;
+$base-blockquote-margin-left: 35px !default;
+$base-blockquote-padding: 0px !default;
+$base-blockquote-padding-left: 35px !default;
+$base-blockquote-letter-spacing: .12em;
+$base-blockquote-word-spacing: .05em;
+
+$base-code-color: $base-body-color !default;
+$base-code-font-size: 0.857em !default;
+//round($global-font-size * 0.857) !default;
+$base-code-font-family: Consolas, monospace, serif !default;
+$base-code-border: $global-border;
+$base-code-background: $global-default-muted-background;
+
+$base-pre-padding: 10px !default;
+$base-pre-background: #f5f5f5 !default;
+$base-pre-color: $base-body-color !default;
+$base-pre-font-family: $base-code-font-family !default;
+$base-pre-font-size: 0.857em !default;
+//round($global-font-size * 0.857) !default;
+$base-pre-line-height: 0.9 !default;
+//round($base-pre-font-size * 0.9) !default;
+$base-pre-border: $global-border;
+$body-background-color: #fff;
+.ng-base-body-color {
+  background: $base-body-color;
+  color: #fff
+}
+
+.ng-base-link-color {
+  background: $base-link-color;
+  color: #fff
+}
+
+.ng-base-link-hover-color {
+  background: $base-link-hover-color;
+  color: #fff
+}
+
+.ng-base-em-color {
+  background: $base-em-color;
+  color: #fff
+}
+
+.ng-base-ins-background {
+  background: $base-ins-background
+}
+
+.ng-base-ins-color {
+  background: $base-ins-color;
+  color: #fff
+}
+
+.ng-base-mark-background {
+  background: $base-mark-background
+}
+
+.ng-base-mark-color {
+  background: $base-mark-color;
+  color: #fff
+}
+
+.ng-base-selection-background {
+  background: $base-selection-background;
+  color: #fff
+}
+
+.ng-base-selection-color {
+  background: $base-selection-color;
+  color: #fff
+}
+
+.ng-base-heading-color {
+  background: $base-heading-color;
+  color: #fff
+}
+
+.ng-base-hr-border {
+  background: $base-hr-border;
+  color: #fff
+}
+
+.ng-base-blockquote-border {
+  background: $base-blockquote-border;
+  color: #fff
+}
+
+.ng-base-blockquote-small-color {
+  background: $base-blockquote-small-color;
+  color: #fff
+}
+
+.ng-base-code-color {
+  background: $base-code-color;
+  color: #fff
+}
+
+.ng-base-code-border {
+  background: $base-code-border;
+  color: #fff
+}
+
+.ng-base-code-background {
+  background: $base-code-background
+}
+
+.ng-base-pre-background {
+  background: $base-pre-background
+}
+
+.ng-base-pre-color {
+  background: $base-pre-color;
+  color: #fff
+}
+
+.ng-base-pre-border {
+  background: $base-pre-border;
+  color: #fff
+}
+
+/*
+Pull Quote
+
+.ng-pull-quote class.
+
+Markup:
+<h1 class="ng-pull-quote">“This is the best time ever to save species because so many need our help”</h1>
+
+
+Weight: 4
+
+Styleguide Typography.Base.PullQuote
+*/
+.ng-pull-quote{
+  font-size:calculateRem(28px) !important;
+  font-weight: 400 !important;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: $base-blockquote-margin-bottom;
+  margin-top: $base-blockquote-margin-top;
+  padding: $base-blockquote-padding;
+  padding-left: 35px;
+  letter-spacing: $base-blockquote-letter-spacing !important;
+  word-spacing: $base-blockquote-word-spacing !important;
+  border-left: 2px solid black !important;
+  line-height: 2 !important;
+}
+
+@media (max-width: $breakpoint-medium-max) {
+  .ng-pull-quote {
+    font-size: calculateRem(24px) !important;
+    letter-spacing: .12em !important;
+    word-spacing: .07em !important;
+    padding-left: 30px !important;
+    border-left: 1px solid black !important;
+    margin-top: 35px;
+  }
+}
+@media (max-width: $breakpoint-small-max) {
+  .ng-pull-quote {
+    font-size: calculateRem(18px) !important;
+    letter-spacing: .12em !important;
+    word-spacing: .08em !important;
+    padding-left: 25px !important;
+    border-left: 1px solid black !important;
+    margin-left: 0;
+  }
+}
+
+/*
+Body Copy Standard
+
+p tag with no class.
+
+Markup:
+<p>
+  The National Geographic Society is a global nonprofit organization committed to exploring and protecting our planet.
+  We are not just a magazine and a tv channel!
+  The interaction of animals with their environments is the engine that keeps the planet healthy for all of us.
+  But for many species, time is running out. That's why National Geographic,
+  along with photographer Joel Sartore, is dedicated to finding solutions to save them.
+</p>
+
+
+Weight: 4
+
+Styleguide Typography.Base.BodyCopy
+*/
+/*extend body paragraph styles*/
+
+.base-body-p {
+  font-size: calculateRem(16px);
+  font-weight: 200;
+  line-height: 1.7;
+  word-spacing: .05em;
+
+}
+
+body {
+  @extend .base-body-p !optional;
+}
+
+
+
+@media (max-width: $breakpoint-medium-max) {
+  body {
+    font-size: calculateRem(16px);
+    font-weight: 200;
+    line-height: 1.8;
+    word-spacing: .05em;
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  body {
+    font-size: calculateRem(16px);
+    font-weight: 200;
+    line-height: 1.7;
+    word-spacing: .05em;
+  }
+}
+
+
+
+@mixin hook-base-link() {
+  border-bottom: 1px solid $ng-gold;
+  text-decoration: none;
+}
+
+@mixin hook-base-link-hover() {
+  border-bottom: 1px solid #000;
+  text-decoration: none;
+}
+
+@mixin hook-base-h() {
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin hook-base-h1() {
+}
+
+@mixin hook-base-h2() {
+}
+
+@mixin hook-base-h3() {
+}
+
+@mixin hook-base-h4() {
+  font-style: $base-heading-font-family;
+  letter-spacing: $base-h4-font-letter-spacing;
+  font-weight: 700;
+
+}
+
+@mixin hook-base-h5() {
+
+}
+
+@mixin hook-base-h6() {
+
+}
+
+@mixin hook-base-hr() {
+  margin: 60px 0;
+}
+
+.ng-solo-breadcrumb {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+@mixin hook-base-blockquote() {
+  font-size: $base-blockquote-font-size;
+  color: $base-blockquote-color;
+  font-family: $base-heading-font-family;
+  font-style: $base-blockquote-font-style;
+  text-transform: uppercase;
+  margin-bottom: $base-blockquote-margin-bottom;
+  margin-left: $base-blockquote-margin-left;
+  margin-top: $base-blockquote-margin-top;
+  padding: $base-blockquote-padding;
+  padding-left: 35px;
+  letter-spacing: $base-blockquote-letter-spacing !important;
+  word-spacing: $base-blockquote-word-spacing !important;
+  border-left: 2px solid #999;
+  line-height: 2;
+  font-weight: 400;
+
+  @media (max-width: $breakpoint-medium-max) {
+    font-size:calculateRem(18px) !important;
+    letter-spacing: .12em !important;
+    word-spacing: .07em !important;
+    padding-left: 30px !important;
+    border-left: 1px solid black;
+    margin-top: 35px;
+  }
+  @media (max-width: $breakpoint-mini-max) {
+    letter-spacing: .12em !important;
+    word-spacing: .08em !important;
+    padding-left: 25px !important;
+    border-left: 1px solid black;
+    margin-left: 0;
+  }
+}
+
+@mixin hook-base-body() {
+}
+
+@mixin hook-base-code() {
+}
+
+@mixin hook-base-pre() {
+  border: 1px solid $base-pre-border;
+  border-radius: 3px;
+}
+
+@mixin hook-base-misc() {
+
+  hr.ng-container-separator {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+/* default strong,b weight on body-overwrite normalis.css */
+b, strong {
+  font-weight: $base-body-bold-weight !important;
+}
+  /*
+  External Link Indicator
+
+  To provide an iconic indicator that a link will take the user off-site, add the
+  `ng-link-external` class to the `<a>` tag.
+
+  Markup:
+  <p>
+      This is a <a href="#">Normal link</a> and this is an <a href="#" class="ng-link-external">External link.</a>
+  </p>
+  <h3><a href="#" class="ng-link-external">This heading leads somewhere</a></h3>
+  <h3 class="ng-promo-title-large"><a href="#" class="ng-link-external">This heading leads somewhere</a></h3>
+  <h3 class="ng-promo-title"><a href="#" class="ng-link-external">This heading leads somewhere</a></h3>
+  <h3 class="ng-article-subhead"><a href="#" class="ng-link-external">This heading leads somewhere</a></h3>
+
+  Weight: 4
+
+  Styleguide Typography.Base.ExternalLink
+  */
+  .ng-link-external:after {
+    content: " \f118";
+    font-size: 0.55em;
+    font-family: icon-society;
+    color: #999;
+    line-height: 1.8;
+    vertical-align: top;
+  }
+
+  /*
+  Image Links
+
+  To provide an Opacity Hover Effect to show that an Image is a clickable link.  To apply, simply add the `ng-image-link` class to the `<a>` tag.
+
+  Markup:
+  <a class="ng-image-link" href="#">
+      <img src="http://lorempixel.com/400/300/" />
+  </a>
+
+  Weight: 10
+
+  Styleguide Media.Thumbnails.ImageLinks
+  */
+  /* Hover Effect for Images contained within a Link. */
+  a.ng-image-link, a.ng-image-link:hover {
+    border: 0;
+  }
+  a.ng-image-link img, a.ng-image-link div {
+    opacity: 1;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    transform: translateZ(0);
+  }
+  a.ng-image-link img:hover, a.ng-image-link div:hover {
+    opacity: 0.9 !important;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+  }
+
+  @media (max-width: $breakpoint-small-max) {
+
+  }
+  @media (max-width: $breakpoint-mini-max) {
+
+  }
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+  a.ng-muted-link, .ng-muted-link a {
+    text-decoration: none;
+    transition: border-color 300ms;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-color: $ng-gold;
+    }
+  }
+
+  a.ng-unstyled {
+    color: inherit !important;
+    text-decoration: inherit;
+    border-bottom: none;
+  }
+  a.ng-unstyled:hover {
+    text-decoration: inherit;
+    border-bottom: none;
+  }
+
+  a.ng-nohover:hover {
+    text-decoration: inherit;
+    color: inherit !important;
+    border-bottom-color: $ng-gold;
+  }
+  p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  /*
+   * Abbreviation and definition
+   */
+
+  abbr[title],
+  dfn[title] {
+    cursor: help;
+    border-bottom: 1px dotted;
+    font-style: normal;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .ng-h1, .ng-h2, .ng-h3, .ng-h4, .ng-h5, .ng-h6 {
+    margin-bottom: 25px;
+    letter-spacing: $base-heading-letter-spacing;
+
+  }
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+  .ng-h1 + p, .ng-h2 + p, .ng-h3 + p, .ng-h4 + p, .ng-h5 + p, .ng-h6 + p,
+  h1 + ul, h2 + ul, h3 + ul, h4 + ul, h5 + ul, h6 + ul,
+  .ng-h1 + ul, .ng-h2 + ul, .ng-h3 + ul, .ng-h4 + ul, .ng-h5 + ul, .ng-h6 + ul,
+  h1 + ol, h2 + ol, h3 + ol, h4 + ol, h5 + ol, h6 + ol,
+  .ng-h1 + ol, .ng-h2 + ol, .ng-h3 + ol, .ng-h4 + ol, .ng-h5 + ol, .ng-h6 + ol {
+    margin-top: 0
+  }
+
+  ul {
+    padding: 0;
+    list-style: disc;
+    list-style-position: outside;
+    padding-left: $base-list-padding-left;
+  }
+
+  /* Small print for identifying the source */
+  blockquote small {
+    display: block;
+    color: $base-blockquote-small-color;
+    font-style: 300;
+    font-size: 12px;
+    letter-spacing: .15em;
+    word-spacing: .22em;
+  }
+
+  /* Smaller margin if `small` follows */
+  blockquote p:last-of-type {
+    margin-bottom: 5px;
+  }
+
+  .ng-hr-small {
+    margin: 20px 0;
+  }
+}
+
+@import "core/base";
+//overwriting core - link hover on ng contrast and alert warning black globally
+.ng-alert-warning, .ng-contrast {
+  a:hover {
+    border-color:darken( $theme-primary-background, 10% ) ;
+    color: $base-pre-background;
+  }
+  a.ng-button:hover {
+    border-color: #444;
+  }
+}
+
+
+h1, .ng-h1, h2, .ng-h2, h4, .ng-h4, h5, .ng-h5, h6, .ng-h6 {
+  margin: 0 0 20px 0 ;
+  font-family: $base-heading-font-family;
+  color: #000;
+  text-transform: uppercase;
+}
+
+h3, .ng-h3{
+  margin: 0 0 20px 0;
+  font-family: $base-body-font-family;
+  font-weight: 300;
+  text-transform: none;
+  word-spacing: .02em;
+  letter-spacing: -.01em;
+}
+
+h3.label {
+  margin: 0 0 20px 0 ;
+  font-size: calculateRem(14px) ;
+  font-weight: 700 ;
+  font-family: $base-heading-font-family;
+  color: #999;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+h5, .ng-h5, h6, .ng-h6 {
+  font-weight: $base-h6-font-weight;
+}
+
+h1, .ng-h1 {
+  font-size: calculateRem(70px);
+  font-weight: 400 ;
+  line-height: 1.2 ;
+  letter-spacing: .12em ;
+  word-spacing: .07em ;
+  border-left: 4px solid black ;
+  padding-left: 45px;
+}
+
+
+h2, .ng-h2 {
+  font-size: calculateRem(60px) ;
+  font-weight: 300 ;
+  line-height: 1.2 ;
+  letter-spacing: .11em ;
+  word-spacing: .05em ;
+}
+
+h3, .ng-h3 {
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
+  font-size: calculateRem(54px);
+  line-height: 1.2 ;
+  word-spacing: .02em ;
+}
+
+h4, .ng-h4, h5, .ng-h5 {
+  font-size: calculateRem(28px) ;
+  font-weight: 700 ;
+  line-height: 1.5 ;
+  letter-spacing: .13em ;
+  word-spacing: .05em ;
+}
+
+h6, .ng-h6 {
+  font-size: calculateRem(18px) ;
+  font-weight: 700 ;
+  line-height: 1.7 ;
+  letter-spacing: .12em ;
+  word-spacing: .2em ;
+}
+
+@media(max-width: 959px) {
+
+  h1, .ng-h1 {
+    font-size: calculateRem(50px) ;
+    font-weight: 300 ;
+    line-height: 1.2 ;
+    letter-spacing: .12em ;
+    word-spacing: .08em ;
+    border-left: 3px solid black ;
+    padding-left: 35px ;
+  }
+
+  h2, .ng-h2 {
+    font-size: calculateRem(45px) ;
+    font-weight: 200 ;
+    line-height: 1.2 ;
+    letter-spacing: .11em ;
+    word-spacing: .05em ;
+  }
+
+  h3, .ng-h3 {
+    font-size: calculateRem(45px) ;
+    line-height: 1.25 ;
+    word-spacing: .02em ;
+  }
+  /* I made h4 2px bigger */
+  h4, .ng-h4, h5, .ng-h5 {
+    font-size: calculateRem(22px) ;
+    font-weight: 700 ;
+    line-height: 1.6 ;
+    letter-spacing: .13em ;
+    word-spacing: .05em ;
+  }
+
+  h6, .ng-h6 {
+    font-size: calculateRem(16px) ;
+    font-weight: 700 ;
+    line-height: 1.7 ;
+    letter-spacing: .12em ;
+    word-spacing: .2em ;
+  }
+}
+
+
+/*
+ * Small & X-Small Breakpoints
+ */
+@media(max-width: 767px) {
+  h1, .ng-h1 {
+    font-size: calculateRem(35px) ;
+    font-weight: 300 ;
+    line-height: 1.3 ;
+    letter-spacing: .12em ;
+    word-spacing: .08em ;
+    border-left: 2px solid black ;
+    padding-left: 25px ;
+  }
+
+
+  h2, .ng-h2 {
+    font-size: calculateRem(35px) ;
+    font-weight: 200 ;
+    line-height: 1.3 ;
+    letter-spacing: .11em ;
+    word-spacing: .05em ;
+  }
+
+
+  h3, .ng-h3 {
+    font-size: calculateRem(35px) ;
+    line-height: 1.3 ;
+    word-spacing: .02em ;
+  }
+
+  h4, .ng-h4, h5, .ng-h5 {
+    font-size: calculateRem(18px) ;
+    font-weight: 700 ;
+    line-height: 1.7 ;
+    letter-spacing: .12em ;
+    word-spacing: .18em ;
+  }
+
+
+
+  h6, .ng-h6 {
+    font-size: calculateRem(16px) ;
+    font-weight: 700 ;
+    line-height: 1.7 ;
+    letter-spacing: .12em ;
+    word-spacing: .2em ;
+  }
+
+
+}
+

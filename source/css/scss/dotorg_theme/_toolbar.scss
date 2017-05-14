@@ -1,0 +1,182 @@
+$toolbar-background:                             #fff !default;
+$toolbar-color:                                  $global-color !default;
+$toolbar-link-color:                             $global-link-color !default;
+$toolbar-link-hover-color:                       $global-link-hover-color !default;
+$toolbar-border:                                 rgba(0,0,0,0.2) !default;
+$toolbar-border-bottom:                          rgba(0,0,0,0.3) !default;
+$toolbar-text-shadow:                            none !default;
+
+$toolbar-nav-height:                             45px !default;
+$toolbar-nav-line-height:                        $toolbar-nav-height !default;
+$toolbar-nav-padding-horizontal:                 13px !default;
+$toolbar-nav-color:                              $global-color !default;
+$toolbar-nav-font-size:                          $global-font-size !default;
+$toolbar-nav-font-weight:                        700 !default;
+$toolbar-nav-font-family:                        $base-body-font-family !default;
+$toolbar-nav-hover-background:                   $global-color !default;
+$toolbar-nav-hover-color:                        $global-contrast-color !default;
+$toolbar-nav-onclick-background:                 $global-default-active-background !default;
+$toolbar-nav-onclick-color:                      $global-color !default;
+$toolbar-nav-active-background:                  $global-default-muted-background !default;
+$toolbar-nav-active-color:                       $global-color !default;
+$toolbar-nav-subtitle-font-size:                 10px !default;
+$toolbar-nav-subtitle-offset:                    2px !default;
+$toolbar-nav-hover-border:                       rgba(0,0,0,0.1) !default;
+$toolbar-nav-hover-border-top:                   rgba(0,0,0,0.1) !default;
+$toolbar-nav-onclick-border-top:                 rgba(0,0,0,0.2) !default;
+$toolbar-nav-hover-box-shadow:                   rgba(0,0,0,0.1) !default;
+$toolbar-nav-onclick-box-shadow:                 rgba(0,0,0,0.1) !default;
+
+$toolbar-brand-font-size:                        round($global-font-size * 1.28) !default; // 18px
+$toolbar-brand-color:                            $global-color !default;
+$toolbar-brand-hover-color:                      $global-color !default;
+
+$toolbar-toggle-font-size:                       round($global-font-size * 1.28) !default; // 18px
+$toolbar-toggle-color:                           $global-color !default;
+$toolbar-toggle-hover-color:                     $global-color !default;
+$toolbar-toggle-icon:                            "\f0c9" !default;
+$toolbar-toggle-icon-alt:                        "\1f8ad" !default;
+
+$toolbar-mini-nav-height:                        30px !default;
+$toolbar-mini-nav-line-height:                   $toolbar-mini-nav-height !default;
+$toolbar-mini-nav-padding-horizontal:            10px !default;
+
+.ng-toolbar-toggle-icon, .ng-toolbar-toggle-icon-alt {font-family: icon-society}
+.ng-toolbar-background {background: $toolbar-background}
+.ng-toolbar-color {background: $toolbar-color;color: #fff}
+.ng-toolbar-link-color {background: $toolbar-link-color;color: #fff}
+.ng-toolbar-link-hover-color {background: $toolbar-link-hover-color;color: #fff}
+.ng-toolbar-border {background: $toolbar-border}
+.ng-toolbar-border-bottom {background: $toolbar-border-bottom}
+.ng-toolbar-text-shadow {background: $toolbar-text-shadow}
+
+.ng-toolbar-nav-color {background: $toolbar-nav-color;color: #fff}
+.ng-toolbar-nav-hover-background {background: $toolbar-nav-hover-background}
+.ng-toolbar-nav-hover-color {background: $toolbar-nav-hover-color;color: #fff}
+.ng-toolbar-nav-onclick-background {background: $toolbar-nav-onclick-background}
+.ng-toolbar-nav-onclick-color {background: $toolbar-nav-onclick-color;color:#fff}
+.ng-toolbar-nav-active-background {background: $toolbar-nav-active-background}
+.ng-toolbar-nav-active-color {background: $toolbar-nav-active-color;color: #fff}
+.ng-toolbar-nav-hover-border {background: $toolbar-nav-hover-border}
+.ng-toolbar-nav-hover-border-top {background: $toolbar-nav-hover-border-top}
+.ng-toolbar-nav-onclick-border-top {background: $toolbar-nav-onclick-border-top}
+.ng-toolbar-nav-hover-box-shadow {background: $toolbar-nav-hover-box-shadow}
+.ng-toolbar-nav-onclick-box-shadow {background: $toolbar-nav-onclick-box-shadow}
+
+.ng-toolbar-brand-color {background: $toolbar-brand-color;color: #fff}
+.ng-toolbar-brand-hover-color {background: $toolbar-brand-hover-color;color: #fff}
+
+.ng-toolbar-toggle-color {background: $toolbar-toggle-color;color: #fff}
+.ng-toolbar-toggle-hover-color {background: $toolbar-toggle-hover-color;color: #fff}
+
+.ng-toolbar-page-tile {
+  margin-left:0 !important;
+  @media (max-width: 850px) {
+    div{
+      font-size:.85em;
+    }
+  }
+}
+
+.ng-header-container{
+  .ng-padding-large-right{
+    @media (max-width: 850px) {
+      padding-right: 20px !important;
+    }
+  }
+}
+
+
+@mixin hook-toolbar(){
+    border: 1px solid $toolbar-border;
+    background-origin: border-box;
+}
+@mixin hook-toolbar-nav(){
+    //
+    // 1. Overlap top border
+    // 2. Collapse horizontal borders
+    // 3. Adjust height because of 1. and `box-sizing` set to `border-box`
+    //
+    margin-top: -1px; // 1
+    margin-left: -1px; // 2
+    height: $toolbar-nav-height + 1; // 3
+    border: 1px solid transparent;
+    border-bottom-width: 0;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+    @if $toolbar-text-shadow {
+        text-shadow: 0 1px 0 $toolbar-text-shadow;
+    }
+}
+@mixin hook-toolbar-nav-hover(){
+    /*
+     * Needed for hover
+     * 1. Create position context to superimpose the successor elements border
+     * 2. Needed because the `li` elements have already a position context
+     */
+    position: relative; // 1 */
+    z-index: 1; // 2 */
+    border-left-color: $toolbar-nav-hover-border;
+    border-right-color: $toolbar-nav-hover-border;
+    border-top-color: $toolbar-nav-hover-border-top;
+    box-shadow: inset 0 2px 4px $toolbar-nav-hover-box-shadow;
+}
+@mixin hook-toolbar-nav-onclick(){
+    border-left-color: $toolbar-nav-hover-border;
+    border-right-color: $toolbar-nav-hover-border;
+    border-top-color: $toolbar-nav-onclick-border-top;
+    box-shadow: inset 0 2px 4px $toolbar-nav-onclick-box-shadow;
+}
+@mixin hook-toolbar-nav-active(){
+    border-left-color: $toolbar-nav-hover-border;
+    border-right-color: $toolbar-nav-hover-border;
+    border-top-color: $toolbar-nav-onclick-border-top;
+    box-shadow: inset 0 2px 4px $toolbar-nav-onclick-box-shadow;
+}
+@mixin hook-toolbar-content(){
+    @if $toolbar-text-shadow {
+        text-shadow: 0 1px 0 $toolbar-text-shadow;
+    }
+}
+@mixin hook-toolbar-misc(){
+    // Change the icon font to icon-society
+    .ng-toolbar-toggle:after {
+        font-family: icon-society;
+    }
+    .ng-toolbar:not(.ng-toolbar-attached) {
+        border-radius: 0;
+    }
+    .ng-toolbar:not(.ng-toolbar-attached) .ng-toolbar-nav:first-child > li:first-child > a {
+        border-radius: 0;
+    }
+    /*
+     * Sub-modifier `ng-toolbar-flip`
+     */
+    .ng-toolbar .ng-toolbar-flip .ng-toolbar-nav > li > a {
+        margin: 0;
+    }
+
+    .ng-toolbar-mini > .ng-toolbar-nav > li > a {
+        height: $toolbar-mini-nav-height + 1;
+        line-height: $toolbar-mini-nav-line-height;
+        padding: 0 $toolbar-mini-nav-padding-horizontal;
+    }
+    .ng-toolbar-mini > .ng-toolbar-content {
+        height: $toolbar-mini-nav-height;
+        line-height: $toolbar-mini-nav-line-height;
+        padding: 0 $toolbar-mini-nav-padding-horizontal;
+    }
+    .ng-toolbar-attached {
+        border-left: 0;
+        border-right: 0;
+    }
+    .ng-toolbar > a, .ng-toolbar > a:hover, .ng-toolbar-toggle, .ng-toolbar-toggle:hover {
+        border-bottom: none;
+    }
+    .ng-toolbar-nav > li > a [class*='ng-icon'], .ng-toolbar-nav > li > span [class*='ng-icon'] {
+        font-size: 1.5rem;
+        vertical-align: middle;
+    }
+}
+
+@import "customcomponents/toolbar";

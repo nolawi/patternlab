@@ -1,0 +1,6 @@
+$upload-dragover-box-shadow:                  rgba(100,100,100,0.3) !default;
+$upload-dragover-box-shadow-blur:             20px !default;
+
+.ng-upload-dragover-box-shadow {background: $upload-dragover-box-shadow}
+
+@mixin hook-upload-misc(){}

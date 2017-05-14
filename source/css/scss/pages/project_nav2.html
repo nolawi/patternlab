@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=10;IE=Edge,chrome=1"/>
+        <meta name="copyright" content="(c) National Geographic Society" />
+        <meta name="author" content="National Geographic Society" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Mockup Page Template - National Geographic Society</title>
+
+        <style type="text/css">
+        @font-face {
+            font-family: 'icon-society';
+            src: url('../fonts/icon-society.woff') format('woff'),
+              url('../fonts/icon-society.ttf') format('truetype'),
+              url('../fonts/icon-society.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" href="../public/style.css">
+        <script src="../public/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="ng-visible-medium-large">
+                <div class="ng-flex ng-flex-middle ng-flex-space-between ng-nav-border">
+                    <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click',justify:'#global-menu2'}">
+                        <button id="global-menu2" class="ng-button ng-button-blank">
+                            <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="37" width="267" class="ng-padding-horizontal" alt="National Geographic" />
+                            <i class="ng-icon-angle-down"></i>
+                        </button>
+                        <div class="ng-dropdown">
+                            <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                                <li><a href="#">Home</a></li>
+                                <li class="ng-parent"><a href="#">Who We Are</a>
+                                    <ul class="ng-nav-sub">
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Our Explorers</a></li>
+                                        <li><a href="#">Our Leadership &amp; Staff</a></li>
+                                        <li><a href="#">2015 Impact Report</a></li>
+                                    </ul>
+                                </li>
+                                <li class="ng-parent"><a href="#">What We Do</a>
+                                    <ul class="ng-nav-sub">
+                                        <li class="ng-nav-header">Projects</li>
+                                        <li><a href="#">Our Human Story</a></li>
+                                        <li><a href="#">Our Living Planet</a></li>
+                                        <li><a href="#">Critical Species</a></li>
+                                        <li><a href="#">New Frontiers</a></li>
+                                        <li class="ng-nav-divider"></li>
+                                        <li><a href="#">Grant Program</a></li>
+                                        <li class="ng-nav-header">Education</li>
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">Curriculum</a></li>
+                                        <li><a href="#">Reference</a></li>
+                                        <li><a href="#">Maps</a></li>
+                                        <li class="ng-nav-divider"></li>
+                                        <li><a href="#">Events</a></li>
+                                    </ul>
+                                </li>
+                                <li class="ng-parent"><a href="#">Get Involved</i></a>
+                                    <ul class="ng-nav-sub">
+                                        <li><a href="#">Support Our Work</a></li>
+                                        <li><a href="#">Join Our Email List</a></li>
+                                        <li><a href="#">Attend an Event</a></li>
+                                        <li><a href="#">Apply for a Grant</a></li>
+                                    </ul>
+                                </li>
+                                <li class="ng-nav-divider"></li>
+                                <li>
+                                    <div class="ng-text-center ng-padding-bottom">
+                                        <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                                        <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="ng-text-center">
+                                        <a class="ng-button ng-button-primary ng-button-large" type="button">Donate</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ng-flex ng-flex-middle">
+                        <div>
+                            <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                            <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                            <a href="#" class="ng-icon-button ng-icon-share"></a>
+                        </div>
+                        <a href="#" class="ng-button ng-button-blank" data-ng-toggle="{target: '#search-panel-1'}">
+                            <i class="ng-icon-search ng-icon-small ng-padding-large-horizontal"></i>
+                        </a>
+                        <div>
+                            <a class="ng-button ng-button-primary" type="button">Donate</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ng-nav-expanded ng-nav-border">
+                    <ul class="ng-subnav ng-margin-remove">
+                        <li>
+                            <p><strong class="ng-padding-horizontal">Photo Ark</strong><p>
+                        </li>
+                        <li style="margin-top: 10px">
+                            <div style="height: 40px;border-left: 1px solid #e5e5e5"></div>
+                        </li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="#">Updates</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Florida Panther</a></li>
+                    </ul>
+                </div>
+                <div id="search-panel-1" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex">
+                    <form class="ng-form ng-container-center" action="" method="get">
+                        <div class="ng-panel ng-contrast-color">
+                            <input type="text" placeholder="Search" name="q" class="ng-form-blank ng-form-large ng-form-width-large">
+                            <button type='submit' class="ng-button ng-button-blank">
+                                <i class='ng-icon-search ng-icon-small ng-padding-horizontal'></i>
+                            </button>
+                        </div>
+                    </form>
+                    <a href="#" class="ng-close" data-ng-toggle="{target: '#search-panel-1'}"></a>
+                </div>
+            </div>
+
+            <div class="ng-flex ng-flex-middle ng-flex-space-between ng-hidden-medium-large" style="border-bottom: 1px solid #999;height: 60px">
+                <ul class="ng-subnav ng-margin-remove">
+                    <li>
+                        <div class="ng-button-dropdown" data-ng-modal="{target:'#modal'}">
+                            <button id="global-menu3" class="ng-button ng-button-blank">
+                                <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-short-black.min.svg" height="37" width="93" class="ng-padding-horizontal" alt="National Geographic" />
+                                <i class="ng-icon-angle-down"></i>
+                            </button>
+                    </li>
+                    <li style="margin: 0 20px">
+                        <div style="height: 33px;border-left: 1px solid #999"></div>
+                    </li>
+                    <li>
+                        <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click'}">
+                            <button class="ng-button ng-button-blank" style="height: 33px">
+                                Photo Ark
+                                <i class="ng-icon-angle-down ng-padding-horizontal"></i>
+                            </button>
+                            <div class="ng-dropdown">
+                                <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Get Involved</a></li>
+                                    <li><a href="#">Updates</a></li>
+                                    <li><a href="#">Education</a></li>
+                                    <li><a href="#">Florida Panther</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+
+        <section class="ng-container ng-container-center ng-padding-top" style="background: #fff;">
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-medium-1-1">
+
+                    <div class="ng-vertical-align ng-text-center" style="background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMTEzMHB4IiBoZWlnaHQ9IjQ1MHB4IiB2aWV3Qm94PSIwIDAgMTEzMCA0NTAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDExMzAgNDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIxMTMwIiBoZWlnaHQ9IjQ1MCIvPg0KPC9zdmc+DQo=') 50% 0 no-repeat; height: 450px;">
+                        <div class="ng-vertical-align-middle ng-width-1-2">
+                            <h1 class="ng-heading-large">Sample Heading</h1>
+                            <p class="ng-text-large">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+                            <p>
+                                <a class="ng-button ng-button-primary ng-button-large" href="#">Button</a>
+                                <a class="ng-button ng-button-large" href="#">Button</a>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-cog ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-thumbs-o-up ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-cloud-download ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-dashboard ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-comments ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ng-width-medium-1-3">
+                    <div class="ng-grid">
+                        <div class="ng-width-1-6">
+                            <i class="ng-icon-briefcase ng-icon-large ng-text-primary"></i>
+                        </div>
+                        <div class="ng-width-5-6">
+                            <h2 class="ng-h3">Sample Heading</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="ng-grid-divider">
+
+            <div class="ng-grid" data-ng-grid-margin>
+
+                <div class="ng-width-medium-1-2">
+                    <img width="660" height="400" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjYwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA2NjAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NjAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI2NjAiIGhlaWdodD0iNDAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yNTguMTg0LDE0My41djExM2gxNDMuNjMydi0xMTNIMjU4LjE4NHogTTM5MC4yNDQsMjQ0LjI0N0gyNzAuNDM3di04OC40OTRoMTE5LjgwOEwzOTAuMjQ0LDI0NC4yNDcNCgkJTDM5MC4yNDQsMjQ0LjI0N3oiLz4NCgk8cG9seWdvbiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjI3Ni44ODEsMjM0LjcxNyAzMDEuNTcyLDIwOC43NjQgMzEwLjgyNCwyMTIuNzY4IDM0MC4wMTYsMTgxLjY4OCAzNTEuNTA1LDE5NS40MzQgDQoJCTM1Ni42ODksMTkyLjMwMyAzODQuNzQ2LDIzNC43MTcgCSIvPg0KCTxjaXJjbGUgZmlsbD0iI0Q4RDhEOCIgY3g9IjMwNS40MDUiIGN5PSIxNzguMjU3IiByPSIxMC43ODciLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                </div>
+
+                <div class="ng-width-medium-1-2">
+                    <h1>Heading</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <h2>Subheading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a class="ng-button ng-button-primary" href="#">Button</a>
+                </div>
+
+            </div>
+
+            <hr class="ng-grid-divider">
+
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-medium-1-2">
+                    <h1>Heading</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <h2>Subheading</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a class="ng-button ng-button-primary" href="#">Button</a>
+                </div>
+
+                <div class="ng-width-medium-1-2">
+                    <img width="660" height="400" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNjYwcHgiIGhlaWdodD0iNDAwcHgiIHZpZXdCb3g9IjAgMCA2NjAgNDAwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA2NjAgNDAwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSI2NjAiIGhlaWdodD0iNDAwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0yNTguMTg0LDE0My41djExM2gxNDMuNjMydi0xMTNIMjU4LjE4NHogTTM5MC4yNDQsMjQ0LjI0N0gyNzAuNDM3di04OC40OTRoMTE5LjgwOEwzOTAuMjQ0LDI0NC4yNDcNCgkJTDM5MC4yNDQsMjQ0LjI0N3oiLz4NCgk8cG9seWdvbiBmaWxsPSIjRDhEOEQ4IiBwb2ludHM9IjI3Ni44ODEsMjM0LjcxNyAzMDEuNTcyLDIwOC43NjQgMzEwLjgyNCwyMTIuNzY4IDM0MC4wMTYsMTgxLjY4OCAzNTEuNTA1LDE5NS40MzQgDQoJCTM1Ni42ODksMTkyLjMwMyAzODQuNzQ2LDIzNC43MTcgCSIvPg0KCTxjaXJjbGUgZmlsbD0iI0Q4RDhEOCIgY3g9IjMwNS40MDUiIGN5PSIxNzguMjU3IiByPSIxMC43ODciLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                </div>
+            </div>
+
+            <hr class="ng-grid-divider">
+
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-medium-1-1">
+                    <div class="ng-panel ng-panel-box ng-text-center">
+                        <p><strong>Phasellus viverra nulla ut metus.</strong> Quisque rutrum etiam ultricies nisi vel augue. <a class="ng-button ng-button-primary ng-margin-left" href="#">Button</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="ng-text-center">Our Clients</h1>
+
+            <div class="ng-grid" data-ng-grid-margin>
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                    <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                       <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                     <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                        <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                   <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                        <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                    <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                        <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                     <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                         <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+
+                <div class="ng-width-1-2 ng-width-medium-1-3 ng-width-large-1-6">
+                     <figure class="ng-overlay ng-overlay-hover">
+                        <img width="350" height="150" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkViZW5lXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMzUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzNTAgMTUwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzNTAgMTUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxyZWN0IGZpbGw9IiNGNUY1RjUiIHdpZHRoPSIzNTAiIGhlaWdodD0iMTUwIi8+DQo8ZyBvcGFjaXR5PSIwLjciPg0KCTxwYXRoIGZpbGw9IiNEOEQ4RDgiIGQ9Ik0xMzEuOTEsNDEuMXY2Ny44aDg2LjE4VjQxLjFIMTMxLjkxeiBNMjExLjE0NiwxMDEuNTQ5SDEzOS4yNlY0OC40NTFoNzEuODg3VjEwMS41NDl6Ii8+DQoJPHBvbHlnb24gZmlsbD0iI0Q4RDhEOCIgcG9pbnRzPSIxNDMuMTI5LDk1LjgzIDE1Ny45NDMsODAuMjU4IDE2My40OTQsODIuNjYgMTgxLjAwOSw2NC4wMTQgMTg3LjkwMiw3Mi4yNiAxOTEuMDE0LDcwLjM4MiANCgkJMjA3Ljg0OCw5NS44MyAJIi8+DQoJPGNpcmNsZSBmaWxsPSIjRDhEOEQ4IiBjeD0iMTYwLjI0MyIgY3k9IjYxLjk1NCIgcj0iNi40NzIiLz4NCjwvZz4NCjwvc3ZnPg0K" alt="">
+                        <figcaption class="ng-overlay-panel ng-overlay-background ng-overlay-fade ng-flex ng-flex-center ng-flex-middle ng-text-center">
+                            <div>Client Name</div>
+                        </figcaption>
+                        <a class="ng-position-cover" href="#"></a>
+                    </figure>
+                </div>
+            </div>
+
+        </section>
+        <script src="../js/ngkit.js"></script>
+    </body>
+</html>

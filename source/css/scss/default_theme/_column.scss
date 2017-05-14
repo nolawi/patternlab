@@ -1,0 +1,6 @@
+$column-gutter:                                   25px;
+
+@mixin hook-column() {}
+@mixin hook-column-misc() {}
+
+@import "core/column";

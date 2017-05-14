@@ -1,0 +1,147 @@
+/* Importing existing variables for reference */
+$alert-padding:                                 25px;
+$alert-background:                              #000;
+$alert-color:                                   #fff;
+
+$alert-success-background:                      #fff;
+$alert-success-color:                           #1EBE27;
+
+$alert-warning-background:                      #000;
+$alert-warning-color:                           #fff;
+
+$alert-danger-background:                       #fff;
+$alert-danger-color:                            #F4583F;
+
+
+$alert-large-padding:                           30px !default;
+
+$alert-margin-vertical:                         $global-margin !default;
+$alert-text-shadow:                             transparent;
+$alert-overlay-background:                      rgba(0,0,0,0.5) !default;
+$alert-overlay-color:                           $global-contrast-color !default;
+
+$alert-border:                                  #000;
+$alert-success-border:                          #56CE5E;
+$alert-warning-border:                          #000;
+$alert-danger-border:                           #F02001;
+$alert-overlay-border:                          transparent;
+
+$alert-icon-size:                               30px;
+
+.ng-alert-background {background: $alert-background}
+.ng-alert-color {background: $alert-color; color: #fff}
+.ng-alert-success-background {background: $alert-success-background}
+.ng-alert-success-color {background: $alert-success-color; color: #fff}
+.ng-alert-warning-background {background: $alert-warning-background}
+.ng-alert-warning-color {background: $alert-warning-color; color: #fff}
+.ng-alert-danger-background {background: $alert-danger-background}
+.ng-alert-danger-color {background: $alert-danger-color; color: #fff}
+.ng-alert-overlay-background {background: $alert-overlay-background}
+.ng-alert-overlay-color {background: $alert-overlay-color}
+.ng-alert-border {background: $alert-border}
+.ng-text-shadow {background: $alert-text-shadow}
+.ng-alert-success-border {background: $alert-success-border}
+.ng-alert-warning-border {background: $alert-warning-border}
+.ng-alert-danger-border {background: $alert-danger-border}
+.ng-alert-overlay-border {background: $alert-overlay-border}
+
+@mixin alert-icon() {
+    padding-left: $alert-padding + $alert-icon-size + 15;
+    position: relative;
+
+    &::after {
+        font-family: 'icon-society';
+        font-size: $alert-icon-size;
+        font-weight: normal;
+        left: $alert-padding;
+        line-height: $alert-icon-size;
+        position: absolute;
+        top: $alert-padding - 3;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &.ng-alert-large {
+        padding-left: $alert-large-padding + $alert-icon-size + 15;
+
+        &::after {
+            top: $alert-large-padding - 3;
+        }
+    }
+}
+
+@mixin hook-alert(){
+    border: 1px solid $alert-border;
+
+    * {
+        color: inherit;
+    }
+
+    @include alert-icon();
+
+    &::after {
+        content: $icn-alarmbell;
+        font-size: 26px;
+        line-height: 26px;
+        top: $alert-padding;
+    }
+
+    .ng-alert-close {
+        color: $alert-color;
+        margin: -3px 0 0 10px;
+        opacity: 1;
+        &::after {
+            content: $icn-lightclose;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+}
+
+@mixin hook-alert-success(){
+    border-color: $alert-success-border;
+    font-weight: bold;
+
+    @include alert-icon();
+
+    &::after {
+        content: $icn-check-circle;
+    }
+
+    .ng-close {
+        color: #ccc;
+    }
+}
+
+@mixin hook-alert-warning(){
+    border-color: $alert-warning-border;
+}
+
+@mixin hook-alert-danger(){
+    border-color: $alert-danger-border;
+    font-weight: bold;
+
+    @include alert-icon();
+
+    &::after {
+        content: $icn-danger-circle;
+    }
+
+    .ng-close {
+        color: #ccc;
+    }
+}
+
+@mixin hook-alert-misc(){
+    .ng-alert:last-child { margin-bottom: 0; }
+
+    /* Modifier: `ng-alert-overlay`
+     ========================================================================== */
+
+    .ng-alert-overlay {
+        background: $alert-overlay-background;
+        color: $alert-overlay-color;
+        border-color: $alert-overlay-border;
+    }
+
+}
+
+@import "core/alert";

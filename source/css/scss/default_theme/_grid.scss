@@ -1,0 +1,56 @@
+$grid-gutter-horizontal:                        $global-grid-gutter !default;
+$grid-gutter-vertical:                          $global-grid-gutter !default;
+
+$grid-large-gutter-horizontal:                  $global-grid-large-gutter !default;
+$grid-large-gutter-vertical:                    $global-grid-large-gutter !default;
+
+$grid-gutter-small-horizontal:                  10px !default;
+$grid-gutter-small-vertical:                    10px !default;
+
+$grid-divider-border:                           $global-border !default;
+$grid-divider-border-width:                     1px !default;
+
+.ng-grid-divider-border {
+    background-color: $grid-divider-border;
+}
+
+@mixin hook-grid-misc(){
+    .ng-grid.ng-grid-micro { margin-left: -2px; }
+    .ng-grid.ng-grid-micro > * { padding-left: 2px; }
+
+    .ng-grid.ng-grid-micro + .ng-grid-micro { margin-top: 2px; }
+    .ng-grid.ng-grid-micro > .ng-grid-margin { margin-top: 2px; }
+
+    .ng-grid.ng-grid-micro > * > .ng-panel + .ng-panel { margin-top: 2px; }
+
+    .ng-grid-divider > [class='ng-width']:nth-child(n+2) { border-left: $grid-divider-border-width solid $grid-divider-border; }
+
+    /* Halves */
+    .ng-width-6-12 { width: 50%; }
+
+    /* Thirds */
+    .ng-width-4-12 { width: 33.333%; }
+    .ng-width-8-12 { width: 66.666%; }
+
+    /* Quarters */
+    .ng-width-3-12 { width: 25%; }
+    .ng-width-9-12 { width: 75%; }
+
+    /* Sixths */
+    .ng-width-2-12 { width: 16.666%; }
+    .ng-width-10-12 { width: 83.333%; }
+
+    /* Twelveth, for compatibility with bootstrap */
+    .ng-width-1-12 { width: 8.333% }
+    .ng-width-5-12 { width: 41.666% }
+    .ng-width-7-12 { width: 58.333% }
+    .ng-width-11-12 { width: 91.666% }
+
+    .ng-grid-wrapper {
+        padding-left: $grid-gutter-horizontal;
+        padding-right: $grid-gutter-horizontal;
+    }
+
+}
+
+@import "core/grid";

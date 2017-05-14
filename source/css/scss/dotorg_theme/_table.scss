@@ -1,0 +1,59 @@
+$table-margin-vertical:                         $global-margin !default;
+$table-padding-vertical:                        8px !default;
+$table-padding-horizontal:                      8px !default;
+$table-border:                                  $global-border !default;
+.ng-table-border {background: $table-border}
+
+$table-caption-color:                           $global-muted-color !default;
+.ng-table-caption-color {background: $table-caption-color}
+$table-caption-font-size:                       round($global-font-size * 0.85) !default;
+
+$table-striped-background:                      $global-default-muted-background !default;
+.ng-table-striped-background {background: $table-striped-background}
+
+$table-condensed-padding-vertical:              4px !default;
+$table-condensed-padding-horizontal:            8px !default;
+
+$table-hover-background:                        darken($table-striped-background, 4%) !default;
+.ng-table-hover-background { background: $table-hover-background; }
+
+@mixin hook-table(){
+    border-bottom: 1px solid $table-border;
+}
+@mixin hook-table-misc(){
+    .ng-table th {
+        border-bottom: 2px solid $table-border;
+    }
+
+    $fa-var-sort: "\00a0\f0dc";
+    $fa-var-sort-asc: "\00a0\f0dd";
+    $fa-var-sort-desc: "\00a0\f0de";
+
+    .ng-table-sortable {
+        .ng-sortable:hover {
+            cursor: pointer;
+        }
+        .ng-sortable:after,
+        .ng-sortable.ng-sorted-asc:after,
+        .ng-sortable.ng-sorted-desc:after {
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            content: $fa-var-sort;
+        }
+        .ng-sortable.ng-sorted-asc:after {
+            content: $fa-var-sort-asc;
+        }
+        .ng-sortable.ng-sorted-desc:after {
+            content: $fa-var-sort-desc;
+        }
+        .ng-sorted {
+            background: $table-hover-background;
+        }
+    }
+}
+
+@import "core/table";

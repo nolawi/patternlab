@@ -1,0 +1,75 @@
+/* Importing existing variables for reference */
+$alert-padding:                                 10px !default;
+$alert-background:                              $global-primary-muted-background !default;
+$alert-color:                                   $global-primary-color !default;
+
+$alert-success-background:                      $global-success-muted-background !default;
+$alert-success-color:                           $global-success-color !default;
+
+$alert-warning-background:                      $global-warning-muted-background !default;
+$alert-warning-color:                           $global-warning-color !default;
+
+$alert-danger-background:                       $global-danger-muted-background !default;
+$alert-danger-color:                            $global-danger-color !default;
+
+
+$alert-large-padding:                           20px !default;
+
+$alert-margin-vertical:                         $global-margin !default;
+$alert-text-shadow:                             $global-text-shadow !default;
+$alert-overlay-background:                      rgba(0,0,0,0.5) !default;
+$alert-overlay-color:                           $global-contrast-color !default;
+
+$alert-border:                                  $global-primary-border !default;
+$alert-success-border:                          $global-success-border !default;
+$alert-warning-border:                          $global-warning-border !default;
+$alert-danger-border:                           $global-danger-border !default;
+$alert-overlay-border:                          transparentize(#000, .7) !default;
+
+.ng-alert-background {background: $alert-background}
+.ng-alert-color {background: $alert-color}
+.ng-alert-success-background {background: $alert-success-background}
+.ng-alert-success-color {background: $alert-success-color; color: #fff}
+.ng-alert-warning-background {background: $alert-warning-background}
+.ng-alert-warning-color {background: $alert-warning-color; color: #fff}
+.ng-alert-danger-background {background: $alert-danger-background}
+.ng-alert-danger-color {background: $alert-danger-color; color: #fff}
+.ng-alert-overlay-background {background: $alert-overlay-background}
+.ng-alert-overlay-color {background: $alert-overlay-color}
+.ng-alert-border {background: $alert-border}
+.ng-text-shadow {background: $alert-text-shadow}
+.ng-alert-success-border {background: $alert-success-border}
+.ng-alert-warning-border {background: $alert-warning-border}
+.ng-alert-danger-border {background: $alert-danger-border}
+.ng-alert-overlay-border {background: $alert-overlay-border}
+
+@mixin hook-alert(){
+    border: 1px solid $alert-border;
+    border-radius: $global-border-radius;
+    text-shadow: 0 1px 0 $alert-text-shadow;
+}
+@mixin hook-alert-success(){
+    border-color: $alert-success-border;
+}
+@mixin hook-alert-warning(){
+    border-color: $alert-warning-border;
+}
+@mixin hook-alert-danger(){
+    border-color: $alert-danger-border;
+}
+@mixin hook-alert-misc(){
+    .ng-alert:last-child { margin-bottom: 0; }
+
+    /* Modifier: `ng-alert-overlay`
+     ========================================================================== */
+
+    .ng-alert-overlay {
+        background: $alert-overlay-background;
+        color: $alert-overlay-color;
+        border-color: $alert-overlay-border;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+
+}
+
+@import "core/alert";

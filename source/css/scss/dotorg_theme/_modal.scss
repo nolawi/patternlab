@@ -1,0 +1,73 @@
+$modal-z-index:                                 ($global-z-index + 10) !default;
+$modal-background:                              rgba(0,0,0,0.6) !default;
+
+$modal-dialog-margin-vertical:                  50px !default;
+$modal-dialog-padding:                          20px !default;
+$modal-dialog-width:                            600px !default;
+$modal-dialog-background:                       $global-background !default;
+
+$modal-dialog-large-width:                      930px !default;
+$modal-dialog-large-width-large:                1130px !default;
+
+$modal-header-margin-bottom:                    0 !default;
+$modal-body-margin-bottom:                      10px !default;
+$modal-footer-margin-top:                       0 !default;
+
+$modal-caption-margin-bottom:                   -10px !default;
+$modal-caption-color:                           $global-contrast-color;
+
+.ng-modal-dialog-background {background: $modal-dialog-background;}
+.ng-modal-background {background: $modal-background;color: #fff}
+.ng-modal-caption-color {background: $modal-caption-color}
+
+@mixin hook-modal(){}
+@mixin hook-modal-dialog(){
+    border-radius: $global-border-radius;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+@mixin hook-modal-dialog-lightbox(){
+    border-radius: 0;
+}
+@mixin hook-modal-header(){
+    margin: (-10px) (-$modal-dialog-padding) $modal-header-margin-bottom (-$modal-dialog-padding);
+    padding: $modal-dialog-padding;
+    border-radius: $global-border-radius $global-border-radius 0 0;
+}
+@mixin hook-modal-footer(){
+    margin: $modal-footer-margin-top (-$modal-dialog-padding) (-$modal-dialog-padding) (-$modal-dialog-padding);
+    padding: $modal-dialog-padding;
+    border-radius: 0 0 $global-border-radius $global-border-radius;
+}
+@mixin hook-modal-caption(){}
+@mixin hook-modal-spinner(){}
+@mixin hook-modal-misc(){
+    .ng-modal-dialog > .ng-close:first-child {
+        margin: -6px -3px 0 0;
+    }
+    .ng-modal-body {
+        margin-bottom: $modal-body-margin-bottom;
+    }
+    .ng-modal-footer a {
+        margin-left: 20px;
+    }
+    @media (max-width: $breakpoint-small-max) {
+        .ng-modal-dialog {
+            border-radius: 0;
+            margin: 0;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: $breakpoint-mini-max) {
+        .ng-modal-footer {
+            text-align: center;
+        }
+        .ng-modal-footer a {
+            width: 83.333%;
+            float: none;
+            margin-left: 0;
+        }
+    }
+}
+
+@import "core/modal";

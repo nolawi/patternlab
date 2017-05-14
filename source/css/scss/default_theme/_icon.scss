@@ -1,0 +1,71 @@
+$icon-font-path:                                 "../fonts" !default;
+
+$icon-small-font-size:                           150% !default;
+$icon-medium-font-size:                          200% !default;
+$icon-large-font-size:                           250% !default;
+
+$icon-small-vertical-align:                      -10% !default;
+$icon-medium-vertical-align:                     -16% !default;
+$icon-large-vertical-align:                      -22% !default;
+
+$icon-hover-color:                               $global-muted-color !default;
+$icon-hover-hover-color:                         $global-color !default;
+
+$icon-button-width:                              35px !default;
+$icon-button-height:                             $icon-button-width !default;
+$icon-button-border-radius:                      100% !default;
+$icon-button-background:                         $global-default-background !default;
+$icon-button-font-size:                          round(($icon-button-width * 0.5)) !default;
+$icon-button-color:                              $global-color !default;
+
+$icon-button-hover-background:                   $global-default-hover-background !default;
+$icon-button-hover-color:                        $global-color !default;
+
+$icon-button-active-background:                  $global-default-active-background !default;
+$icon-button-active-color:                       $global-color !default;
+
+/* Can't prefix with just .ng- because of other classes that interfere */
+.ng--icon-hover-color {background: $icon-hover-color;color: #fff}
+.ng--icon-hover-hover-color {background: $icon-hover-hover-color;color: #fff}
+.ng--icon-button-background {background: $icon-button-background;}
+.ng--icon-button-color {background: $icon-button-color;color: #fff}
+.ng--icon-button-hover-background {background: $icon-button-hover-background;}
+.ng--icon-button-hover-color {background: $icon-button-hover-color;color: #fff}
+.ng--icon-button-active-background {background: $icon-button-active-background;}
+.ng--icon-button-active-color {background: $icon-button-active-color;color: #fff}
+
+@mixin hook-icon-hover() {}
+@mixin hook-icon-hover-hover() {}
+@mixin hook-icon-button() {}
+@mixin hook-icon-button-hover() {}
+@mixin hook-icon-button-active() {}
+@mixin hook-icon-misc() {
+    .ng-icon, .ng-icon svg {
+        width: 1em;
+        height: 1em;
+        font-size: 1em;
+        line-height: 1em;
+        max-width: 100%;
+        max-height: 100%;
+        fill: currentColor;
+    }
+    .ng-icon {
+        display: inline-block;
+        // vertical-align: text-top;
+        position: relative;
+    }
+    .ng-icon svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .ng-icon-algin-top svg {
+        vertical-align: top;
+    }
+    .ng-icon-algin-text-top svg {
+        vertical-align: text-top;
+    }
+
+}
+
+@import "core/icon";

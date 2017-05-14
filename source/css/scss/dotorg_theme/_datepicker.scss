@@ -1,0 +1,64 @@
+$datepicker-animation:                          ng-fade;
+
+$datepicker-nav-height:                         20px;
+$datepicker-nav-margin-bottom:                  $global-margin;
+$datepicker-nav-color:                          $global-color;
+$datepicker-nav-hover-color:                    $global-color;
+$datepicker-previous-icon:                      "\1f890";
+$datepicker-next-icon:                          "\1f892";
+
+$datepicker-table-width:                        26px;
+$datepicker-table-height:                       24px;
+$datepicker-table-color:                        $global-color;
+
+$datepicker-table-hover-background:             $global-default-hover-background;
+$datepicker-table-hover-color:                  $global-color;
+$datepicker-table-onclick-background:           $global-default-active-background;
+$datepicker-table-onclick-color:                $global-color;
+
+$datepicker-table-active-background:            $global-primary-background;
+$datepicker-table-active-color:                 $global-contrast-color;
+
+$datepicker-table-muted-color:                  $global-muted-color;
+
+$datepicker-hover-border:                       rgba(0,0,0,0.16);
+$datepicker-hover-text-shadow:                  $global-text-shadow;
+
+$datepicker-contrast-text-shadow:               $global-contrast-text-shadow;
+
+.ng-datepicker-nav-color {background: $datepicker-nav-color;color: #fff}
+.ng-datepicker-nav-hover-color {background: $datepicker-nav-hover-color;color: #fff}
+.ng-datepicker-table-color {background: $datepicker-table-color;color: #fff}
+.ng-datepicker-table-hover-background {background: $datepicker-table-hover-background}
+.ng-datepicker-table-hover-color {background: $datepicker-table-hover-color;color: #fff}
+.ng-datepicker-table-onclick-background {background: $datepicker-table-onclick-background}
+.ng-datepicker-table-onclick-color {background: $datepicker-table-onclick-color;color: #fff}
+.ng-datepicker-table-active-background {background: $datepicker-table-active-background;color: #fff}
+.ng-datepicker-table-active-color {background: $datepicker-table-active-color}
+.ng-datepicker-table-muted-color {background: $datepicker-table-muted-color}
+.ng-datepicker-hover-border {background: $datepicker-hover-border}
+.ng-datepicker-hover-text-shadow {background: $datepicker-hover-text-shadow}
+.ng-datepicker-contrast-text-shadow {background: $datepicker-contrast-text-shadow}
+
+@mixin hook-datepicker-nav(){}
+@mixin hook-datepicker-nav-item(){}
+@mixin hook-datepicker-table-item(){
+    border: 1px solid transparent;
+    border-radius: $global-border-radius;
+}
+@mixin hook-datepicker-table-item-hover(){
+    border-color: $datepicker-hover-border;
+    text-shadow: 0 1px 0 $datepicker-hover-text-shadow;
+}
+@mixin hook-datepicker-table-item-onclick(){}
+@mixin hook-datepicker-table-item-active(){
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+    text-shadow: 0 -1px 0 $datepicker-contrast-text-shadow;
+}
+@mixin hook-datepicker-misc(){
+    .ng-datepicker-previous:after, .ng-datepicker-next:after {
+        font-family: icon-society;
+    }
+}
+
+@import "components/datepicker";

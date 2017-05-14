@@ -1,0 +1,50 @@
+$offcanvas-z-index:                             $global-z-index;
+$offcanvas-background:                          rgba(0,0,0,0.1);
+
+$offcanvas-bar-width:                           270px;
+$offcanvas-bar-background:                      #333;
+
+$offcanvas-panel-margin:                        20px 15px;
+$offcanvas-panel-color:                         #777;
+$offcanvas-panel-link-color:                    #ccc;
+$offcanvas-panel-title-color:                   $offcanvas-panel-link-color;
+$offcanvas-panel-link-hover-color:              #fff;
+
+$offcanvas-panel-text-shadow:                   rgba(0,0,0,0.5);
+
+.ng-offcanvas-background {background: $offcanvas-background}
+.ng-offcanvas-bar-background {background: $offcanvas-bar-background;color: #fff}
+.ng-offcanvas-panel-color {background: $offcanvas-panel-color;color: #fff}
+.ng-offcanvas-panel-link-color {background: $offcanvas-panel-link-color}
+.ng-offcanvas-panel-title-color {background: $offcanvas-panel-title-color}
+.ng-offcanvas-panel-link-hover-color {background: $offcanvas-panel-link-hover-color}
+.ng-offcanvas-panel-text-shadow {background: $offcanvas-panel-text-shadow; color: #fff}
+
+@mixin hook-offcanvas(){}
+@mixin hook-offcanvas-bar(){}
+@mixin hook-offcanvas-panel(){
+    text-shadow: 0 1px 0 $offcanvas-panel-text-shadow;
+}
+@mixin hook-offcanvas-misc(){
+    .ng-offcanvas-bar:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 1px;
+        background: rgba(0,0,0,0.6);
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    }
+
+    .ng-offcanvas-bar-flip:after {
+        right: auto;
+        left: 0;
+        width: 1px;
+        background: rgba(0,0,0,0.6);
+        box-shadow: 0 0 5px 2px rgba(0,0,0,0.6);
+    }
+}
+
+@import "core/offcanvas";

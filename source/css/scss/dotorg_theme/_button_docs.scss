@@ -1,0 +1,449 @@
+/**
+Buttons
+
+Easily create nicely looking buttons, which come in different styles.
+
+Styleguide Controls.Buttons
+*/
+
+/**
+Configuration
+
+Weight: -20
+
+Styleguide Controls.Buttons.Configuration
+*/
+
+/**
+Button Variables
+
+<table class="settings">
+<tbody>
+<tr><td>`$button-height`</td>
+    <td>#{$button-height}</td>
+</tr>
+<tr><td>`$button-line-height`</td>
+    <td>#{$button-height}</td>
+</tr>
+<tr><td>`$button-padding-horizontal`</td>
+    <td>#{$button-padding-horizontal}</td></tr>
+</tbody>
+</table>
+
+Weight: -10
+
+Styleguide Controls.Buttons.Configuration.Button-Variables
+*/
+
+/**
+Button Color Variables
+
+<table class="settings">
+<tbody>
+<tr><td>`$button-background`</td>
+    <td class="ng-button-background">#{$button-background}</td></tr>
+<tr><td>`$button-color`</td>
+    <td class="ng-button-color">#{$button-color}</td></tr>
+<tr><td>`$button-hover-background`</td>
+    <td class="ng-button-hover-background">#{$button-hover-background}</td></tr>
+<tr><td>`$button-hover-color`</td>
+    <td class="ng-button-hover-color">#{$button-hover-color}</td></tr>
+<tr><td>`$button-active-background`</td>
+    <td class="ng-button-active-background">#{$button-active-background}</td></tr>
+<tr><td>`$button-active-color`</td>
+    <td class="ng-button-active-color">#{$button-active-color}</td></tr>
+<tr><td>`$button-border`</td>
+    <td class="ng-border">#{$button-border}</td></tr>
+<tr><td>`$button-border-bottom`</td>
+    <td class="ng-button-border-bottom">#{$button-border-bottom}</td></tr>
+<tr><td>`$button-text-shadow`</td>
+    <td class="ng-button-text-shadow">#{$button-text-shadow}</td></tr>
+</tbody>
+</table>
+
+Weight: -9
+
+Styleguide Controls.Buttons.Configuration.Color-Variables
+*/
+/**
+Button Disabled Color Variables
+
+<table class="settings">
+<tr><td>`$button-disabled-background`</td>
+    <td class="ng-button-disabled-background">#{$button-disabled-background}</td></tr>
+<tr><td>`$button-disabled-color`</td>
+    <td class="ng-button-disabled-color">#{$button-disabled-color}</td></tr>
+</table>
+
+Weight: -8
+
+Styleguide Controls.Buttons.Configuration.Disabled-Variables
+*/
+/**
+Contrast Color Variables
+
+<table class="settings">
+<tr><td>`$button-contrast-border`</td>
+    <td class="ng-button-contrast-border">#{$button-contrast-border}</td></tr>
+<tr><td>`$button-contrast-border-bottom`</td>
+    <td class="ng-contrast-border-bottom">#{$button-contrast-border-bottom}</td></tr>
+<tr><td>`$button-contrast-text-shadow`</td>
+    <td class="ng-contrast-text-shadow">#{$button-contrast-text-shadow}</td></tr>
+</table>
+
+Weight: -7
+
+Styleguide Controls.Buttons.Configuration.Contrast-Color-Variables
+*/
+/**
+Primary Color Variables
+
+<table class="settings">
+<tr><td>`$button-primary-background`</td>
+    <td class="ng-primary-background">#{$button-primary-background}</td></tr>
+<tr><td>`$button-primary-color`</td>
+    <td class="ng-contrast-color">#{$button-primary-color}</td></tr>
+<tr><td>`$button-primary-hover-background`</td>
+    <td class="ng-button-primary-hover-background">#{$button-primary-hover-background}</td></tr>
+<tr><td>`$button-primary-hover-color`</td>
+    <td class="ng-button-primary-hover-color">#{$button-primary-hover-color}</td></tr>
+<tr><td>`$button-primary-active-background`</td>
+    <td class="ng-button-primary-active-background">#{$button-primary-active-background}</td></tr>
+<tr><td>`$button-primary-active-color`</td>
+    <td class="ng-button-primary-active-color">#{$button-primary-active-color}</td></tr>
+</table>
+
+Weight: -6
+
+Styleguide Controls.Buttons.Configuration.Primary-Color-Variables
+*/
+/**
+Success Color Variables
+
+<table class="settings">
+<tr><td>`$button-success-background`</td>
+    <td class="ng-button-success-background">#{$button-success-background}</td></tr>
+<tr><td>`$button-success-color`</td>
+    <td class="ng-button-success-color">#{$button-success-color}</td></tr>
+<tr><td>`$button-success-hover-background`</td>
+    <td class="ng-button-success-hover-background">#{$button-success-hover-background}</td></tr>
+<tr><td>`$button-success-hover-color`</td>
+    <td class="ng-button-success-hover-color">#{$button-success-hover-color}</td></tr>
+<tr><td>`$button-success-active-background`</td>
+    <td class="ng-button-success-active-background">#{$button-success-active-background}</td></tr>
+<tr><td>`$button-success-active-color`</td>
+    <td class="ng-button-success-active-color">#{$button-success-active-color}</td></tr>
+</table>
+
+Weight: -5
+
+Styleguide Controls.Buttons.Configuration.Success-Color-Variables
+*/
+/**
+Danger Color Variables
+
+<table class="settings">
+<tr><td>`$button-danger-background`</td>
+    <td class="ng-button-danger-background">#{$button-danger-background}</td></tr>
+<tr><td>`$button-danger-color`</td>
+    <td class="ng-button-danger-color">#{$button-danger-color}</td></tr>
+<tr><td>`$button-danger-hover-background`</td>
+    <td class="ng-button-danger-hover-background">#{$button-danger-hover-background}</td></tr>
+<tr><td>`$button-danger-hover-color`</td>
+    <td class="ng-button-danger-hover-color">#{$button-danger-hover-color}</td></tr>
+<tr><td>`$button-danger-active-background`</td>
+    <td class="ng-button-danger-active-background">#{$button-danger-active-background}</td></tr>
+<tr><td>`$button-danger-active-color`</td>
+    <td class="ng-danger-active-color">#{$button-danger-active-color}</td></tr>
+</table>
+
+Weight: -4
+
+Styleguide Controls.Buttons.Configuration.Danger-Color-Variables
+*/
+/**
+Link Color Variables
+
+<table class="settings">
+<tr><td>`$button-link-color`</td>
+    <td class="ng-button-link-color">#{$button-link-color}</td></tr>
+<tr><td>`$button-link-hover-color`</td>
+    <td class="ng-button-link-hover-color">#{$button-link-hover-color}</td></tr>
+<tr><td>`$button-link-hover-text-decoration`</td>
+    <td>#{$button-link-hover-text-decoration}</td></tr>
+<tr><td>`$button-link-disabled-color`</td>
+    <td class="ng-button-link-disabled-color">#{$button-link-disabled-color}</td></tr>
+</table>
+
+Weight: -3
+
+Styleguide Controls.Buttons.Configuration.Link-Color-Variables
+*/
+/**
+Size Variables
+
+<table class="settings">
+<tr><td>`$button-mini-height`</td>
+    <td>#{$button-mini-height}</td>
+</tr>
+<tr><td>`$button-mini-line-height`</td>
+    <td>#{$button-mini-line-height}</td>
+</tr>
+<tr><td>`$button-mini-font-size`</td>
+    <td>#{$button-mini-font-size}</td>
+</tr>
+<tr><td>`$button-mini-padding-horizontal`</td>
+    <td>#{$button-mini-padding-horizontal}</td></tr>
+<tr><td>`$button-small-height`</td>
+    <td>#{$button-small-height}</td>
+</tr>
+<tr><td>`$button-small-line-height`</td>
+    <td>#{$button-small-line-height}</td>
+</tr>
+<tr><td>`$button-small-font-size`</td>
+    <td>#{$button-small-font-size}</td>
+</tr>
+<tr><td>`$button-small-padding-horizontal`</td>
+    <td>#{$button-small-padding-horizontal}</td>
+</tr>
+<tr><td>`$button-large-height`</td>
+    <td>#{$button-large-height}</td>
+</tr>
+<tr><td>`$button-large-line-height`</td>
+    <td>#{$button-large-line-height}</td>
+</tr>
+<tr><td>`$button-large-font-size`</td>
+    <td>#{$button-large-font-size}</td></tr>
+<tr><td>`$button-large-padding-horizontal`</td>
+    <td>#{$button-large-padding-horizontal}</td></tr>
+</table>
+
+Weight: -2
+
+Styleguide Controls.Buttons.Configuration.Size-Variables
+*/
+
+/**
+Basic Usage
+
+To apply this component, add the `.ng-button` class to an `<a>` or `<button>`
+element. Now you have created a button. Add the disabled attribute to a
+`<button>` element to disable the button.
+
+:hover     - Highlight the button when hovering
+:disabled  - When disabled, the buttons's appears dimmed.
+
+Markup:
+<a class="ng-button {{modifier_class}}" href="">Link</a>
+<button class="ng-button {{modifier_class}}" type="button">Button</button>
+
+Weight: 2
+
+Styleguide Controls.Buttons.Usage
+*/
+
+/**
+Color modifiers
+
+There are several color modifiers available. Just add one of the following
+classes to apply a different look.
+
+
+.ng-button-primary  - To add emphasis and to identify the primary action in a set of buttons
+.ng-button-success  - To indicate a successful or positive action
+.ng-button-danger   - To indicate a dangerous or negative action
+.ng-button-overlay  - To overlay over a photo or other busy background
+.ng-button-disabled - To make an <a> look disabled.
+
+Markup:
+<a class="ng-button {{ modifier_class }}" href="">Link</a>
+<button class="ng-button {{ modifier_class }}" type="button">Button</button>
+<button class="ng-button {{ modifier_class }}" type="button" disabled>Disabled</button>
+<a class="ng-button-disabled">This Button is Disabled</a>
+
+Weight: 3
+
+Styleguide Controls.Buttons.ColorModifiers
+*/
+
+/**
+Button Link Modifier
+
+To deemphasize a button to look like a link while maintaining button behavior,
+add `.ng-button-link`.
+
+Markup:
+<a class="ng-button ng-button-link" href="">Link</a>
+<button class="ng-button ng-button-link" type="button">Button</button>
+<button class="ng-button ng-button-link" type="button" disabled>Disabled</button>
+
+Weight: 4
+
+Styleguide Controls.Buttons.LinkModifier
+*/
+
+/**
+Style Modifiers
+
+To deemphasize a button to have no styling while maintaining button behavior,
+add `.ng-button-blank`
+
+Markup:
+<a class="ng-button ng-button-blank" href="">Link</a>
+<button class="ng-button ng-button-blank" type="button">Button</button>
+<button class="ng-button ng-button-blank" type="button" disabled>Disabled</button>
+
+Weight: 5
+
+Styleguide Controls.Buttons.StyleModifier
+*/
+
+
+/**
+Size modifiers
+
+Add the `.ng-button-mini`, `.ng-button-small` or `.ng-button-large` class to a
+button to make it smaller or larger.
+
+Markup:
+<button class="ng-button ng-button-mini" type="button">Mini button</button>
+<button class="ng-button ng-button-small" type="button">Small button</button>
+<button class="ng-button" type="button">Default button</button>
+<button class="ng-button ng-button-large" type="button">Large button</button>
+
+Weight: 6
+
+Styleguide Controls.Buttons.SizeModifier
+*/
+
+/**
+Button Group
+
+To create a button group, add the `.ng-button-group` class to a `<div>` element
+around the buttons. That's it! No further markup needed.
+
+Markup:
+<div class="ng-button-group">
+    <a class="ng-button" href="">Link</a>
+    <button class="ng-button">Button</button>
+    <button class="ng-button">Button</button>
+</div>
+
+Weight: 7
+
+Styleguide Controls.Buttons.ButtonGroup
+*/
+
+/**
+Pill buttons
+
+Markup:
+<p>
+    <a class="ng-pill-button" href="">Link</a>
+    <button class="ng-pill-button" type="button">Button</button>
+    <button class="ng-pill-button ng-pill-button-closable" type="button"><i class="ng-icon-times"></i> Button</button>
+    <button class="ng-pill-button" type="button" disabled>Disabled</button>
+</p>
+<p>
+    <a class="ng-pill-button ng-button-primary" href="">Link</a>
+    <button class="ng-pill-button ng-button-primary" type="button">Button</button>
+    <button class="ng-pill-button ng-pill-button-closable ng-button-primary" type="button"><i class="ng-icon-times"></i> Button</button>
+    <button class="ng-pill-button ng-button-primary" type="button" disabled>Disabled</button>
+</p>
+<p>
+    <a class="ng-pill-button ng-button-success" href="">Link</a>
+    <button class="ng-pill-button ng-button-success" type="button">Button</button>
+    <button class="ng-pill-button ng-pill-button-closable ng-button-success" type="button"><i class="ng-icon-times"></i> Button</button>
+    <button class="ng-pill-button ng-button-success" type="button" disabled>Disabled</button>
+</p>
+<p>
+    <a class="ng-pill-button ng-button-danger" href="">Link</a>
+    <button class="ng-pill-button ng-button-danger" type="button">Button</button>
+    <button class="ng-pill-button ng-pill-button-closable ng-button-danger" type="button"><i class="ng-icon-times"></i> Button</button>
+    <button class="ng-pill-button ng-button-danger" type="button" disabled>Disabled</button>
+</p>
+
+Weight: 9
+
+Styleguide Controls.Buttons.PillButtons
+*/
+
+/**
+File Input Buttons
+
+File Inputs will get automatic styling, however some of the button specific styling doesn not yet work in Firefox.
+
+Markup:
+<input type="file" />
+
+Weight: 10
+
+Styleguide Controls.Buttons.FileInputButtons
+*/
+
+/**
+JavaScript
+
+<span class="badge info">JAVASCRIPT</span> Requires `core/button.js`
+
+You can toggle button states via JavaScript. Just add the data attibute data-ng-button.
+
+Markup:
+<button class="ng-button ng-button-primary" type="button" data-ng-button="">Button</button>
+
+Weight: 11
+
+Styleguide Controls.Buttons.JavaScript
+*/
+/**
+Checkbox Buttons
+
+Toggle between a group of buttons like a checkbox by wrapping a <div> element
+with the data attribute data-ng-button-checkbox around them. This can also be
+applied to a button group.
+
+Markup:
+<div class="ng-margin">
+    <div data-ng-button-checkbox="">
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+    </div>
+</div>
+<div class="ng-margin">
+    <div class="ng-button-group" data-ng-button-checkbox="">
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+    </div>
+</div>
+
+Weight: 1
+
+Styleguide Controls.Buttons.JavaScript.checkbox
+*/
+/**
+Radio Buttons
+
+Toggle between a group of buttons, like radio buttons, by wrapping a div element that uses data-ng-button-radio around them. This can also be applied to a button group.
+
+Markup:
+<div class="ng-margin">
+    <div data-ng-button-radio="">
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+    </div>
+</div>
+<div class="ng-margin">
+    <div class="ng-button-group" data-ng-button-radio="">
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+        <button class="ng-button">Button</button>
+    </div>
+</div>
+
+Weight: 2
+
+Styleguide Controls.Buttons.JavaScript.radio
+*/

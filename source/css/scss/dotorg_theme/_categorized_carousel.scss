@@ -1,0 +1,140 @@
+$categorized-carousel-border-color:             #ccc;
+$categorized-carousel-image-aspect:             3/2;
+
+
+.ng-categorized-carousel {
+    .ng-categorized-carousel-slider {
+        border-bottom: 1px solid $categorized-carousel-border-color;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    .ng-categorized-carousel-panel {
+        padding-bottom: 20px;
+
+        .ng-article-series-promo {
+            margin-bottom: 7px;
+        }
+
+        .ng-promo-title {
+            margin-top: 0;
+            padding-bottom: 1px;
+        }
+    }
+
+    .ng-categorized-carousel-image {
+        margin-bottom: 15px;
+    }
+
+    // Vertically center nav arrows over the image portion only, using intrinsic ratio technique
+    .ng-categorized-carousel-slider-nav-previous-container,
+    .ng-categorized-carousel-slider-nav-next-container {
+        box-sizing: border-box;
+        position: absolute;
+        //top: 0;
+        top: 0;
+        //width: calc(50% - 12.5px);
+        width:42px;
+        height:100%;
+
+      /****
+        &:before {
+            content: "";
+            display: block;
+            padding-top: (1 / $categorized-carousel-image-aspect) * 100%;
+            width: 100%;
+        }
+
+
+        > div {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        *****/
+
+      .ng-slidenav-previous, .ng-slidenav-next {
+        top: 100px;
+      }
+    }
+
+    .ng-categorized-carousel-slider-nav-previous-container {
+        left: 0;
+    }
+
+    .ng-categorized-carousel-slider-nav-next-container {
+        right: 0;
+    }
+
+    // Hide navigation arrows on touch devices
+    .ng-touch & {
+        .ng-categorized-carousel-slider-nav-previous-container,
+        .ng-categorized-carousel-slider-nav-next-container {
+            display: none;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    .ng-categorized-carousel-button-container,
+    .ng-categorized-carousel-slider-container {
+        display: flex;
+        flex-direction: column;
+
+        > .ng-category-button,
+        > .ng-categorized-carousel-slider {
+            flex: 1 0 auto;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-categorized-carousel {
+        .ng-categorized-carousel-slider {
+            border-bottom: none;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-small-max) {
+    .ng-categorized-carousel {
+        .ng-category-button-heading,
+        .ng-categorized-carousel-info,  {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-mini-max) {
+    .ng-categorized-carousel {
+        @include ng-width-full();
+
+        .ng-category-button .ng-category-button-heading,
+        .ng-category-button .ng-category-button-dek,
+        .ng-category-button .ng-category-button-flag,
+        .ng-categorized-carousel-info {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .ng-slider-container {
+            padding-bottom: 10px;
+        }
+
+        .ng-dotnav {
+            bottom: 0;
+            margin: 0;
+            position: absolute;
+            width: 100%;
+
+            > li:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

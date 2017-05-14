@@ -1,0 +1,68 @@
+$dropdown-z-index:                              ($global-z-index + 20) !default;
+$dropdown-width:                                200px !default;
+$dropdown-margin-top:                           5px !default;
+$dropdown-padding:                              15px !default;
+$dropdown-background:                           #fff !default;
+$dropdown-color:                                $global-color !default;
+$dropdown-animation:                            ng-fade !default;
+
+$dropdown-divider-border-width:                 1px !default;
+$dropdown-divider-border:                       #ddd !default;
+
+$dropdown-small-padding:                        5px !default;
+
+$dropdown-navbar-margin:                        6px !default;
+$dropdown-navbar-background:                    #fff !default;
+$dropdown-navbar-color:                         $global-color !default;
+$dropdown-navbar-animation:                     ng-slide-top-fixed !default;
+
+$dropdown-scrollable-height:                    280px !default;
+
+$dropdown-divider-border:                       $global-border !default;
+
+$dropdown-border:                               darken($global-border, 7%) !default;
+$dropdown-box-shadow:                           rgba(0,0,0,0.1) !default;
+
+.ng-dropdown-background {background: $dropdown-background;}
+.ng-dropdown-color {background: $dropdown-color;color: #fff}
+
+.ng-dropdown-divider-border {background: $dropdown-divider-border;}
+
+.ng-dropdown-navbar-background {background: $dropdown-navbar-background;}
+.ng-dropdown-navbar-color {background: $dropdown-navbar-color;color: #fff}
+
+.ng-dropdown-divider-border {background: $dropdown-divider-border;color: #fff}
+
+.ng-dropdown-border {background: $dropdown-border;color: #fff}
+.ng-dropdown-box-shadow {background: $dropdown-box-shadow;color: #fff}
+
+@mixin hook-dropdown(){
+    border: 1px solid $dropdown-border;
+    border-radius: $global-border-radius;
+    box-shadow: 0 2px 5px $dropdown-box-shadow;
+}
+@mixin hook-dropdown-navbar(){
+    left: -1px;
+    border: 1px solid $dropdown-border;
+    border-radius: $global-border-radius;
+    box-shadow: 0 2px 5px $dropdown-box-shadow;
+}
+@mixin hook-dropdown-overlay(){}
+@mixin hook-dropdown-misc(){
+    .ng-has-subnav {position:relative}
+    .ng-dropdown .ng-has-subnav .ng-nav { padding-left: 0; }
+    .ng-dropdown .ng-has-subnav:hover .ng-dropdown {
+        z-index:1;
+        display:block;
+    }
+    .ng-dropdown .ng-dropdown {
+        position: absolute;
+        top:-1 * $dropdown-padding;
+        left:101%;
+        z-index: -1;
+        transition:display linear 0.15s;
+        margin-top: 0
+    }
+}
+
+@import "core/dropdown";

@@ -1,0 +1,66 @@
+.ambient-hero .ambient-hero__video {
+   -webkit-transform: translateX(-50%) translateY(-50%);
+   -moz-transform: translateX(-50%) translateY(-50%);
+   -ms-transform: translateX(-50%) translateY(-50%);
+   -o-transform: translateX(-50%) translateY(-50%);
+   transform: translateX(-50%) translateY(-50%);
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   width: auto;
+   height: auto;
+   z-index: -100;
+}
+.ambient-hero .hero-wrapper {
+    position: relative;
+    height: 100%;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ng-slideshow .ambient-hero .hero-wrapper h1{
+    border-left-color: #fc0 !important;
+}
+
+.ambient-hero .hero-wrapper video::-webkit-media-controls {
+    display: none !important;
+}
+
+.ambient-hero .hero-wrapper .ng-margin-left{
+    margin-left: inherit !important;
+
+}
+
+
+.ambient-hero .hero-wrapper .ambient-hero__text {
+    position: absolute;
+    bottom: 0.75em;
+    letter-spacing: .03em;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    -webkit-font-smoothing: antialiased;
+}
+
+.ng-hero-carousel .ambient-hero .hero-wrapper .ng-promo-title {
+    margin-bottom: 0 !important;
+    max-width: inherit;
+}
+
+
+@media screen and (min-width: 760px) {
+    .ambient-hero .hero-wrapper {
+        position: relative;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .ambient-hero .ambient-hero__video {
+        visibility: visible;
+    }
+}

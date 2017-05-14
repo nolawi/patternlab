@@ -1,0 +1,143 @@
+$sprite-path:   "../images/" !default;.ng-icon-educator-large {    width: 59px;
+    height: 59px;    background-position: 0 0;
+}
+
+.ng-icon-educator-black-large {    width: 59px;
+    height: 59px;    background-position: -118.00000000000001px 0;
+}
+
+.ng-icon-educator-disabled-large {    width: 59px;
+    height: 59px;    background-position: -236.00000000000003px 0;
+}
+
+.ng-icon-educator-white-large {    width: 59px;
+    height: 59px;    background-position: -354.00000000000006px 0;
+}
+
+.ng-icon-engineer-large {    width: 59px;
+    height: 59px;    background-position: -472.00000000000006px 0;
+}
+
+.ng-icon-engineer-black-large {    width: 59px;
+    height: 59px;    background-position: -590.0000000000001px 0;
+}
+
+.ng-icon-engineer-disabled-large {    width: 59px;
+    height: 59px;    background-position: -708.0000000000001px 0;
+}
+
+.ng-icon-engineer-white-large {    width: 59px;
+    height: 59px;    background-position: -826.0000000000001px 0;
+}
+
+.ng-icon-family-large {    width: 59px;
+    height: 59px;    background-position: -944.0000000000001px 0;
+}
+
+.ng-icon-family-black-large {    width: 59px;
+    height: 59px;    background-position: -1062px 0;
+}
+
+.ng-icon-family-disabled-large {    width: 59px;
+    height: 59px;    background-position: -1180px 0;
+}
+
+.ng-icon-family-white-large {    width: 59px;
+    height: 59px;    background-position: -1298px 0;
+}
+
+.ng-icon-student-large {    width: 59px;
+    height: 59px;    background-position: -1416px 0;
+}
+
+.ng-icon-student-black-large {    width: 59px;
+    height: 59px;    background-position: -1534px 0;
+}
+
+.ng-icon-student-disabled-large {    width: 59px;
+    height: 59px;    background-position: -1652px 0;
+}
+
+.ng-icon-student-white-large {    width: 59px;
+    height: 59px;    background-position: -1770px 0;
+}
+
+.ng-icon-educator-large, .ng-icon-educator-black-large, .ng-icon-educator-disabled-large, .ng-icon-educator-white-large, .ng-icon-engineer-large, .ng-icon-engineer-black-large, .ng-icon-engineer-disabled-large, .ng-icon-engineer-white-large, .ng-icon-family-large, .ng-icon-family-black-large, .ng-icon-family-disabled-large, .ng-icon-family-white-large, .ng-icon-student-large, .ng-icon-student-black-large, .ng-icon-student-disabled-large, .ng-icon-student-white-large {
+    background-size: 1888px 118.00000000000001px;
+    background-repeat: no-repeat;
+    background-image: url("#{$sprite-path}ng-icon-default-sprite-large.png");    vertical-align: middle;
+}
+
+.ng-icon-educator-small {    width: 24px;
+    height: 24px;    background-position: 0 0;
+}
+
+.ng-icon-educator-black-small {    width: 24px;
+    height: 24px;    background-position: -49px 0;
+}
+
+.ng-icon-educator-disabled-small {    width: 24px;
+    height: 24px;    background-position: -97px 0;
+}
+
+.ng-icon-educator-white-small {    width: 24px;
+    height: 24px;    background-position: -145px 0;
+}
+
+.ng-icon-engineer-small {    width: 24px;
+    height: 24px;    background-position: -193px 0;
+}
+
+.ng-icon-engineer-black-small {    width: 24px;
+    height: 24px;    background-position: -241px 0;
+}
+
+.ng-icon-engineer-disabled-small {    width: 24px;
+    height: 24px;    background-position: -289px 0;
+}
+
+.ng-icon-engineer-white-small {    width: 24px;
+    height: 24px;    background-position: -337px 0;
+}
+
+.ng-icon-family-small {    width: 24px;
+    height: 24px;    background-position: -385px 0;
+}
+
+.ng-icon-family-black-small {    width: 24px;
+    height: 24px;    background-position: -432px 0;
+}
+
+.ng-icon-family-disabled-small {    width: 24px;
+    height: 24px;    background-position: -480px 0;
+}
+
+.ng-icon-family-white-small {    width: 24px;
+    height: 24px;    background-position: -528px 0;
+}
+
+.ng-icon-student-small {    width: 24px;
+    height: 24px;    background-position: -576px 0;
+}
+
+.ng-icon-student-black-small {    width: 24px;
+    height: 24px;    background-position: -624px 0;
+}
+
+.ng-icon-student-disabled-small {    width: 24px;
+    height: 24px;    background-position: -672px 0;
+}
+
+.ng-icon-student-white-small {    width: 24px;
+    height: 24px;    background-position: -720px 0;
+}
+
+.ng-icon-educator-small, .ng-icon-educator-black-small, .ng-icon-educator-disabled-small, .ng-icon-educator-white-small, .ng-icon-engineer-small, .ng-icon-engineer-black-small, .ng-icon-engineer-disabled-small, .ng-icon-engineer-white-small, .ng-icon-family-small, .ng-icon-family-black-small, .ng-icon-family-disabled-small, .ng-icon-family-white-small, .ng-icon-student-small, .ng-icon-student-black-small, .ng-icon-student-disabled-small, .ng-icon-student-white-small {
+    background-size: 768px 49px;
+    background-repeat: no-repeat;
+    background-image: url("#{$sprite-path}ng-icon-default-sprite-small.png");    vertical-align: middle;
+}
+
+.svg .ng-icon-educator-large, .svg .ng-icon-educator-black-large, .svg .ng-icon-educator-disabled-large, .svg .ng-icon-educator-white-large, .svg .ng-icon-engineer-large, .svg .ng-icon-engineer-black-large, .svg .ng-icon-engineer-disabled-large, .svg .ng-icon-engineer-white-large, .svg .ng-icon-family-large, .svg .ng-icon-family-black-large, .svg .ng-icon-family-disabled-large, .svg .ng-icon-family-white-large, .svg .ng-icon-student-large, .svg .ng-icon-student-black-large, .svg .ng-icon-student-disabled-large, .svg .ng-icon-student-white-large, .svg .ng-icon-educator-small, .svg .ng-icon-educator-black-small, .svg .ng-icon-educator-disabled-small, .svg .ng-icon-educator-white-small, .svg .ng-icon-engineer-small, .svg .ng-icon-engineer-black-small, .svg .ng-icon-engineer-disabled-small, .svg .ng-icon-engineer-white-small, .svg .ng-icon-family-small, .svg .ng-icon-family-black-small, .svg .ng-icon-family-disabled-small, .svg .ng-icon-family-white-small, .svg .ng-icon-student-small, .svg .ng-icon-student-black-small, .svg .ng-icon-student-disabled-small, .svg .ng-icon-student-white-small {
+    background-image: url("../../images/ng-icon-default-sprite.svg");
+}

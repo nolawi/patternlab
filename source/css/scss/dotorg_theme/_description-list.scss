@@ -1,0 +1,13 @@
+$description-list-horizontal-width:             160px !default;
+$description-list-horizontal-margin-left:       180px !default;
+
+$description-list-line-margin-top:              5px !default;
+$description-list-line-border-width:            1px !default;
+$description-list-line-border:                  $global-border !default;
+$description-list-line-color:                   $global-muted-color !default;
+.ng-description-list-line-border { background: $description-list-line-border}
+.ng-description-list-line-color { background: $description-list-line-color}
+
+@mixin hook-description-list-misc(){}
+
+@import "core/description-list";

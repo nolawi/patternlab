@@ -1,0 +1,41 @@
+$article-sharing-hover-color:                   #999;
+
+
+.ng-article-sharing {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+
+    li {
+        float: left;
+        height: 24px;
+        overflow: hidden;
+        padding-left: 30px;
+
+        &:first-child {
+            padding-left: 0;
+        }
+
+        a {
+            border: none;
+            display: block;
+            font-size: 24px;
+            line-height: 1;
+
+            &.google-plus {
+                font-size: 30px;
+                margin-top: -3px;
+            }
+        }
+
+        .ng-icon {
+            transition: color 300ms ease;
+
+            &:hover {
+                color: $article-sharing-hover-color !important;
+            }
+        }
+    }
+}

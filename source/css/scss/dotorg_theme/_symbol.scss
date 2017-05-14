@@ -1,0 +1,263 @@
+
+$symbol-height:                                 77px !default;
+$symbol-width:                                  70px !default;
+$symbol-small-height:                           67px !default;
+$symbol-small-width:                            60px !default;
+$symbol-padding-bottom:							7px !default;
+
+
+.ng-symbol { 
+    display: block;
+    height: $symbol-height; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: $symbol-padding-bottom;
+    width: $symbol-width; 
+}
+
+@media (max-width: $breakpoint-mini-max) {
+    .ng-symbol { 
+        height: $symbol-small-height; 
+        width: $symbol-small-width; 
+    }
+}
+
+
+/**
+Symbols
+
+Add a Symbol to any page by adding an Image tag with "ng-symbol" class and point the src attribute to one of our current Symbol SVGs which are the numbers 1 through 10, (plus we can always turn it up to Eleven if we need to.)
+
+Styleguide Media.Symbols
+*/
+
+
+/**
+Configuration
+
+Weight: -20
+
+Styleguide Media.Symbols.Configuration
+*/
+
+
+/**
+Symbol Variables
+
+<table class="settings">
+<tbody>
+<tr><td>`$symbol-height`</td>
+    <td>#{$symbol-height}</td>
+</tr>
+<tr><td>`$symbol-width`</td>
+    <td>#{$symbol-width}</td>
+</tr>
+<tr><td>`$symbol-padding-bottom`</td>
+    <td>#{$symbol-padding-bottom}</td></tr>
+<tr><td>`$symbol-small-height`</td>
+    <td>#{$symbol-small-height}</td>
+</tr>
+<tr><td>`$symbol-small-width`</td>
+    <td>#{$symbol-small-width}</td>
+</tr>
+</tbody>
+</table>
+
+Weight: -10
+
+Styleguide Media.Symbols.Configuration.Symbol-Variables
+*/
+
+
+
+/**
+Basic Usage
+
+To add a Symbol, choose a Plugin which lets you add HTML such as the OpenHTML Plugin, or the Text Plugin.   Edit the Source HTML of that element, and add an Image Tag with the `ng-symbol` Class, AND point the source at one of our Symbol SVG Image Files.
+
+Markup:
+<img class="ng-symbol" src="/static/images/css_images/symbol_circle_1.svg" />
+
+Weight: 10
+
+Styleguide Media.Symbols.Usage
+*/
+
+
+/** 
+Available Symbols:
+
+<table class="settings">
+<thead>
+<tr><th class="ng-text-center">Symbol</th>
+	<th>Image Source</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_1.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_1.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_2.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_2.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_3.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_3.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_4.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_4.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_5.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_5.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_6.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_6.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_7.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_7.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_8.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_8.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_9.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_9.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_10.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_10.svg`</td>
+</tr>
+<tr><td><img class="ng-symbol" src="/static/images/css_images/symbol_circle_11.svg" /></td>
+    <td>`/static/images/css_images/symbol_circle_11.svg`</td>
+</tr>
+</tbody>
+</table>
+
+Weight: 20
+
+Styleguide Media.Symbols.AvailableSymbols
+*/
+
+
+
+/** 
+Ordered List Symbols:
+
+By adding the `ng-symbols` class to an Ordered List, the svg-number symbols will be used to number line items.
+
+Markup:
+<ol class="ng-symbols">
+    <li>Item Number One</li>
+    <li>Item Number Two</li>
+    <li>Item Number Three</li>
+    <li>Item Number Four</li>
+    <li>Item Number Five</li>
+    <li>Item Number Six</li>
+    <li>Item Number Seven</li>
+    <li>Item Number Eight</li>
+    <li>Item Number Nine</li>
+    <li>Item Number Ten</li>
+    <li>Item Number Eleven</li>
+</ol>
+
+Weight: 30
+
+Styleguide Media.Symbols.OrderedListSymbols
+*/
+ol.ng-symbols {
+    padding-left: 0;
+}
+ol.ng-symbols li { 
+    clear: both;
+    list-style: none; 
+    margin-bottom: 30px;
+    overflow: auto;
+    padding-left: 4em;
+} 
+ol.ng-symbols li:before {
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    content: ''; 
+    display: inline;
+    float: left;
+    height: 3em;
+    margin-bottom: 10px; 
+    margin-left: -4em;
+    vertical-align: bottom;
+    width: 3em; 
+}
+ol.ng-symbols li:nth-child(1):before { 
+    background-image: url(/static/images/css_images/symbol_circle_1.svg); 
+}
+ol.ng-symbols li:nth-child(2):before { 
+    background-image: url(/static/images/css_images/symbol_circle_2.svg); 
+}
+ol.ng-symbols li:nth-child(3):before { 
+    background-image: url(/static/images/css_images/symbol_circle_3.svg); 
+}
+ol.ng-symbols li:nth-child(4):before { 
+    background-image: url(/static/images/css_images/symbol_circle_4.svg); 
+}
+ol.ng-symbols li:nth-child(5):before { 
+    background-image: url(/static/images/css_images/symbol_circle_5.svg); 
+}
+ol.ng-symbols li:nth-child(6):before { 
+    background-image: url(/static/images/css_images/symbol_circle_6.svg); 
+}
+ol.ng-symbols li:nth-child(7):before { 
+    background-image: url(/static/images/css_images/symbol_circle_7.svg); 
+}
+ol.ng-symbols li:nth-child(8):before { 
+    background-image: url(/static/images/css_images/symbol_circle_8.svg); 
+}
+ol.ng-symbols li:nth-child(9):before { 
+    background-image: url(/static/images/css_images/symbol_circle_9.svg); 
+}
+ol.ng-symbols li:nth-child(10):before { 
+    background-image: url(/static/images/css_images/symbol_circle_10.svg); 
+}
+ol.ng-symbols li:nth-child(11):before { 
+    background-image: url(/static/images/css_images/symbol_circle_11.svg); 
+}
+
+/** 
+Ordered List Symbol Size Modifiers:
+
+To display the symbols within an ordered list smaller or larger, add the `ng-symbols-small` or `ng-symbols-large` size-modifier class.
+
+Markup:
+<ol class="ng-symbols ng-symbols-small">
+    <li><small>Item Number One</small></li>
+    <li><small>Item Number Two</small></li>
+    <li><small>Item Number Three</small></li>
+</ol>
+<ol class="ng-symbols">
+    <li>Item Number One</li>
+    <li>Item Number Two</li>
+    <li>Item Number Three</li>
+</ol>
+<ol class="ng-symbols ng-symbols-large">
+    <li><big>Item Number One</big></li>
+    <li><big>Item Number Two</big></li>
+    <li><big>Item Number Three</big></li>
+</ol>
+
+Weight: 35
+
+Styleguide Media.Symbols.OrderedListSymbols.SizeModifiers
+*/
+ol.ng-symbols.ng-symbols-small li { 
+    padding-left: 3em;
+    margin-bottom: 10px;
+} 
+ol.ng-symbols.ng-symbols-small li:before {
+    height: 2em;
+    margin-left: -3em; 
+    width: 2em; 
+}
+ol.ng-symbols.ng-symbols-large li { 
+    margin-bottom: 50px;
+    padding-left: 5em;
+} 
+ol.ng-symbols.ng-symbols-large li:before {
+    height: 4em; 
+    margin-left: -5em;
+    width: 4em; 
+}

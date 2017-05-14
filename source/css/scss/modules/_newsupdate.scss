@@ -1,0 +1,86 @@
+
+.ng-newsupdate {
+    background: #000;
+    max-height: 105px;
+    height: 60px;
+    font-family: $base-heading-font-family !important;
+    overflow: auto;
+    display: table;
+    padding: 11px 0 0 50px;
+
+    label {
+        color: #FFCC00;
+        float: left;
+        text-transform: uppercase;
+        padding-right: 10px;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: $base-blockquote-letter-spacing;
+        margin-top: 2px;
+        float: left;
+    }
+   ul {
+    padding:0;
+    margin:0;
+   }
+    span, li, .ng-ticker-item {
+        font-family: $base-body-font-family;
+        color: #fff !important;
+        text-transform: none;
+        margin-right: 5px;
+        font-weight: normal;
+        font-size: 16px;
+        list-style: none;
+
+        a, a:hover {
+            color: #fff !important;
+        }
+    }
+    .ng-newsupdate-cont {
+        max-height: 40px !important;
+
+    }
+    .ng-container {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+//for testing to be removed;
+.newsticker {
+
+  overflow: hidden;
+
+  ul li {
+    width: 730px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: none;
+  }
+}
+@media (max-width:$breakpoint-medium-max) {
+    .ng-newsupdate {
+        padding-left: 30px;
+        height: 85px;
+
+        label {
+            font-size: 14px;
+        }
+        span, #ng-ticker ul li {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width:$breakpoint-small-max) {
+    .ng-newsupdate {
+        padding-left: 10px;
+        height: 105px;
+
+        label {
+            font-size: 12px;
+        }
+        span, ul li {
+            font-size: 14px;
+        }
+    }
+}

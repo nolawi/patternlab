@@ -1,0 +1,470 @@
+$button-height:                                 60px !default;
+$button-mini-height:                            20px !default;
+$button-small-height:                           40px !default;
+$button-large-height:                           60px !default;
+
+$button-line-height:                            $button-height - 2 !default;
+$button-mini-line-height:                       $button-mini-height - 2 !default;
+$button-small-line-height:                      $button-small-height - 2 !default;
+$button-large-line-height:                      $button-large-height - 2 !default;
+
+$button-font-size:                              calculateRem(14px) !default;
+$button-mini-font-size:                         calculateRem(10px) !default;
+$button-small-font-size:                        calculateRem(12px) !default;
+$button-large-font-size:                        calculateRem(16px) !default;
+
+$button-padding-horizontal:                     35px !default;
+$button-mini-padding-horizontal:                15px !default;
+$button-small-padding-horizontal:               20px !default;
+$button-large-padding-horizontal:               35px !default;
+
+$button-background:                             #fff !default;
+$button-color:                                  $global-color !default;
+$button-hover-background:                       $global-default-hover-background !default;
+$button-hover-color:                            $global-color !default;
+$button-active-background:                      $global-default-active-background !default;
+$button-active-color:                           $global-color !default;
+.ng-button-background {background: $button-background}
+.ng-button-color {background: $button-color; color: #fff}
+.ng-button-hover-background {background: $button-hover-background}
+.ng-button-hover-color {background: $button-hover-color; color: #fff}
+.ng-button-active-background {background: $button-active-background}
+.ng-button-active-color {background: $button-active-color; color: #fff}
+
+$button-primary-background:                     $global-primary-background !default;
+$button-primary-color:                          $global-color !default;
+$button-primary-hover-background:               $theme-primary-muted-background !default;
+$button-primary-hover-color:                    $global-color !default;
+$button-primary-active-background:              saturate(darken($global-primary-background, 5%), 10%) !default;
+$button-primary-active-color:                   $global-color;
+.ng-button-primary-background {background: $button-primary-background;color: #fff}
+.ng-button-primary-color {background: $button-primary-color}
+.ng-button-primary-hover-background {background: $button-primary-hover-background;color: #fff}
+.ng-button-primary-hover-color {background: $button-primary-hover-color;color: #fff}
+.ng-button-primary-active-background {background: $button-primary-active-background;color: #fff}
+.ng-button-primary-active-color {background: $button-primary-active-color;color: #fff}
+
+$button-success-background:                     $global-success-background !default;
+$button-success-color:                          $global-contrast-color !default;
+$button-success-hover-background:               saturate(lighten($global-success-background, 5%), 10%) !default;
+$button-success-hover-color:                    $global-contrast-color !default;
+$button-success-active-background:              saturate(darken($global-success-background, 5%), 10%) !default;
+$button-success-active-color:                   $global-contrast-color !default;
+.ng-button-success-background {background: $button-success-background;color: #fff}
+.ng-button-success-color {background: $button-success-color}
+.ng-button-success-hover-background {background: $button-success-hover-background;color: #fff}
+.ng-button-success-hover-color {background: $button-success-hover-color}
+.ng-button-success-active-background {background: $button-success-active-background;color: #fff}
+.ng-button-success-active-color {background: $button-success-active-color}
+
+$button-danger-background:                      $global-danger-background !default;
+$button-danger-color:                           $global-contrast-color !default;
+$button-danger-hover-background:                saturate(lighten($global-danger-background, 5%), 10%) !default;
+$button-danger-hover-color:                     $global-contrast-color !default;
+$button-danger-active-background:               saturate(darken($global-danger-background, 5%), 10%) !default;
+$button-danger-active-color:                    $global-contrast-color !default;
+.ng-button-danger-background {background: $button-danger-background;color: #fff}
+.ng-button-danger-color {background: $button-danger-color}
+.ng-button-danger-hover-background {background: $button-danger-hover-background;color: #fff}
+.ng-button-danger-hover-color {background: $button-danger-hover-color}
+.ng-button-danger-active-background {background: $button-danger-active-background;color: #fff}
+.ng-button-danger-active-color {background: $button-danger-active-color}
+
+$button-disabled-background:                    transparent !default;
+$button-disabled-color:                         $global-muted-color !default;
+.ng-button-disabled-background {background: $button-disabled-background}
+.ng-button-disabled-color {background: $button-disabled-color}
+
+$button-link-color:                             $global-link-color !default;
+$button-link-hover-color:                       $global-link-hover-color !default;
+$button-link-hover-text-decoration:             underline !default;
+$button-link-disabled-color:                    $global-muted-color !default;
+.ng-button-link-color {background: $button-link-color;color: #fff}
+.ng-button-link-hover-color {background: $button-link-hover-color;color: #fff}
+.ng-button-link-disabled-color {background: $button-link-disabled-color;color: #fff}
+
+$button-border:                                 rgba(0,0,0,0.2) !default;
+$button-border-bottom:                          rgba(0,0,0,0.3) !default;
+$button-text-shadow:                            $global-text-shadow !default;
+.ng-button-border {background: $button-border}
+.ng-button-border-bottom {background: $button-border-bottom}
+.ng-button-text-shadow {background: $button-text-shadow}
+
+$button-contrast-border:                        rgba(0,0,0,0.2) !default;
+$button-contrast-border-bottom:                 rgba(0,0,0,0.4) !default;
+$button-contrast-text-shadow:                   $global-contrast-text-shadow !default;
+.ng-button-contrast-border {background: $button-contrast-border}
+.ng-button-contrast-border-bottom {background: $button-contrast-border-bottom}
+.ng-button-contrast-text-shadow {background: $button-contrast-text-shadow}
+
+$button-reverse-background:                     #000;
+$button-reverse-color:                          #f0f0f0;
+
+
+@mixin hook-button() {
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition-duration: 400ms;
+    border: 1px solid $button-border;
+    border-radius: 0;
+    text-shadow: none;
+    font-weight: 600;
+    font-size: $button-font-size;
+    transition-duration: 400ms;
+
+    .ng-icon {
+        display: inline-block;
+        font-size: 24px;
+        margin-right: 4px;
+        top: -4px;
+        vertical-align: text-top;
+    }
+}
+@mixin hook-button-hover(){
+    background-image: none;
+    border-color: $button-border;
+}
+@mixin hook-button-active(){
+    border-color: $button-border;
+    // border-top-color: $button-border-bottom;
+    background-image: none;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+}
+@mixin hook-button-primary(){
+    border-color: $button-primary-background;
+    text-shadow: none;
+}
+@mixin hook-button-primary-hover(){
+    border-color: $button-primary-hover-background;
+    background-image: none;
+}
+@mixin hook-button-primary-active(){
+    background-image: none;
+    border-color: $button-primary-active-background;
+    // border-top-color: $button-contrast-border-bottom;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+@mixin hook-button-success(){
+    border-color: $button-success-background;
+    // border-bottom-color: $button-contrast-border-bottom;
+    text-shadow: none;
+}
+@mixin hook-button-success-hover(){
+    border-color: $button-success-hover-background;
+    background-image: none;
+}
+@mixin hook-button-success-active(){
+    background-image: none;
+    border-color: $button-success-active-background;
+    // border-top-color: $button-contrast-border-bottom;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+@mixin hook-button-danger(){
+    border-color: $button-danger-background;
+    text-shadow: none;
+}
+@mixin hook-button-danger-hover(){
+    border-color: $button-danger-hover-background;
+    background-image: none;
+}
+@mixin hook-button-danger-active(){
+    background-image: none;
+    border-color: $button-danger-active-background;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+@mixin hook-button-disable(){
+    border: 1px solid $button-border;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+@mixin hook-button-link(){
+    font-weight: normal;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+    border-bottom: 1px solid $ng-gold;
+    padding: 0;
+    line-height: normal;
+    min-height: auto;
+    height: auto;
+    min-height: initial;
+    &:hover {
+        border-bottom: 1px solid $theme-muted-color;
+        text-decoration: none;
+    }
+}
+@mixin hook-button-large(){
+    // border-radius: $global-border-radius + 1;
+    min-width: 250px;
+}
+@mixin hook-button-misc(){
+    /* Modifier ng-button-blank */
+    .ng-button-blank, .ng-button-blank:active, .ng-button-blank:hover, .ng-button-blank:focus, .ng-button-blank:disabled {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        line-height: initial;
+        min-height: initial;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .ng-button-overlay, .ng-contrast .ng-button-overlay {
+        background-color: black;
+        color: white;
+        border: 1px solid #545454;
+        &:hover:not(:disabled), &:focus:not(:disabled) {
+            background-color: #444;
+            color: white;
+        }
+    }
+
+    .ng-button.ng-button-reverse {
+        &, &:active, &:focus {
+            background-color: $button-reverse-background;
+            border-color: $button-reverse-background;
+            box-shadow: none;
+            color: $button-reverse-color;
+            text-shadow: none;
+            -webkit-font-smoothing: antialiased;
+        }
+    }
+
+    /* Disabled <a> button */
+    .ng-button-disabled, .ng-button-disabled:hover, .ng-button-disabled:focus {
+        background-color: transparent;
+        color: #999;
+        cursor: auto;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        background-image: none;
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+    .ng-button.ng-link-external {
+        &:after {
+            font-size: 14px;
+            color: #999;
+            vertical-align: middle;
+            margin-left: 3px;
+            position: relative;
+            top: -1px;
+        }
+
+        &.ng-button-primary:after {
+            color: #000;
+        }
+
+        &.ng-button-large:after {
+            font-size: 16px;
+            top: -1px;
+        }
+
+        &.ng-button-small:after {
+            font-size: 12px;
+            top: -1px;
+        }
+    }
+
+    /* Sub-object `ng-button-group`
+     ========================================================================== */
+
+    /*
+     * Reset border-radius
+     */
+
+    .ng-button-group > .ng-button:not(:first-child):not(:last-child),
+    .ng-button-group > div:not(:first-child):not(:last-child) .ng-button { border-radius: 0; }
+
+    .ng-button-group > .ng-button:first-child,
+    .ng-button-group > div:first-child .ng-button {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .ng-button-group > .ng-button:last-child,
+    .ng-button-group > div:last-child .ng-button {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    /*
+     * Collapse border
+     */
+
+    .ng-button-group > .ng-button,
+    .ng-button-group > div .ng-button {
+        margin-bottom: -1px;
+        margin-right: -1px;
+    }
+
+    .ng-button-group.ng-button-group-margin {
+        > .ng-button {
+            margin: 0 20px 20px 0;
+        }
+    }
+
+    /*
+     * Allow button groups to wrap
+     */
+
+    .ng-button-group { white-space: normal; }
+
+    /*
+     * Add triangle to selected RadioButtonGroup Button
+     */
+
+    [data-ng-button-radio] .ng-button {
+        position: relative;
+
+        &.ng-active {
+            @extend .ng-button-reverse;
+        }
+
+        &::after {
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 10px solid transparent;
+            bottom: -11px;
+            content: '';
+            height: 0;
+            left: 50%;
+            margin-left: -12px;
+            position: absolute;
+            width: 0;
+            transition-duration: 400ms;
+        }
+
+        &.ng-active::after {
+            border-top-color: $button-reverse-background;
+        }
+    }
+
+
+    /*
+     * Create position context to superimpose the successor elements border
+     * Known issue: If you use an `a` element as button and an icon inside,
+     * the active state will not work if you click the icon inside the button
+     * Workaround: Just use a `button` or `input` element as button
+     */
+
+    .ng-button-group .ng-button:active { position: relative; }
+
+    .ng-pill-button {
+        @extend .ng-button;
+
+        border-radius: 8px;
+        font-weight: normal;
+        line-height: $global-height - 2;
+        min-height: $global-height;
+        padding: 0 10px;
+
+        &.ng-pill-button-closable {
+            padding: 0 40px 0 10px;
+            position: relative;
+            text-align: left;
+
+            .ng-icon-times {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                margin-top: -8px;
+            }
+        }
+    }
+
+    /*
+     * Dropdown toggles
+     */
+
+    .ng-button-dropdown-toggle {
+        padding: 0 85px 0 20px;
+        position: relative;
+        text-align: left;
+
+        .ng-icon-angle-down {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            margin-top: -8px;
+        }
+    }
+
+
+    /* Phone-Call Links Hide on desktops */
+    .no-touch a.ng-button[href^="tel:"] {
+        display: none;
+    }
+
+    /* File Input Buttons */
+    input[type="file"] {
+        border: 1px solid #CCC;
+        cursor: pointer;
+        font-size: 0.875rem;
+        padding: 20px;
+        /*mod for profile */
+        &#id_custom_avatar {
+            padding: 0px;
+            width: 100%;
+        }
+    }
+    ::-ms-browse {
+      background-color: $global-primary-background;
+      border: 0;
+      color: black;
+      cursor: pointer;
+      font-size: $button-small-font-size;
+      font-weight: bold;
+      min-height: $button-small-height;
+      padding: 0 1.25rem;
+    }
+    ::-webkit-file-upload-button {
+      background-color: $global-primary-background;
+      border: 0;
+      color: black;
+      cursor: pointer;
+      font-size: $button-small-font-size;
+      font-weight: bold;
+      min-height: $button-small-height;
+      padding: 0 1.25rem;
+    }
+
+    /*
+     * Side By Side Buttons on Mobile
+     */
+    @media (max-width: $breakpoint-mini-max) {
+        .ng-button:not(.ng-button-mini) {
+            font-size: $button-small-font-size;
+            line-height: $button-small-line-height;
+            min-height: $button-small-height;
+            min-width: 200px;
+            padding: 0 $button-small-padding-horizontal;
+        }
+        .ng-header-container .ng-button {
+            min-width: auto;
+        }
+        .ng-button + .ng-button {
+            margin-top: 25px;
+
+            [data-ng-button-radio] & {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@import "core/button";
+
+@media (max-width: $breakpoint-mini-max) {
+    input[type=submit],
+    .BBFormContainer input[type="submit"].BBFormSubmitbutton {
+        font-size: $button-small-font-size !important;
+        line-height: $button-small-line-height !important;
+        min-height: $button-small-height !important;
+        min-width: 200px !important;
+        padding: 0 $button-small-padding-horizontal !important;
+        width: auto !important;
+    }
+}
+

@@ -1,0 +1,14 @@
+$close-size:                                    20px !default;
+
+$close-alt-padding:                             2px !default;
+$close-alt-background:                          $global-background !default;
+.ng-close-alt-background {background: $close-alt-background}
+
+@mixin hook-close(){}
+@mixin hook-close-alt(){
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),
+                0 0 6px rgba(0,0,0,0.3);
+}
+@mixin hook-close-misc(){}
+
+@import "core/close";

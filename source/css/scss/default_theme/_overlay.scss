@@ -1,0 +1,119 @@
+$overlay-panel-padding:                         20px;
+$overlay-panel-color:                           $global-contrast-color;
+
+$overlay-panel-background:                      rgba(0,0,0,0.5);
+
+$overlay-icon:                                  "\f002";
+$overlay-icon-size:                             50px;
+$overlay-icon-color:                            $global-contrast-color;
+
+$overlay-fade-in-opacity:                       1;
+$overlay-fade-out-opacity:                      0.7;
+
+$overlay-scale-in-scale:                        1.1;
+$overlay-scale-out-scale:                       1;
+
+$overlay-spin-in-scale:                         1.1;
+$overlay-spin-out-scale:                        1;
+$overlay-spin-in-rotate:                        3deg;
+$overlay-spin-out-rotate:                       0deg;
+
+$overlay-panel-link-color:                      inherit;
+$overlay-panel-link-text-decoration:            underline;
+
+.ng-overlay-panel-color {background: $overlay-panel-color}
+.ng-overlay-panel-background {background: $overlay-panel-background;color: #fff}
+.ng-overlay-icon-color {background: $overlay-icon-color}
+.ng-overlay-panel-link-color {background: $overlay-panel-link-color}
+.ng-overlay-icon {font-family: FontAwesome}
+
+
+// DEPRECATED
+$overlay-area-background:                       rgba(0,0,0,0.3) !default;
+
+$overlay-area-icon:                             "\f002" !default;
+$overlay-area-icon-video:                       "\f144" !default;
+$overlay-area-icon-size:                        50px !default;
+$overlay-area-icon-color:                       $global-contrast-color !default;
+
+$overlay-area-content-font-size:                1rem !default;
+$overlay-area-content-padding-horizontal:       15px !default;
+$overlay-area-content-color:                    #fff !default;
+$overlay-area-content-link-color:               inherit !default;
+
+$overlay-caption-background:                    rgba(0,0,0,0.5) !default;
+$overlay-caption-padding:                       10px !default;
+$overlay-caption-color:                         $global-contrast-color !default;
+
+@mixin hook-overlay-panel() {}
+@mixin hook-overlay-background() {}
+@mixin hook-overlay-image() {}
+@mixin hook-overlay-icon() {}
+@mixin hook-overlay-misc(){
+    /*
+     * CUSTOM ADDITION: Use correct color for inline-markup tags
+     */
+    .ng-overlay-panel strong,
+    .ng-overlay-panel em,
+    .ng-overlay-panel del,
+    .ng-overlay-panel ins,
+    .ng-overlay-panel code,
+    .ng-overlay-panel a,
+    .ng-overlay-panel mark,
+    .ng-overlay-panel q,
+    .ng-overlay-panel abbr,
+    .ng-overlay-panel dfn,
+    .ng-overlay-panel small { color: inherit; }
+
+    .ng-overlay-video-icon:before,
+    .ng-overlay-play-icon:before {
+        content: $overlay-icon;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $overlay-icon-size;
+        height: $overlay-icon-size;
+        margin-top: -($overlay-icon-size / 2);
+        margin-left: -($overlay-icon-size / 2);
+        font-size: $overlay-icon-size;
+        line-height: 1;
+        font-family: FontAwesome;
+        text-align: center;
+        color: $overlay-icon-color;
+        @include hook-overlay-icon();
+    }
+
+    .ng-overlay-video-icon:before {
+        content: "\f03d";
+    }
+
+    .ng-overlay-play-icon:before {
+        content: "\f04b";
+    }
+    .ng-overlay-caption-top {
+        /* 1 */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* 2 */
+        padding: $overlay-caption-padding;
+        background: $overlay-caption-background;
+        color: $overlay-caption-color;
+        /* 3 */
+        opacity: 0;
+        -webkit-transition: opacity 0.15s linear;
+        transition: opacity 0.15s linear;
+        -webkit-transform: translate3d(0,0,0);
+        top: 0;
+        bottom: auto;
+    }
+
+}
+// DEPRECATED
+@mixin hook-overlay-area() {}
+@mixin hook-overlay-area-icon() {}
+@mixin hook-overlay-area-content() {}
+@mixin hook-overlay-caption() {}
+
+@import "core/overlay";

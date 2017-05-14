@@ -1,0 +1,79 @@
+$dotnav-margin-bottom:                          30px !default;
+$dotnav-margin-left:                            15px !default;
+$dotnav-width:                                  8px !default;
+$dotnav-height:                                 $dotnav-width !default;
+$dotnav-background:                             rgba(50,50,50,0.1) !default;
+
+$dotnav-hover-background:                       rgba(50,50,50,0.4) !default;
+$dotnav-onclick-background:                     rgba(50,50,50,0.6) !default;
+$dotnav-active-background:                      transparentize($ng-gold, 0.4) !default;
+
+$dotnav-contrast-background:                    #ccc !default;
+$dotnav-contrast-hover-background:              transparentize(#fff, 0.3) !default;
+$dotnav-contrast-onclick-background:            transparentize(#fff, 0.1) !default;
+$dotnav-contrast-active-background:             #fff !default;
+$dotnav-contrast-border:                        #979797 !default;
+
+$dotnav-vertical-margin-top:                    $dotnav-margin-left !default;
+
+
+.ng-dotnav-background {background: $dotnav-background;}
+.ng-dotnav-hover-background {background: $dotnav-hover-background;color: #fff}
+.ng-dotnav-onclick-background {background: $dotnav-onclick-background;color: #fff}
+.ng-dotnav-active-background {background: $dotnav-active-background;color: #fff}
+.ng-dotnav-contrast-background {background: $dotnav-contrast-background}
+.ng-dotnav-contrast-hover-background {background: $dotnav-contrast-hover-background}
+.ng-dotnav-contrast-onclick-background {background: $dotnav-contrast-onclick-background}
+.ng-dotnav-contrast-active-background {background: $dotnav-contrast-active-background}
+
+@mixin hook-dotnav-item(){
+    border-bottom: none;
+}
+@mixin hook-dotnav-item-hover(){
+    border-bottom: none
+}
+@mixin hook-dotnav-item-onclick(){
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+@mixin hook-dotnav-item-active(){}
+@mixin hook-dotnav-contrast-item(){
+    border: 1px solid $dotnav-contrast-border;
+}
+@mixin hook-dotnav-contrast-item-hover(){}
+@mixin hook-dotnav-contrast-item-onclick(){}
+@mixin hook-dotnav-contrast-item-active(){}
+@mixin hook-dotnav-misc(){
+    .ng-dotnav {
+    	margin-bottom: $dotnav-margin-bottom;
+        margin-left: 0;  // Remove the left margin from the default ul style
+        animation: fadein 3s;
+        visibility: hidden;
+        -ms-animation: fadein 3s;
+        -moz-animation: fadein 3s; /* Firefox */
+        -webkit-animation: fadein 3s; /* Safari and Chrome */
+        -o-animation: fadein 4s; /* Opera */
+    }
+
+    .ng-dotnav>*>* {
+        width: 6px;
+        height: 6px;
+    }
+
+    @media (max-width: $breakpoint-medium-max) {
+    	.ng-dotnav {
+            margin-bottom: 20px;
+            top: auto;
+        }
+    }
+    @media (max-width: $breakpoint-mini-max) {
+    	.ng-dotnav {
+            margin-bottom: 15px;
+            top: auto;
+        }
+    }
+
+}
+
+
+@import "components/dotnav";

@@ -1,0 +1,400 @@
+/**
+Icons
+
+Place vector icons anywhere using an icon font.
+
+This component uses a custom [Icon Society](https://github.com/Natgeoed/icon-society)
+icon font. Icon fonts are great, because they enable you to easily change color,
+size and more via CSS. They are scalable vector graphics, which means that they
+look great on high-resolution displays.
+
+Styleguide Media.Icons
+*/
+/**
+Configuration
+
+<table class="settings">
+    <tr><td>`$icon-font-path`</td>
+        <td>#{$icon-font-path}</td>
+    </tr>
+    <tr><td>`$icon-small-font-size`</td>
+        <td>#{$icon-small-font-size}</td>
+    </tr>
+    <tr><td>`$icon-medium-font-size`</td>
+        <td>#{$icon-medium-font-size}</td>
+    </tr>
+    <tr><td>`$icon-large-font-size`</td>
+        <td>#{$icon-large-font-size}</td>
+    </tr>
+    <tr><td>`$icon-small-vertical-align`</td>
+        <td>#{$icon-small-vertical-align}</td>
+    </tr>
+    <tr><td>`$icon-medium-vertical-align`</td>
+        <td>#{$icon-medium-vertical-align}</td>
+    </tr>
+    <tr><td>`$icon-large-vertical-align`</td>
+        <td>#{$icon-large-vertical-align}</td>
+    </tr>
+    <tr><td>`$icon-hover-color`</td>
+        <td class="ng--icon-hover-color">#{$icon-hover-color}</td>
+    </tr>
+    <tr><td>`$icon-hover-hover-color`</td>
+        <td class="ng--icon-hover-hover-color">#{$icon-hover-hover-color}</td>
+    </tr>
+    <tr><td>`$icon-button-width`</td>
+        <td>#{$icon-button-width}</td>
+    </tr>
+    <tr><td>`$icon-button-height`</td>
+        <td>#{$icon-button-height}</td>
+    </tr>
+    <tr><td>`$icon-button-border-radius`</td>
+        <td>#{$icon-button-border-radius}</td>
+    </tr>
+    <tr><td>`$icon-button-background`</td>
+        <td class="ng--icon-button-background">#{$icon-button-background}</td>
+    </tr>
+    <tr><td>`$icon-button-font-size`</td>
+        <td class="ng--icon-button-font-size">#{$icon-button-font-size}</td>
+    </tr>
+    <tr><td>`$icon-button-color`</td>
+        <td class="ng--icon-button-color">#{$icon-button-color}</td>
+    </tr>
+    <tr><td>`$icon-button-hover-background`</td>
+        <td class="ng--icon-button-hover-background">#{$icon-button-hover-background}</td>
+    </tr>
+    <tr><td>`$icon-button-hover-color`</td>
+        <td class="ng--icon-button-hover-color">#{$icon-button-hover-color}</td>
+    </tr>
+    <tr><td>`$icon-button-active-background`</td>
+        <td class="ng--icon-button-active-background">#{$icon-button-active-background}</td>
+    </tr>
+    <tr><td>`$icon-button-active-color`</td>
+        <td class="ng--icon-button-active-color">#{$icon-button-active-color}</td>
+    </tr>
+</table>
+
+Weight: 1
+
+Styleguide Media.Icons.Configuration
+*/
+/**
+Basic Usage
+
+To apply an icon, add any `.ng-icon-*` class to an `<i>` or `<span>` element.
+Et voilà, you have a vector icon, which inherits size and color just like your
+text does.
+
+Markup:
+<ul class="ng-list ng-list-line">
+    <li><i class="ng-icon-download"></i> Uses the <code>.ng-icon-download</code> class</li>
+    <li><i class="ng-icon-user"></i> Uses the <code>.ng-icon-user</code> class</li>
+    <li><i class="ng-icon-sort"></i> Uses the <code>.ng-icon-sort</code> class</li>
+    <li><a href="#"><i class="ng-icon-external-link"></i> An icon in a link</a></li>
+</ul>
+<a href="#" class="ng-button"><i class="ng-icon-envelope"></i> A button with an icon</a>
+
+Weight: 2
+
+Styleguide Media.Icons.Usage
+*/
+/**
+More Examples
+
+Weight: 3
+
+Styleguide Media.Icons.More-Examples
+*/
+/**
+Button Group
+
+This example shows a group of buttons from the Button component with icons inside each button.
+
+Markup:
+<div class="ng-button-group">
+    <a href="#" class="ng-button"><i class="ng-icon-audio-mute"></i></a>
+    <a href="#" class="ng-button"><i class="ng-icon-audio-loud"></i></a>
+    <a href="#" class="ng-button"><i class="ng-icon-play"></i></a>
+    <a href="#" class="ng-button"><i class="ng-icon-expand"></i></a>
+</div>
+
+Styleguide Media.Icons.More-Examples.button-group
+*/
+/**
+Button dropdown
+
+This example shows a button which is split into a standard action to the left
+and a dropdown toggle on the right, using the Dropdown component.
+
+Markup:
+<div class="ng-button-group">
+    <button class="ng-button ng-button-primary"><i class="ng-icon-folder-open"></i> Post</button>
+    <div data-ng-dropdown="{mode:'click'}">
+        <button class="ng-button ng-button-primary"><i class="ng-icon-caret-down"></i></button>
+        <div class="ng-dropdown ng-dropdown-small">
+            <ul class="ng-nav ng-nav-dropdown">
+                <li><a href="#"><i class="ng-icon-edit"></i> Edit</a></li>
+                <li><a href="#"><i class="ng-icon-eye"></i> View</a></li>
+                <li><a href="#"><i class="ng-icon-check-square-o"></i> Enable</a></li>
+                <li class="ng-nav-divider"></li>
+                <li><a href="#"><i class="ng-icon-trash-o"></i> Trash</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+Styleguide Media.Icons.More-Examples.button-dropdown
+*/
+/**
+Blockquotes
+
+This example shows a blockquote from the Base component with a large quote icon.
+It also uses the `.ng-align-left` class from the Utility component.
+
+Markup:
+<blockquote>
+    <p>
+        <i class="ng-icon-quote-left ng-icon-large ng-align-left"></i>
+        The &lt;blockquote&gt; element defines a long quotation which also
+        creates a new block by inserting white space before and after the
+        blockquote element.
+    </p>
+</blockquote>
+
+Styleguide Media.Icons.More-Examples.blockquotes
+*/
+/**
+Size Modifiers
+
+Add the `.ng-icon-small`, `.ng-icon-medium` or `.ng-icon-large` class to an
+icon to make the it larger.
+
+Markup:
+<p><i class="ng-icon-ngs"></i> the default icon is the same size as the text</p>
+<p><i class="ng-icon-ngs ng-icon-small"></i> <code>.ng-icon-small</code> is #{$icon-small-font-size} of the text size</p>
+<p><i class="ng-icon-ngs ng-icon-medium"></i> <code>.ng-icon-medium</code> is #{$icon-medium-font-size} of the text size</p>
+<p><i class="ng-icon-ngs ng-icon-large"></i> <code>.ng-icon-large</code> is #{$icon-large-font-size} of the text size</p>
+
+Weight: 4
+
+Styleguide Media.Icons.Sizing
+*/
+
+/**
+Spin Modifier
+
+Use the `ng-icon-spin` class to get any icon to rotate.
+
+Markup:
+<i class="ng-icon-clock-o ng-icon-spin"></i>
+<i class="ng-icon-close ng-icon-spin"></i>
+<i class="ng-icon-share ng-icon-spin"></i>
+
+Weight: 5
+
+Styleguide Media.Icons.Spinning
+*/
+
+/**
+Icon hover
+
+Use the modifier `.ng-icon-hover` class to use an anchor as an icon, applying a
+hover effect and removing the link underline.
+
+Markup:
+<a href="#" class="ng-icon-small ng-icon-hover ng-icon-facebook"></a>
+<a href="#" class="ng-icon-small ng-icon-hover ng-icon-twitter"></a>
+<a href="#" class="ng-icon-small ng-icon-hover ng-icon-google-plus"></a>
+<a href="#" class="ng-icon-small ng-icon-hover ng-icon-instagram"></a>
+
+Weight: 6
+
+Styleguide Media.Icons.hover
+*/
+/**
+Icon button
+
+Use the modifier `.ng-icon-button` class to create an icon button, which can be
+used perfectly for social icons.
+
+Markup:
+<a href="#" class="ng-icon-button ng-icon-facebook"></a>
+<a href="#" class="ng-icon-button ng-icon-twitter"></a>
+<a href="#" class="ng-icon-button ng-icon-google-plus"></a>
+<a href="#" class="ng-icon-button ng-icon-instagram"></a>
+
+Weight: 7
+
+Styleguide Media.Icons.button
+*/
+/**
+Icon Button Large modifier
+
+Add the modifier `.ng-icon-button-large` class to create a large icon button.
+
+Markup:
+<a href="#" class="ng-icon-button ng-icon-button-large ng-icon-facebook"></a>
+<a href="#" class="ng-icon-button ng-icon-button-large ng-icon-twitter"></a>
+<a href="#" class="ng-icon-button ng-icon-button-large ng-icon-google-plus"></a>
+<a href="#" class="ng-icon-button ng-icon-button-large ng-icon-instagram"></a>
+
+Styleguide Media.Icons.button.large
+*/
+
+/**
+Justify icon
+
+To add a fixed width to the icon and center it, add the `.ng-icon-justify` class.
+This is useful when using different icons in a list.
+
+Markup:
+<ul class="ng-list">
+  <li><a href="#"><i class="ng-icon-download ng-icon-justify"></i> Downloads</a></li>
+  <li><a href="#"><i class="ng-icon-book ng-icon-justify"></i> Library</a></li>
+  <li><a href="#"><i class="ng-icon-user ng-icon-justify"></i> Users</a></li>
+  <li><a href="#"><i class="ng-icon-heart ng-icon-justify"></i> Favorites</a></li>
+</ul>
+
+Weight: 8
+
+Styleguide Media.Icons.Fixed-width
+*/
+
+/**
+Icons listing
+
+The complete set of icons in <a href="https://github.com/Natgeoed/icon-society/">Icon Society</a>
+
+Weight: 9
+
+Styleguide Media.Icons.Icon-list
+*/
+/**
+Web Application Icons
+
+<ul class="ng-grid ng-grid-width-1-2 ng-grid-width-medium-1-4">
+    <li><i class="ng-icon-add ng-icon-justify"></i>&emsp;add</li>
+    <li><i class="ng-icon-book ng-icon-justify"></i>&emsp;book</li>
+    <li><i class="ng-icon-box-arrow-ne ng-icon-justify"></i>&emsp;box-arrow-ne</li>
+    <li><i class="ng-icon-box-arrow-ne-light ng-icon-justify"></i>&emsp;box-arrow-ne-light</li>
+    <li><i class="ng-icon-clock-o ng-icon-justify"></i>&emsp;clock-o</li>
+    <li><i class="ng-icon-close ng-icon-justify"></i>&emsp;close</li>
+    <li><i class="ng-icon-close-light ng-icon-justify"></i>&emsp;close-light</li>
+    <li><i class="ng-icon-comment ng-icon-justify"></i>&emsp;comment</li>
+    <li><i class="ng-icon-download ng-icon-justify"></i>&emsp;download</li>
+    <li><i class="ng-icon-envelope ng-icon-justify"></i>&emsp;envelope</li>
+    <li><i class="ng-icon-eraser ng-icon-justify"></i>&emsp;eraser</li>
+    <li><i class="ng-icon-external-link ng-icon-justify"></i>&emsp;external-link (alias)</li>
+    <li><i class="ng-icon-external-link-light ng-icon-justify"></i>&emsp;external-link-light (alias)</li>
+    <li><i class="ng-icon-external-link-square ng-icon-justify"></i>&emsp;external-link-square (alias)</li>
+    <li><i class="ng-icon-external-link-square-light ng-icon-justify"></i>&emsp;external-link-square-light (alias)</li>
+    <li><i class="ng-icon-geolocate ng-icon-justify"></i>&emsp;geolocate</li>
+    <li><i class="ng-icon-heart ng-icon-justify"></i>&emsp;heart</li>
+    <li><i class="ng-icon-heart-hollow ng-icon-justify"></i>&emsp;heart-hollow</li>
+    <li><i class="ng-icon-info-circle ng-icon-justify"></i>&emsp;info-circle</li>
+    <li><i class="ng-icon-list-ul ng-icon-justify"></i>&emsp;list-ul</li>
+    <li><i class="ng-icon-map-marker ng-icon-justify"></i>&emsp;map-marker</li>
+    <li><i class="ng-icon-minus ng-icon-justify"></i>&emsp;minus</li>
+    <li><i class="ng-icon-minus-square-o ng-icon-justify"></i>&emsp;minus-square-o</li>
+    <li><i class="ng-icon-plus ng-icon-justify"></i>&emsp;plus (alias)</li>
+    <li><i class="ng-icon-plus-square-o ng-icon-justify"></i>&emsp;plus-square-o</li>
+    <li><i class="ng-icon-print ng-icon-justify"></i>&emsp;print</li>
+    <li><i class="ng-icon-question-circle ng-icon-justify"></i>&emsp;question-circle</li>
+    <li><i class="ng-icon-remove ng-icon-justify"></i>&emsp;remove (alias)</li>
+    <li><i class="ng-icon-remove-light ng-icon-justify"></i>&emsp;remove-light (alias)</li>
+    <li><i class="ng-icon-search ng-icon-justify"></i>&emsp;search</li>
+    <li><i class="ng-icon-search-minus ng-icon-justify"></i>&emsp;search-minus (alias)</li>
+    <li><i class="ng-icon-search-plus ng-icon-justify"></i>&emsp;search-plus (alias)</li>
+    <li><i class="ng-icon-share ng-icon-justify"></i>&emsp;share</li>
+    <li><i class="ng-icon-sort ng-icon-justify"></i>&emsp;sort</li>
+    <li><i class="ng-icon-times ng-icon-justify"></i>&emsp;times (alias)</li>
+    <li><i class="ng-icon-times-light ng-icon-justify"></i>&emsp;times-light (alias)</li>
+    <li><i class="ng-icon-toggle-off ng-icon-justify"></i>&emsp;toggle-off</li>
+    <li><i class="ng-icon-toggle-on ng-icon-justify"></i>&emsp;toggle-on</li>
+    <li><i class="ng-icon-unlock ng-icon-justify"></i>&emsp;unlock</li>
+    <li><i class="ng-icon-user ng-icon-justify"></i>&emsp;user</li>
+    <li><i class="ng-icon-walker ng-icon-justify"></i>&emsp;walker</li>
+    <li><i class="ng-icon-warning ng-icon-justify"></i>&emsp;warning</li>
+    <li><i class="ng-icon-zoom-in ng-icon-justify"></i>&emsp;zoom-in</li>
+    <li><i class="ng-icon-zoom-out ng-icon-justify"></i>&emsp;zoom-out</li>
+</ul>
+
+Weight: 1
+
+Styleguide Media.Icons.Icon-list.web-application
+*/
+/**
+Directional Icons
+
+<ul class="ng-grid ng-grid-width-1-2 ng-grid-width-medium-1-4">
+    <li><i class="ng-icon-angle-double-left ng-icon-justify"></i>&emsp;angle-double-left</li>
+    <li><i class="ng-icon-angle-double-right ng-icon-justify"></i>&emsp;angle-double-right</li>
+    <li><i class="ng-icon-angle-down ng-icon-justify"></i>&emsp;angle-down (alias)</li>
+    <li><i class="ng-icon-angle-down-light ng-icon-justify"></i>&emsp;angle-down-light (alias)</li>
+    <li><i class="ng-icon-angle-left ng-icon-justify"></i>&emsp;angle-left (alias)</li>
+    <li><i class="ng-icon-angle-left-light ng-icon-justify"></i>&emsp;angle-left-light (alias)</li>
+    <li><i class="ng-icon-angle-right ng-icon-justify"></i>&emsp;angle-right (alias)</li>
+    <li><i class="ng-icon-angle-right-light ng-icon-justify"></i>&emsp;angle-right-light (alias)</li>
+    <li><i class="ng-icon-angle-up ng-icon-justify"></i>&emsp;angle-up (alias)</li>
+    <li><i class="ng-icon-angle-up-light ng-icon-justify"></i>&emsp;angle-up-light (alias)</li>
+    <li><i class="ng-icon-arrow-down ng-icon-justify"></i>&emsp;arrow-down</li>
+    <li><i class="ng-icon-arrow-down ng-icon-justify"></i>&emsp;arrow-down</li>
+    <li><i class="ng-icon-arrow-left ng-icon-justify"></i>&emsp;arrow-left</li>
+    <li><i class="ng-icon-arrow-left-light ng-icon-justify"></i>&emsp;arrow-left-light</li>
+    <li><i class="ng-icon-arrow-ne ng-icon-justify"></i>&emsp;arrow-ne</li>
+    <li><i class="ng-icon-arrow-ne-light ng-icon-justify"></i>&emsp;arrow-ne-light</li>
+    <li><i class="ng-icon-arrow-right ng-icon-justify"></i>&emsp;arrow-right</li>
+    <li><i class="ng-icon-arrow-right-light ng-icon-justify"></i>&emsp;arrow-right-light</li>
+    <li><i class="ng-icon-arrow-up ng-icon-justify"></i>&emsp;arrow-up</li>
+    <li><i class="ng-icon-arrow-up-light ng-icon-justify"></i>&emsp;arrow-up-light</li>
+    <li><i class="ng-icon-caret-down ng-icon-justify"></i>&emsp;caret-down</li>
+    <li><i class="ng-icon-caret-right ng-icon-justify"></i>&emsp;caret-right</li>
+    <li><i class="ng-icon-caret-up ng-icon-justify"></i>&emsp;caret-up</li>
+    <li><i class="ng-icon-direction-down ng-icon-justify"></i>&emsp;direction-down</li>
+    <li><i class="ng-icon-direction-down-light ng-icon-justify"></i>&emsp;direction-down-light</li>
+    <li><i class="ng-icon-direction-left ng-icon-justify"></i>&emsp;direction-left</li>
+    <li><i class="ng-icon-direction-left-light ng-icon-justify"></i>&emsp;direction-left-light</li>
+    <li><i class="ng-icon-direction-right ng-icon-justify"></i>&emsp;direction-right</li>
+    <li><i class="ng-icon-direction-right-light ng-icon-justify"></i>&emsp;direction-right-light</li>
+    <li><i class="ng-icon-direction-up ng-icon-justify"></i>&emsp;direction-up</li>
+    <li><i class="ng-icon-direction-up-light ng-icon-justify"></i>&emsp;direction-up-light</li>
+</ul>
+
+Weight: 11
+
+Styleguide Media.Icons.Icon-list.directional
+*/
+/**
+Media Player Icons
+
+<ul class="ng-grid ng-grid-width-1-2 ng-grid-width-medium-1-4">
+    <li><i class="ng-icon-audio ng-icon-justify"></i>&emsp;audio</li>
+    <li><i class="ng-icon-audio-loud ng-icon-justify"></i>&emsp;audio-loud</li>
+    <li><i class="ng-icon-audio-mute ng-icon-justify"></i>&emsp;audio-mute</li>
+    <li><i class="ng-icon-contract ng-icon-justify"></i>&emsp;contract</li>
+    <li><i class="ng-icon-expand ng-icon-justify"></i>&emsp;expand</li>
+    <li><i class="ng-icon-play ng-icon-justify"></i>&emsp;play</li>
+</ul>
+
+Weight: 12
+
+Styleguide Media.Icons.Icon-list.media-player
+*/
+/**
+Brand Icons
+
+<ul class="ng-grid ng-grid-width-1-2 ng-grid-width-medium-1-4">
+    <li><i class="ng-icon-facebook ng-icon-justify"></i>&emsp;facebook</li>
+    <li><i class="ng-icon-google-plus ng-icon-justify"></i>&emsp;google-plus</li>
+    <li><i class="ng-icon-instagram ng-icon-justify"></i>&emsp;instagram</li>
+    <li><i class="ng-icon-linkedin ng-icon-justify"></i>&emsp;linkedin</li>
+    <li><i class="ng-icon-ngs ng-icon-justify"></i>&emsp;ngs</li>
+    <li><i class="ng-icon-pinterest ng-icon-justify"></i>&emsp;pinterest</li>
+    <li><i class="ng-icon-twitter ng-icon-justify"></i>&emsp;twitter</li>
+    <li><i class="ng-icon-whats-app ng-icon-justify"></i>&emsp;whats-app</li>
+    <li><i class="ng-icon-youtube ng-icon-justify"></i>&emsp;youtube</li>
+</ul>
+
+Weight: 13
+
+Styleguide Media.Icons.Icon-list.file-type
+*/

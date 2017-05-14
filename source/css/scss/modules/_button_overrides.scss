@@ -1,0 +1,17 @@
+.ng-button-row {
+  .ng-button {
+    margin-left:15px;
+    margin-right:15px;
+    margin-top:30px;
+  }
+}
+
+@media (max-width: $breakpoint-mini-max) {
+  .ng-button + .ng-button {
+    margin-top: 20px;
+
+    [data-ng-button-radio] & {
+      margin-top: 0;
+    }
+  }
+}

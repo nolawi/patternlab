@@ -1,0 +1,27 @@
+.ng-promo-full-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 400px;
+}
+.ng-full-promo .ng-title {
+    border: 1px solid #CCC;
+    padding: 25px 0;
+}
+.ng-full-promo .ng-title label { 
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.ng-full-promo h3 {
+    color: #FFF;
+    margin-bottom: 0;
+}
+.ng-full-promo .ng-margin-top { 
+    margin-top: 30px !important;
+}
+.ng-full-promo .ng-margin-small-top {
+    margin-top: 20px !important;
+}

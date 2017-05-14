@@ -1,0 +1,279 @@
+$form-height:                                   $global-height !default;
+$form-padding:                                  4px 6px !default;
+$form-border:                                   $global-border !default;
+$form-border-width:                             1px !default;
+$form-background:                               $global-background !default;
+$form-color:                                    $global-color !default;
+
+$form-focus-border:                             #99baca !default;
+$form-focus-background:                         #f5fbfe !default;
+$form-focus-color:                              $global-color !default;
+
+$form-disabled-border:                          $global-border !default;
+$form-disabled-background:                      $global-default-muted-background !default;
+$form-disabled-color:                           $global-muted-color !default;
+
+$form-placeholder-color:                        $global-muted-color !default;
+
+$form-gutter:                                   $global-margin !default;
+
+$form-legend-border:                            $global-border !default;
+$form-legend-border-width:                      1px !default;
+$form-legend-font-size:                         round($global-font-size * 1.28) !default;
+$form-legend-line-height:                       round($form-legend-font-size * 1.66) !default;
+
+$form-small-height:                             $global-small-height !default;
+$form-large-height:                             $global-large-height !default;
+$form-small-padding:                            3px 3px !default;
+$form-large-padding:                            8px 6px !default;
+$form-small-font-size:                          round($global-font-size * 0.85) !default;
+$form-large-font-size:                          round($global-font-size * 1.14) !default;
+
+$form-danger-border:                            #dc8d99 !default;
+$form-danger-background:                        #fff7f8 !default;
+$form-danger-color:                             #c91032 !default;
+
+$form-success-border:                           #8ec73b !default;
+$form-success-background:                       #fafff2 !default;
+$form-success-color:                            #539022 !default;
+
+$form-blank-border:                             $global-border !default;
+$form-blank-border-style:                       dashed !default;
+
+$form-mini-width:                               40px !default;
+$form-small-width:                              130px !default;
+$form-medium-width:                             200px !default;
+$form-large-width:                              500px !default;
+
+$form-help-inline-margin-left:                  10px !default;
+$form-help-block-margin-top:                    5px !default;
+
+$form-controls-condensed-margin-vertical:       5px !default;
+
+$form-stacked-margin-bottom:                    5px !default;
+$form-stacked-font-weight:                      bold !default;
+
+$form-horizontal-label-width:                   200px !default;
+$form-horizontal-label-margin-top:              5px !default;
+$form-horizontal-controls-margin-left:          215px !default;
+$form-horizontal-controls-text-padding-top:     5px !default;
+
+$form-icon-width:                               $global-height !default;
+$form-icon-font-size:                           $global-font-size !default;
+$form-icon-color:                               $global-muted-color !default;
+
+.ng-form-border {background: $form-border; color: #fff}
+.ng-form-background {background: $form-background}
+.ng-form-color {background: $form-color; color: #fff}
+.ng-form-focus-border {background: $form-focus-border; color: #fff}
+.ng-form-focus-background {background: $form-focus-background}
+.ng-form-focus-color {background: $form-focus-color; color: #fff}
+.ng-form-disabled-border {background: $form-disabled-border; color: #fff}
+.ng-form-disabled-background {background: $form-disabled-background; color: #fff}
+.ng-form-disabled-color {background: $form-disabled-color; color: #fff}
+.ng-form-placeholder-color {background: $form-placeholder-color; color: #fff}
+.ng-form-legend-border {background: $form-legend-border; color: #fff}
+.ng-form-danger-border {background: $form-danger-border; color: #fff}
+.ng-form-danger-background {background: $form-danger-background}
+.ng-form-danger-color {background: $form-danger-color; color: #fff}
+.ng-form-success-border {background: $form-success-border; color: #fff}
+.ng-form-success-background {background: $form-success-background}
+.ng-form-success-color {background: $form-success-color; color: #fff}
+.ng-form-blank-border {background: $form-blank-border; color: #fff}
+.ng-form-icon-color {background: $form-icon-color; color: #fff}
+
+@mixin hook-form(){
+    border-radius: $global-border-radius;
+}
+@mixin hook-form-focus(){}
+@mixin hook-form-disabled(){}
+@mixin hook-form-legend(){}
+@mixin hook-form-danger(){}
+@mixin hook-form-success(){}
+@mixin hook-form-blank(){}
+@mixin hook-form-blank-focus(){}
+@mixin hook-form-stacked-label(){}
+@mixin hook-form-horizontal-label(){}
+@mixin hook-form-misc(){
+    .ng-form input.ng-read-only,
+    .ng-form input:read-only {
+        border-color: $form-disabled-border;
+        background-color: $form-disabled-background;
+        color: $form-disabled-color;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        @include hook-form-disabled();
+    }
+
+    // Base styles
+    // -------------------------
+    .ng-input-group {
+      position: relative; // For dropdowns
+      display: table;
+      border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+
+      input {
+        // Ensure that the input is always above the *appended* addon button for
+        // proper border colors.
+        position: relative;
+        z-index: 2;
+
+        // IE9 fubars the placeholder attribute in text inputs and the arrows on
+        // select elements in input groups. To fix it, we float the input. Details:
+        // https://github.com/twbs/bootstrap/issues/11561#issuecomment-28936855
+        float: left;
+
+        // width: 100%;
+        margin-bottom: 0;
+      }
+    }
+
+    // Sizing options
+    //
+    // Remix the default form control sizing classes into new ones for easier
+    // manipulation.
+
+    // .input-group-lg > .form-control,
+    // .input-group-lg > .input-group-addon,
+    // .input-group-lg > .input-group-btn > .btn {
+    //   @extend .input-lg;
+    // }
+    // .input-group-sm > .form-control,
+    // .input-group-sm > .input-group-addon,
+    // .input-group-sm > .input-group-btn > .btn {
+    //   @extend .input-sm;
+    // }
+
+
+    // Display as table-cell
+    // -------------------------
+    .ng-input-group-addon,
+    .ng-input-group-btn,
+    .ng-input-group input,
+    .ng-input-group label {
+      display: table-cell;
+
+      // &:not(:first-child):not(:last-child) {
+      //   border-radius: 0;
+      // }
+    }
+
+    .ng-input-group label {
+        height: $form-height - $form-horizontal-label-margin-top;
+        vertical-align: middle;
+        width: $form-horizontal-label-width;
+    }
+
+    // Addon and addon wrapper for buttons
+    .ng-input-group-addon,
+    .ng-input-group-btn {
+      white-space: nowrap;
+      vertical-align: middle; // Match the inputs
+    }
+
+    $input-group-addon-bg: $global-default-background;
+
+    // Text input groups
+    // -------------------------
+    .ng-input-group-addon {
+      padding: $form-padding;
+      font-size: $global-font-size;
+      font-weight: normal;
+      line-height: 1;
+      color: $form-color;
+      text-align: center;
+      background-color: $input-group-addon-bg;
+      border: $form-border-width solid $form-border;
+      border-radius: $global-border-radius;
+
+      // // Sizing
+      // &.input-sm {
+      //   padding: $padding-small-vertical $padding-small-horizontal;
+      //   font-size: $font-size-small;
+      //   border-radius: $border-radius-small;
+      // }
+      // &.input-lg {
+      //   padding: $padding-large-vertical $padding-large-horizontal;
+      //   font-size: $font-size-large;
+      //   border-radius: $border-radius-large;
+      // }
+
+      // Nuke default margins from checkboxes and radios to vertically center within.
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-top: 0;
+      }
+    }
+
+    // Reset rounded corners
+    .ng-input-group input:first-child,
+    .ng-input-group label + input,
+    .ng-input-group input:not(:last-child),
+    .ng-input-group-addon:first-child,
+    .ng-input-group label + .ng-input-group-addon,
+    .ng-input-group-btn:first-child > .ng-button,
+    .ng-input-group-btn:last-child > .ng-button:not(:last-child):not(.dropdown-toggle) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    .ng-input-group-addon:first-child,
+    label + .ng-input-group-addon {
+      border-right: 0;
+    }
+    .ng-input-group input:last-child,
+    .ng-input-group .ng-input-group-addon + input,
+    .ng-input-group-addon:last-child,
+    .ng-input-group-btn:last-child > .ng-button,
+    .ng-input-group-btn:last-child > .ng-button-group > .ng-button,
+    .ng-input-group-btn:first-child > .ng-button:not(:first-child),
+    .ng-input-group-btn:first-child > .ng-button-group:not(:first-child) > .ng-button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    .ng-input-group-addon:last-child {
+      border-left: 0;
+    }
+
+    // Button input groups
+    // -------------------------
+    .ng-input-group-btn {
+      position: relative;
+      // Jankily prevent input button groups from wrapping with `white-space` and
+      // `font-size` in combination with `inline-block` on buttons.
+      font-size: 0;
+      white-space: nowrap;
+
+      // Negative margin for spacing, position for bringing hovered/focused/actived
+      // element above the siblings.
+      > .ng-button {
+        position: relative;
+        + .ng-button {
+          margin-left: -1px;
+        }
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active {
+          z-index: 2;
+        }
+      }
+
+      // Negative margin to only have a 1px border between the two
+      &:first-child {
+        > .ng-button,
+        > .ng-button-group {
+          margin-right: -1px;
+        }
+      }
+      &:last-child {
+        > .ng-button,
+        > .ng-button-group {
+          margin-left: -1px;
+        }
+      }
+    }
+}
+
+@import "core/form";

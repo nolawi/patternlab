@@ -1,0 +1,206 @@
+
+$thumbnail-padding:                             0 !default;
+$thumbnail-border:                              $global-border !default;
+$thumbnail-border-width:                        1px !default;
+$thumbnail-background:                          $global-background !default;
+$thumbnail-hover-border:                        darken($global-border, 20%) !default;
+$thumbnail-hover-background:                    $global-background !default;
+.ng-thumbnail-border { background: $thumbnail-border }
+.ng-thumbnail-background { background: $thumbnail-background }
+.ng-thumbnail-hover-border { background: $thumbnail-hover-border }
+.ng-thumbnail-hover-background { background: $thumbnail-hover-background }
+
+$thumbnail-caption-padding:                     $thumbnail-padding !default;
+$thumbnail-caption-color:                       $global-color !default;
+.ng-thumbnail-caption-color { background: $thumbnail-caption-color; color: #fff; }
+$thumbnail-font-family:                         $base-heading-font-family !default;
+$thumbnail-font-size:                           0.9375rem !default;
+$thumbnail-line-height:                         1.8 !default;
+
+$thumbnail-mini-width:                          150px !default;
+$thumbnail-small-width:                         200px !default;
+$thumbnail-medium-width:                        300px !default;
+$thumbnail-large-width:                         400px !default;
+
+$thumbnail-hover-box-shadow:                    rgba(0,0,0,0.3) !default;
+.ng-thumbnail-hover-box-shadow { background: $thumbnail-hover-box-shadow }
+
+/* third option for caption and credit together */
+.ng-thumbnail .ng-caption-credit {
+    border-left: 1px solid black !important;
+
+    .ng-thumbnail-caption, .ng-thumbnail-credit {
+        padding-left: 20px;
+    }
+    .ng-thumbnail-credit {
+        border:0 !important;
+        &.ng-pipe{
+          padding-left: 20px !important;
+          border-left: 1px solid #999 !important;
+        }
+    }
+}
+
+@mixin hook-thumbnail(){
+    background: none;
+    background-color: transparent;
+    border: 0;
+    &.ng-bordered {
+        padding: $thumbnail-padding;
+        border: $thumbnail-border-width solid $thumbnail-border;
+        border-radius: $global-border-radius;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+}
+@mixin hook-thumbnail-hover(){
+    &.ng-bordered{
+        box-shadow: 0 1px 4px $thumbnail-hover-box-shadow;
+    }
+}
+@mixin hook-thumbnail-caption(){
+    text-align: left;
+    > h1, > h2, > h3, > h4, > h5, > h6,
+    > .ng-h1, > .ng-h2, > .ng-h3, > .ng-h4, > .ng-h5, > .ng-h6 {
+      margin-bottom: 0;
+    }
+    > p {
+      margin-top: 0;
+    }
+    > p:last-child {
+      margin-bottom: 0;
+    }
+    font-family: $thumbnail-font-family;
+    font-size: $thumbnail-font-size;
+    line-height: $thumbnail-line-height;
+    margin-top: 20px;
+    color: #333;
+}
+@mixin hook-thumbnail-misc(){
+
+    .ng-thumbnail-credit {
+        font-family: $thumbnail-font-family  !important;
+        font-size: 0.75rem !important;
+        font-weight: 400  !important;
+        line-height: $thumbnail-line-height  !important;
+        margin-top: 9px;
+        letter-spacing: .15em !important;
+        word-spacing: .22em !important;
+        text-transform: uppercase;
+        color: #999;
+    }
+  @media(max-width: $breakpoint-medium-max) {
+    .ng-thumbnail-caption {
+      font-size: calculateRem(14px) !important;
+      margin-top: 15px;
+    }
+    .ng-thumbnail-credit {
+      font-size: calculateRem(11px) !important;
+    }
+  }
+  @media(max-width: $breakpoint-mini-max) {
+    .ng-thumbnail-caption {
+      font-size: calculateRem(13px) !important;
+      line-height: 1.6;
+      margin-top: 10px;
+    }
+    .ng-thumbnail-credit {
+      font-size: calculateRem(11px) !important;
+    }
+  }
+
+    /* Tease Overrides */
+    .ng-tease .ng-thumbnail-credit {
+        margin-bottom: 0;
+    }
+    .ng-tease-top .ng-thumbnail-credit {
+        margin-bottom: 30px;
+    }
+    @media (max-width: $breakpoint-small-max) {
+        .ng-tease .ng-thumbnail-credit {
+            margin-bottom: 30px !important;
+        }
+        .ng-tease.no-credit .ng-promo-title {
+            margin-top: 15px;
+        }
+    }
+}
+
+/**
+Credit
+
+To add a Credit$, simply add a page element with the `.ng-thumbnail-credit` class within the `.ng-thumbnail` container.
+
+Markup:
+<div class="ng-grid">
+    <div class="ng-width-medium-1-2">
+        Thumbnail w/ Caption & Credit
+        <div class="ng-thumbnail ng-bordered">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div class="ng-thumbnail-caption">This is the Caption of the Thumbnail</div>
+            <div class="ng-thumbnail-credit">This is the Credit: Photo By Leonardo DaVinci</div>
+        </div>
+    </div>
+    <div class="ng-width-medium-1-2">
+        Thumbnail w/ Caption & Credit with ng-pipe on ng-thumbnail-credit
+        <div class="ng-thumbnail ng-bordered">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div class="ng-thumbnail-caption">This is the Caption of the Thumbnail</div>
+            <div class="ng-thumbnail-credit ng-pipe">This is the Credit: Photo By Leonardo DaVinci</div>
+        </div>
+    </div>
+    <div class="ng-width-medium-1-2">
+        Thumbnail w/ Caption & Credit together
+        <div class="ng-thumbnail ng-bordered ng-caption-credit">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div class="ng-caption-credit">
+                <div class="ng-thumbnail-caption">This is the Caption of the Thumbnail</div>
+                <div class="ng-thumbnail-credit">This is the Credit: Photo By Leonardo DaVinci</div>
+            </div>
+        </div>
+    </div>
+   <div class="ng-width-medium-1-2">
+        Thumbnail w/ Caption & Credit together without left border
+        <div class="ng-thumbnail ng-bordered ng-caption-credit">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div>
+                <div class="ng-thumbnail-caption">This is the Caption of the Thumbnail</div>
+                <div class="ng-thumbnail-credit">This is the Credit: Photo By Leonardo DaVinci</div>
+            </div>
+        </div>
+    </div>
+    <div class="ng-width-medium-1-2">
+        Thumbnail w/ Credit Only
+        <div class="ng-thumbnail ng-bordered">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div class="ng-thumbnail-credit">This is the Credit: Photo By Leonardo DaVinci</div>
+        </div>
+    </div>
+        <div class="ng-width-medium-1-2">
+        Thumbnail w/ Credit Only with ng-pipe on ng-thumbnail-credit
+        <div class="ng-thumbnail ng-bordered">
+            <img src="http://lorempixel.com/400/400/" alt="hello kitty!" width="400" />
+            <div class="ng-thumbnail-credit ng-pipe">This is the Credit: Photo By Leonardo DaVinci</div>
+        </div>
+    </div>
+</div>
+
+Styleguide Media.Thumbnails.Usage.credit
+*/
+
+@import "core/thumbnail";
+
+.ng-thumbnail-caption{
+  font-family: Montserrat, Helvetica, Arial, sans-serif !important;
+
+  &.ng-pipe{
+    padding-left: 20px !important;
+    border-left: 1px solid #999 !important;
+  }
+}
+
+.ng-thumbnail-credit {
+  &.ng-pipe{
+    padding-left: 20px !important;
+    border-left: 1px solid #999 !important;
+  }
+}

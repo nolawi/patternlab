@@ -1,0 +1,60 @@
+
+$thumbnail-padding:                             4px !default;
+$thumbnail-border:                              $global-border !default;
+$thumbnail-border-width:                        1px !default;
+$thumbnail-background:                          $global-background !default;
+$thumbnail-hover-border:                        darken($global-border, 20%) !default;
+$thumbnail-hover-background:                    $global-background !default;
+.ng-thumbnail-border { background: $thumbnail-border }
+.ng-thumbnail-background { background: $thumbnail-background }
+.ng-thumbnail-hover-border { background: $thumbnail-hover-border }
+.ng-thumbnail-hover-background { background: $thumbnail-hover-background }
+
+$thumbnail-caption-padding:                     $thumbnail-padding !default;
+$thumbnail-caption-color:                       $global-color !default;
+.ng-thumbnail-caption-color { background: $thumbnail-caption-color; color: #fff; }
+$thumbnail-font-family:                         $base-body-font-family !default;
+$thumbnail-font-size:                           $base-h6-font-size !default;
+$thumbnail-line-height:                         $base-h6-line-height !default;
+
+$thumbnail-mini-width:                          150px !default;
+$thumbnail-small-width:                         200px !default;
+$thumbnail-medium-width:                        300px !default;
+$thumbnail-large-width:                         400px !default;
+
+$thumbnail-hover-box-shadow:                    rgba(0,0,0,0.3) !default;
+.ng-thumbnail-hover-box-shadow { background: $thumbnail-hover-box-shadow }
+
+@mixin hook-thumbnail(){
+    border: 0;
+    &.ng-bordered {
+        padding: $thumbnail-padding;
+        border: $thumbnail-border-width solid $thumbnail-border;
+        border-radius: $global-border-radius;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+}
+@mixin hook-thumbnail-hover(){
+    &.ng-bordered{
+        box-shadow: 0 1px 4px $thumbnail-hover-box-shadow;
+    }
+}
+@mixin hook-thumbnail-caption(){
+    text-align: left;
+    > h1, > h2, > h3, > h4, > h5, > h6,
+    > .ng-h1, > .ng-h2, > .ng-h3, > .ng-h4, > .ng-h5, > .ng-h6 {
+      margin-bottom: 0;
+    }
+    > p {
+      margin-top: 0;
+    }
+    > p:last-child {
+      margin-bottom: 0;
+    }
+    font-family: $thumbnail-font-family;
+    font-size: $thumbnail-font-size;
+    line-height: $thumbnail-line-height;
+}
+@mixin hook-thumbnail-misc(){}
+
+@import "core/thumbnail";

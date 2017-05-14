@@ -1,0 +1,45 @@
+$subnav-margin:                                 $global-margin !default;
+$subnav-color:                                  $global-link-color !default;
+$subnav-hover-color:                            $global-link-hover-color !default;
+$subnav-disabled-color:                         $global-muted-color !default;
+
+$subnav-line-border-height:                     10px !default;
+$subnav-line-border:                            $global-border !default;
+$subnav-line-border-width:                      1px !default;
+
+$subnav-pill-padding-vertical:                  3px !default;
+$subnav-pill-padding-horizontal:                9px !default;
+$subnav-pill-hover-background:                  $global-default-muted-background !default;
+$subnav-pill-hover-color:                       $global-color !default;
+$subnav-pill-active-background:                 $global-primary-background !default;
+$subnav-pill-active-color:                      $global-contrast-color !default;
+
+.ng-subnav-color {background: $subnav-color;color: #fff}
+.ng-subnav-hover-color {background: $subnav-hover-color;color: #fff}
+.ng-subnav-disabled-color {background: $subnav-disabled-color;color: #fff}
+
+.ng-subnav-line-border {background: $subnav-line-border;color: #fff}
+
+.ng-subnav-pill-hover-background {background: $subnav-pill-hover-background;}
+.ng-subnav-pill-hover-color {background: $subnav-pill-hover-color;color: #fff}
+.ng-subnav-pill-active-background {background: $subnav-pill-active-background;color: #fff}
+.ng-subnav-pill-active-color {background: $subnav-pill-active-color;}
+
+@mixin hook-subnav-item(){}
+@mixin hook-subnav-link(){}
+@mixin hook-subnav-link-hover(){}
+@mixin hook-subnav-active(){}
+@mixin hook-subnav-disabled(){}
+@mixin hook-subnav-line-divider(){}
+@mixin hook-subnav-pill(){
+    border-radius: $global-border-radius;
+}
+@mixin hook-subnav-pill-hover(){
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1);
+}
+@mixin hook-subnav-pill-active(){
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+}
+@mixin hook-subnav-misc(){}
+
+@import "core/subnav";

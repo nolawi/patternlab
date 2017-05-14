@@ -1,0 +1,35 @@
+$slidenav-width:                                60px !default;
+$slidenav-height:                               $slidenav-width !default;
+$slidenav-color:                                rgba(50,50,50,0.4) !default;
+$slidenav-font-size:                            60px !default;
+$slidenav-line-height:                          $slidenav-height !default;
+$slidenav-previous-icon:                        "\f104" !default;
+$slidenav-next-icon:                            "\f105" !default;
+
+$slidenav-hover-color:                          rgba(50,50,50,0.7) !default;
+
+$slidenav-active-color:                         rgba(50,50,50,0.9) !default;
+
+$slidenav-position-previous:                    20px !default;
+$slidenav-position-next:                        $slidenav-position-previous !default;
+
+$slidenav-contrast-color:                       rgba(255,255,255,0.5) !default;
+$slidenav-contrast-hover-color:                 rgba(255,255,255,0.7) !default;
+$slidenav-contrast-active-color:                rgba(255,255,255,0.9) !default;
+
+.ng-slidenav-color {background: $slidenav-color;color: #fff}
+.ng-slidenav-hover-color {background: $slidenav-hover-color;color: #fff}
+.ng-slidenav-active-color {background: $slidenav-active-color;color: #fff}
+.ng-slidenav-contrast-color {background: $slidenav-contrast-color;}
+.ng-slidenav-contrast-hover-color {background: $slidenav-contrast-hover-color;}
+.ng-slidenav-contrast-active-color {background: $slidenav-contrast-active-color;}
+.ng-slidenav-previous-icon, .ng-slidenav-next-icon {font-family: FontAwesome}
+@mixin hook-slidenav(){}
+@mixin hook-slidenav-hover(){}
+@mixin hook-slidenav-active(){}
+@mixin hook-slidenav-contrast(){}
+@mixin hook-slidenav-contrast-hover(){}
+@mixin hook-slidenav-contrast-active(){}
+@mixin hook-slidenav-misc(){}
+
+@import "components/slidenav";

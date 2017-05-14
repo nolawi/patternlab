@@ -1,0 +1,3 @@
+<a href="{{ linkHref }}" class="ng-button {{ btnClass }}">{{ btnText }}</a>
+
+<button class="ng-button [modifier class]" type="button">Button</button>

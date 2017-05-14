@@ -1,0 +1,38 @@
+$sprite-path:                                   "../images/";
+
+.ng-inst-hier-activity,
+.ng-inst-hier-lesson,
+.ng-inst-hier-unit,
+.ng-inst-hier-curriculum {
+    background: url(../../images/instructionalhierarchy.png);
+    width: 150px;
+    height: 243px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.ng-inst-hier-lesson {
+    background-position: -160px 0;
+}
+.ng-inst-hier-unit{
+    background-position: -320px 0;
+}
+.ng-inst-hier-curriculum {
+    background-position: -480px 0;
+}
+
+// $audience-gradient-top:                         #485462 !default; // $te-gradient-top;
+// $audience-gradient-bottom:                      #283646 !default;  // $te-gradient-bottom;
+// $audience-background:                           #485462 !default;
+// $audience-color:                                #fff;
+
+// .te-audience-bkgnd {
+//     background: $audience-background;
+//     color: $audience-color;
+// }
+
+.ng-alert-overlay, .toast.toast-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white !important;
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: none !important;
+}

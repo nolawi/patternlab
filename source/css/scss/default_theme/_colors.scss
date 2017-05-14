@@ -1,0 +1,338 @@
+$theme-color:                                       #444;
+$theme-muted-color:                                 #999;
+$theme-text-shadow:                                 #fff;
+$theme-link-color:                                  #044e8e;
+$theme-link-hover-color:                            #4f98b4;
+$theme-contrast-color:                              #fff;
+$theme-contrast-text-shadow:                        rgba(0,0,0,0.1) !default;
+$theme-background:                                  #fff !default;
+$theme-border:                                      #ddd;
+$theme-default-background:                          #f5f5f5;
+$theme-default-muted-background:                    #fafafa;
+$theme-default-hover-background:                    $theme-default-muted-background;
+$theme-default-active-background:                   #eee;
+$theme-primary-muted-background:                    #ebf7fd;
+$theme-primary-background:                          #00a8e6;
+$theme-primary-color:                               #2d7091;
+$theme-primary-border:                              transparentize($theme-primary-color, .7);
+$theme-success-muted-background:                    #f2fae3;
+$theme-success-background:                          #8cc14c;
+$theme-success-color:                               #659f13;
+$theme-success-border:                              transparentize($theme-success-color, .7);
+$theme-warning-muted-background:                    #fffceb;
+$theme-warning-background:                          #faa732;
+$theme-warning-color:                               #e28327;
+$theme-warning-border:                              transparentize($theme-warning-color, .7);
+$theme-danger-muted-background:                     #fff1f0;
+$theme-danger-background:                           #da314b;
+$theme-danger-color:                                #d85030;
+$theme-danger-border:                               transparentize($theme-danger-color, .7);
+
+.theme-color {background: $theme-color;color: #fff;}
+.theme-muted-color {background: $theme-muted-color;color: #fff;}
+.theme-text-shadow {background: $theme-text-shadow;}
+.theme-link-color {background: $theme-link-color;color: #fff;}
+.theme-link-hover-color {background: $theme-link-hover-color;color: #fff;}
+.theme-contrast-color {background: $theme-contrast-color;}
+.theme-contrast-text-shadow {background: $theme-contrast-text-shadow;}
+.theme-background {background: $theme-background;}
+.theme-border {background: $theme-border;color: #fff;}
+.theme-default-background {background: $theme-default-background;}
+.theme-default-muted-background {background: $theme-default-muted-background;}
+.theme-default-hover-background {background: $theme-default-hover-background;}
+.theme-default-active-background {background: $theme-default-active-background;}
+.theme-primary-muted-background {background: $theme-primary-muted-background;}
+.theme-primary-background {background: $theme-primary-background;color: #fff;}
+.theme-primary-color {background: $theme-primary-color;color: #fff;}
+.theme-primary-border {background: $theme-primary-border;color: #fff;}
+.theme-success-muted-background {background: $theme-success-muted-background;}
+.theme-success-background {background: $theme-success-background;color: #fff;}
+.theme-success-color {background: $theme-success-color;color: #fff;}
+.theme-success-border {background: $theme-success-border;color: #fff;}
+.theme-warning-muted-background {background: $theme-warning-muted-background;}
+.theme-warning-background {background: $theme-warning-background;color: #fff;}
+.theme-warning-color {background: $theme-warning-color;color: #fff;}
+.theme-warning-border {background: $theme-warning-border;color: #fff;}
+.theme-danger-muted-background {background: $theme-danger-muted-background;}
+.theme-danger-background {background: $theme-danger-background;color: #fff;}
+.theme-danger-color {background: $theme-danger-color;color: #fff;}
+.theme-danger-border {background: $theme-danger-border;color: #fff;}
+
+/**
+Theme Colors
+
+These colors define most of the colors used throughout the framework.
+
+<table class="settings">
+<tr><td>`$theme-color`</td><td class="theme-color">#{$theme-color}</td></tr>
+<tr><td>`$theme-muted-color`</td><td class="theme-muted-color">#{$theme-muted-color}</td></tr>
+<tr><td>`$theme-text-shadow`</td><td class="theme-text-shadow">#{$theme-text-shadow}</td></tr>
+<tr><td>`$theme-link-color`</td><td class="theme-link-color">#{$theme-link-color}</td></tr>
+<tr><td>`$theme-link-hover-color`</td><td class="theme-link-hover-color">#{$theme-link-hover-color}</td></tr>
+<tr><td>`$theme-contrast-color`</td><td class="theme-contrast-color">#{$theme-contrast-color}</td></tr>
+<tr><td>`$theme-contrast-text-shadow`</td><td class="theme-contrast-text-shadow">#{$theme-contrast-text-shadow}</td></tr>
+<tr><td>`$theme-background`</td><td class="theme-background">#{$theme-background}</td></tr>
+<tr><td>`$theme-border`</td><td class="theme-border">#{$theme-border}</td></tr>
+<tr><td>`$theme-default-background`</td><td class="theme-default-background">#{$theme-default-background}</td></tr>
+<tr><td>`$theme-default-muted-background`</td><td class="theme-default-muted-background">#{$theme-default-muted-background}</td></tr>
+<tr><td>`$theme-default-hover-background`</td><td class="theme-default-hover-background">#{$theme-default-hover-background}</td></tr>
+<tr><td>`$theme-default-active-background`</td><td class="theme-default-active-background">#{$theme-default-active-background}</td></tr>
+<tr><td>`$theme-primary-muted-background`</td><td class="theme-primary-muted-background">#{$theme-primary-muted-background}</td></tr>
+<tr><td>`$theme-primary-background`</td><td class="theme-primary-background">#{$theme-primary-background}</td></tr>
+<tr><td>`$theme-primary-color`</td><td class="theme-primary-color">#{$theme-primary-color}</td></tr>
+<tr><td>`$theme-primary-border`</td><td class="theme-primary-border">#{$theme-primary-border}</td></tr>
+<tr><td>`$theme-success-muted-background`</td><td class="theme-success-muted-background">#{$theme-success-muted-background}</td></tr>
+<tr><td>`$theme-success-background`</td><td class="theme-success-background">#{$theme-success-background}</td></tr>
+<tr><td>`$theme-success-color`</td><td class="theme-success-color">#{$theme-success-color}</td></tr>
+<tr><td>`$theme-success-border`</td><td class="theme-success-border">#{$theme-success-border}</td></tr>
+<tr><td>`$theme-warning-muted-background`</td><td class="theme-warning-muted-background">#{$theme-warning-muted-background}</td></tr>
+<tr><td>`$theme-warning-background`</td><td class="theme-warning-background">#{$theme-warning-background}</td></tr>
+<tr><td>`$theme-warning-color`</td><td class="theme-warning-color">#{$theme-warning-color}</td></tr>
+<tr><td>`$theme-warning-border`</td><td class="theme-warning-border">#{$theme-warning-border}</td></tr>
+<tr><td>`$theme-danger-muted-background`</td><td class="theme-danger-muted-background">#{$theme-danger-muted-background}</td></tr>
+<tr><td>`$theme-danger-background`</td><td class="theme-danger-background">#{$theme-danger-background}</td></tr>
+<tr><td>`$theme-danger-color`</td><td class="theme-danger-color">#{$theme-danger-color}</td></tr>
+<tr><td>`$theme-danger-border`</td><td class="theme-danger-border">#{$theme-danger-border}</td></tr>
+</table>
+
+Styleguide Introduction.Theme.Colors
+*/
+
+$facebook-color: #3b5998;
+$googleplus-color: #dc4e41;
+$twitter-color: #55acee;
+$github-color: #4183c4;
+$atlassian-color: #003366;
+$yahoo-color: #410093;
+$linkedin-color: #0077b5;
+$pinterest-color: #bd081c;
+
+/**
+Color Classes
+
+These classes allow you to set foreground and background colors on your elements.
+
+The `.ng-color-*` classes set the foreground color only. The `.ng-background-*`
+classes set the background color only.
+
+Styleguide Typography.Colors
+*/
+/**
+Theme Colors
+
+<table class="settings">
+<tr><td>`.ng-color-default`</td><td class="ng-color-default">#{$theme-color}</td></tr>
+<tr><td>`.ng-background-default`</td><td class="ng-background-default">#{$theme-color}</td></tr>
+<tr><td>`.ng-color-contrast`</td><td class="ng-color-contrast">#{$theme-contrast-color}</td></tr>
+<tr><td>`.ng-background-contrast`</td><td class="ng-background-contrast">#{$theme-contrast-color}</td></tr>
+<tr><td>`.ng-color-border`</td><td class="ng-color-border">#{$theme-border}</td></tr>
+<tr><td>`.ng-background-border`</td><td class="ng-background-border">#{$theme-border}</td></tr>
+</table>
+
+Styleguide Typography.Colors.Theme
+*/
+/**
+Social Colors
+
+<table class="settings">
+<tr><td>`.ng-color-facebook`</td><td class="ng-color-facebook">#{$facebook-color}</td></tr>
+<tr><td>`.ng-background-facebook`</td><td class="ng-background-facebook">#{$facebook-color}</td></tr>
+<tr><td>`.ng-color-googleplus`</td><td class="ng-color-googleplus">#{$googleplus-color}</td></tr>
+<tr><td>`.ng-background-googleplus`</td><td class="ng-background-googleplus">#{$googleplus-color}</td></tr>
+<tr><td>`.ng-color-twitter`</td><td class="ng-color-twitter">#{$twitter-color}</td></tr>
+<tr><td>`.ng-background-twitter`</td><td class="ng-background-twitter">#{$twitter-color}</td></tr>
+<tr><td>`.ng-color-github`</td><td class="ng-color-github">#{$github-color}</td></tr>
+<tr><td>`.ng-background-github`</td><td class="ng-background-github">#{$github-color}</td></tr>
+<tr><td>`.ng-color-atlassian`</td><td class="ng-color-atlassian">#{$atlassian-color}</td></tr>
+<tr><td>`.ng-background-atlassian `</td><td class="ng-background-atlassian ">#{$atlassian-color}</td></tr>
+<tr><td>`.ng-color-yahoo`</td><td class="ng-color-yahoo">#{$yahoo-color}</td></tr>
+<tr><td>`.ng-background-yahoo`</td><td class="ng-background-yahoo">#{$yahoo-color}</td></tr>
+<tr><td>`.ng-color-linkedin`</td><td class="ng-color-linkedin">#{$linkedin-color}</td></tr>
+<tr><td>`.ng-background-linkedin`</td><td class="ng-background-linkedin">#{$linkedin-color}</td></tr>
+<tr><td>`.ng-color-pinterest`</td><td class="ng-color-pinterest">#{$pinterest-color}</td></tr>
+<tr><td>`.ng-background-pinterest `</td><td class="ng-background-pinterest ">#{$pinterest-color}</td></tr>
+</table>
+
+Styleguide Typography.Colors.Social
+*/
+
+.ng-color-default {color: $theme-color !important;text-shadow: none !important;}
+.ng-background-default {background: $theme-color !important;}
+.ng-color-contrast {color: $theme-contrast-color !important;text-shadow: none !important;}
+.ng-background-contrast {background: $theme-contrast-color !important;}
+.ng-color-border {color: $theme-border !important;text-shadow: none !important;}
+.ng-background-border {background: $theme-border !important;}
+.ng-color-facebook {color: $facebook-color !important;text-shadow: none !important;}
+.ng-background-facebook {background: $facebook-color !important;}
+.ng-color-googleplus, .ng-color-google-plus {color: $googleplus-color !important;text-shadow: none !important;}
+.ng-background-googleplus, .ng-background-google-plus {background: $googleplus-color !important;}
+.ng-color-twitter {color: $twitter-color !important;text-shadow: none !important;}
+.ng-background-twitter {background: $twitter-color !important;}
+.ng-color-github {color: $github-color !important;text-shadow: none !important;}
+.ng-background-github {background: $github-color !important;}
+.ng-color-atlassian {color: $atlassian-color !important;text-shadow: none !important;}
+.ng-background-atlassian {background: $atlassian-color !important;}
+.ng-color-yahoo {color: $yahoo-color !important;text-shadow: none !important;}
+.ng-background-yahoo {background: $yahoo-color !important;}
+.ng-color-linkedin {color: $linkedin-color !important;text-shadow: none !important;}
+.ng-background-linkedin {background: $linkedin-color !important;}
+.ng-color-pinterest {color: $pinterest-color !important;text-shadow: none !important;}
+.ng-background-pinterest {background: $pinterest-color !important;}
+
+
+// Color palette
+$blue-purple-1:                                 #946CAF;
+$blue-1:                                        #90CFF1;
+$blue-green-1:                                  #71B254;
+$orange-4:                                      #C36F15;
+$gray-3:                                        #C4CBCF;
+$gray-2:                                        #E0E4E8;
+$gray-1:                                        #DBE0E3;
+$gray-4:                                        #606A71;
+$sand-3:                                        #D0D3BE;
+$sand-2:                                        #E4E5CF;
+$sand-1:                                        #F1F1E5;
+$blue-purple-2:                                 #845BA6;
+$blue-2:                                        #1BB1E7;
+$blue-green-2:                                  #419639;
+$orange-5:                                      #F36F2B;
+$blue-purple-3:                                 #744E91;
+$blue-3:                                        #00B2EB;
+$blue-green-3:                                  #1E8234;
+$orange-6:                                      #C95D1A;
+$blue-4:                                        #0092C8;
+$blue-5:                                        #058CC1;
+$blue-6:                                        #007DC3;
+$blue-7:                                        #0B63A7;
+$blue-8:                                        #08518B;
+$ng-gold:                                       #FFCC00;
+$gold-2:                                        #FFCB08;
+$red-1:                                         #F15B47;
+$gold-3:                                        #FDB813;
+$red-2:                                         #C4161C;
+$red-3:                                         #9D071C;
+$red-4:                                         #8B0304;
+
+.ng-color-blue-purple-1 {color: $blue-purple-1}
+.ng-color-blue-1 {color: $blue-1}
+.ng-color-blue-green-1 {color: $blue-green-1}
+.ng-color-orange-4 {color: $orange-4}
+.ng-color-gray-3 {color: $gray-3}
+.ng-color-gray-2 {color: $gray-2}
+.ng-color-gray-1 {color: $gray-1}
+.ng-color-gray-4 {color: $gray-4}
+.ng-color-sand-3 {color: $sand-3}
+.ng-color-sand-2 {color: $sand-2}
+.ng-color-sand-1 {color: $sand-1}
+.ng-color-blue-purple-2 {color: $blue-purple-2}
+.ng-color-blue-2 {color: $blue-2}
+.ng-color-blue-green-2 {color: $blue-green-2}
+.ng-color-orange-5 {color: $orange-5}
+.ng-color-blue-purple-3 {color: $blue-purple-3}
+.ng-color-blue-3 {color: $blue-3}
+.ng-color-blue-green-3 {color: $blue-green-3}
+.ng-color-orange-6 {color: $orange-6}
+.ng-color-blue-4 {color: $blue-4}
+.ng-color-blue-5 {color: $blue-5}
+.ng-color-blue-6 {color: $blue-6}
+.ng-color-blue-7 {color: $blue-7}
+.ng-color-blue-8 {color: $blue-8}
+.ng-color-ng-gold {color: $ng-gold}
+.ng-color-gold-2 {color: $gold-2}
+.ng-color-red-1 {color: $red-1}
+.ng-color-gold-3 {color: $gold-3}
+.ng-color-red-2 {color: $red-2}
+.ng-color-red-3 {color: $red-3}
+.ng-color-red-4 {color: $red-4}
+
+.ng-background-blue-1 {background: $blue-1;color: #fff}
+.ng-background-blue-2 {background: $blue-2;color: #fff}
+.ng-background-blue-3 {background: $blue-3;color: #fff}
+.ng-background-blue-4 {background: $blue-4;color: #fff}
+.ng-background-blue-5 {background: $blue-5;color: #fff}
+.ng-background-blue-6 {background: $blue-6;color: #fff}
+.ng-background-blue-7 {background: $blue-7;color: #fff}
+.ng-background-blue-8 {background: $blue-8;color: #fff}
+.ng-background-blue-green-1 {background: $blue-green-1;color: #fff}
+.ng-background-blue-green-2 {background: $blue-green-2;color: #fff}
+.ng-background-blue-green-3 {background: $blue-green-3;color: #fff}
+.ng-background-blue-purple-1 {background: $blue-purple-1;color: #fff}
+.ng-background-blue-purple-2 {background: $blue-purple-2;color: #fff}
+.ng-background-blue-purple-3 {background: $blue-purple-3;color: #fff}
+.ng-background-gold-2 {background: $gold-2;color: #fff}
+.ng-background-gold-3 {background: $gold-3;color: #fff}
+.ng-background-gray-1 {background: $gray-1;}
+.ng-background-gray-2 {background: $gray-2;}
+.ng-background-gray-3 {background: $gray-3;color: #fff}
+.ng-background-gray-4 {background: $gray-4;color: #fff}
+.ng-background-ng-gold {background: $ng-gold;color: #fff}
+.ng-background-orange-4 {background: $orange-4;color: #fff}
+.ng-background-orange-5 {background: $orange-5;color: #fff}
+.ng-background-orange-6 {background: $orange-6;color: #fff}
+.ng-background-red-1 {background: $red-1;color: #fff}
+.ng-background-red-2 {background: $red-2;color: #fff}
+.ng-background-red-3 {background: $red-3;color: #fff}
+.ng-background-red-4 {background: $red-4;color: #fff}
+.ng-background-sand-1 {background: $sand-1;}
+.ng-background-sand-2 {background: $sand-2;}
+.ng-background-sand-3 {background: $sand-3;}
+
+
+/**
+Other Theme Colors
+
+<table class="configuration">
+<thead>
+    <tr><th>Variable</th><th>Color Class</th><th>Background Class</th><th>Color</th></tr>
+</thead>
+<tbody>
+    <tr><td>`$blue-purple-1`</td><td>`.ng-color-blue-purple-1`</td><td>`.ng-background-blue-purple-1`</td><td class="ng-background-blue-purple-1">#{$blue-purple-1}</td></tr>
+    <tr><td>`$blue-1`</td><td>`.ng-color-blue-1`</td><td>`.ng-background-blue-1`</td><td class="ng-background-blue-1">#{$blue-1}</td></tr>
+    <tr><td>`$blue-green-1`</td><td>`.ng-color-blue-green-1`</td><td>`.ng-background-blue-green-1`</td><td class="ng-background-blue-green-1">#{$blue-green-1}</td></tr>
+    <tr><td>`$orange-4`</td><td>`.ng-color-orange-4`</td><td>`.ng-background-orange-4`</td><td class="ng-background-orange-4">#{$orange-4}</td></tr>
+    <tr><td>`$gray-3`</td><td>`.ng-color-gray-3`</td><td>`.ng-background-gray-3`</td><td class="ng-background-gray-3">#{$gray-3}</td></tr>
+    <tr><td>`$gray-2`</td><td>`.ng-color-gray-2`</td><td>`.ng-background-gray-2`</td><td class="ng-background-gray-2">#{$gray-2}</td></tr>
+    <tr><td>`$gray-1`</td><td>`.ng-color-gray-1`</td><td>`.ng-background-gray-1`</td><td class="ng-background-gray-1">#{$gray-1}</td></tr>
+    <tr><td>`$gray-4`</td><td>`.ng-color-gray-4`</td><td>`.ng-background-gray-4`</td><td class="ng-background-gray-4">#{$gray-4}</td></tr>
+    <tr><td>`$sand-3`</td><td>`.ng-color-sand-3`</td><td>`.ng-background-sand-3`</td><td class="ng-background-sand-3">#{$sand-3}</td></tr>
+    <tr><td>`$sand-2`</td><td>`.ng-color-sand-2`</td><td>`.ng-background-sand-2`</td><td class="ng-background-sand-2">#{$sand-2}</td></tr>
+    <tr><td>`$sand-1`</td><td>`.ng-color-sand-1`</td><td>`.ng-background-sand-1`</td><td class="ng-background-sand-1">#{$sand-1}</td></tr>
+    <tr><td>`$blue-purple-2`</td><td>`.ng-color-blue-purple-2`</td><td>`.ng-background-blue-purple-2`</td><td class="ng-background-blue-purple-2">#{$blue-purple-2}</td></tr>
+    <tr><td>`$blue-2`</td><td>`.ng-color-blue-2`</td><td>`.ng-background-blue-2`</td><td class="ng-background-blue-2">#{$blue-2}</td></tr>
+    <tr><td>`$blue-green-2`</td><td>`.ng-color-blue-green-2`</td><td>`.ng-background-blue-green-2`</td><td class="ng-background-blue-green-2">#{$blue-green-2}</td></tr>
+    <tr><td>`$orange-5`</td><td>`.ng-color-orange-5`</td><td>`.ng-background-orange-5`</td><td class="ng-background-orange-5">#{$orange-5}</td></tr>
+    <tr><td>`$blue-purple-3`</td><td>`.ng-color-blue-purple-3`</td><td>`.ng-background-blue-purple-3`</td><td class="ng-background-blue-purple-3">#{$blue-purple-3}</td></tr>
+    <tr><td>`$blue-3`</td><td>`.ng-color-blue-3`</td><td>`.ng-background-blue-3`</td><td class="ng-background-blue-3">#{$blue-3}</td></tr>
+    <tr><td>`$blue-green-3`</td><td>`.ng-color-blue-green-3`</td><td>`.ng-background-blue-green-3`</td><td class="ng-background-blue-green-3">#{$blue-green-3}</td></tr>
+    <tr><td>`$orange-6`</td><td>`.ng-color-orange-6`</td><td>`.ng-background-orange-6`</td><td class="ng-background-orange-6">#{$orange-6}</td></tr>
+    <tr><td>`$blue-4`</td><td>`.ng-color-blue-4`</td><td>`.ng-background-blue-4`</td><td class="ng-background-blue-4">#{$blue-4}</td></tr>
+    <tr><td>`$blue-5`</td><td>`.ng-color-blue-5`</td><td>`.ng-background-blue-5`</td><td class="ng-background-blue-5">#{$blue-5}</td></tr>
+    <tr><td>`$blue-6`</td><td>`.ng-color-blue-6`</td><td>`.ng-background-blue-6`</td><td class="ng-background-blue-6">#{$blue-6}</td></tr>
+    <tr><td>`$blue-7`</td><td>`.ng-color-blue-7`</td><td>`.ng-background-blue-7`</td><td class="ng-background-blue-7">#{$blue-7}</td></tr>
+    <tr><td>`$blue-8`</td><td>`.ng-color-blue-8`</td><td>`.ng-background-blue-8`</td><td class="ng-background-blue-8">#{$blue-8}</td></tr>
+    <tr><td>`$ng-gold`</td><td>`.ng-color-ng-gold`</td><td>`.ng-background-ng-gold`</td><td class="ng-background-ng-gold">#{$ng-gold}</td></tr>
+    <tr><td>`$gold-2`</td><td>`.ng-color-gold-2`</td><td>`.ng-background-gold-2`</td><td class="ng-background-gold-2">#{$gold-2}</td></tr>
+    <tr><td>`$red-1`</td><td>`.ng-color-red-1`</td><td>`.ng-background-red-1`</td><td class="ng-background-red-1">#{$red-1}</td></tr>
+    <tr><td>`$gold-3`</td><td>`.ng-color-gold-3`</td><td>`.ng-background-gold-3`</td><td class="ng-background-gold-3">#{$gold-3}</td></tr>
+    <tr><td>`$red-2`</td><td>`.ng-color-red-2`</td><td>`.ng-background-red-2`</td><td class="ng-background-red-2">#{$red-2}</td></tr>
+    <tr><td>`$red-3`</td><td>`.ng-color-red-3`</td><td>`.ng-background-red-3`</td><td class="ng-background-red-3">#{$red-3}</td></tr>
+    <tr><td>`$red-4`</td><td>`.ng-color-red-4`</td><td>`.ng-background-red-4`</td><td class="ng-background-red-4">#{$red-4}</td></tr>
+</tbody>
+</table>
+
+Styleguide Typography.Colors.Other
+*/
+
+
+$audience-background:                           $theme-default-background !default;
+$audience-color:                                $theme-color !default;
+$tooltip-background:                            #fff;
+$popover-background:                            #fff;
+$body-background-color: #fff !default;
+$theme-background: '' !default;
+
+@mixin get-audience-background(){
+    // @include two-tone-background($audience-gradient-top, $audience-gradient-bottom, $audience-background);
+    background: $audience-background;
+    color: $audience-color;
+}

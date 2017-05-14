@@ -1,0 +1,126 @@
+$category-button-border-color:                  #ccc;
+$category-button-flag-background:               #000;
+$category-button-flag-color:                    #fff;
+$category-button-padding:                       15px;
+$flag-margin:                                   (-($category-button-padding + 1));
+
+
+.ng-category-button {
+    border: 1px solid $category-button-border-color;
+    box-sizing: border-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    min-height: 390px;
+    padding: $category-button-padding $category-button-padding 30px $category-button-padding;
+    position: relative;
+    transition-duration: 400ms;
+    -ms-flex-direction: column;
+        flex-direction: column;
+
+    &:hover {
+        background-color: #fafafa;
+    }
+
+    > * {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+
+    .ng-category-button-overlay-link {
+        border: none;
+        bottom: 0;
+        display: block;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .ng-category-button-flag {
+        background: $category-button-flag-background;
+        color: $category-button-flag-color;
+        margin: $flag-margin $flag-margin 15px $flag-margin;
+        padding: 10px;
+        -webkit-font-smoothing: antialiased;
+
+        .ng-article-kicker {
+            margin: 0;
+        }
+    }
+
+    .ng-category-button-title {
+        margin: 15px 0 20px 0;
+    }
+
+    .ng-category-button-dek {
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    }
+
+    .ng-category-button-cta {
+        h4 {
+            display: inline;
+            margin: 0;
+        }
+
+        &:not(.ng-button) {
+            .ng-icon {
+                display: inline-block;
+                font-size: 24px;
+                margin-right: 4px;
+                position: relative;
+                top: 3px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-category-button {
+        border-width: 1px 0 0 0;
+        display: block;
+        height: auto;
+        min-height: 0;
+        padding: 23px 0 25px 0;
+
+        &:hover {
+            background-color: initial;
+        }
+
+        .ng-category-button-overlay-link {
+            display: none;
+        }
+
+        .ng-category-button-flag {
+            margin: -24px 0 23px 0;
+        }
+
+        .ng-category-button-title {
+            margin: 0 0 5px 0;
+        }
+
+        .ng-category-button-cta {
+            float: right;
+            margin: 5px 0 0 5px;
+            padding: 0 15px;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-mini-max) {
+    .ng-category-button {
+        padding-bottom: 20px;
+        padding-top: $category-button-padding;
+
+        .ng-category-button-flag {
+            margin-bottom: 15px;
+            margin-top: $flag-margin;
+        }
+    }
+    .ng-button.ng-category-button-cta {
+        min-width: auto;
+    }
+}

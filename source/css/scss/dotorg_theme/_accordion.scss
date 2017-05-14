@@ -1,0 +1,147 @@
+// Variables
+// ========================================================================
+
+.ng-accordion {
+    background-color: #FFFFFF;
+    margin-top: -1px;
+    transition-duration: 400ms;
+
+  p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .ng-article-subtitle, .ng-article-lead {
+    margin-top: 5px !important;
+  }
+
+  &:hover {
+        background-color: #fbfbfb;
+        -webkit-transition-duration: 400ms;
+        transition-duration: 400ms;
+    }
+
+    .ng-accordion-header {
+      cursor: pointer;
+    }
+
+    .ng-accordion-body { font-weight: normal; }
+
+    .ng-icon-disclosure,
+    .ng-toggle-open,
+    .ng-toggle-close {
+        float: right;
+        line-height: inherit;
+    }
+
+    .ng-toggle-open,
+    .ng-toggle-close {
+        font-size: 0.9rem;
+        margin-top: 6px;
+    }
+
+    .ng-toggle-close {display: none; }
+
+    &.ng-open {
+        .ng-toggle-open { display: none; }
+        .ng-toggle-close { display: block; }
+    }
+
+    // Large Accordion
+
+    &.ng-accordion-large {
+        font-size: initial;
+      padding: 35px 25px;
+
+      .ng-article-lead { margin-top: 10px; }
+
+        .ng-accordion-body {
+            line-height: 1.5rem;
+          margin-top: 20px;
+          overflow-y: visible;
+        }
+
+        .ng-icon-disclosure,
+        .ng-toggle-open,
+        .ng-toggle-close {
+            font-size: 23px;
+        }
+
+        .ng-toggle-open,
+        .ng-toggle-close {
+            margin-top: 0;
+        }
+
+        .ng-accordion-header {
+            padding-right: 30px;
+            position: relative;
+
+            .ng-toggle-close,
+            .ng-toggle-open {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-accordion.ng-accordion-large {
+        .ng-icon-disclosure,
+        .ng-toggle-open,
+        .ng-toggle-close {
+            font-size: 19px;
+        }
+    }
+}
+
+
+@media (max-width: $breakpoint-small-max) {
+    .ng-accordion.ng-accordion-large {
+      padding: 20px 25px;
+
+      .ng-accordion-header { padding-right: 20px; }
+
+        .ng-article-lead { margin-top: 5px; }
+
+        .ng-accordion-body { margin-top: 30px; }
+
+        .ng-icon-disclosure,
+        .ng-toggle-open,
+        .ng-toggle-close {
+            font-size: 15px;
+        }
+    }
+}
+
+
+/**
+Large Accordion
+
+To apply a larger style with more spacing and larger font sizes, add the `ng-accordion-large` class to each `ng-accordion`.
+
+Markup:
+<div id="myaccordion">
+    <div class="ng-accordion ng-accordion-large" data-ng-accordion="{target: '#large-item-1'}">
+        <div class="ng-article-subhead">Large Item 1</div>
+        <i class="ng-icon ng-icon-disclosure"></i>
+        <div class="ng-panel ng-accordion-body ng-hidden" id="large-item-1">
+            <p>Hello! This panel has the ng-accordion-body class, which makes the text have a larger line height and more spacing.</p>
+        </div>
+    </div>
+    <div class="ng-accordion ng-accordion-large" data-ng-accordion="{target: '#large-item-2'}">
+        <div class="ng-article-subhead">Large Item 2</div>
+        <i class="ng-icon ng-icon-disclosure"></i>
+        <div class="ng-panel ng-accordion-body ng-hidden" id="large-item-2">
+            <p>How are you!</p>
+        </div>
+    </div>
+</div>
+
+Styleguide Containers.Accordion.04
+*/
+
+
+@import "customcomponents/accordion";

@@ -1,0 +1,147 @@
+/**
+Filtering Results
+
+Markup:
+<div class="ng-grid">
+<div class="ng-width-1-3">
+    <div class="ng-panel ng-panel-box">
+        <ul class="ng-nav ng-nav-side" data-ng-facetfilter>
+            <li class="ng-nav-header ng-current-filters">Current Filters</li>
+            <li>
+                <span class="ng-search"><input class="ng-form-small ng-search-field" type="search" placeholder="Search"></span>
+            </li>
+            <!-- -->
+            <li class="ng-nav-header">Grades &amp; Ages</li>
+            <li class="ng-facet-value" id="id_grade_bands_preK"><a><span class="ng-nav-badge">999</span>preK</a></li>
+            <li class="ng-facet-value" id="id_grade_bands_K-2"><a><span class="ng-nav-badge">999</span>K-2 (Ages 5-7)</a></li>
+            <li class="ng-facet-value" id="id_grade_bands_3-5"><a><span class="ng-nav-badge">999</span>3-5 (Ages 8-10)</a></li>
+            <li class="ng-facet-value" id="id_grade_bands_6-8"><a><span class="ng-nav-badge">999</span>6-8 (Ages 11-13)</a></li>
+            <li class="ng-facet-value" id="id_grade_bands_9-12"><a><span class="ng-nav-badge">999</span>9-12 (Ages 14-18)</a></li>
+            <li class="ng-facet-value" id="id_grade_bands_13"><a><span class="ng-nav-badge">999</span>Post-Secondary (Ages 18+)</a></li>
+            <!-- -->
+            <li class="ng-nav-header">Intended Audience</li>
+            <li class="ng-facet-value" id="id_audiences_1"><a><span class="ng-nav-badge">999</span>Teachers</a></li>
+            <li class="ng-facet-value" id="id_audiences_2"><a><span class="ng-nav-badge">999</span>Informal Educators</a></li>
+            <li class="ng-facet-value" id="id_audiences_3"><a><span class="ng-nav-badge">999</span>Families</a></li>
+            <li class="ng-facet-value" id="id_audiences_4"><a><span class="ng-nav-badge">999</span>Students</a></li>
+            <li class="ng-facet-value" id="id_audiences_5"><a><span class="ng-nav-badge">999</span>Kids</a></li>
+            <!-- -->
+            <li class="ng-nav-header">Subjects</li>
+            <li class="ng-facet-value" id="id_subjects_2"><a><span class="ng-nav-badge">999</span>Arts</a></li>
+            <li class="ng-facet-value" id="id_subjects_17"><a><span class="ng-nav-badge">999</span>Cross-Disciplinary</a></li>
+            <li class="ng-facet-value" id="id_subjects_3"><a><span class="ng-nav-badge">999</span>Educational Technology</a></li>
+            <li class="ng-facet-value" id="id_subjects_5"><a><span class="ng-nav-badge">999</span>Geography</a></li>
+            <li class="ng-facet-value" id="id_subjects_6"><a><span class="ng-nav-badge">999</span>Health</a></li>
+            <li class="ng-facet-value" id="id_subjects_7"><a><span class="ng-nav-badge">999</span>Informal Education</a></li>
+            <li class="ng-facet-value" id="id_subjects_8"><a><span class="ng-nav-badge">999</span>Language Arts</a></li>
+            <li class="ng-facet-value" id="id_subjects_9"><a><span class="ng-nav-badge">999</span>Mathematics</a></li>
+            <li class="ng-facet-value" id="id_subjects_16"><a><span class="ng-nav-badge">999</span>Professional Development</a></li>
+            <li class="ng-facet-value" id="id_subjects_13"><a><span class="ng-nav-badge">999</span>Science</a></li>
+            <li class="ng-facet-value" id="id_subjects_14"><a><span class="ng-nav-badge">999</span>Social Studies</a></li>
+            <!-- -->
+            <li class="ng-nav-header">Archive</li>
+            <li class="ng-facet-value" id="id_archive_0"><a><span class="ng-nav-badge">999</span>Show All</a></li>
+            <li class="ng-facet-value" id="id_archive_1"><a><span class="ng-nav-badge">999</span>Exclude</a></li>
+        </ul>
+    </div>
+</div>
+<div class="ng-width-1-3">
+    <div class="ng-panel ng-panel-box">
+        <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-facetfilter data-ng-nav="{multiple:true}">
+            <li class="ng-nav-header ng-current-filters">Current Filters</li>
+            <li>
+                <span class="ng-search"><input class="ng-form-small ng-search-field" type="search" placeholder="Search"></span>
+            </li>
+            <!-- -->
+            <li class="ng-parent"><a href="#">Grades &amp; Ages</a>
+            <ul class="ng-nav-sub">
+                <li class="ng-facet-value" id="id_grade_bands_preK"><a href="#"><span class="ng-nav-badge">999</span>preK</a></li>
+                <li class="ng-facet-value" id="id_grade_bands_K-2"><a href="#"><span class="ng-nav-badge">999</span>K-2 (Ages 5-7)</a></li>
+                <li class="ng-facet-value" id="id_grade_bands_3-5"><a href="#"><span class="ng-nav-badge">999</span>3-5 (Ages 8-10)</a></li>
+                <li class="ng-facet-value" id="id_grade_bands_6-8"><a href="#"><span class="ng-nav-badge">999</span>6-8 (Ages 11-13)</a></li>
+                <li class="ng-facet-value" id="id_grade_bands_9-12"><a href="#"><span class="ng-nav-badge">999</span>9-12 (Ages 14-18)</a></li>
+                <li class="ng-facet-value" id="id_grade_bands_13"><a href="#"><span class="ng-nav-badge">999</span>Post-Secondary (Ages 18+)</a></li>
+            </ul></li>
+            <!-- -->
+            <li class="ng-parent"><a href="#">Intended Audience</a>
+            <ul class="ng-nav-sub">
+                <li class="ng-facet-value" id="id_audiences_1"><a href="#"><span class="ng-nav-badge">999</span>Teachers</a></li>
+                <li class="ng-facet-value" id="id_audiences_2"><a href="#"><span class="ng-nav-badge">999</span>Informal Educators</a></li>
+                <li class="ng-facet-value" id="id_audiences_3"><a href="#"><span class="ng-nav-badge">999</span>Families</a></li>
+                <li class="ng-facet-value" id="id_audiences_4"><a href="#"><span class="ng-nav-badge">999</span>Students</a></li>
+                <li class="ng-facet-value" id="id_audiences_5"><a href="#"><span class="ng-nav-badge">999</span>Kids</a></li>
+            </ul></li>
+            <!-- -->
+            <li class="ng-parent"><a href="#">Subjects</a>
+            <ul class="ng-nav-sub">
+                <li class="ng-facet-value" id="id_subjects_2"><a href="#"><span class="ng-nav-badge">999</span>Arts</a></li>
+                <li class="ng-facet-value" id="id_subjects_17"><a href="#"><span class="ng-nav-badge">999</span>Cross-Disciplinary</a></li>
+                <li class="ng-facet-value" id="id_subjects_3"><a href="#"><span class="ng-nav-badge">999</span>Educational Technology</a></li>
+                <li class="ng-facet-value" id="id_subjects_5"><a href="#"><span class="ng-nav-badge">999</span>Geography</a></li>
+                <li class="ng-facet-value" id="id_subjects_6"><a href="#"><span class="ng-nav-badge">999</span>Health</a></li>
+                <li class="ng-facet-value" id="id_subjects_7"><a href="#"><span class="ng-nav-badge">999</span>Informal Education</a></li>
+                <li class="ng-facet-value" id="id_subjects_8"><a href="#"><span class="ng-nav-badge">999</span>Language Arts</a></li>
+                <li class="ng-facet-value" id="id_subjects_9"><a href="#"><span class="ng-nav-badge">999</span>Mathematics</a></li>
+                <li class="ng-facet-value" id="id_subjects_16"><a href="#"><span class="ng-nav-badge">999</span>Professional Development</a></li>
+                <li class="ng-facet-value" id="id_subjects_13"><a href="#"><span class="ng-nav-badge">999</span>Science</a></li>
+                <li class="ng-facet-value" id="id_subjects_14"><a href="#"><span class="ng-nav-badge">999</span>Social Studies</a></li>
+            </ul></li>
+            <!-- -->
+            <li class="ng-parent"><a href="#">Archive</a>
+            <ul class="ng-nav-sub">
+                <li class="ng-facet-value" id="id_archive_0"><a href="#"><span class="ng-nav-badge">999</span>Show All</a></li>
+                <li class="ng-facet-value" id="id_archive_1"><a href="#"><span class="ng-nav-badge">999</span>Exclude</a></li>
+            </ul></li>
+        </ul>
+    </div>
+</div>
+</div>
+
+Styleguide Components.FilterResults
+*/
+
+.ng-nav-side > li >.ng-search {
+    padding: $nav-padding-vertical $nav-padding-horizontal;
+    display: block;
+    &:before {
+        top: $nav-padding-vertical;
+        left: $nav-padding-horizontal;
+    }
+    > .ng-search-field {
+        display: block;
+    }
+}
+
+.ng-nav-badge {
+    @extend .ng-badge;
+    @extend .ng-badge-notification;
+    @extend .ng-float-right;
+}
+
+/*
+.ng-facet-value > a {
+    &:before {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f055\00a0";  // ng-icon-plus-circle + nbsp
+    }
+}
+.ng-selected-facet > a {
+    &:before {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: $text-danger-color;
+        content: "\f057\00a0";  // ng-icon-times-circle + nbsp
+    }
+}
+*/

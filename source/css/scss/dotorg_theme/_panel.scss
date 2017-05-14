@@ -1,0 +1,157 @@
+
+$panel-title-margin-bottom:                     $global-margin !default;
+$panel-title-font-size:                         round($global-font-size * 1.28) !default;
+$panel-title-line-height:                       round($panel-title-font-size * 1.33) !default;
+$panel-title-font-weight:                       bold !default;
+$panel-title-color:                             $global-color !default;
+$panel-title-text-transform:                    none !default;
+
+$panel-box-padding:                             30px !default;
+$panel-box-background:                          #fafafa !default;
+$panel-box-color:                               $global-color !default;
+$panel-box-hover-color:                         $panel-box-color !default;
+$panel-box-title-color:                         $global-color !default;
+$panel-box-badge-top:                           10px !default;
+$panel-box-badge-right:                         $panel-box-badge-top !default;
+$panel-box-teaser-margin:                       -($panel-box-padding + 1) !default;
+$panel-box-teaser-margin-bottom:                $panel-title-margin-bottom !default;
+$panel-box-border:                              $global-border !default;
+
+$panel-box-primary-background:                  #ebf7fd !default;
+$panel-box-primary-color:                       #2d7091 !default;
+$panel-box-primary-title-color:                 #2d7091 !default;
+$panel-box-primary-hover-color:                 $panel-box-primary-color !default;
+$panel-box-primary-border:                      fade($panel-box-primary-color, 30%) !default;
+
+$panel-box-secondary-background:                #fff !default;
+$panel-box-secondary-color:                     #444 !default;
+$panel-box-secondary-hover-color:               $panel-box-secondary-color !default;
+$panel-box-secondary-title-color:               #444 !default;
+
+$panel-header-title-padding:                    10px !default;
+$panel-header-title-border:                     $global-border !default;
+$panel-header-title-border-width:               1px !default;
+$panel-header-title-color:                      $global-color !default;
+
+$panel-space-padding:                           50px !default;
+
+$panel-divider-gutter:                          $global-grid-gutter !default;
+$panel-divider-large-gutter:                    $global-grid-large-gutter !default;
+$panel-divider-border:                          $global-border !default;
+$panel-divider-border-width:                    1px !default;
+
+$panel-hover-padding:                            15px !default;
+$panel-hover-color:                              #000 !default;
+$panel-hover-hover-background:                   #fbfbfb !default;
+$panel-hover-hover-color:                        #444 !default;
+$panel-hover-badge-top:                          10px !default;
+$panel-hover-badge-right:                        $panel-hover-badge-top !default;
+$panel-hover-teaser-margin:                      -$panel-hover-padding !default;
+
+.ng-panel-title-color {background: $panel-title-color;color: #fff}
+
+.ng-panel-box-background {background: $panel-box-background}
+.ng-panel-box-color {background: $panel-box-color;color: #fff}
+.ng-panel-box-title-color {background: $panel-box-title-color;color: #fff}
+.ng-panel-box-border {background: $panel-box-border;color: #fff}
+.ng-panel-box-hover-color {background: $panel-box-hover-color;color: #fff}
+
+.ng-panel-box-primary-background {background: $panel-box-primary-background}
+.ng-panel-box-primary-color {background: $panel-box-primary-color;color: #fff}
+.ng-panel-box-primary-hover-color {background: $panel-box-primary-hover-color;color: #fff}
+.ng-panel-box-primary-title-color {background: $panel-box-primary-title-color;color: #fff}
+.ng-panel-box-primary-border {background: $panel-box-primary-border;color: #fff}
+
+.ng-panel-box-secondary-background {background: $panel-box-secondary-background;color: #fff}
+.ng-panel-box-secondary-color {background: $panel-box-secondary-color;color: #fff}
+.ng-panel-box-secondary-hover-color {background: $panel-box-secondary-hover-color;color: #fff}
+.ng-panel-box-secondary-title-color {background: $panel-box-secondary-title-color;color: #fff}
+
+.ng-panel-header-title-border {background: $panel-header-title-border;}
+.ng-panel-header-title-color {background: $panel-header-title-color;color: #fff}
+
+.ng-panel-divider-border {background: $panel-divider-border}
+.ng-panel-hover-color {background: $panel-hover-color;color: #fff}
+.ng-panel-hover-hover-background {background: $panel-hover-hover-background}
+.ng-panel-hover-hover-color {background: $panel-hover-hover-color;color: #fff}
+
+@mixin hook-panel-title(){}
+@mixin hook-panel-badge(){}
+@mixin hook-panel-box(){
+    border: 1px solid $panel-box-border;
+}
+@mixin hook-panel-box-hover(){}
+@mixin hook-panel-box-primary(){
+    border-color: $panel-box-primary-border;
+    @extend .ng-panel-box;
+}
+@mixin hook-panel-box-primary-hover(){}
+@mixin hook-panel-box-secondary(){
+    @extend .ng-panel-box;
+}
+@mixin hook-panel-box-secondary-hover(){}
+@mixin hook-panel-hover(){}
+@mixin hook-panel-hover-hover(){}
+@mixin hook-panel-header(){}
+@mixin hook-panel-misc(){
+
+    .ng-panel.ng-padding .ng-panel-teaser {
+        margin: $panel-box-teaser-margin $panel-box-teaser-margin $panel-box-teaser-margin-bottom $panel-box-teaser-margin; 
+    }
+
+    .ng-panel-tab-content {
+        @extend .ng-panel-box;
+        background-color: $global-contrast-color;
+        color: $global-color;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-top: 0;
+        .ng-media.ng-grid {
+            display: inline-block;
+        }
+    }
+    .ng-panel-tab-content-left {
+        @extend .ng-panel-box;
+        background-color: $global-contrast-color;
+        color: $global-color;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+        border-left: 0;
+    }
+    .ng-panel-tab-content-right {
+        @extend .ng-panel-box;
+        background-color: $global-contrast-color;
+        color: $global-color;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        border-right: 0;
+    }
+    .ng-panel-tab-content-bottom {
+        @extend .ng-panel-box;
+        background-color: $global-contrast-color;
+        color: $global-color;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom: 0;
+    }
+
+
+    .ng-panel-accordion-content {
+        @extend .ng-panel-box;
+        background-color: $global-contrast-color;
+        color: $global-color;
+        border-radius: 0;
+    }
+
+    .ng-panel-box .ng-panel-teaser > *,
+    .ng-panel.ng-padding .ng-panel-teaser > * {
+        border-top-left-radius: $global-border-radius;
+        border-top-right-radius: $global-border-radius;
+    }
+    .ng-filter-picker {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+    }
+}
+
+@import "core/panel";

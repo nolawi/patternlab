@@ -1,0 +1,62 @@
+//
+// Breakpoints
+//
+
+$breakpoint-xlarge:                             2220px !default;
+
+$breakpoint-large:                              960px !default;
+$breakpoint-large-max:                          $breakpoint-xlarge - 1 !default;
+
+$breakpoint-medium:                             768px !default;
+$breakpoint-medium-max:                         $breakpoint-large - 1 !default;
+
+$breakpoint-small:                              480px !default;
+$breakpoint-small-max:                          $breakpoint-medium - 1 !default;
+
+$breakpoint-mini-max:                           $breakpoint-small - 1 !default;
+
+//
+// Text
+//
+
+$global-font-size:                              16px !default;
+$global-line-height:                            40px !default;
+
+//
+// Spacings
+//
+
+$global-margin:                                 15px !default;
+$global-large-margin:                           15px !default;
+$global-grid-gutter:                            25px !default;
+$global-grid-large-gutter:                      25px !default;
+$grid-gutter-large-horizontal:                  25px !default;
+$grid-gutter-large-vertical:                    25px !default;
+
+//
+// Controls
+//
+
+$global-height:                                 30px !default;
+$global-mini-height:                            20px !default;
+$global-small-height:                           25px !default;
+$global-large-height:                           40px !default;
+
+//
+// Z-index
+//
+
+$global-z-index:                                1000 !default;
+
+
+$utility-container-max-width:                   1080px !default;
+$utility-container-large-max-width:             1080px !default;
+$utility-container-large-padding-horizontal:    $global-grid-large-gutter !default;
+$panel-divider-gutter-large:                    $global-grid-large-gutter !default;
+$modal-dialog-large-width-large:                930px !default;
+
+
+$dotnav-width:                                  10px;
+$slidenav-position-previous:                    0;
+$slidenav-position-next:                        0;
+$slidenav-line-height:                          55px;

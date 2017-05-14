@@ -1,0 +1,245 @@
+$utility-container-max-width:                   $breakpoint-large !default;
+$utility-container-padding-horizontal:          $global-grid-gutter !default;
+
+$utility-container-large-max-width:             $breakpoint-xlarge !default;
+$utility-container-large-padding-horizontal:    $global-grid-large-gutter !default;
+
+$utility-align-horizontal:                      $global-margin !default;
+$utility-align-vertical:                        $global-margin !default;
+
+$utility-height-viewport-min-height:            600px;
+
+$utility-margin:                                $global-margin !default;
+$utility-margin-small:                          5px !default;
+$utility-margin-medium:                         20px !default;
+$utility-margin-large:                          50px !default;
+
+$utility-border-rounded:                        5px !default;
+
+$utility-heading-large-font-size:               round($global-font-size * 3.71) !default; // 52px
+$utility-heading-large-line-height:             round($utility-heading-large-font-size * 1.23) !default; // 64px
+
+$utility-link-muted-color:                      $global-color !default;
+$utility-link-muted-hover-color:                $global-color !default;
+
+$utility-scrollable-text-height:                300px !default;
+
+$utility-scrollable-box-height:                 250px !default;
+$utility-scrollable-box-padding:                0px !default;
+$utility-scrollable-box-border:                 $global-border !default;
+$utility-scrollable-box-border-width:           1px !default;
+
+.ng-utility-link-muted-color {background: $utility-link-muted-color;color: #fff}
+.ng-utility-link-muted-hover-color {background: $utility-link-muted-hover-color;color: #fff}
+.ng-utility-scrollable-box-border {background: $utility-scrollable-box-border;color: #fff}
+
+@mixin responsive-padding($breakpoint, $label, $size) {
+    $map: (
+        'mini': $breakpoint-mini-max,
+        'small': $breakpoint-small-max,
+        'medium': $breakpoint-medium-max,
+        'large': $breakpoint-large-max
+    );
+
+    @media (max-width: map-get($map, $breakpoint)) {
+        .ng-padding-#{$breakpoint}-#{$label} { padding: $size; }
+        .ng-padding-#{$breakpoint}-#{$label}-top,
+        .ng-padding-#{$breakpoint}-#{$label}-vertical { padding-top: $size !important; }
+        .ng-padding-#{$breakpoint}-#{$label}-bottom,
+        .ng-padding-#{$breakpoint}-#{$label}-vertical { padding-bottom: $size !important; }
+        .ng-padding-#{$breakpoint}-#{$label}-left,
+        .ng-padding-#{$breakpoint}-#{$label}-horizontal { padding-left: $size !important; }
+        .ng-padding-#{$breakpoint}-#{$label}-right,
+        .ng-padding-#{$breakpoint}-#{$label}-horizontal { padding-right: $size !important; }
+    }
+}
+
+@mixin hook-container(){}
+@mixin hook-scrollable-box(){
+    border-radius: 3px;
+}
+@mixin hook-utility-misc(){
+    .ng-border-add {
+        border: 1px solid $global-border !important;
+    }
+    .ng-border-remove {
+        border: 0 !important;
+    }
+    .ng-padding { padding: $utility-margin; }
+
+    .ng-padding-top, .ng-padding-vertical { padding-top: $utility-margin !important; }
+    .ng-padding-bottom, .ng-padding-vertical { padding-bottom: $utility-margin !important; }
+    .ng-padding-left, .ng-padding-horizontal { padding-left: $utility-margin !important; }
+    .ng-padding-right, .ng-padding-horizontal { padding-right: $utility-margin !important; }
+
+
+    .ng-padding-large { padding: $utility-margin-large; }
+
+    .ng-padding-large-top, .ng-padding-large-vertical { padding-top: $utility-margin-large !important; }
+    .ng-padding-large-bottom, .ng-padding-large-vertical { padding-bottom: $utility-margin-large !important; }
+    .ng-padding-large-left, .ng-padding-large-horizontal { padding-left: $utility-margin-large !important; }
+    .ng-padding-large-right, .ng-padding-large-horizontal { padding-right: $utility-margin-large !important; }
+
+    .ng-padding-medium { padding: $utility-margin-medium; }
+
+    .ng-padding-medium-top, .ng-padding-medium-vertical { padding-top: $utility-margin-medium !important; }
+    .ng-padding-medium-bottom, .ng-padding-medium-vertical { padding-bottom: $utility-margin-medium !important; }
+    .ng-padding-medium-left, .ng-padding-medium-horizontal { padding-left: $utility-margin-medium !important; }
+    .ng-padding-medium-right, .ng-padding-medium-horizontal { padding-right: $utility-margin-medium !important; }
+
+
+    .ng-padding-small { padding: $utility-margin-small; }
+
+    .ng-padding-small-top, .ng-padding-small-vertical { padding-top: $utility-margin-small !important; }
+    .ng-padding-small-bottom, .ng-padding-small-vertical { padding-bottom: $utility-margin-small !important; }
+    .ng-padding-small-left, .ng-padding-small-horizontal { padding-left: $utility-margin-small !important; }
+    .ng-padding-small-right, .ng-padding-small-horizontal { padding-right: $utility-margin-small !important; }
+
+
+    .ng-padding-remove { padding: 0 !important; }
+    .ng-padding-top-remove { padding-top: 0 !important; }
+    .ng-padding-bottom-remove { padding-bottom: 0 !important; }
+
+    .ng-margin-medium { margin-bottom: $utility-margin-medium; }
+    * + .ng-margin-medium { margin-top: $utility-margin-medium; }
+
+    .ng-margin-medium-top { margin-top: $utility-margin-medium !important; }
+    .ng-margin-medium-bottom { margin-bottom: $utility-margin-medium !important; }
+    .ng-margin-medium-left { margin-left: $utility-margin-medium !important; }
+    .ng-margin-medium-right { margin-right: $utility-margin-medium !important; }
+
+    // TODO: Decide on some standardized sizes - PW
+    @include responsive-padding('mini', '15', 15px);
+    @include responsive-padding('mini', '20', 20px);
+    @include responsive-padding('mini', '30', 30px);
+    @include responsive-padding('mini', '40', 40px);
+
+
+    /**
+    Intrinsic Ratios
+
+    Markup:
+    <div class="ng-container-16-9">
+        <video controls="" width="600" height="350">
+            <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.mp4?test1" type="video/mp4">
+            <source src="http://www.quirksmode.org/html5/videos/big_buck_bunny.ogv?test1" type="video/ogg">
+        </video>
+    </div>
+    <div class="ng-container-16-9">
+        <img src="http://lorempixel.com/600/350" width="600" height="350" />
+    </div>
+
+    Styleguide Layout.Utilities.responsive-objects.intrinsic
+    */
+    .ng-container-16-9, .ng-container-4-3 {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        & *:first-child {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .ng-container-16-9 {
+        padding-bottom: 56.25%;
+    }
+    .ng-container-4-3 {
+        padding-bottom: 75%;
+    }
+
+    @media (min-width: $breakpoint-large) {
+        .ng-visible-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-medium-max) {
+        .ng-visible-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-small-max) {
+        .ng-visible-mini { display: none !important; }
+        .ng-visible-medium { display: none !important; }
+        .ng-visible-large { display: none !important; }
+        .ng-hidden-small { display: none !important; }
+    }
+    @media (max-width: $breakpoint-mini-max) {
+        .ng-hidden-mini { display: none !important; }
+        .ng-visible-medium { display: none !important; }
+        .ng-visible-large { display: none !important; }
+        .ng-visible-small { display: none !important; }
+    }
+    @media (max-width: $breakpoint-small-max) {
+        .ng-visible-medium-large { display: none !important; }
+        .ng-hidden-small-mini { display: none !important; }
+    }
+    @media (min-width: $breakpoint-medium) {
+        .ng-hidden-medium-large { display: none !important; }
+        .ng-visible-small-mini { display: none !important; }
+    }
+
+    .ng-escape {
+        margin-left: -1 * $global-margin !important;
+        margin-right: -1 * $global-margin !important;
+    }
+
+    .ng-transparent {
+        background: transparent;
+    }
+
+    /*
+     * Responsive floats
+     */
+
+     @media (min-width: $breakpoint-small) {
+        .ng-float-small-left { float: left; }
+        .ng-float-small-right { float: right; }
+     }
+
+     @media (min-width: $breakpoint-medium) {
+        .ng-float-medium-left { float: left; }
+        .ng-float-medium-right { float: right; }
+     }
+
+     @media (min-width: $breakpoint-large) {
+        .ng-float-large-left { float: left; }
+        .ng-float-large-right { float: right; }
+     }
+
+     @media (min-width: $breakpoint-xlarge) {
+        .ng-float-xlarge-left { float: left; }
+        .ng-float-xlarge-right { float: right; }
+     }
+}
+
+/* global util for ease loading in on page load */
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+
+
+@import "core/utility";

@@ -1,0 +1,854 @@
+/**
+Tease
+
+A tease consists of an image and either a heading, a description or both. You can
+orient them horizontally, with the image on the left or right, or vertically.
+
+Markup:
+<div class="ng-width-medium-1-3"> <!-- container for styleguide only -->
+    <div class=" ng-tease-top">
+        <a href="http://www.nationalgeographic.com/explorers/science-and-exploration/projects/" class="ng-media-img">
+            <img src="http://media.education.nationalgeographic.com/assets/photos/136/769/66e4ccc7-2bc6-43cc-8e16-d2ec40cd54c0_r360x240.jpg?6919b4ea85434a3b9b33d363d6f9dda595298524" srcset="http://media.education.nationalgeographic.com/assets/photos/136/769/66e4ccc7-2bc6-43cc-8e16-d2ec40cd54c0_r5616x3744.jpg?1a37f33e3d51df860aa461fad32430cdecaa248e 5616w, http://media.education.nationalgeographic.com/assets/photos/136/769/66e4ccc7-2bc6-43cc-8e16-d2ec40cd54c0_r720x480.jpg?1f180985039d76aa064739ee9cd42d5e3186444c 720w, http://media.education.nationalgeographic.com/assets/photos/136/769/66e4ccc7-2bc6-43cc-8e16-d2ec40cd54c0_r1080x720.jpg?f372b7033c3cc83486fb3e71e2ae0e425128d3a7 1080w" sizes="(max-width: 767px) 100vw" alt="Critical Initiatives">
+        </a>
+        <div class="ng-media-body">
+            <h4 class="ng-promo-title ng-margin-top">
+                <a href="http://www.nationalgeographic.com/explorers/science-and-exploration/projects/">
+                    Critical Initiatives
+                </a>
+            </h4>
+            <div class="media-description">
+                <p>
+                    We support hundreds of important projects every year, but a few of our key programs—like the Big Cats Initiative—increase awareness and promote protection of our planet's most critically threatened species, habitats, and more.
+                </p>
+            </div> <!-- description container -->
+        </div> <!-- ng-media-body -->
+    </div> <!-- ng-tease -->
+</div> <!-- end container for styleguide only -->
+
+Styleguide Components.Tease
+
+*/
+.ng-tease {
+    &.ng-tease-top .ng-media-body {
+        margin-top: 15px
+    }
+    .ng-promo-title {
+        font-family: Montserrat,Helvetica,Arial,sans-serif !important;
+        margin-bottom: 10px !important;
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        .ng-media-body {
+            margin-top: 15px;
+        }
+    }
+
+    &.ng-tease-format-section {
+        color: #FFF;
+
+        .ng-section-tease {
+            color: #FFF;
+
+            a {
+                border-bottom: 0;
+                color: #FFF;
+            }
+            a:hover {
+                border-bottom: 0;
+            }
+        }
+        .ng-media-body {
+            background-color: #666;
+            margin: 0;
+            min-height: 170px;
+            padding: 15px;
+            position: relative;
+
+            .ng-icon {
+                border: 0;
+                color: #FFF;
+                font-size: 26px;
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+        @media (max-width: $breakpoint-medium-max) {
+            .ng-media-body {
+                min-height: 150px;
+            }
+        }
+        @media (max-width: $breakpoint-small-max) {
+            .ng-media-body {
+                min-height: 120px;
+                max-width: none !important;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    &.ng-tease-circle {
+        text-align: center;
+    }
+}
+
+
+/**
+Group Heading
+
+The Group Heading module is the foundation for all other modules. In its simplest
+for, it consists of a Title, Description, Action Text and Action Link. It has
+the ability to add a thumbnail, although it is not very useful.
+
+<table class="ng-table ng-table-condensed">
+<tr><th>Field</th><th>Required?</th><th>Description</th></tr>
+<tr><td>Title</td><td>No</td><td>This appears at the top of the panel, above all the thumbnails</td></tr>
+<tr><td>Description</td><td>No</td><td>This text appears at the top of the panel, above all the thumbnails, but below the title.</td></tr>
+<tr><td>Thumbnail Image</td><td>No</td><td>The image to display under the description.</td></tr>
+<tr><td>Thumbnail Size</td><td>Yes</td><td>This size of the thumbnail images. This combined with the width field dictates how many thumbnails go across the module.</td></tr>
+<tr><td>Display Type</td><td>No</td><td>Optionally used in some sites to provide additional styling on the module.</td></tr>
+<tr><td>Action Text</td><td>No</td><td>Used with Action Link to provide a way to customize a link to additional content. If Action Link is not blank, this field defaults to "More {{ title }} >>".</td></tr>
+<tr><td>Action Link</td><td>No</td><td>This is a link to find more of this content. It appears at the bottom of the module, after all the thumbnails.</td></tr>
+</table>
+
+Markup:
+<div class="ng-panel ng-panel-themed ng-width" style="width: 620px">
+    <h3 class="ng-panel-title">Group headings galore!</h3>
+    <p>Likeness bearing behold sixth be made him second god brought our void hath. Our, fly moved night forth. Midst doesn't greater. Stars divided place one appear made doesn't kind heaven doesn't Creepeth rule man i.</p>
+    <p>Is thing All. Whales meat. Which, them after beast fifth lesser saw itself spirit open tree give second likeness air above rule life give had to whose, made whales divide fish, void Morning moveth without for. Upon have whose.</p>
+    <div class="ng-media">
+        <a class="ng-media-img" href="#">
+            <img src="http://lorempixel.com/100/75" width="100" height="75" alt="Group headings galore!">
+        </a>
+    </div>
+    <a href="#">More Group Headings Galore! <i class="ng-icon-angle-double-right"></i></a>
+</div>
+
+Styleguide Components.GroupHeading
+*/
+/**
+Links List
+
+Markup:
+<div class="ng-grid">
+<div class="ng-panel ng-panel-themed ng-width" style="width: 290px">
+    <h3 class="ng-panel-title">Reference &amp; News</h3>
+    <p>Discover a range of supports for learning about real-world issues,
+    including news articles, a glossary, and an encyclopedia.</p>
+    <a href="#" alt="Reference &amp; News" class="ng-thumbnail">
+        <img src="http://lorempixel.com/300/225" width="300" height="225" alt="Current-Event-Connections">
+    </a>
+    <div class="ng-thumbnail-caption"><a href="#" class="ng-unstyled">Featured Reference</a></div>
+    <ul class="ng-list-bullet ng-list-space ng-margin-small">
+        <li>
+            <a href="#" title="Encyclopedia">Encyclopedia</a>
+        </li>
+        <li>
+            <a href="#" title="Glossary">Glossary</a>
+        </li>
+        <li>
+            <a href="#" title="Real-World Geographers">Real-World Geographers</a>
+        </li>
+    </ul>
+    <p><a href="#">More Reference &amp; News <i class="ng-icon-angle-double-right"></i></a></p>
+</div>
+<div class="ng-panel ng-panel-themed ng-width" style="width: 175px">
+    <h3 class="ng-panel-title">Reference &amp; News</h3>
+    <p>Discover a range of supports for learning about real-world issues,
+    including news articles, a glossary, and an encyclopedia.</p>
+    <a href="#" alt="Reference &amp; News" class="ng-thumbnail">
+        <img src="http://lorempixel.com/160/120" width="160" height="120" alt="Current-Event-Connections">
+    </a>
+    <div class="ng-thumbnail-caption"><a href="#" class="ng-unstyled">Featured Reference</a></div>
+    <ul class="ng-list-bullet ng-list-space ng-margin-small">
+        <li>
+            <a href="#" title="Encyclopedia">Encyclopedia</a>
+        </li>
+        <li>
+            <a href="#" title="Glossary">Glossary</a>
+        </li>
+        <li>
+            <a href="#" title="Real-World Geographers">Real-World Geographers</a>
+        </li>
+    </ul>
+    <p><a href="#">More Reference &amp; News <i class="ng-icon-angle-double-right"></i></a></p>
+</div>
+</div>
+
+Styleguide Components.LinksList
+*/
+/**
+Thumbnail Grid
+
+Options:
+
+<table class="ng-table ng-table-condensed">
+<tr><th>Field</th><th>Required?</th><th>Description</th></tr>
+<tr><td>Title</td><td>No</td><td>This appears at the top of the panel, above all the thumbnails</td></tr>
+<tr><td>Description</td><td>No</td><td>This text appears at the top of the panel, above all the thumbnails, but below the title.</td></tr>
+<tr><td>Width</td><td>Yes</td><td>This indicates how wide to make the overall module.</td></tr>
+<tr><td>Thumbnail Size</td><td>Yes</td><td>This size of the thumbnail images. This combined with the width field dictates how many thumbnails go across the module.</td></tr>
+<tr><td>Display Type</td><td>No</td><td>Optionally used in some sites to provide additional styling on the module.</td></tr>
+<tr><td>Action Text</td><td>No</td><td>Used with Action Link to provide a way to customize a link to additional content. If Action Link is not blank, this field defaults to "More {{ title }} >>".</td></tr>
+<tr><td>Action Link</td><td>No</td><td>This is a link to find more of this content. It appears at the bottom of the module, after all the thumbnails.</td></tr>
+</table>
+
+This uses the `.ng-panel-themed` modifier.
+
+Thumbnail size depends on the module width and number of thumbnails across.
+Sizes given below are standardized, but may shrink a few pixels in some cases.
+
+
+<table class="ng-table ng-table-condensed">
+<tr><th>Module Width</th><th>Thumbnails Across</th><th>Image Size</th></tr>
+<tr><td rowspan="6">2/3 width or 4 columns or 620px</td>
+     <tr><td>2</td><td>300 x 225</td></tr>
+     <tr><td>3</td><td>200 x 150</td></tr>
+     <tr><td>4</td><td>140 x 105</td></tr>
+     <tr><td>5</td><td>110 x 82</td></tr>
+     <tr><td>6</td><td>90 x 68</td></tr>
+<tr><td rowspan="5">1/2 width or 3 columns or 455px</td>
+     <tr><td>2</td><td>220 x 165</td></tr>
+     <tr><td>3</td><td>140 x 105</td></tr>
+     <tr><td>4</td><td>100 x 75</td></tr>
+     <tr><td>5</td><td>75 x 50</td></tr>
+<tr><td rowspan="4">1/3 width or 2 columns or 290px</td>
+     <tr><td>1</td><td>300 x 225</td></tr>
+     <tr><td>2</td><td>140 x 105</td></tr>
+     <tr><td>3</td><td>90 x 68</td></tr>
+</table>
+
+Markup:
+<div class="ng-panel ng-panel-themed ng-width" style="width: 620px">
+    <h3 class="ng-panel-title">This Month in Geographic History</h3>
+    <p>'Why,' said the Dodo, 'the best way to explain it is to do it.' (And, as
+    you might like to try the thing yourself, some winter day, I will tell you
+    how the Dodo managed it.) First it marked out a race-course.</p>
+    <ul class="ng-grid ng-grid-preserve" data-ng-grid-match="{target:'.ng-thumbnail'}">
+        <li class="ng-width-1-3">
+            <div class="ng-thumbnail">
+                <a href="#" title="Salem Witch Trials Begin">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Salem Witch Trials Begin</a></h5>
+                    <p>March 1, 1692</p>
+                </div>
+            </div>
+        </li>
+        <li class="ng-width-1-3">
+            <div class="ng-thumbnail">
+                <a href="#" title="Flu Pandemic Begins">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Flu Pandemic Begins</a></h5>
+                    <p>March 11, 1918</p>
+                    <p>Another paragraph for testing</p>
+                </div>
+            </div>
+        </li>
+        <li class="ng-width-1-3">
+            <div class="ng-thumbnail">
+                <a href="#" title="Uncle Sam Makes His Illustrated Debut ">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Uncle Sam Makes His Illustrated Debut</a></h5>
+                    <p>March 13, 1852</p>
+                </div>
+            </div>
+        </li>
+        <li class="ng-width-1-3 ng-grid-margin">
+            <div class="ng-thumbnail">
+                <a href="#" title="Terra Cotta Warriors Found">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Terra Cotta Warriors Found</a></h5>
+                    <p>March 29, 1974</p>
+                </div>
+            </div>
+        </li>
+        <li class="ng-width-1-3 ng-grid-margin">
+            <div class="ng-thumbnail">
+                <a href="#" title="Montreal Wins First Stanley Cup">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Montreal Wins First Stanley Cup</a></h5>
+                    <p>March 22, 1894</p>
+                </div>
+            </div>
+        </li>
+        <li class="ng-width-1-3 ng-grid-margin">
+            <div class="ng-thumbnail">
+                <a href="#" title="Read Across America Day">
+                    <img src="http://lorempixel.com/200/150" width="200" height="150">
+                </a>
+                <div class="ng-thumbnail-caption">
+                    <h5><a href="#">Read Across America Day</a></h5>
+                    <p>March 2, 1998</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <a href="#">More events this month <i class="ng-icon-angle-double-right"></i></a>
+</div>
+
+Styleguide Components.ThumbnailGrid
+*/
+/**
+Feature Lists
+
+A feature list is listing of items
+
+Markup:
+<div class="ng-panel ng-panel-themed ng-width" style="width: 620px">
+    <h3 class="ng-panel-title">Multimedia</h3>
+    <p>Experience captivating National Geographic photography and video,
+    optimized for use in the classroom.</p>
+    <div class="ng-media">
+        <a href="#" title="Misunderstood Microbes" class="ng-media-img">
+            <img src="http://lorempixel.com/100/75" width="100" height="75" alt="Yuck" title="Yuck">
+        </a>
+        <div class="ng-media-body ng-wrap">
+            <h4><a href="#" title="Misunderstood Microbes">Misunderstood Microbes</a></h4>
+            <p>Most Microbes Are Here to Help, Not Harm</p>
+        </div>
+    </div>
+    <div class="ng-media">
+        <a href="#" title="Global Closet Calculator" class="ng-media-img">
+            <img src="http://lorempixel.com/100/75" width="100" height="75" alt="" title="">
+        </a>
+        <div class="ng-media-body ng-wrap">
+            <h4><a href="#" title="Global Closet Calculator">Global Closet Calculator</a></h4>
+            <p>Head to your closet to discover your interdependence!</p>
+        </div>
+    </div>
+    <div class="ng-media">
+        <a href="" title="Cheetah Speed" class="ng-media-img">
+            <img src="http://lorempixel.com/100/75" width="100" height="75" alt="edu-cheetah-science.jpg" title="edu-cheetah-science.jpg">
+        </a>
+        <div class="ng-media-body ng-wrap">
+            <h4><a href="#" title="Cheetah Speed">Cheetah Speed</a></h4>
+            <p>A cheetah's unique anatomy makes it built for speed.</p>
+        </div>
+    </div>
+    <p class="action"><a href="#">More Multimedia »</a></p>
+</div>
+
+Styleguide Components.FeatureList
+*/
+
+/**
+Related Materials
+
+Markup:
+<div class="ng-width-1-2">
+    <div class="ng-accordion ng-accordion-themed ng-open" data-ng-accordion="{target: '#find-more-resources'}">
+        <a href=""><i class="ng-icon-disclosure"></i> Find More Resources</a>
+    </div>
+    <div id="find-more-resources">
+        <div class="ng-tab-center ng-default-muted-background">
+            <ul class="ng-tab ng-margin-small-top" data-ng-tab="{connect: '#fmr-tabcontent'}">
+                <li class="ng-active">
+                    <a href="">Activities</a>
+                </li>
+                <li>
+                    <a href="">Multimedia</a>
+                </li>
+                <li>
+                    <a href="">Reference</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="ng-switcher" id="fmr-tabcontent">
+            <li class="ng-active">
+                <div class="ng-panel-tab-content">
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Culture and Food and Ritual, Oh My!">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Culture and Food and Ritual, Oh My!</a></h5>
+                            <small class="ng-text-muted">Grades 9-12</small>
+                        </div>
+                    </div>
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Geographic Groceries">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Geographic Groceries</a></h5>
+                            <small class="ng-text-muted">Grades 3-5</small>
+                        </div>
+                    </div>
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Exploring Sustainable Seafood">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Exploring Sustainable Seafood</a></h5>
+                            <small class="ng-text-muted">Grades 3-5</small>
+                        </div>
+                    </div>
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Food Crops in the Americas">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Food Crops in the Americas</a></h5>
+                            <small class="ng-text-muted">Grades 3-5</small>
+                        </div>
+                    </div>
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Campaigns Against Counterfeiting and Piracy">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Campaigns Against Counterfeiting and Piracy</a></h5>
+                            <small class="ng-text-muted">Grades 6-8</small>
+                        </div>
+                    </div>
+                    <p class="ng-margin-bottom-remove"><a href="#">See All Activities <i class="ng-icon-angle-double-right"></i></a></p>
+                </div>
+            </li>
+            <li>
+                <div class="ng-panel-tab-content">
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Human Footprint Interactive">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Human Footprint Interactive</a></h5>
+                            <small class="ng-text-muted">Grades 4+</small>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="ng-panel-tab-content">
+                    <div class="ng-media">
+                        <a href="#" class="ng-media-img">
+                            <img class="left" src="http://lorempixel.com/60/45" height="45" width="65" alt="Case Study: Big Cats in the Ruaha Landscape ">
+                        </a>
+                        <div class="ng-media-body">
+                            <h5 class="ng-margin-bottom-remove"><a href="#">Case Study: Big Cats in the Ruaha Landscape </a></h5>
+                            <small class="ng-text-muted">Grades 9+</small>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+Styleguide Components.RelatedMaterials
+*/
+/**
+Legacy NavBar Menus
+
+Markup:
+<div style="height: 400px"><!-- This div wrapper just creates the space in this example -->
+<nav class="ng-audience-navbar">
+    <ul class="ng-navbar-nav audience">
+        <li class="ng-parent ng-open">
+            <a href="#">Teaching Resources</a>
+            <ul class="ng-navmenu">
+                <li><a href="#">Ideas</a></li>
+                <li class="ng-open"><a href="#">Activities</a>
+                    <div class="ng-navslide ng-grid ng-grid-small" style="min-width: 340px">
+                        <div class="ng-width-1-2">
+                            <div class="ng-panel">
+                                <dl><dt>Grades</dt>
+                                    <dd><a href="#" title="">preK</a></dd>
+                                    <dd><a href="#" title="">K-2</a></dd>
+                                    <dd><a href="#" title="">3-5</a></dd>
+                                    <dd><a href="#" title="">6-8</a></dd>
+                                    <dd><a href="#" title="">9-12</a></dd>
+                                    <dd><a href="#" title="">Post Secondary</a></dd>
+                                    <dd><a href="#" title="">See All »</a></dd>
+                                </dl>
+                            </div>
+                            <div class="ng-panel">
+                                <dl><dt>Subjects</a></dt>
+                                    <dd><a href="#" title="">Geography</a></dd>
+                                    <dd><a href="#" title="">Science</a></dd>
+                                    <dd><a href="#" title="">Social Studies</a></dd>
+                                    <dd><a href="#" title="">Other Subjects</a></dd>
+                                    <dd><a href="#" title="">See All »</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="ng-width-1-2">
+                            <div class="ng-panel">
+                                <dl><dt>Topics</dt>
+                                    <dd><a href="#" title="">Africa</a></dd>
+                                    <dd><a href="#" title="">Antarctica</a></dd>
+                                    <dd><a href="#" title="">Asia</a></dd>
+                                    <dd><a href="#" title="">Australia and Oceania</a></dd>
+                                    <dd><a href="#" title="">Europe</a></dd>
+                                    <dd><a href="#" title="">North America</a></dd>
+                                    <dd><a href="#" title="">South America</a></dd>
+                                    <dd><a href="#" title="">Ocean</a></dd>
+                                    <dd><a href="#" title="">See More »</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+</div>
+
+*/
+.ng-navmenu {
+    z-index: 990;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    font-size: 12px;
+    line-height: 15px;
+    overflow: visible !important;
+    width: 147px;
+    height: 350px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: #dfeff3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-left: 0;
+    > li {
+        float: none;
+        position: static;
+        height: auto;
+        list-style-type: none;
+        a{
+            display: block;
+            padding: 5px 5px 5px 13px;
+            font-weight: normal;
+        }
+
+        &:hover,
+        &.ng-open,
+        &.ng-active{
+            background-color: #86898d;
+            overflow: visible;
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+            > .ng-navslide {
+                display: block;
+            }
+        }
+    }
+
+    display:none;
+}
+
+.ng-navslide {
+    position: absolute;
+    background-color: #86898d;
+    top: 0;
+    left: 100%;
+    padding: 10px;
+    white-space: nowrap;
+    min-height: 345px;
+    padding: 15px 20px 0 0;
+    background-color: #86898d;
+
+    dl{
+        vertical-align: top;
+        white-space: nowrap;
+
+        dt{
+            padding-left: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 18px;
+            color: #333333;
+            a{font-weight: bold;}
+        }
+        dd{
+            a{
+                color: #ffffff;
+            }
+            a:hover {
+                color: #333333;
+                background-color: #dfeff3;
+            }
+        }
+    }
+
+    a {
+        padding: 0;
+        margin: 0;
+        float: none;
+        background: none;
+        font-weight: normal;
+    }
+    .featured{
+        position: absolute;
+        top: 0;
+        right: -46%;
+        width: 152px;
+        background-color: #86898d;
+        padding: 15px 0 15px 0;
+
+        .paginate{
+            padding: 0  20px  0  20px;
+            border-left: 1px solid #ffffff;
+            strong{
+                font-size: 16px;
+                font-weight: bold;
+                color: #ffffff;
+            }
+            .paginate-navigation{}
+            .paginate-info{}
+            .paginate-content{
+                .block {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    display: none;
+}
+
+ul.audience {
+    position: static;
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 14px;
+    z-index: 999;
+
+    > li{
+        height: auto;
+        border: none;
+        position: relative;
+
+        &:hover .ng-navmenu,
+        &.ng-open .ng-navmenu {
+            display: block;
+        }
+    }
+}
+
+/**
+Item listing
+
+For a somewhat tabular display of a list of content items
+
+Markup:
+<div class="ng-panel ng-margin-bottom ng-border-add">
+    <div class="ng-media" style="position: relative">
+        <div id="my-id6" class="ng-drawer ng-drawer-flip" data-ng-drawer="{closedWidth: 32}">
+            <div class="ng-drawer-tab-alt">
+                <a href="#my-id6" data-ng-drawertrigger><i class="ng-icon-trigger"></i></a>
+            </div>
+            <div class="ng-drawer-bar ng-vertical-align">
+                <div class="ng-vertical-align-middle ng-margin-small-left ng-margin-small-right">
+                    <h5 class="ng-margin-small" style="padding-left: 29px"> Appropriate for</h5>
+                    <p class="ng-margin-small">
+                        <a href="#?ar_a=1"><i class="ng-icon-educator-small"></i> Educators</a>
+                    </p>
+                    <p class="ng-margin-small">
+                        <a href="#?ar_a=3"><i class="ng-icon-family-small"></i> Families</a>
+                    </p>
+                    <p class="ng-margin-small">
+                        <a href="#?ar_a=4"><i class="ng-icon-student-small"></i> Students</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="ng-media-img" href="#">
+            <div class="ng-overlay ng-hover">
+                <img src="http://lorempixel.com/200/150" alt="">
+                <div class="ng-overlay-caption-top">Activity</div>
+            </div>
+        </a>
+        <div class="ng-media-body">
+            <h3><a href="#">Borneo Fires</a></h3>
+            <p>Peat bogs also emit carbon as they are burned accidentally, or intentionally for industrial or agricultural development. Indonesia is home ...</p>
+            <p><strong>Subjects:</strong> Science, Health, Geography<br />
+               <strong>Best for:</strong> Grades 5-12+</p>
+        </div>
+    </div>
+</div>
+
+Styleguide Components.ItemListing
+*/
+.ng-drawer-panel-right {
+    @extend .ng-panel;
+    @extend .ng-padding-horizontal;
+    @extend .ng-padding-small-vertical;
+    @extend .ng-float-right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+-webkit-box-shadow: -2px 0px 4px -1px rgba(0, 0, 0, 0.1);
+-moz-box-shadow:    -2px 0px 4px -1px rgba(0, 0, 0, 0.1);
+box-shadow:         -2px 0px 4px -1px rgba(0, 0, 0, 0.1);
+    background-color: $global-background;
+}
+
+
+/**
+Instructional Pathways
+
+Markup:
+<div class="ng-panel">
+    <h3>Unit: Beyond Borders</h3>
+    <ol class="ng-list-collapsible" data-ng-collapsiblelist>
+        <li>
+            <i class="ng-icon-list-collapsible"></i>
+            <a href="/education/lesson/political-borders/?ar_a=1" target="_blank">
+                Lesson 1: Political Borders
+            </a>
+            <ol>
+                <li>
+                    <i class="ng-icon-list-collapsible"></i>
+                    Activity 1: Drawing Political Borders
+                </li>
+                <li>
+                    <i class="ng-icon-list-collapsible"></i>
+                    Activity 2: Comparing Political Borders
+                </li>
+            </ol>
+        </li>
+        <li>
+            <i class="ng-icon-list-collapsible"></i>
+            <a href="/education/lesson/gathering-ideas-about-europe/?ar_a=1" target="_blank">
+                Lesson 2: Gathering Ideas About Europe
+            </a>
+            <ol>
+                <li>
+                    <i class="ng-icon-list-collapsible"></i>
+                    Activity 1: Influence of Shape and Size
+                </li>
+                <li>
+                    <i class="ng-icon-list-collapsible"></i>
+                    Activity 2: The Physical and Cultural Landscape of Europe
+                </li>
+                <li>
+                    <i class="ng-icon-list-collapsible"></i>
+                    <a href="/education/activity/observing-physical-and-cultural-landscapes/?ar_a=1" target="_blank">
+                        Activity 3: Observing Physical and Cultural Landscapes
+                    </a>
+                </li>
+            </ol>
+        </li>
+    </ol>
+</div>
+
+Styleguide Components.InstructionalPathways
+*/
+/**
+Tweet This
+
+Markup:
+<div class="ng-tweetthis">
+    <p class="ng-tweetthis-title">Africa’s lion population declined 90% in the last 75 years! Find out how you  can help at causeanuproar.com</p>
+    <p class="ng-promo-title ng-text-center">
+        <a href="https://twitter.com/intent/tweet?text=Africa%E2%80%99s+lion+population+declined+90%25+in+the+last+75+years%21+Find+out+how+you++can+help+at+causeanuproar.com&amp;hashtags=bigcats" style="border-bottom: none" class="ng-text-muted" onclick="window.open(this.href, '_blank', 'location=yes,width=550,height=420,scrollbars=yes');return false;">Tweet This <i class="ng-icon ng-icon-medium ng-color-twitter" style="vertical-align:middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M28.7 8.5v.8c0 8.7-6.6 18.6-18.6 18.6C6.3 28 2.9 27 0 25.1c.5.1 1 .1 1.6.1 3.1 0 5.9-1 8.1-2.8-2.8-.1-5.3-1.9-6.1-4.6.3.1.8.1 1.2.1.6 0 1.2-.1 1.7-.2-3-.6-5.2-3.3-5.2-6.5v-.1c.9.6 1.9.9 2.9.9-1.7-1.2-2.9-3.2-2.9-5.5 0-1.2.3-2.3.9-3.3 3.3 4 8.1 6.6 13.5 6.8-.1-.4-.2-1-.2-1.5 0-3.6 2.9-6.5 6.6-6.5 1.9 0 3.5.8 4.7 2 1.5-.3 2.9-.8 4.2-1.5-.5 1.5-1.5 2.8-2.8 3.6 1.3-.2 2.6-.6 3.8-1-.9 1.4-2.1 2.5-3.3 3.4z"></path></svg></i></a>
+    <a href="https://twitter.com/intent/tweet?text=Africa%E2%80%99s+lion+population+declined+90%25+in+the+last+75+years%21+Find+out+how+you++can+help+at+causeanuproar.com&amp;hashtags=bigcats" class="ng-position-cover" onclick="window.open(this.href, '_blank', 'location=yes,width=550,height=420,scrollbars=yes');return false;"></a>
+    </p>
+</div>
+
+Styleguide Components.TweetThis
+*/
+
+.ng-tweetthis {
+    @extend .ng-panel;
+    @extend .ng-panel-box-secondary;
+    @extend .ng-panel-hover;
+    padding: 50px 0;
+}
+
+.ng-tweetthis .ng-tweetthis-title {
+    @extend .ng-text-center;
+    @extend .ng-color-twitter;
+    @extend .ng-width-medium-3-4;
+    @extend .ng-container-center;
+    font-family: $base-body-font-family;
+    text-decoration: none;
+    transition: border-color 300ms;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    margin-bottom: 40px;
+}
+.ng-tweetthis .ng-icon {
+    padding-left: 5px;
+}
+.ng-tweetthis .ng-icon-medium svg {
+    width: 225%;
+    height: 225%;
+}
+@media (max-width: $breakpoint-small-max) {
+    .ng-tweetthis {
+        padding: 45px 20px;
+    }
+    .ng-tweetthis .ng-tweetthis-title {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width: $breakpoint-mini-max) {
+    .ng-tweetthis {
+        padding: 40px 20px;
+    }
+    .ng-tweetthis .ng-tweetthis-title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}
+/**
+Heading
+
+A very simple Heading consisting of a large title which defaults to H4 styling, and can also include an optional smaller deck text.
+
+<table class="ng-table ng-table-condensed">
+<tr><th>Field</th><th>Required?</th><th>Description</th></tr>
+<tr><td>Heading Text</td><td>Yes</td><td>This appears at the top of the plugin in large text.</td></tr>
+<tr><td>Heading Style</td><td>Yes</td><td>This affects the styling of the Heading Text, it defaults to the `<H4>` styling choice.</td></tr>
+<tr><td>Deck Text</td><td>No</td><td>Smaller text shown below the Heading Text.</td></tr>
+</table>
+
+Markup:
+<div class="ng-heading ng-width-mini-1-1 ng-width-small-5-6 ng-width-large-3-4 ng-container-center ng-text-center">
+    <h2 class="ng-h4">The Heading Text</h2>
+    <div class="ng-deck">Optional text can be displayed below the Heading Text, here in the Deck.</div>
+</div>
+
+Styleguide Components.Heading
+*/
+.ng-heading .ng-article-kicker {
+    border-left: 0;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+.ng-heading h2 {
+    margin-bottom: 30px !important;
+}
+.ng-heading .ng-deck {
+    margin-bottom: 35px;
+    margin-top: -10px;
+}
+
+@media (max-width: $breakpoint-mini-max) {
+    .ng-heading h2 {
+        margin-bottom: 15px !important;
+    }
+    .ng-heading .ng-deck {
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+}

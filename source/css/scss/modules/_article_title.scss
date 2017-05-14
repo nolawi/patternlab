@@ -1,0 +1,171 @@
+/**
+Article Heading
+
+This is how article headings are marked up.
+
+Styleguide Components.ArticleHeading
+*/
+/**
+Basic Heading
+
+The basic heading contains a may contain a kicker, title and subtitle or deck.
+
+If the title length is less than 28 characters, no additional markup is required.
+If the title length is between 29 and 32 characters add `ng-h2` to the `h1` class,
+and if the title length is 33 characters or more add `ng-h3` to the `h1` class.
+
+Markup:
+<header id="article-heading" class="ng-article">
+    <p class="ng-article-kicker">Video: Media Spotlight</p>
+    <h2 class="ng-article-title ng-h2">Misunderstood Microbes</h2>
+    <h2 class="ng-article-subtitle">Most Microbes Are Here to Help, Not Harm</h2>
+</header>
+
+Weight: 1
+
+Styleguide Components.ArticleHeading.PageTitle
+*/
+
+$page-title-margin-top:                       70px !default;
+
+.ng-page-title {
+    margin-top: $page-title-margin-top;
+    margin-bottom: 25px;
+}
+
+.ng-sticky-placeholder .ng-page-title {
+    margin-top: 0 !important;
+}
+.ng-sticky-placeholder .ng-page-title .ng-article-title {
+    font-size: 2.875rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.ng-page-title {
+    margin-bottom: 35px;
+}
+
+.ng-page-title.ng-align-center .ng-article-kicker {
+    border: 0;
+}
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-page-title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: $breakpoint-small-max) {
+    .ng-page-title {
+        margin-top: 35px;
+        margin-left: 0;
+    }
+}
+
+/**
+Article Subheading Styles
+
+The subheading styles can use any header tag (`<h1>` - `<h6>`). Producers should
+use the appropriate semantictag for the placement of the information
+
+<table class="settings">
+<tbody>
+<tr><td>`.ng-section-tease`</td>
+    <td>Section tease header</td></tr>
+    <tr><td>`.ng-modal-title .ng-h3`</td>
+    <td>Used for modal headings</td></tr>
+<tr><td>`.ng-promo-title-large`</td>
+    <td>Large Promo title</td></tr>
+<tr><td>`.ng-promo-title`</td>
+    <td>Small Promo Title</td></tr>
+<tr><td>`.ng-article-subhead`</td>
+    <td>Medium Promo title</td></tr>
+<tr><td>`.ng-article-subtitle`</td>
+    <td>Used in page title subheadings</td></tr>
+    <tr><td>`.ng-article-lead`</td>
+    <td>Used in article taglines</td></tr>
+<tr><td>`.ng-article-kicker`</td>
+    <td>Used in page title kickers</td></tr>
+<tr><td>`.ng-article-series-promo`</td>
+    <td>Series Promo Tag</td></tr>
+</tbody>
+</table>
+
+Markup:
+<h1 class="ng-section-tease">Section Tease Title</h1>
+<h3 class="ng-modal-title ng-h3">Modal Title</h3>
+<h3 class="ng-promo-title-large">FotoWalk with Robbie Shone and Becca Skinner Let's See What This Looks Like When It's Long</h3>
+<h3 class="ng-promo-title">The 2017 William W. Warner Beautiful Swimmers Award Let's See What This Looks Like When It's Long</h3>
+<h3 class="ng-article-subhead">Unbranded: An Epic Ride Through the American West Let's See What This Looks Like When It's Long</h3>
+<h3 class="ng-article-subtitle">Article subtitles</h3>
+<h3 class="ng-article-lead">Article taglines or deks</h3>
+<h3 class="ng-article-kicker">Big Cats Initiative Showing a two-Line Wrap around</h3>
+<h3 class="ng-article-kicker ng-pipe">Big Cats Initiative Showing a two-Line Wrap around with .ng-pipe class</h3>
+<h3 class="ng-article-series-promo">Series Promo Tag</h3>
+<h3 class="ng-article-series-promo ng-pipe">Series Promo Tag with .ng-pipe class</h3>
+
+Weight: 2
+
+Styleguide Components.ArticleHeading.Subheading
+*/
+
+/**
+Time Calendar Icon
+
+Markup:
+<time datetime="2014-09-30" class="ng-calendar-icon">
+    <strong>September</strong>
+    <span>30</span>
+</time>
+
+Styleguide Components.ArticleHeading.05
+*/
+
+.ng-calendar-icon {
+    font-size: 1em; /*change size */
+    display: block;
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-color: $global-contrast-color;
+    border-radius: 0.7em;
+    -moz-border-radius: 0.7em;
+
+    // The "pages" under the icon
+    box-shadow: 0 1px 0 #bdbdbd,
+                0 2px 0 #fff,
+                0 3px 0 #bdbdbd,
+                0 4px 0 #fff,
+                0 5px 0 #bdbdbd,
+                0 0 0 1px #bdbdbd;
+    overflow: hidden;
+
+    * {
+        display: block;
+        width: 100%;
+        font-size: 1em;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+    }
+
+    strong {
+        position: absolute;
+        top: 0;
+        padding: 0.4em 0;
+        color: $global-contrast-color;
+        background-color: $global-link-color;
+        border-bottom: 1px dashed #ddd;
+        box-shadow: 0 2px 0 $global-link-color;
+    }
+    span {
+        font-size: 2.8em;
+        padding-top: 0.8em;
+        color: $global-color;
+    }
+}
+

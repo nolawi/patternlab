@@ -1,0 +1,192 @@
+/**
+Carousel
+
+Styleguide Components.DynamicLeadCarousel
+*/
+
+/**
+Dynamic Lead Carousel
+
+Markup:
+<div class="ng-slidenav-position ng-dynamic-lead" data-ng-slideshow="{autoplay:true}">
+    <ul class="ng-slideshow">
+        <li class="ng-active ng-overlay">
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+            <div class="ng-overlay-panel ng-overlay-bottom ng-overlay-background">
+                <h2 class="ng-slide-title">Free Online Courses for Educators</h2>
+                <p class="ng-slide-subtitle">Register Today for Fall 2014 Courses</p>
+            </div>
+            <a href="#" class="ng-position-cover"></a>
+        </li>
+        <li class="ng-overlay">
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+            <div class="ng-overlay-panel ng-overlay-bottom ng-overlay-background">
+                <h2 class="ng-slide-title">Mobile Apps and Content</h2>
+                <p class="ng-slide-subtitle">Find Mobile-Friendly Content for <em>BYOD</em> and <em>1:1 Classrooms</em></p>
+            </div>
+            <a href="#" class="ng-position-cover"></a>
+        </li>
+        <li class="ng-overlay">
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+            <div class="ng-overlay-panel ng-overlay-bottom ng-overlay-background">
+                <h2 class="ng-slide-title">As Seen on NG</h2>
+                <p class="ng-slide-subtitle">Bring National Geographic's Rich Media Into Your Classroom</p>
+            </div>
+            <a href="#" class="ng-position-cover"></a>
+        </li>
+        <li class="ng-overlay">
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+            <div class="ng-overlay-panel ng-overlay-bottom ng-overlay-background">
+                <h2 class="ng-slide-title">Pictures of Practice</h2>
+                <p class="ng-slide-subtitle">Classroom Videos Highlighting Great Teaching and Learning</p>
+            </div>
+            <a href="#" class="ng-position-cover"></a>
+        </li>
+    </ul>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-previous" data-ng-slideshow-item="previous"></a>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-next" data-ng-slideshow-item="next"></a>
+    <ul class="ng-dotnav ng-dotnav-contrast ng-position-bottom ng-flex-center ng-text-center">
+        <li class="ng-active" data-ng-slideshow-item="0">
+            <a href="#" title="Free Online Courses for Educators"></a>
+        </li>
+        <li data-ng-slideshow-item="1">
+            <a href="#" title="Mobile Apps and Content"></a>
+        </li>
+        <li data-ng-slideshow-item="2">
+            <a href="#" title="As Seen on NG"></a>
+        </li>
+        <li data-ng-slideshow-item="3">
+            <a href="#" title="Pictures of Practice"></a>
+        </li>
+    </ul>
+</div>
+
+Styleguide Components.DynamicLeadCarousel.13
+*/
+
+/**
+New Carousel
+
+Markup:
+<div class="ng-slidenav-position" data-ng-slideshow="{animation: 'none'}">
+    <ul class="ng-slideshow">
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+    </ul>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-previous" data-ng-slideshow-item="previous"></a>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-next" data-ng-slideshow-item="next"></a>
+    <ul class="ng-dotnav ng-dotnav-contrast ng-position-bottom ng-text-center">
+        <li data-ng-slideshow-item="0"><a href=""></a></li>
+        <li data-ng-slideshow-item="1"><a href=""></a></li>
+        <li data-ng-slideshow-item="2"><a href=""></a></li>
+    </ul>
+</div>
+
+Styleguide Components.DynamicLeadCarousel.15
+*/
+
+/**
+Hero Carousel
+
+Markup:
+<div class="ng-slidenav-position" data-ng-slideshow="{animation: 'none'}">
+    <ul class="ng-slideshow">
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+        <li>
+            <img src="http://lorempixel.com/800/400" width="800" height="400" alt="">
+        </li>
+    </ul>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-previous" data-ng-slideshow-item="previous"></a>
+    <a href="" class="ng-slidenav ng-slidenav-contrast ng-slidenav-next" data-ng-slideshow-item="next"></a>
+    <ul class="ng-dotnav ng-dotnav-contrast ng-position-bottom ng-text-center">
+        <li data-ng-slideshow-item="0"><a href=""></a></li>
+        <li data-ng-slideshow-item="1"><a href=""></a></li>
+        <li data-ng-slideshow-item="2"><a href=""></a></li>
+    </ul>
+</div>
+
+Styleguide Components.DynamicLeadCarousel.17
+*/
+
+/* headlines for borders  */
+$base-heading-border:                           4px solid;
+.ng-slideshow {
+    h1,.ng-h1,   h2,.ng-h2 {
+        padding-left: 45px !important;
+        border-left:$base-heading-border !important;
+    }
+}
+
+.ng-dynamic-lead .ng-overlay-panel {
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.ng-dynamic-lead .ng-dotnav {
+    margin-bottom: 8px;
+}
+.ng-slide-title {
+    display: block;
+    color: #ffffff;
+    font-size: 29px;
+    line-height: 37px;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+.ng-slide-subtitle, {
+    color: #ffffff;
+    font-size: 19px;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.ng-slide-morelink{
+    display: block;
+    color: #ffcc00;
+    text-transform: uppercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+/* Gallery dotnav + slideshowcounter */
+.ng-gallery .ng-dotnav {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.ng-slideshowcounter {
+    color: #999;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.ng-slideshowcounter.ng-contrast {
+    color: $contrast-color;
+}
+.ng-slideshowcounter span {
+    color: #000;
+}
+.ng-slideshowcounter.ng-contrast span {
+    color: #FFF;
+}
+.ng-gallery.ng-autoplay {
+    .ng-dotnav,
+    .ng-slidenav,
+    .ng-slideshowcounter,
+    .ng-thumbnail,
+    .ng-thumbnail-caption {
+        display: none;
+    }
+}

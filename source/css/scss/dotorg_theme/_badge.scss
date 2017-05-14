@@ -1,0 +1,50 @@
+/* Importing existing variables for reference */
+$badge-background:                              $global-primary-background;
+$badge-padding-horizontal:                      5px;
+$badge-font-size:                               round($global-font-size * 0.71); // 10px
+$badge-font-weight:                             bold;
+$badge-line-height:                             round($badge-font-size * 1.4); // 14px
+$badge-color:                                   $global-contrast-color;
+$badge-text-transform:                          none;
+$badge-hover-color:                             $global-contrast-color;
+
+$badge-notification-font-size:                  round($global-font-size * 0.85); // 12px
+$badge-notification-line-height:                round($badge-notification-font-size * 1.5); // 18px
+
+$badge-success-background:                      $global-success-background;
+$badge-warning-background:                      $global-warning-background;
+$badge-danger-background:                       $global-danger-background;
+
+
+$badge-border:                                  rgba(0,0,0,0.2);
+$badge-border-bottom:                           rgba(0,0,0,0.3);
+$badge-text-shadow:                             $global-contrast-text-shadow;
+
+.ng-badge-background {background: $badge-background;color: #fff}
+.ng-badge-color {background: $badge-color}
+.ng-badge-success-background {background: $badge-success-background;color: #fff}
+.ng-badge-warning-background {background: $badge-warning-background;color: #fff}
+.ng-badge-danger-background {background: $badge-danger-background;color: #fff}
+.ng-badge-border {background: $badge-border;color: #fff}
+.ng-badge-border-bottom {background: $badge-border-bottom;color: #fff}
+.ng-badge-text-shadow {background: $badge-text-shadow;color: #fff}
+
+@mixin hook-badge(){
+    border: 1px solid $badge-border;
+    border-bottom-color: $badge-border-bottom;
+    background-origin: border-box; // 1
+    // background-image: -webkit-linear-gradient(top, $badge-primary-gradient-top, $badge-primary-gradient-bottom);
+    // background-image: linear-gradient(to bottom, $badge-primary-gradient-top, $badge-primary-gradient-bottom);
+    border-radius: 2px;
+    text-shadow: 0 -1px 0 $badge-text-shadow;
+}
+@mixin hook-badge-success(){
+
+}
+@mixin hook-badge-warning(){
+}
+@mixin hook-badge-danger(){
+}
+@mixin hook-badge-misc(){}
+
+@import "core/badge";

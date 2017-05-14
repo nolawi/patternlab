@@ -1,0 +1,259 @@
+/**
+Media Object Lists
+
+Make a scrolling list of media objects easily!
+
+Styleguide Components.ObjectLists
+*/
+
+/**
+Basic usage
+
+Markup:
+<div class="ng-grid">
+<div class="ng-width-1-3">
+    <ul class="ng-list ng-list-media">
+        <li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">adaptation</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Human Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Physical Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Resources</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">agriculture</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air mass</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air pollution</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">alluvial fan</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">altimeter</a></h4>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="ng-width-1-3">
+    <ul class="ng-list ng-list-media ng-list-striped">
+        <li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">adaptation</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Human Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Physical Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Resources</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">agriculture</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air mass</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air pollution</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">alluvial fan</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">altimeter</a></h4>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="ng-width-1-3">
+    <div class="ng-panel ng-scrollable-box">
+    <ul class="ng-list ng-list-media ng-list-striped">
+        <li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">adaptation</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Human Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Physical Geography</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">Africa: Resources</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">agriculture</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air mass</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">air pollution</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">alluvial fan</a></h4>
+            </div>
+        </li><li>
+            <a href="#" class="ng-media-img">
+                <img src="http://lorempixel.com/60/45" width="60" height="45">
+            </a>
+            <div class="ng-media-body">
+                <h4><a href="#">altimeter</a></h4>
+            </div>
+        </li>
+    </ul>
+    </div>
+</div>
+</div>
+
+Styleguide Components.ObjectLists.01
+*/
+
+.ng-list-media {
+    margin-left: 0;
+    > li {
+        @extend .ng-media;
+        margin-bottom: 0;
+    }
+}
+
+.ng-scrollable-box > .ng-list-striped > li:first-child {
+    border-top: 0;
+}
+.ng-scrollable-box > .ng-list-striped > li:last-child {
+    border-bottom: 0;
+}

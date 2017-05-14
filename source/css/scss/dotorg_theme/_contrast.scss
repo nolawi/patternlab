@@ -1,0 +1,192 @@
+// Variables
+// ========================================================================
+
+$contrast-color:                                #F5F5F5 !default;
+$contrast-inverted-color:                       #444 !default;
+
+//
+// Components
+//
+
+$contrast-base-color:                           $contrast-color !default;
+
+$contrast-base-link-color:                      rgba($contrast-color, 0.7) !default;
+$contrast-base-link-text-decoration:            none !default;
+$contrast-base-link-hover-color:                $contrast-color !default;
+$contrast-base-link-hover-text-decoration:      none !default;
+
+$contrast-base-code-color:                      $contrast-color !default;
+$contrast-base-em-color:                        $contrast-color !default;
+
+$contrast-base-heading-color:                   $contrast-color !default;
+
+$contrast-base-hr-border:                       rgba($contrast-color, 0.2) !default;
+
+$contrast-nav-side-color:                       $contrast-color !default;
+$contrast-nav-side-hover-background:            rgba($contrast-color, 0.1) !default;
+$contrast-nav-side-hover-color:                 $contrast-color !default;
+$contrast-nav-side-active-background:           $contrast-color !default;
+$contrast-nav-side-active-color:                $contrast-inverted-color !default;
+$contrast-nav-side-header-color:                $contrast-color !default;
+$contrast-nav-side-divider-border:              rgba($contrast-color, 0.2) !default;
+$contrast-nav-side-nested-color:                rgba($contrast-color, 0.7) !default;
+$contrast-nav-side-nested-hover-color:          $contrast-color !default;
+
+$contrast-subnav-color:                         rgba($contrast-color, 0.7) !default;
+$contrast-subnav-hover-color:                   $contrast-color !default;
+$contrast-subnav-hover-text-decoration:         none !default;
+$contrast-subnav-active-color:                  $contrast-color !default;
+
+$contrast-subnav-line-border:                   rgba($contrast-color, 0.2) !default;
+
+$contrast-subnav-pill-hover-background:         rgba($contrast-color, 0.7) !default;
+$contrast-subnav-pill-hover-color:              $contrast-inverted-color !default;
+$contrast-subnav-pill-active-background:        $contrast-color !default;
+$contrast-subnav-pill-active-color:             $contrast-inverted-color !default;
+
+$contrast-tab-border:                           rgba($contrast-color, 0.2) !default;
+$contrast-tab-color:                            rgba($contrast-color, 0.7) !default;
+$contrast-tab-hover-border:                     rgba($contrast-color, 0.7) !default;
+$contrast-tab-hover-background:                 rgba($contrast-color, 0.7) !default;
+$contrast-tab-hover-color:                      $contrast-inverted-color !default;
+$contrast-tab-active-border:                    rgba($contrast-color, 0.2) !default;
+$contrast-tab-active-background:                $contrast-color !default;
+$contrast-tab-active-color:                     $contrast-inverted-color !default;
+
+$contrast-list-line-border:                     rgba($contrast-color, 0.2) !default;
+
+$contrast-form-border:                          rgba($contrast-color, 0.8) !default;
+$contrast-form-background:                      rgba($contrast-color, 0.8) !default;
+$contrast-form-color:                           $contrast-inverted-color !default;
+$contrast-form-focus-border:                    $contrast-color !default;
+$contrast-form-focus-background:                $contrast-color !default;
+$contrast-form-focus-color:                     $contrast-inverted-color !default;
+
+$contrast-form-placeholder-color:               rgba($contrast-inverted-color, 0.7) !default;
+
+$contrast-button-background:                    $contrast-color !default;
+$contrast-button-color:                         $contrast-inverted-color !default;
+$contrast-button-hover-background:              rgba($contrast-color, 0.8) !default;
+$contrast-button-hover-color:                   $contrast-inverted-color !default;
+$contrast-button-active-background:             rgba($contrast-color, 0.7) !default;
+$contrast-button-active-color:                  $contrast-inverted-color !default;
+
+$contrast-button-primary-background:            $global-primary-background !default;
+$contrast-button-primary-color:                 $theme-color !default;
+$contrast-button-primary-hover-background:      $global-primary-muted-background !default;
+$contrast-button-primary-hover-color:           $theme-color !default;
+$contrast-button-primary-active-background:     saturate(darken($global-primary-background, 5%), 10%) !default;
+$contrast-button-primary-active-color:          $theme-color !default;
+
+$contrast-icon-hover-color:                     rgba($contrast-color, 0.7) !default;
+$contrast-icon-hover-hover-color:               $contrast-color !default;
+
+$contrast-icon-button-background:               $contrast-color !default;
+$contrast-icon-button-color:                    $contrast-inverted-color !default;
+$contrast-icon-button-hover-background:         rgba($contrast-color, 0.8) !default;
+$contrast-icon-button-hover-color:              $contrast-inverted-color !default;
+$contrast-icon-button-active-background:        rgba($contrast-color, 0.7) !default;
+$contrast-icon-button-active-color:             $contrast-inverted-color !default;
+
+$contrast-text-muted-color:                     rgba($contrast-color, 0.6) !default;
+$contrast-text-primary-color:                   #2d7091 !default;
+
+.ng-contrast-color {background: $contrast-color;}
+.ng-contrast-inverted-color {background: $contrast-inverted-color; color: #fff}
+.ng-contrast-base-color {background: $contrast-base-color;}
+.ng-contrast-base-link-color {background: $contrast-base-link-color;}
+.ng-contrast-base-link-hover-color {background: $contrast-base-link-hover-color;}
+.ng-contrast-base-code-color {background: $contrast-base-code-color; }
+.ng-contrast-base-em-color {background: $contrast-base-em-color; }
+.ng-contrast-base-heading-color {background: $contrast-base-heading-color;}
+.ng-contrast-base-hr-border {background: $contrast-base-hr-border;}
+.ng-contrast-nav-side-color {background: $contrast-nav-side-color;}
+.ng-contrast-nav-side-hover-background {background: $contrast-nav-side-hover-background;}
+.ng-contrast-nav-side-hover-color {background: $contrast-nav-side-hover-color;}
+.ng-contrast-nav-side-active-background {background: $contrast-nav-side-active-background;}
+.ng-contrast-nav-side-active-color {background: $contrast-nav-side-active-color; color: #fff}
+.ng-contrast-nav-side-header-color {background: $contrast-nav-side-header-color; }
+.ng-contrast-nav-side-divider-border {background: $contrast-nav-side-divider-border; }
+.ng-contrast-nav-side-nested-color {background: $contrast-nav-side-nested-color; }
+.ng-contrast-nav-side-nested-hover-color {background: $contrast-nav-side-nested-hover-color; }
+.ng-contrast-subnav-color {background: $contrast-subnav-color; }
+.ng-contrast-subnav-hover-color {background: $contrast-subnav-hover-color; }
+.ng-contrast-subnav-hover-text-decoration {background: $contrast-subnav-hover-text-decoration; }
+.ng-contrast-subnav-active-color {background: $contrast-subnav-active-color; }
+.ng-contrast-subnav-line-border {background: $contrast-subnav-line-border; }
+.ng-contrast-subnav-pill-hover-background {background: $contrast-subnav-pill-hover-background; }
+.ng-contrast-subnav-pill-hover-color {background: $contrast-subnav-pill-hover-color; color: #fff}
+.ng-contrast-subnav-pill-active-background {background: $contrast-subnav-pill-active-background; }
+.ng-contrast-subnav-pill-active-color {background: $contrast-subnav-pill-active-color; color: #fff}
+.ng-contrast-tab-border {background: $contrast-tab-border; }
+.ng-contrast-tab-color {background: $contrast-tab-color; }
+.ng-contrast-tab-hover-border {background: $contrast-tab-hover-border; }
+.ng-contrast-tab-hover-background {background: $contrast-tab-hover-background; }
+.ng-contrast-tab-hover-color {background: $contrast-tab-hover-color; color: #fff}
+.ng-contrast-tab-active-border {background: $contrast-tab-active-border; }
+.ng-contrast-tab-active-background {background: $contrast-tab-active-background; }
+.ng-contrast-tab-active-color {background: $contrast-tab-active-color; color: #fff}
+.ng-contrast-list-line-border {background: $contrast-list-line-border;}
+.ng-contrast-form-border {background: $contrast-form-border; }
+.ng-contrast-form-background {background: $contrast-form-background; }
+.ng-contrast-form-color {background: $contrast-form-color; color: #fff}
+.ng-contrast-form-focus-border {background: $contrast-form-focus-border; }
+.ng-contrast-form-focus-background {background: $contrast-form-focus-background; }
+.ng-contrast-form-focus-color {background: $contrast-form-focus-color; color: #fff}
+.ng-contrast-form-placeholder-color {background: $contrast-form-placeholder-color; }
+.ng-contrast-button-background {background: $contrast-button-background; }
+.ng-contrast-button-color {background: $contrast-button-color; color: #fff}
+.ng-contrast-button-hover-background {background: $contrast-button-hover-background; }
+.ng-contrast-button-hover-color {background: $contrast-button-hover-color; color: #fff}
+.ng-contrast-button-active-background {background: $contrast-button-active-background; }
+.ng-contrast-button-active-color {background: $contrast-button-active-color; color: #fff}
+.ng-contrast-button-primary-background {background: $contrast-button-primary-background; color: #fff}
+.ng-contrast-button-primary-color {background: $contrast-button-primary-color; }
+.ng-contrast-button-primary-hover-background {background: $contrast-button-primary-hover-background; color: #fff}
+.ng-contrast-button-primary-hover-color {background: $contrast-button-primary-hover-color;}
+.ng-contrast-button-primary-active-background {background: $contrast-button-primary-active-background; color: #fff}
+.ng-contrast-button-primary-active-color {background: $contrast-button-primary-active-color; }
+.ng-contrast-icon-hover-color {background: $contrast-icon-hover-color; }
+.ng-contrast-icon-hover-hover-color {background: $contrast-icon-hover-hover-color;}
+.ng-contrast-icon-button-background {background: $contrast-icon-button-background;}
+.ng-contrast-icon-button-color {background: $contrast-icon-button-color; color: #fff}
+.ng-contrast-icon-button-hover-background {background: $contrast-icon-button-hover-background; }
+.ng-contrast-icon-button-hover-color {background: $contrast-icon-button-hover-color; color: #fff}
+.ng-contrast-icon-button-active-background {background: $contrast-icon-button-active-background; }
+.ng-contrast-icon-button-active-color {background: $contrast-icon-button-active-color; color: #fff}
+.ng-contrast-text-muted-color {background: $contrast-text-muted-color;}
+.ng-contrast-text-primary-color {background: $contrast-text-primary-color; color: #fff}
+
+
+@mixin hook-contrast-base-code() {}
+@mixin hook-contrast-nav-side() {}
+@mixin hook-contrast-nav-side-hover() {}
+@mixin hook-contrast-nav-side-active() {}
+@mixin hook-contrast-nav-side-header() {}
+@mixin hook-contrast-nav-side-divider() {}
+@mixin hook-contrast-subnav() {}
+@mixin hook-contrast-subnav-hover() {}
+@mixin hook-contrast-subnav-active() {}
+@mixin hook-contrast-subnav-line-divider() {}
+@mixin hook-contrast-subnav-pill-hover() {}
+@mixin hook-contrast-subnav-pill-active() {}
+@mixin hook-contrast-tab() {}
+@mixin hook-contrast-tab-hover() {}
+@mixin hook-contrast-tab-active() {}
+@mixin hook-contrast-list-line() {}
+@mixin hook-contrast-form() {}
+@mixin hook-contrast-form-focus() {}
+@mixin hook-contrast-button() {}
+@mixin hook-contrast-button-hover() {}
+@mixin hook-contrast-button-active() {}
+@mixin hook-contrast-button-primary() {}
+@mixin hook-contrast-button-primary-hover() {}
+@mixin hook-contrast-button-primary-active() {}
+@mixin hook-contrast-icon-hover() {}
+@mixin hook-contrast-icon-hover-hover() {}
+@mixin hook-contrast-icon-button() {}
+@mixin hook-contrast-icon-button-hover() {}
+@mixin hook-contrast-icon-button-active() {}
+@mixin hook-contrast-misc() {}
+
+@import "core/contrast";

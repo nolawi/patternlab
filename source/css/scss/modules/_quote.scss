@@ -1,0 +1,44 @@
+.ng-quote .ng-pull-quote {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.ng-quote.ng-text-center .ng-pull-quote {
+    border-left: 0 !important;
+    padding-left: 0 !important;
+}
+.ng-quote .ng-pull-quote :first-child::before {
+    content: "\201c";
+}
+.ng-quote .ng-pull-quote :last-child::after {
+    content: "\201d";
+}
+.ng-quote .ng-article-kicker {
+    border-left: 0;
+    margin-left: 0;
+    padding-left: 0;
+}
+.ng-quote .ng-thumbnail {
+    margin-top: 40px;
+}
+.ng-quote img {
+    border-radius: 50px;
+}
+
+/* Quote in a Gallery Override */
+.ng-gallery .ng-quote {
+    margin-bottom: 0;
+}
+
+/* tablet */
+@media (max-width: $breakpoint-small-max) {
+    .ng-quote .ng-pull-quote {
+        font-size: 1.5rem;
+    }
+}
+/* mobile */
+@media (max-width: $breakpoint-mini-max) {
+    .ng-quote .ng-thumbnail {
+        margin-top: 20px;
+    }
+}
+

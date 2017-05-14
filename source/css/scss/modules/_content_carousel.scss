@@ -1,0 +1,177 @@
+
+.ng-content-carousel {
+
+    .ng-article-subhead {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .ng-article-subtitle {
+        font-size: 1rem !important;
+        line-height: 1.6875 !important;
+        margin-top: 0 !important;
+    }
+}
+.ng-content-carousel .ng-slider>* {
+    border-right: 1px solid transparent;
+    box-sizing: border-box;
+}
+.ng-content-carousel .ng-slidenav-position .ng-slidenav {
+    top: 40%;
+}
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-content-carousel .ng-article-subhead {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .ng-content-carousel-slide {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+
+/* Responsive fix for High-Resolution Tablets when changing orientation */
+@media only screen
+        and (min-device-width : 768px)
+        and (max-device-width : 1024px)
+        and (orientation : portrait)
+        and (-webkit-min-device-pixel-ratio: 2) {
+
+        .ng-grid-width-small-1-3>* {
+            width: 33.333%;
+            box-sizing: border-box;
+        }
+}
+
+
+/**
+Content Carousel
+
+The Content Carousel is an extension of the NGKit's Slider component, examples for both are shown below.
+
+Styleguide Components.ContentCarousel.0
+*/
+
+/**
+Content Carousel
+
+This more complex markup features a Mobile-Dot-Nav and titles/descriptions in each slide.  To make the Content Carousel span the full width of the viewport, add the `ng-width-full` class to to the `ng-content-carousel` element.
+
+Markup:
+<div class="ng-content-carousel">
+    <div class="" data-ng-slider>
+        <div class="ng-slider-container ng-slidenav-position">
+            <ul class="ng-slider ng-grid-width-small-1-3">
+                <li>
+                    <div class="ng-panel">
+                        <div class="ng-thumbnail ng-width-1-1">
+                            <div style="height: 400px;
+                                        overflow: hidden;"
+                                        class="hover-opacity">
+                                <a href="/projects/bioblitz">
+                                    <div style="background-image: url(http://lorempixel.com/400/400/);
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                height: 400px;"></div>
+                                   </a>
+                            </div>
+                            <ul class="ng-dotnav ng-dotnav-contrast ng-flex-center ng-visible-mini ng-margin-small-top">
+                                <li data-ng-slideshow-item="{{forloop.counter0}}" class="ng-active"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                            </ul>
+                            <div class="ng-container-center ng-width-large-5-6 ng-padding-left ng-padding-right">
+                                <h3 class="ng-promo-title-large ng-margin-top">
+                                    <a href="/projects/bioblitz/">Title of First Slide</a>
+                                </h3>
+                                <div class="ng-article-subtitle" style="font-size: 16px;">Et idque veniam putent vix. In pro erant persequeris. Usu et exerci populo intellegam, soluta definitiones an est. No eam dicat ludus, ad movet ullamcorper vix, erat omnis intellegam quo ad. Mei ex suavitate molestiae, eum mazim inimicus quaerendum ei.</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ng-panel">
+                        <div class="ng-thumbnail ng-width-1-1">
+                            <div style="height: 400px;
+                                        overflow: hidden;"
+                                        class="hover-opacity">
+                                <a href="/projects/bioblitz">
+                                    <div style="background-image: url(http://lorempixel.com/400/400/);
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                height: 400px;"></div>
+                                   </a>
+                            </div>
+                            <ul class="ng-dotnav ng-dotnav-contrast ng-flex-center ng-visible-mini ng-margin-small-top">
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}" class="ng-active"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                            </ul>
+                            <div class="ng-container-center ng-width-large-5-6 ng-padding-left ng-padding-right">
+                                <h3 class="ng-promo-title-large ng-margin-top">
+                                    <a href="/projects/bioblitz/">Title of Second Slide</a>
+                                </h3>
+                                <div class="ng-article-subtitle" style="font-size: 16px;">Et idque veniam putent vix. In pro erant persequeris. Usu et exerci populo intellegam, soluta definitiones an est. No eam dicat ludus, ad movet ullamcorper vix, erat omnis intellegam quo ad. Mei ex suavitate molestiae, eum mazim inimicus quaerendum ei.</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="ng-panel">
+                        <div class="ng-thumbnail ng-width-1-1">
+                            <div style="height: 400px;
+                                        overflow: hidden;"
+                                        class="hover-opacity">
+                                <a href="/projects/bioblitz">
+                                    <div style="background-image: url(http://lorempixel.com/400/400/);
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                height: 400px;"></div>
+                                   </a>
+                            </div>
+                            <ul class="ng-dotnav ng-dotnav-contrast ng-flex-center ng-visible-mini ng-margin-small-top">
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}"><a href=""></a></li>
+                                <li data-ng-slideshow-item="{{forloop.counter0}}" class="ng-active"><a href=""></a></li>
+                            </ul>
+                            <div class="ng-container-center ng-width-large-5-6 ng-padding-left ng-padding-right">
+                                <h3 class="ng-promo-title-large ng-margin-top">
+                                    <a href="/projects/bioblitz/">Title of Third Slide</a>
+                                </h3>
+                                <div class="ng-article-subtitle" style="font-size: 16px;">Et idque veniam putent vix. In pro erant persequeris. Usu et exerci populo intellegam, soluta definitiones an est. No eam dicat ludus, ad movet ullamcorper vix, erat omnis intellegam quo ad. Mei ex suavitate molestiae, eum mazim inimicus quaerendum ei.</div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="#" class="ng-slidenav ng-slidenav-contrast ng-slidenav-previous ng-hidden-mini" data-ng-slider-item="previous"></a>
+            <a href="#" class="ng-slidenav ng-slidenav-contrast ng-slidenav-next ng-hidden-mini" data-ng-slider-item="next"></a>
+        </div>
+    </div>
+</div>
+
+Styleguide Components.ContentCarousel.2
+*/
+
+
+/* Content Carousel Overrides for Quote Plugin */
+
+.ng-content-carousel .ng-quote .ng-promo-title {
+    margin-top: 20px;
+}
+.ng-content-carousel .ng-quote blockquote {
+    font-size: 1.5rem;
+}
+/*
+.ng-content-carousel .ng-quote img {
+    -webkit-clip-path: circle(40px at center);
+    -moz-clip-path: circle(40px, 40px, 40px);
+    clip-path: circle(40px, 40px, 40px);
+    width: 80px;
+    height: 80px;
+}
+*/

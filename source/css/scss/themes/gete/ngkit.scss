@@ -1,0 +1,118 @@
+// $icon-font-path:                                 "../../fonts" !default;
+// $sprite-path:                                   "../../images/";
+
+// @import "variables";
+// @import "../../ngkit";
+// @import "themed_panel";
+
+@import "variables";
+
+@import "theming";
+@import "themes/ng_theme_globals";
+@import "default_theme/colors";
+@import "core/variables";
+@import "globals";
+@import "mixins";
+@import "hco_fonts";
+
+// Defaults
+@import "normalize";
+@import "default_theme/base";
+
+// Layout
+@import "default_theme/grid";
+@import "default_theme/panel";
+@import "themed_panel";
+@import "default_theme/block";
+@import "default_theme/article";
+@import "default_theme/comment";
+@import "default_theme/cover";
+
+// Navs
+@import "default_theme/offcanvas";
+@import "default_theme/nav";
+@import "default_theme/navbar";
+@import "default_theme/subnav";
+@import "default_theme/breadcrumb";
+@import "default_theme/pagination";
+@import "default_theme/tab";
+
+// Elements
+@import "default_theme/list";
+@import "default_theme/description-list";
+@import "default_theme/table";
+@import "default_theme/form";
+
+// Common
+@import "default_theme/button";
+@import "default_theme/icon";
+@import "default_theme/close";
+@import "default_theme/badge";
+@import "default_theme/alert";
+@import "default_theme/thumbnail";
+@import "default_theme/overlay";
+@import "default_theme/column";
+@import "default_theme/animation";
+
+// Javascript
+@import "default_theme/dropdown";
+@import "default_theme/modal";
+@import "default_theme/switcher";
+
+// Need to be loaded last
+@import "default_theme/text";
+@import "default_theme/utility";
+@import "default_theme/flex";
+@import "default_theme/contrast";
+@import "default_theme/print";
+
+//@import "components/accordion";
+@import "customcomponents/accordion";
+@import "default_theme/autocomplete";
+@import "default_theme/datepicker";
+@import "default_theme/dotnav";
+@import "components/form-advanced";
+@import "components/form-password";
+@import "components/form-select";
+@import "components/htmleditor";
+@import "components/nestable";
+@import "components/notify";
+@import "components/placeholder";
+@import "default_theme/search";
+@import "default_theme/slidenav";
+@import "default_theme/slideshow";
+@import "default_theme/sticky";
+@import "default_theme/upload";
+@import "default_theme/progress";
+@import "default_theme/tooltip";
+
+@import "customcomponents/alphanumeric_index";
+@import "customcomponents/drawer";
+@import "customcomponents/media_object";
+// @import "customcomponents/notifications";
+@import "customcomponents/popover";
+@import "customcomponents/readmore";
+@import "customcomponents/slider";
+@import "customcomponents/slider_switch";
+@import "customcomponents/subnavaccordion";
+@import "customcomponents/tagcloud";
+// @import "customcomponents/toggle";
+@import "customcomponents/toolbar";
+@import "customcomponents/_test_overview";
+@import "docs-core";
+@import "docs-components";
+
+@import "modules/article_title";
+@import "modules/audience_subnav";
+@import "modules/content_modules";
+@import "modules/page_structure";
+@import "modules/page_modules";
+@import "modules/list-media";
+@import "modules/filter_results";
+@import "modules/vocabulary";
+@import "modules/carousel";
+// @import "modules/search_results";
+@import "customcomponents/_test_overview";
+@import "svgsprites";
+
+$body-background-color: #fff;

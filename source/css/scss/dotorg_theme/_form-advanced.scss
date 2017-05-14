@@ -1,0 +1,48 @@
+$form-advanced-size:                           14px !default;
+$form-advanced-border:                         #aaa !default;
+$form-advanced-border-width:                   1px !default;
+$form-advanced-margin-top:                     -4px !default;
+$form-advanced-color:                          transparent !default;
+
+$form-advanced-checked-color:                  $theme-primary-color !default;
+
+$form-advanced-radio-size:                     13px !default;
+
+$form-advanced-checkbox-icon:                  "\d7" !default;
+$form-advanced-checkbox-indeterminate-icon:    "\f068" !default;
+$form-advanced-checkbox-font-size:             12px !default;
+
+$form-advanced-disabled-border:                #ddd !default;
+$form-advanced-disabled-color:                 #aaa !default;
+
+@mixin hook-form-advanced(){}
+@mixin hook-form-advanced-checked(){}
+@mixin hook-form-advanced-radio(){
+    margin-top: 2px;
+}  // Checked/selected state
+@mixin hook-form-advanced-checkbox(){
+    color: transparent;
+    font-family: icon-society;
+    background: url('data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2032%2032%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20stroke-linejoin%3D%22round%22%20stroke-miterlimit%3D%221.414%22%3E%3Cpath%20d%3D%22M9.173%2023.883l-6.617-6.615-2.404%202.404%209.02%209.02L31.85%206.014V5.41l-2.102-2.102L9.172%2023.883z%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fsvg%3E');
+    background-size: 1rem;
+    background-repeat: no-repeat;
+    background-position: right;
+
+}  // Checked/selected state
+@mixin hook-form-advanced-disabled(){}
+@mixin hook-form-advanced-misc(){
+    .ng-form input[type="radio"] {
+        width: 19px;
+        height: 19px;
+    }
+    .ng-form input[type="radio"] + label {
+        padding-left: 10px
+    }
+
+    .ng-form .radio {
+      margin-bottom: 10px;
+    }
+
+}
+
+@import "components/form-advanced";

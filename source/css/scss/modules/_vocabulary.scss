@@ -1,0 +1,134 @@
+/**
+Vocabulary
+
+A module for displaying vocabulary terms and definitions in articles
+
+Styleguide Components.Vocabulary
+*/
+
+/**
+Vocaulary lists
+
+Markup:
+<table class="ng-table ng-table-striped ng-table-condensed">
+<thead>
+    <tr>
+        <th>Term</th>
+        <th>Part of Speech</th>
+        <th>Definition</th>
+        <th>Encyclopedia</th>
+    </tr>
+</thead>
+<tr>
+    <td class="ng-text-bold">agriculture</td>
+    <td class="ng-text-italic">Noun</td>
+    <td>the art and science of cultivating the land for growing crops (farming) or raising livestock (ranching).</td>
+    <td><a href="#" title="Encyclopedic Entry: agriculture">
+        <i class="ng-icon-book"></i>
+        <span class="sr-only">Encyclopedic Entry: agriculture</span>
+        </a></td>
+</tr><tr>
+    <td class="ng-text-bold">aquaculture</td>
+    <td class="ng-text-italic">Noun</td>
+    <td>the art and science of cultivating marine or freshwater life for food and industry.</td>
+    <td>&nbsp;</td>
+</tr><tr>
+    <td class="ng-text-bold">arable</td>
+    <td class="ng-text-italic">Adjective</td>
+    <td>land able to produce crops.</td>
+    <td>&nbsp;</td>
+</tr><tr>
+    <td class="ng-text-bold">biodiversity</td>
+    <td class="ng-text-italic">Noun</td>
+    <td>all the different kinds of living organisms within a given area.</td>
+    <td><a href="#" title="Encyclopedic Entry: biodiversity">
+        <i class="ng-icon-book"></i>
+        <span class="sr-only">Encyclopedic Entry: biodiversity</span>
+        </a></td>
+</tr>
+</table>
+
+Styleguide Components.Vocabulary.01
+*/
+/**
+Definition popovers
+
+<div class="ng-popover top" style="display: block; position: relative">
+    <div class="ng-arrow"></div>
+    <div class="ng-popover-content"
+        <p><span class="ng-text-bold">agriculture</span> (A-grih-kuhl-cher)</p>
+        <hr class="ng-hr">
+        <p class="ng-text-italic ng-margin-bottom-remove">noun</p>
+        <p class="ng-margin-top-remove">the art and science of cultivating the land for growing crops (farming) or raising livestock (ranching).</p>
+        <hr class="ng-hr">
+        <p>Read more in the <a href="#">NG Education Encyclopedia <i class="ng-icon-angle-double-right"></i></a></p>
+    </div>
+</div>
+
+Markup:
+<script>
+var vocabulary = [
+    {value:'agriculture', phonetic:'(A-grih-kuhl-cher)', partofspeech:'noun', definition:'the art and science of cultivating the land for growing crops (farming) or raising livestock (ranching).', encyclopedia:'#'},
+    {value:'aquaculture', phonetic:'(AH-kwuh-kuhl-cher)', partofspeech:'noun', definition:'the art and science of cultivating marine or freshwater life for food and industry.', encyclopedia: null},
+    {value:'arable', phonetic:'(AIR-uh-buhl)', partofspeech:'adjective', definition:'land able to produce crops.', encyclopedia:null},
+    {value:'biodiversity', phonetic:'(bi-oh-dih-VEHR-sih-tee)', partofspeech:'noun', definition:'all the different kinds of living organisms within a given area.', encyclopedia:'#'}
+];
+</script>
+<p id="test1"><a class="tipHelp">Agriculture</a> is the art and science of cultivating the soil, growing crops and raising livestock. It includes the preparation of plant and animal products for people to use and their distribution to markets.</p>
+<script>
+$(document).ready(function(e) {
+    $.NGkit.definition.initialize({source: vocabulary, selector:"#test1 .tipHelp"});
+});
+</script>
+
+Styleguide Components.Vocabulary.03
+*/
+
+.tipHelp {
+    color: #044e8e !important;
+    border-bottom: 2px dotted #ffcc03;
+    &:hover {
+        color: #5eb1c9 !important;
+    }
+}
+
+/**
+Custom definition templates
+
+The default template for displaying definitions is:
+
+<pre class="kss-markup"><code data-language="html"><div class="ng-panel">
+    <p><span class="ng-text-bold">{{value}}</span> {{ phonetic }}</p>
+    <hr class="ng-hr">
+    <p class="ng-text-italic ng-margin-bottom-remove">{{ partofspeech }}</p>
+    <p class="ng-margin-top-remove">{{{ definition }}}</p>
+    {{#encyclopedia}}
+    <hr class="ng-hr">
+    <p>Read more in the <a href="{{{ encyclopedia }}}">
+        NG Education Encyclopedia <i class="ng-icon-angle-double-right"></i>
+    </a></p>
+    {{/encyclopedia}}
+</div></code></pre>
+
+You can pass in a `template` parameter, which can be the actual template, or an
+id selector of the template defined within a `<script>` tag.
+
+Markup:
+<script type="text/popover" id="deftemplate">
+<div class="ng-panel">
+    <h4>{{value}} <small class="ng-text-italic">{{ phonetic }}</small></h4>
+    <p class="ng-text-italic ng-margin-bottom-remove">{{ partofspeech }}</p>
+    <p class="ng-margin-top-remove">{{ definition }}</p>
+    <p>Read more in the <a href="#">NG Education Encyclopedia <i class="ng-icon-angle-double-right"></i></a></p>
+</div>
+</script>
+<p id="test2"><a class="tipHelp">Agriculture</a> is the art and science of cultivating the soil, growing crops and raising livestock. It includes the preparation of plant and animal products for people to use and their distribution to markets.</p>
+<script>
+$(document).ready(function(e) {
+    $.NGkit.definition.initialize({source: vocabulary, template:"#deftemplate", selector:"#test2 .tipHelp"});
+});
+</script>
+
+Styleguide Components.Vocabulary.05
+*/
+

@@ -1,0 +1,90 @@
+$icon-font-path:                                 "../fonts" !default;
+
+$icon-micro-font-size:                           75% !default;
+$icon-mini-font-size:                            100% !default;
+$icon-small-font-size:                           150% !default;
+$icon-medium-font-size:                          200% !default;
+$icon-large-font-size:                           250% !default;
+
+$icon-micro-vertical-align:                      -10% !default;
+$icon-mini-vertical-align:                       -10% !default;
+$icon-large-vertical-align:                      -22% !default;
+$icon-small-vertical-align:                      -10% !default;
+$icon-medium-vertical-align:                     -16% !default;
+$icon-large-vertical-align:                      -22% !default;
+
+$icon-hover-color:                               $global-muted-color !default;
+$icon-hover-hover-color:                         $global-color !default;
+
+$icon-button-width:                              40px !default;
+$icon-button-height:                             $icon-button-width !default;
+$icon-button-border-radius:                      100% !default;
+$icon-button-background:                         #fff !default;
+$icon-button-font-size:                          round(($icon-button-width * 0.5)) !default;
+$icon-button-color:                              $global-color !default;
+
+$icon-button-hover-background:                   $global-default-hover-background !default;
+$icon-button-hover-color:                        $global-color !default;
+
+$icon-button-active-background:                  $global-default-active-background !default;
+$icon-button-active-color:                       $global-color !default;
+
+/* Can't prefix with just .ng- because of other classes that interfere */
+.ng--icon-hover-color {background: $icon-hover-color;color: #fff}
+.ng--icon-hover-hover-color {background: $icon-hover-hover-color;color: #fff}
+.ng--icon-button-background {background: $icon-button-background;}
+.ng--icon-button-color {background: $icon-button-color;color: #fff}
+.ng--icon-button-hover-background {background: $icon-button-hover-background;}
+.ng--icon-button-hover-color {background: $icon-button-hover-color;color: #fff}
+.ng--icon-button-active-background {background: $icon-button-active-background;}
+.ng--icon-button-active-color {background: $icon-button-active-color;color: #fff}
+
+
+.ng-icon-micro {
+    font-size: $icon-micro-font-size !important;
+    vertical-align: $icon-micro-vertical-align;
+}
+.ng-icon-mini {
+    font-size: $icon-mini-font-size !important;
+    vertical-align: $icon-mini-vertical-align;
+}
+
+@mixin hook-icon-hover() {
+    border-bottom: none;
+}
+@mixin hook-icon-hover-hover() {
+    border-bottom: none;
+}
+@mixin hook-icon-button() {
+    border: 1px solid rgba(0,0,0,0.2);
+    & + & {
+        margin-left: 5px
+    }
+    &.ng-icon-button-large {
+        width: $icon-button-width * 2;
+        height: $icon-button-height * 2;
+        line-height: $icon-button-height * 2;
+        font-size: $icon-button-font-size * 2;
+    }
+
+    &.ng-icon-button-large svg {
+        top: 40%;
+        left: 40%;
+    }
+
+    transition: background-color 0.4s ease;
+
+}
+@mixin hook-icon-button-hover() {
+    border: 1px solid rgba(0,0,0,0.2);
+    background: #E6E6E6;
+}
+@mixin hook-icon-button-active() {}
+@mixin hook-icon-misc() {
+    .ng-icon-button-large svg {
+        top: 40%;
+        left: 40%;
+    }
+}
+
+@import "icon-society";

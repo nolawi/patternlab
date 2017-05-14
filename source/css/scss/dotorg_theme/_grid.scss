@@ -1,0 +1,146 @@
+$grid-gutter-horizontal:                        $global-grid-gutter !default;
+$grid-gutter-vertical:                          35px !default;
+
+$grid-large-gutter-horizontal:                  $global-grid-large-gutter !default;
+$grid-large-gutter-vertical:                    35px !default;
+
+$grid-gutter-small-horizontal:                  10px !default;
+$grid-gutter-small-vertical:                    25px !default;
+
+$grid-divider-border:                           $global-border !default;
+$grid-divider-border-width:                     1px !default;
+
+.ng-grid-divider-border {
+    background-color: $grid-divider-border;
+}
+
+@mixin grid-extras($selector-prefix: 'ng-width') {
+    /* Halves */
+    .#{$selector-prefix}-6-12,
+    .#{$selector-prefix}-4-8,
+    .#{$selector-prefix}-8-16 { width: 50%; }
+
+    /* Thirds */
+    .#{$selector-prefix}-4-12 { width: 33.333%; }
+    .#{$selector-prefix}-8-12 { width: 66.666%; }
+
+    /* Quarters */
+    .#{$selector-prefix}-3-12,
+    .#{$selector-prefix}-2-8,
+    .#{$selector-prefix}-4-16 { width: 25%; }
+    .#{$selector-prefix}-9-12,
+    .#{$selector-prefix}-6-8,
+    .#{$selector-prefix}-12-16 { width: 75%; }
+
+    /* Sixths */
+    .#{$selector-prefix}-2-12 { width: 16.666%; }
+    .#{$selector-prefix}-10-12 { width: 83.333%; }
+
+    /* Twelveth, for compatibility with bootstrap */
+    .#{$selector-prefix}-1-12 { width: 8.333% }
+    .#{$selector-prefix}-5-12 { width: 41.666% }
+    .#{$selector-prefix}-7-12 { width: 58.333% }
+    .#{$selector-prefix}-11-12 { width: 91.666% }
+
+    /* Eighths */
+    .#{$selector-prefix}-1-8,
+    .#{$selector-prefix}-2-16 { width: 12.5%; }
+    .#{$selector-prefix}-3-8,
+    .#{$selector-prefix}-6-16 { width: 37.5%; }
+    .#{$selector-prefix}-5-8,
+    .#{$selector-prefix}-10-16 { width: 62.5%; }
+    .#{$selector-prefix}-7-8,
+    .#{$selector-prefix}-14-16 { width: 87.5%; }
+
+    /* Sixteenths */
+    .#{$selector-prefix}-1-16 { width: 6.25%; }
+    .#{$selector-prefix}-3-16 { width: 18.75%; }
+    .#{$selector-prefix}-5-16 { width: 31.25%; }
+    .#{$selector-prefix}-7-16 { width: 43.75%; }
+    .#{$selector-prefix}-9-16 { width: 56.25%; }
+    .#{$selector-prefix}-11-16 { width: 68.75%; }
+    .#{$selector-prefix}-13-16 { width: 81.25%; }
+    .#{$selector-prefix}-15-16 { width: 93.75%; }
+}
+    //for tabs panel only on tablet portrait mode-picks up grid at small-max
+    
+        @media (min-width: $breakpoint-small-max) {
+        
+            .ng-panel-tab-content{
+              div[class*="ng-width-medium-"]  {
+                width: 100% !important;
+                },
+                 [class*='ng-width-medium'] > * {
+                box-sizing: border-box;
+                width: 100%;
+            }
+
+            } 
+        }
+        
+
+
+
+@mixin hook-grid-misc(){
+    .ng-grid.ng-grid-micro { margin-left: -2px; }
+    .ng-grid.ng-grid-micro > * { padding-left: 2px; }
+
+    .ng-grid.ng-grid-micro + .ng-grid-micro { margin-top: 2px; }
+    .ng-grid.ng-grid-micro > .ng-grid-margin { margin-top: 2px; }
+
+    .ng-grid.ng-grid-micro > * > .ng-panel + .ng-panel { margin-top: 2px; }
+
+    .ng-grid-divider > [class='ng-width']:nth-child(n+2) { border-left: $grid-divider-border-width solid $grid-divider-border; }
+
+    /* Add divisions of 12 and 16 to the grid */
+    @include grid-extras();
+
+    @media (min-width: $breakpoint-small) {
+        @include grid-extras('ng-width-small');
+    }
+ 
+
+    @media (min-width: $breakpoint-medium) {
+        @include grid-extras('ng-width-medium');
+    }
+    
+
+    @media (min-width: $breakpoint-large) {
+        @include grid-extras('ng-width-large');
+    }
+
+    @media (min-width: $breakpoint-xlarge) {
+        @include grid-extras('ng-width-xlarge');
+    }
+
+    .ng-grid-wrapper {
+        padding-left: $grid-gutter-horizontal;
+        padding-right: $grid-gutter-horizontal;
+    }
+
+    /* Full Width of Viewport Container */
+    .ng-width-full {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+
+    /* Mobile Screen Size */
+    @media (max-width: $breakpoint-small-max) {
+        .ng-grid-margin { margin-top: $grid-gutter-small-vertical !important; }
+    }
+}
+
+@mixin ng-width-full() {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+@import "core/grid";

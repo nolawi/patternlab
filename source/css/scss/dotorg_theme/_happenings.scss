@@ -1,0 +1,26 @@
+
+#event_key_image_container {
+    height:550px;
+    overflow: hidden;
+    text-align: center;
+    position:relative;
+}
+#event_key_image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+.ng-event-detail {
+    .ng-thumbnail-credit.ng-pipe {
+        margin-left: -25px;
+    }
+}
+@media (max-width: 479px) {
+    #event_key_image_container {
+        height: 320px;
+    }
+}

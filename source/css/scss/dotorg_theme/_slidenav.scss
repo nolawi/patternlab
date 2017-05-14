@@ -1,0 +1,67 @@
+$slidenav-width:                                40px !default;
+$slidenav-height:                               60px !default;
+$slidenav-color:                                rgba(50,50,50,0.4) !default;
+$slidenav-font-size:                            30px !default;
+$slidenav-line-height:                          $slidenav-height !default;
+$slidenav-previous-icon:                        "\1f890" !default;
+$slidenav-next-icon:                            "\1f892" !default;
+
+$slidenav-hover-color:                          rgba(50,50,50,0.7) !default;
+
+$slidenav-active-color:                         rgba(50,50,50,0.9) !default;
+
+$slidenav-position-previous:                    20px !default;
+$slidenav-position-next:                        $slidenav-position-previous !default;
+
+$slidenav-contrast-color:                       rgba(255,255,255,0.5) !default;
+$slidenav-contrast-hover-color:                 rgba(255,255,255,0.7) !default;
+$slidenav-contrast-active-color:                rgba(255,255,255,0.9) !default;
+
+.ng-slidenav-color {background: $slidenav-color;color: #fff}
+.ng-slidenav-hover-color {background: $slidenav-hover-color;color: #fff}
+.ng-slidenav-active-color {background: $slidenav-active-color;color: #fff}
+.ng-slidenav-contrast-color {background: $slidenav-contrast-color;}
+.ng-slidenav-contrast-hover-color {background: $slidenav-contrast-hover-color;}
+.ng-slidenav-contrast-active-color {background: $slidenav-contrast-active-color;}
+.ng-slidenav-previous-icon, .ng-slidenav-next-icon {font-family: FontAwesome}
+@mixin hook-slidenav(){
+    border-bottom: none;
+    font-family: icon-society;
+    line-height: $slidenav-height;
+}
+@mixin hook-slidenav-hover(){
+    border-bottom: none;
+}
+@mixin hook-slidenav-active(){}
+@mixin hook-slidenav-contrast(){
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+@mixin hook-slidenav-contrast-hover(){}
+@mixin hook-slidenav-contrast-active(){}
+@mixin hook-slidenav-misc(){
+    .ng-slidenav-previous:before {
+        font-family: icon-society;
+    }
+
+    .ng-slidenav-next:before {
+        font-family: icon-society;
+    }
+
+    @media (max-width: $breakpoint-medium-max) {
+        .ng-slidenav {
+            width: 32px;
+            height: 47px;
+        }
+        .ng-slidenav-previous, .ng-slidenav-next {
+            font-size: 21px;
+            line-height: 47px;
+            top: 50%;
+        }
+    }
+    @media (max-width: $breakpoint-mini-max) {
+
+    }
+}
+
+@import "components/slidenav";

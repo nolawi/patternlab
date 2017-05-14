@@ -1,0 +1,527 @@
+// Name:            Icon
+// Description:     Defines styles for icons
+//
+// Adapted from http://fortawesome.github.com/Font-Awesome (Version 4.2.0)
+//
+// Component:       `ng-icon-*`
+//
+// Sub-objects:     `ng-icon-hover`
+//                  `ng-icon-button`
+//
+// Modifiers:       `ng-icon-small`
+//                  `ng-icon-medium`
+//                  `ng-icon-large`
+//                  `ng-icon-justify`
+//                  `ng-icon-spin`
+//
+// Uses:            Animation
+//
+// ========================================================================
+
+
+// Variables
+// ========================================================================
+
+$icon-font-path:                                 "../fonts" !default;
+
+$icon-small-font-size:                           1.5rem !default;
+$icon-medium-font-size:                          2rem !default;
+$icon-large-font-size:                           2.5rem !default;
+
+$icon-small-vertical-align:                      -10% !default;
+$icon-medium-vertical-align:                     -16% !default;
+$icon-large-vertical-align:                      -22% !default;
+
+$icon-hover-color:                              #999 !default;
+$icon-hover-hover-color:                        #444 !default;
+
+$icon-button-width:                              35px !default;
+$icon-button-height:                             $icon-button-width !default;
+$icon-button-border-radius:                      100% !default;
+$icon-button-background:                         #eee !default;
+$icon-button-font-size:                          round(($icon-button-width * 0.5)) !default;
+$icon-button-color:                              #444 !default;
+
+$icon-button-hover-background:                   #f5f5f5 !default;
+$icon-button-hover-color:                        #444 !default;
+
+$icon-button-active-background:                  #ddd !default;
+$icon-button-active-color:                       #444 !default;
+
+
+// Variables
+
+$icn-add: "\2b";
+$icn-arrowdown: "\2193";
+$icn-arrowleft: "\2190";
+$icn-arrowne: "\2197";
+$icn-arrowright: "\2192";
+$icn-arrowup: "\2191";
+$icn-audio: "\23f4";
+$icn-audioloud: "\f104";
+$icn-audiomute: "\f105";
+$icn-border: "\25af";
+$icn-boxarrowne: "\2b00";
+$icn-close: "\d7";
+$icn-comment: "\f109";
+$icn-contract: "\f10a";
+$icn-directiondown: "\1f893";
+$icn-directionleft: "\1f890";
+$icn-directionright: "\1f892";
+$icn-directionup: "\1f891";
+$icn-envelope: "\2709";
+$icn-expand: "\2922";
+$icn-fa-angle-double-left: "\1f89b";
+$icn-fa-angle-double-right: "\1f89c";
+$icn-fa-book: "\1f89d";
+$icn-fa-caret-down: "\1f89e";
+$icn-fa-caret-right: "\1f89f";
+$icn-fa-caret-up: "\1f8a0";
+$icn-fa-clock-o: "\1f8a1";
+$icn-fa-download: "\1f8a2";
+$icn-fa-eraser: "\1f8a3";
+$icn-fa-google-plus: "\1f8aa";
+$icn-fa-info-circle: "\1f8a4";
+$icn-fa-list-ul: "\1f8a5";
+$icn-fa-minus-square-o: "\1f8ab";
+$icn-fa-plus-square-o: "\1f8ac";
+$icn-fa-question-circle: "\1f8a6";
+$icn-fa-sort: "\1f8a7";
+$icn-fa-unlock: "\1f8a8";
+$icn-fa-warning: "\1f8a9";
+$icn-facebook: "\66";
+$icn-geolocate: "\25ce";
+$icn-googleplus: "\f113";
+$icn-heart: "\2665";
+$icn-hearthollow: "\2661";
+$icn-instagram: "\1f4f7";
+$icn-lightarrowdown: "\1f897";
+$icn-lightarrowleft: "\1f898";
+$icn-lightarrowne: "\f117";
+$icn-lightarrowright: "\1f899";
+$icn-lightarrowup: "\1f89a";
+$icn-lightboxarrowne: "\f118";
+$icn-lightclose: "\f119";
+$icn-lightdirectiondown: "\f11a";
+$icn-lightdirectionleft: "\2039";
+$icn-lightdirectionright: "\203a";
+$icn-lightdirectionup: "\f11d";
+$icn-linkedin: "\f11e";
+$icn-mapmarker: "\1f7c2";
+$icn-pinterest: "\f120";
+$icn-play: "\25b6";
+$icn-print: "\1f5b6";
+$icn-remove: "\2212";
+$icn-search: "\1f8ad";
+$icn-share: "\2924";
+$icn-toggleoff: "\25d1";
+$icn-toggleon: "\25d0";
+$icn-twitter: "\74";
+$icn-user: "\1f464";
+$icn-walker: "\1f6b6";
+$icn-whatsapp: "\1f5e9";
+$icn-youtube: "\1f4fa";
+$icn-zoomin: "\2295";
+$icn-zoomout: "\2296";
+
+
+$icn-1pagemap: "\1f8af";
+$icn-activity: "\1f8b0";
+$icn-alarmbell: "\1f8b1";
+$icn-angle-double-right: "\1f8b2";
+$icn-archived-activity: "\1f8b3";
+$icn-archived-lesson: "\1f8b4";
+$icn-archived-page: "\1f8b5";
+$icn-article: "\1f8b6";
+$icn-atlas: "\1f8b7";
+$icn-calendar-detail: "\1f8b8";
+$icn-calendar-event: "\1f8b9";
+$icn-cancel: "\1f8ba";
+$icn-cartoon: "\1f8bb";
+$icn-check: "\1f8bc";
+$icn-check-circle: "\1f8bd";
+$icn-clock: "\1f8be";
+$icn-collection: "\1f8bf";
+$icn-coloringpage: "\1f8c0";
+$icn-danger-circle: "\1f8c1";
+$icn-document: "\1f8c2";
+$icn-download: "\1f8c3";
+$icn-educator: "\1f8c4";
+$icn-educatorguide: "\1f8c5";
+$icn-encyclopedia: "\1f8c6";
+$icn-event: "\1f8c7";
+$icn-external-link: "\1f8c8";
+$icn-fa-home: "\1f8ae";
+$icn-facebook-square: "\1f8c9";
+$icn-family: "\1f8ca";
+$icn-gallery: "\1f8cb";
+$icn-globe: "\1f8cc";
+$icn-google-plus: "\1f8cd";
+$icn-graphic: "\1f8ce";
+$icn-grid-view: "\1f8cf";
+$icn-historic-article: "\1f8d0";
+$icn-home: "\1f8d1";
+$icn-idea: "\1f8d2";
+$icn-illustration: "\1f8d3";
+$icn-image: "\1f8d4";
+$icn-info-circle: "\1f8d5";
+$icn-interactive: "\1f8d6";
+$icn-internal-resource: "\1f8d7";
+$icn-lesson: "\1f8d8";
+$icn-list-ul: "\1f8d9";
+$icn-list-view: "\1f8da";
+$icn-map: "\1f8db";
+$icn-map-marker: "\1f8dc";
+$icn-mapmaker-interactive: "\1f8dd";
+$icn-mapmaker-kit: "\1f8de";
+$icn-mediumlogo: "\1f8df";
+$icn-multimedia: "\1f8e0";
+$icn-ngs: "\1f8e1";
+$icn-other-media: "\1f8e2";
+$icn-page: "\1f8e3";
+$icn-pdf: "\1f8e4";
+$icn-phone: "\1f8e5";
+$icn-photo: "\1f8e6";
+$icn-question-circle: "\1f8e7";
+$icn-quiz: "\1f8e8";
+$icn-student: "\1f8e9";
+$icn-ticket: "\1f8ea";
+$icn-unit: "\1f8ec";
+$icn-video: "\1f8ed";
+
+
+@font-face {
+    font-family: 'icon-society';
+    src: url("#{$icon-font-path}/icon-society.woff") format("woff"),
+         url("#{$icon-font-path}/icon-society.ttf") format("truetype"),
+         url("#{$icon-font-path}/icon-society.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*
+ * 1. Allow margin
+ * 2. Prevent inherit font style
+ * 4. Correct line-height
+ * 5. Better font rendering
+ * 6. Remove `text-decoration` for anchors
+ */
+
+[class*='ng-icon-'] {
+    font-family: icon-society;
+    /* 1 */
+    display: inline-block;
+    /* 2 */
+    font-weight: normal;
+    font-style: normal;
+    /* 4 */
+    line-height: 1;
+    /* 5 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 6 */
+[class*='ng-icon-'],
+[class*='ng-icon-']:hover,
+[class*='ng-icon-']:focus { text-decoration: none; }
+
+.ng-icon, .ng-icon svg {
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+    line-height: 1em;
+    max-width: 100%;
+    max-height: 100%;
+    fill: currentColor;
+}
+.ng-icon {
+    display: inline-block;
+    // vertical-align: text-top;
+    position: relative;
+}
+.ng-icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.ng-icon-algin-top svg {
+    vertical-align: top;
+}
+.ng-icon-algin-text-top svg {
+    vertical-align: text-top;
+}
+
+/* Size modifiers
+ ========================================================================== */
+
+.ng-icon-small {
+    font-size: $icon-small-font-size;
+    line-height: $icon-small-font-size;
+    vertical-align: $icon-small-vertical-align;
+}
+.ng-icon-small svg {
+    width: $icon-small-font-size;
+    height: $icon-small-font-size;
+}
+.ng-icon-medium {
+    font-size: $icon-medium-font-size;
+    line-height: $icon-medium-font-size;
+    vertical-align: $icon-medium-vertical-align;
+}
+.ng-icon-medium svg {
+    width: $icon-medium-font-size;
+    height: $icon-medium-font-size;
+}
+.ng-icon-large {
+    font-size: $icon-large-font-size;
+    line-height: $icon-large-font-size;
+    vertical-align: $icon-large-vertical-align;
+}
+.ng-icon-large svg {
+    width: $icon-large-font-size;
+    height: $icon-large-font-size;
+}
+
+/* Modifier: `ng-icon-justify`
+ ========================================================================== */
+
+.ng-icon-justify {
+    width: 1em;
+    text-align: center;
+}
+
+
+/* Modifier: `ng-icon-spin`
+ ========================================================================== */
+
+.ng-icon-spin {
+    display: inline-block;
+    -webkit-animation: ng-rotate 2s infinite linear;
+    animation: ng-rotate 2s infinite linear;
+}
+
+
+/* Modifier: `ng-icon-hover`
+ ========================================================================== */
+
+.ng-icon-hover {
+    color: $icon-hover-color;
+    @include hook-icon-hover();
+}
+
+/*
+ * Hover
+ */
+
+.ng-icon-hover:hover {
+    color: $icon-hover-hover-color;
+    @include hook-icon-hover-hover();
+}
+
+
+/* Modifier: `ng-icon-button`
+ ========================================================================== */
+
+.ng-icon-button {
+    box-sizing: border-box;
+    display: inline-block;
+    width: $icon-button-width;
+    height: $icon-button-height;
+    border-radius: $icon-button-border-radius;
+    background: $icon-button-background;
+    line-height: $icon-button-height;
+    color: $icon-button-color;
+    font-size: $icon-button-font-size;
+    text-align: center;
+    @include hook-icon-button();
+}
+.ng-icon-button svg {
+    top: 50%;
+    left: 50%;
+    transform: translate(-($icon-button-font-size / 2), -($icon-button-font-size / 2))
+}
+/*
+ * Hover
+ * 1. Apply hover style also to focus state
+ * 2. Remove default focus style
+ */
+
+.ng-icon-button:hover,
+.ng-icon-button:focus { // 1
+    background-color: $icon-button-hover-background;
+    color: $icon-button-hover-color;
+    /* 2 */
+    outline: none;
+    @include hook-icon-button-hover();
+}
+
+/* Active */
+.ng-icon-button:active {
+    background-color: $icon-button-active-background;
+    color: $icon-button-active-color;
+    @include hook-icon-button-active();
+}
+
+/* Icon mapping
+ ========================================================================== */
+
+.ng-icon-plus:before,
+.ng-icon-add:before { content: $icn-add;}
+.ng-icon-arrow-down:before { content: $icn-arrowdown;}
+.ng-icon-arrow-left:before { content: $icn-arrowleft;}
+.ng-icon-arrow-ne:before { content: $icn-arrowne;}
+.ng-icon-arrow-right:before { content: $icn-arrowright;}
+.ng-icon-arrow-up:before { content: $icn-arrowup;}
+.ng-icon-audio:before { content: $icn-audio;}
+.ng-icon-audio-loud:before { content: $icn-audioloud;}
+.ng-icon-audio-mute:before { content: $icn-audiomute;}
+.ng-icon-ngs:before { content: $icn-border;}
+.ng-icon-external-link-square:before,
+.ng-icon-external-link:before,
+.ng-icon-box-arrow-ne:before { content: $icn-boxarrowne;}
+.ng-icon-remove:before,
+.ng-icon-times:before,
+.ng-icon-close:before { content: $icn-close; }
+.ng-icon-remove-light:before,
+.ng-icon-times-light:before,
+.ng-icon-close-light:before { content: $icn-lightclose;}
+.ng-icon-comment:before { content: $icn-comment;}
+.ng-icon-contract:before { content: $icn-contract;}
+.ng-icon-angle-down:before,
+.ng-icon-direction-down:before { content: $icn-directiondown;}
+.ng-icon-chevron-left:before,
+.ng-icon-angle-left:before,
+.ng-icon-direction-left:before { content: $icn-directionleft;}
+.ng-icon-chevron-right:before,
+.ng-icon-angle-right:before,
+.ng-icon-direction-right:before { content: $icn-directionright;}
+.ng-icon-angle-up:before,
+.ng-icon-direction-up:before { content: $icn-directionup;}
+.ng-icon-envelope:before { content: $icn-envelope;}
+.ng-icon-expand:before { content: $icn-expand;}
+.ng-icon-facebook:before { content: $icn-facebook;}
+.ng-icon-geolocate:before { content: $icn-geolocate;}
+// .ng-icon-google-plus:before { content: $icn-googleplus;}
+.ng-icon-heart:before { content: $icn-heart;}
+.ng-icon-heart-hollow:before { content: $icn-hearthollow;}
+.ng-icon-instagram:before { content: $icn-instagram;}
+.ng-icon-arrow-down:before { content: $icn-lightarrowdown;}
+.ng-icon-arrow-left-light:before { content: $icn-lightarrowleft;}
+.ng-icon-arrow-ne-light:before { content: $icn-lightarrowne;}
+.ng-icon-arrow-right-light:before { content: $icn-lightarrowright;}
+.ng-icon-arrow-up-light:before { content: $icn-lightarrowup;}
+.ng-icon-external-link-square-light:before,
+.ng-icon-external-link-light:before,
+.ng-icon-box-arrow-ne-light:before { content: $icn-lightboxarrowne;}
+.ng-icon-angle-down-light:before,
+.ng-icon-direction-down-light:before { content: $icn-lightdirectiondown;}
+.ng-icon-angle-left-light:before,
+.ng-icon-direction-left-light:before { content: $icn-lightdirectionleft;}
+.ng-icon-angle-right-light:before,
+.ng-icon-direction-right-light:before { content: $icn-lightdirectionright;}
+.ng-icon-angle-up-light:before,
+.ng-icon-direction-up-light:before { content: $icn-lightdirectionup;}
+.ng-icon-linkedin:before { content: $icn-linkedin;}
+.ng-icon-map-marker:before { content: $icn-mapmarker;}
+.ng-icon-minus:before { content: $icn-remove;}
+.ng-icon-pinterest:before { content: $icn-pinterest;}
+.ng-icon-play:before { content: $icn-play;}
+.ng-icon-print:before { content: $icn-print;}
+.ng-icon-search:before {content: $icn-search;}
+.ng-icon-share:before { content: $icn-share;}
+.ng-icon-toggle-off:before { content: $icn-toggleoff;}
+.ng-icon-toggle-on:before { content: $icn-toggleon;}
+.ng-icon-twitter:before { content: $icn-twitter;}
+.ng-icon-user:before { content: $icn-user;}
+.ng-icon-walker:before { content: $icn-walker;}
+.ng-icon-whats-app:before { content: $icn-whatsapp;}
+.ng-icon-youtube:before { content: $icn-youtube;}
+.ng-icon-search-plus:before,
+.ng-icon-zoom-in:before { content: $icn-zoomin;}
+.ng-icon-search-minus:before,
+.ng-icon-zoom-out:before { content: $icn-zoomout;}
+
+
+.ng-icon-angle-double-left:before {content: $icn-fa-angle-double-left;}
+.ng-icon-angle-double-right:before {content: $icn-fa-angle-double-right;}
+.ng-icon-book:before {content: $icn-fa-book;}
+.ng-icon-caret-down:before {content: $icn-fa-caret-down;}
+.ng-icon-caret-right:before {content: $icn-fa-caret-right;}
+.ng-icon-caret-up:before {content: $icn-fa-caret-up;}
+.ng-icon-clock-o:before {content: $icn-fa-clock-o;}
+.ng-icon-download:before {content: $icn-fa-download;}
+.ng-icon-eraser:before {content: $icn-fa-eraser;}
+.ng-icon-google-plus:before {content: $icn-fa-google-plus;}
+.ng-icon-info-circle:before {content: $icn-fa-info-circle;}
+.ng-icon-list-ul:before {content: $icn-fa-list-ul;}
+.ng-icon-minus-square-o:before {content: $icn-fa-minus-square-o;}
+.ng-icon-plus-square-o:before {content: $icn-fa-plus-square-o;}
+.ng-icon-question-circle:before {content: $icn-fa-question-circle;}
+.ng-icon-sort:before {content: $icn-fa-sort;}
+.ng-icon-unlock:before {content: $icn-fa-unlock;}
+.ng-icon-warning:before {content: $icn-fa-warning;}
+
+
+.ng-icon-1pagemap:before { content: $icn-1pagemap; }
+.ng-icon-activity:before { content: $icn-activity; }
+.ng-icon-alarmbell:before { content: $icn-alarmbell; }
+.ng-icon-angle-double-right:before { content: $icn-angle-double-right; }
+.ng-icon-archived-activity:before { content: $icn-archived-activity; }
+.ng-icon-archived-lesson:before { content: $icn-archived-lesson; }
+.ng-icon-archived-page:before { content: $icn-archived-page; }
+.ng-icon-article:before { content: $icn-article; }
+.ng-icon-atlas:before { content: $icn-atlas; }
+.ng-icon-calendar-detail:before { content: $icn-calendar_detail; }
+.ng-icon-calendar-event:before { content: $icn-calendar_event; }
+.ng-icon-cancel:before { content: $icn-cancel; }
+.ng-icon-cartoon:before { content: $icn-cartoon; }
+.ng-icon-check-circle:before { content: $icn-check-circle; }
+.ng-icon-check:before { content: $icn-check; }
+.ng-icon-clock:before { content: $icn-clock; }
+.ng-icon-collection:before { content: $icn-collection; }
+.ng-icon-coloringpage:before { content: $icn-coloringpage; }
+.ng-icon-danger-circle:before { content: $icn-danger-circle; }
+.ng-icon-document:before { content: $icn-document; }
+.ng-icon-download:before { content: $icn-download; }
+.ng-icon-educator:before { content: $icn-educator; }
+.ng-icon-educatorguide:before { content: $icn-educatorguide; }
+.ng-icon-encyclopedia:before { content: $icn-encyclopedia; }
+.ng-icon-event:before { content: $icn-event; }
+.ng-icon-fa-home:before { content: $icn-fa-home; }
+.ng-icon-facebook-square:before { content: $icn-facebook-square; }
+.ng-icon-family:before { content: $icn-family; }
+.ng-icon-gallery:before { content: $icn-gallery; }
+.ng-icon-globe:before { content: $icn-globe; }
+.ng-icon-google-plus:before { content: $icn-google-plus; }
+.ng-icon-graphic:before { content: $icn-graphic; }
+.ng-icon-grid-view:before { content: $icn-grid-view; }
+.ng-icon-historic-article:before { content: $icn-historic-article; }
+.ng-icon-home:before { content: $icn-home; }
+.ng-icon-idea:before { content: $icn-idea; }
+.ng-icon-illustration:before { content: $icn-illustration; }
+.ng-icon-image:before { content: $icn-image; }
+.ng-icon-info-circle:before { content: $icn-info-circle; }
+.ng-icon-interactive:before { content: $icn-interactive; }
+.ng-icon-internal-resource:before { content: $icn-internal-resource; }
+.ng-icon-lesson:before { content: $icn-lesson; }
+.ng-icon-list-ul:before { content: $icn-list-ul; }
+.ng-icon-list-view:before { content: $icn-list-view; }
+.ng-icon-map-marker:before { content: $icn-map-marker; }
+.ng-icon-map:before { content: $icn-map; }
+.ng-icon-mapmaker-interactive:before { content: $icn-mapmaker-interactive; }
+.ng-icon-mapmaker-kit:before { content: $icn-mapmaker-kit; }
+.ng-icon-mediumlogo:before { content: $icn-mediumlogo; }
+.ng-icon-multimedia:before { content: $icn-multimedia; }
+.ng-icon-ngs:before { content: $icn-ngs; }
+.ng-icon-other-media:before { content: $icn-other-media; }
+.ng-icon-page:before { content: $icn-page; }
+.ng-icon-pdf:before { content: $icn-pdf; }
+.ng-icon-phone:before { content: $icn-phone; }
+.ng-icon-photo:before { content: $icn-photo; }
+.ng-icon-question-circle:before { content: $icn-question-circle; }
+.ng-icon-quiz:before { content: $icn-quiz; }
+.ng-icon-student:before { content: $icn-student; }
+.ng-icon-ticket:before { content: $icn-ticket; }
+.ng-icon-unit:before { content: $icn-unit; }
+.ng-icon-video:before { content: $icn-video; }

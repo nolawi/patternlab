@@ -1,0 +1,349 @@
+$search-width:                                  180px !default;
+$search-focus-width:                            180px !default;
+$search-height:                                 $global-height !default;
+$search-padding:                                30px !default;
+$search-padding-small:                          25px !default;
+$search-padding-large:                          40px !default;
+$search-border:                                 rgba(0,0,0,0.3) !default;
+$search-border-width:                           1px !default;
+$search-background:                             rgba(255,255,255,0.9) !default;
+$search-color:                                  $global-color !default;
+$search-placeholder-color:                      $global-muted-color !default;
+
+$search-icon:                                   "\1f8ad" !default;
+$search-icon-size:                              $global-font-size !default;
+$search-icon-color:                             rgba(0,0,0,0.2) !default;
+
+// Dropdown modifier
+$dropdown-search-width:                          300px !default;
+$dropdown-search-margin-top:                     0 !default;
+$dropdown-search-background:                     #f5f5f5 !default;
+$dropdown-search-color:                          $global-color !default;
+$dropdown-search-animation:                      ng-slide-top-fixed !default;
+$dropdown-search-navbar-margin-top:              5px !default;
+$dropdown-search-navbar-margin-right:            -15px !default;
+
+// Nav modifier
+$nav-search-color:                               $global-color !default;
+$nav-search-active-background:                   $global-primary-background !default;
+$nav-search-active-color:                        $global-contrast-color !default;
+$nav-search-header-color:                        $global-muted-color !default;
+$nav-search-divider-border:                      $global-border !default;
+$nav-search-divider-border-width:                1px !default;
+$nav-search-nested-color:                        $global-link-color !default;
+$nav-search-nested-hover-color:                  $global-link-hover-color !default;
+
+// Search in offcanvas
+$offcanvas-search-margin:                        20px 15px !default;
+$offcanvas-search-background:                    #1a1a1a !default;
+$offcanvas-search-border:                        rgba(0,0,0,0) !default;
+$offcanvas-search-color:                         #ccc !default;
+$offcanvas-search-placeholder-color:             #777 !default;
+$offcanvas-search-icon-color:                    #777 !default;
+
+.ng-search-border {background: $search-border}
+.ng-search-background {background: $search-background}
+.ng-search-color {background: $search-color; color: #fff}
+.ng-search-placeholder-color {background: $search-placeholder-color; color: #fff}
+.ng-search-icon-color {background: $search-icon-color; color: #fff}
+.ng-search-icon {font-family: FontAwesome}
+.ng-dropdown-search-background{background: $dropdown-search-background}
+.ng-dropdown-search-color{background: $dropdown-search-color;color: #fff}
+.ng-nav-search-color{background: $nav-search-color;color: #fff}
+.ng-nav-search-active-background{background: $nav-search-active-background;color: #fff}
+.ng-nav-search-header-color{background: $nav-search-header-color;color: #fff}
+.ng-nav-search-divider-border{background: $nav-search-divider-border;color: #fff}
+.ng-nav-search-nested-color{background: $nav-search-nested-color;color: #fff}
+.ng-nav-search-nested-hover-color{background: $nav-search-nested-hover-color;color: #fff}
+.ng-offcanvas-search-background{background: $offcanvas-search-background;color: #fff}
+.ng-offcanvas-search-border{background: $offcanvas-search-border}
+.ng-offcanvas-search-color{background: $offcanvas-search-color;color: #fff}
+.ng-offcanvas-search-placeholder-color{background: $offcanvas-search-placeholder-color;color: #fff}
+.ng-offcanvas-search-icon-color{background: $offcanvas-search-icon-color;color: #fff}
+
+@mixin hook-search(){}
+@mixin hook-search-icon(){
+    font-family: icon-society;
+}
+@mixin hook-search-field(){
+    box-sizing: border-box;
+    &.ng-form-small {
+        height: $form-small-height !important;
+        padding: 0 $search-padding-small !important;
+        font-size: $form-small-font-size;
+    }
+
+    &.ng-form-large {
+        height: $form-large-height !important;
+        padding: 0 $search-padding-large !important;
+        font-size: $form-large-font-size;
+    }
+    &.ng-form-width-large {
+        width: $form-large-width;
+        &:focus {
+            width: $form-large-width;
+        }
+    }
+}
+@mixin hook-search-field-focus(){}
+
+@mixin hook-dropdown-search(){}
+@mixin hook-nav-search(){
+    text-shadow: none;
+}
+@mixin hook-nav-search-active(){
+    box-shadow: inset 0 2px 4px $nav-search-active-box-shadow;
+    text-shadow: 0 -1px 0 $nav-search-active-text-shadow;
+}
+@mixin hook-nav-search-header(){
+    text-shadow: none;
+}
+@mixin hook-nav-search-divider(){}
+@mixin hook-offcanvas-search-field(){}
+
+@mixin hook-search-misc(){
+    input[type="search"] {box-sizing: border-box;}
+    .ng-search.ng-form-small:before {
+        height: $form-small-height !important;
+        font-size: $form-small-font-size;
+        width: $search-padding-small;
+        line-height: $form-small-height;
+        left: 3px;
+        top: 3px;
+    }
+
+    .ng-search.ng-form-large:before {
+        height: $form-large-height !important;
+        font-size: $form-large-font-size;
+        line-height: $form-large-height;
+        width: $search-padding-large;
+        left: 6px;
+        top: 8px;
+    }
+
+    .ng-search-field-rounded {
+        @extend .ng-search-field;
+        border-radius: $search-height / 2;
+    }
+
+    .ng-search-container {
+        input[type="text"].ng-form-large {
+            height: 50px;
+            padding: 8px 6px 14px 6px;
+            width: 650px;
+        }
+    }
+
+    .ng-popup-nav {
+        .ng-modal-dialog {
+            .ng-nav-side > li > .ng-search {
+                padding: 15px 10px;
+            }
+        }
+
+        .ng-search-field, .ng-search-field-rounded {
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            height: 38px;
+            padding: 0 0 0 20px;
+        }
+
+        .ng-nav-side > li > .ng-search:before {
+            left: inherit;
+            right: 20px;
+            top: 18px;
+        }
+    }
+
+    /* Search Index Pages */
+
+    .ng-search-index-header {
+        .ng-page-title {
+            margin-bottom: 35px;
+        }
+    }
+
+    .ng-search-index-form-container {
+        padding-top: 40px;
+    }
+
+    .exhibitions-index {
+        .ng-search-index-form-container {
+            padding-top: 15px;
+        }
+
+        #filterform > .ng-panel:first-child {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .grid .ng-search-grid-icon i,
+    .list .ng-search-list-icon i,
+    .globe .ng-search-globe-icon i {
+        color: $mdgray;
+    }
+
+    /* Search Index Tile Results */
+    .ng-search-result-tile .ng-article-series-promo ~ .ng-promo-title {
+        margin-top: 10px;
+    }
+
+    .ng-search-result-tile .ng-thumbnail-caption {
+        margin-top: 15px;
+    }
+
+    .ng-search-result-tile .ng-flag, .ng-search-results .ng-flag {
+        background-color: #000;
+        color: #fff;
+        font-size: 12px !important;
+        margin-top: 20px;
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    .ng-search-result-tile .ng-thumbnail,
+    .ng-search-result-tile .ng-thumbnail img {
+        width: 100%;
+    }
+
+    .ng-search-result-tile .ng-flag + .ng-flag, .ng-search-results .ng-flag + .ng-flag {
+        margin-top: 0;
+    }
+
+    .ng-search-result-divider {
+        margin: 40px 0 !important;
+    }
+
+    .ng-search-filters-container {
+        margin-top: 20px;
+    }
+
+    .ng-facet-dropdown {
+        float: left;
+        margin: 0 20px 20px 0;
+    }
+
+    .ng-facet-filters {
+        text-align: right;
+
+        a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .ng-current-filters {
+        line-height: 2.5;
+    }
+
+    .ng-selected-facet {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .ng-daterange-trigger {
+        @extend .ng-button;
+
+        padding-left: 0;
+        padding-right: 25px;
+        position: relative;
+        text-align: left;
+        width: auto !important;
+
+        &, &:hover {
+            background: transparent;
+            border-color: transparent;
+        }
+
+        .ng-icon:not(.ng-daterange-trigger-icon) {
+            font-size: 16px;
+            margin-right: 0;
+            margin-top: -8px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+
+        .ng-daterange-trigger-icon {
+            font-size: 3em;
+            vertical-align: middle;
+        }
+    }
+
+    .ng-active-filters-container {
+        padding-top: 20px;
+        margin-bottom: -20px !important;
+        margin-top: 15px;
+    }
+
+    @media (max-width: $breakpoint-small-max) {
+        .exhibitions-index {
+            .ng-search-index-form-container {
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint-small) and (max-width: $breakpoint-small-max) {
+        #exhibition-filter-container {
+            text-align: center;
+
+            .ng-facet-dropdown {
+                float: none;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint-mini-max) {
+        .ng-search-result-tile {
+            border-bottom: 0;
+            height: auto;
+            padding-bottom: 40px;
+        }
+
+        .ng-search-result-tile .ng-promo-title {
+            font-size: 16px;
+        }
+
+        .ng-search-filters-container {
+            margin-top: 15px;
+        }
+
+        .ng-facet-dropdown {
+            float: none;
+            margin-right: 0;
+
+            &,
+            & .ng-button-dropdown,
+            & .ng-button-dropdown-toggle {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+
+        .ng-facet-filters {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .ng-daterange-trigger {
+            min-height: 0;
+            line-height: 25px;
+
+            .ng-daterange-trigger-icon {
+                font-size: 1.5em;
+            }
+        }
+
+        .ng-search-result-tile .ng-flag, .ng-search-results .ng-flag {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+@import "components/search";

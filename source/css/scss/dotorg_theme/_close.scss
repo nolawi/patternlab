@@ -1,0 +1,22 @@
+$close-size:                                    30px !default;
+
+$close-alt-padding:                             2px !default;
+$close-alt-background:                          $global-background !default;
+.ng-close-alt-background {background: $close-alt-background}
+
+@mixin hook-close(){
+    &:hover {border-bottom: 0;}
+}
+@mixin hook-close-alt(){
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),
+                0 0 6px rgba(0,0,0,0.3);
+}
+@mixin hook-close-misc(){
+    .ng-close:after {
+        content: "\d7";
+        font-family: icon-society;
+        font-size: 26px;
+    }
+}
+
+@import "core/close";

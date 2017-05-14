@@ -1,0 +1,20 @@
+$nav-autocomplete-color:                              $global-color !default;
+$nav-autocomplete-active-background:                  $global-primary-background !default;
+$nav-autocomplete-active-color:                       $global-contrast-color !default;
+$nav-autocomplete-header-color:                       $global-muted-color !default;
+$nav-autocomplete-divider-border-width:               1px !default;
+$nav-autocomplete-divider-border:                     $global-border !default;
+$nav-autocomplete-active-text-shadow:                 $global-contrast-text-shadow !default;
+$nav-autocomplete-active-box-shadow:                  rgba(0,0,0,0.2) !default;
+
+@mixin hook-nav-autocomplete(){}
+@mixin hook-nav-autocomplete-active(){
+    box-shadow: inset 0 2px 4px $nav-autocomplete-active-box-shadow;
+    text-shadow: 0 -1px 0 $nav-autocomplete-active-text-shadow;
+}
+@mixin hook-nav-autocomplete-header(){}
+@mixin hook-nav-autocomplete-divider(){}
+
+@mixin hook-autocomplete-misc(){}
+
+@import "components/autocomplete";

@@ -1,0 +1,62 @@
+$text-small-font-size:                          round($global-font-size * 0.78) !default; // 11px
+$text-small-line-height:                        round($text-small-font-size * 1.45) !default; // 16px
+$text-large-font-size:                          round($global-font-size * 1.28) !default; // 18px
+$text-large-line-height:                        round($text-large-font-size * 1.33) !default; // 24px
+$text-large-font-weight:                        normal;
+
+$text-muted-color:                              $global-muted-color;
+$text-primary-color:                            #2d7091;
+$text-success-color:                            #659f13;
+$text-warning-color:                            #e28327;
+$text-danger-color:                             #d85030;
+
+.ng-text-muted-color {background: $text-muted-color;color: #fff}
+.ng-text-primary-color {background: $text-primary-color;color: #fff}
+.ng-text-success-color {background: $text-success-color;color: #fff}
+.ng-text-warning-color {background: $text-warning-color;color: #fff}
+.ng-text-danger-color {background: $text-danger-color;color: #fff}
+
+@mixin hook-text-misc() {
+    .ng-text-normal { font-weight: normal; }
+    .ng-text-italic { font-style: italic; }
+    h1 > small, h2 > small, h3 > small, h4 > small, h5 > small {
+        color: $text-muted-color
+    }
+    .ng-text-capital {text-transform: capitalize}
+    .ng-text-uppercase {text-transform: uppercase}
+    .ng-text-lowercase {text-transform: lowercase}
+
+    // Only display content to screen readers
+    //
+    // See: http://a11yproject.com/posts/how-to-hide-content/
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    // Use in conjunction with .sr-only to only display content when it's focused.
+    // Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+    // Credit: HTML5 Boilerplate
+
+    .sr-only-focusable {
+      &:active,
+      &:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+      }
+    }
+
+};
+
+@import "core/text";

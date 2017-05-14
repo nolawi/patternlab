@@ -1,0 +1,24 @@
+// Heading links should not be styled by color, but should have a hover text decoration
+$ng-border-width:                       8px !default;
+
+.ng-panel-themed {
+    > .ng-panel-title {
+        border-left: $ng-border-width solid $ng-gold;
+        padding-left: 10px;
+        margin-bottom: 9px;
+    }
+    > .ng-panel-title a {
+        border-bottom: none;
+    }
+    > p,
+    > .ng-panel-title + p {
+        margin-top: 0;
+        margin-bottom: 9px;
+    }
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6{
+        font-weight: bold;
+        a {color: inherit}
+        a:hover {color: inherit}
+    }
+}

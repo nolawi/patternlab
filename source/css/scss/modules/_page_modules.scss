@@ -1,0 +1,1598 @@
+/**
+Page Modules
+
+Modules that are used on nearly all pages
+
+Styleguide PageModules
+*/
+
+/**
+Global Navigation
+
+The global navigation
+
+Styleguide PageModules.GlobalNavigation
+*/
+
+/**
+Standard Site
+
+These components are shown on non-project pages
+
+Weight: 1
+
+Styleguide PageModules.GlobalNavigation.StdSite
+*/
+
+/**
+Standard Site Header
+
+This header is seen on the standard non-project pages.
+
+Markup:
+<div class="ng-flex ng-flex-middle ng-flex-space-between ng-heading-site">
+    <div>
+        <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+        <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+        <a href="#" class="ng-icon-button ng-icon-share"></a>
+    </div>
+    <div>
+        <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="51" width="370" alt="National Geographic" />
+    </div>
+    <div>
+        <a class="ng-button ng-button-primary" type="button">Donate</a>
+    </div>
+</div>
+
+Weight: 1
+
+Styleguide PageModules.GlobalNavigation.StdSite.Header
+*/
+
+.ng-heading-site {
+    padding: 18px 10px 18px 15px;
+    background-color: #fff;
+}
+.ng-heading-site .ng-button-primary {
+    width: 138px;
+}
+/**
+Standard Site Header Mobile
+
+This header is seen on the standard non-project pages on mobile.
+
+- Size is shown at iPhone 5 width of 320px
+- Outer container shadow is for device visualization only.
+- Button triggers a modal navigation
+
+Markup:
+<div style="width: 320px;box-shadow: 0 0 1em #ddd;">
+    <div class="ng-flex ng-flex-middle ng-flex-space-between ng-padding">
+        <div class="ng-button ng-button-blank" data-ng-modal="{target:'#modal'}">
+            <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-stacked-black.min.svg" height="54" width="143" alt="National Geographic" />
+            <img src="http://edu6258.test.education.nationalgeographic.org/static/images/icons/direction-down.svg" height="24" width="24" style="padding-left: 5px" alt="Menu" />
+        </div>
+        <div>
+            <a class="ng-button ng-button-primary" type="button">Donate</a>
+        </div>
+    </div>
+</div>
+
+Weight: 2
+
+Styleguide PageModules.GlobalNavigation.StdSite.HeaderMobile
+*/
+
+/**
+Standard Site Navigation
+
+This navigation is seen on standard non-project pages
+
+Markup:
+<nav class="ng-navbar ng-navbar-attached ng-nav-primary ng-flex">
+    <ul class="ng-navbar-nav ng-clearfix ng-container-center">
+        <li class="ng-parent" data-ng-dropdown>
+            <a href="" class="ng-text-uppercase">Who We Are</a>
+            <div class="ng-dropdown ng-dropdown-navbar">
+                <ul class="ng-nav ng-nav-navbar">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Explorers</a></li>
+                    <li><a href="#">Our Leadership &amp; Staff</a></li>
+                    <li><a href="#">2015 Impact Report</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="ng-parent" data-ng-dropdown="{pos:'bottom-center'}">
+            <a href="" class="ng-text-uppercase">What We Do</a>
+            <div class="ng-dropdown ng-dropdown-navbar ng-dropdown-width-2">
+                <div class="ng-grid ng-dropdown-grid">
+                    <div class="ng-width-2-3">
+                        <ul class="ng-nav ng-nav-navbar ng-panel">
+                            <li class="ng-nav-header">Exploration &amp; Protection</li>
+                            <li><a href="#">Our Human Story</a></li>
+                            <li><a href="#">Our Living Planet</a></li>
+                            <li><a href="#">Critical Species</a></li>
+                            <li><a href="#">New Frontiers</a></li>
+                            <li class="ng-nav-divider"></li>
+                            <li><a href="#" class="ng-nav-header-link">Grant Program</a></li>
+                        </ul>
+                    </div>
+                    <div class="ng-width-1-3">
+                        <ul class="ng-nav ng-nav-navbar ng-panel">
+                            <li class="ng-nav-header">Education</li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Curriculum</a></li>
+                            <li><a href="#">Reference</a></li>
+                            <li><a href="#">Maps</a></li>
+                            <li class="ng-nav-divider"></li>
+                            <li><a href="#" class="ng-nav-header-link">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="ng-parent" data-ng-dropdown>
+            <a href="" class="ng-text-uppercase">Get Involved</i></a>
+            <div class="ng-dropdown ng-dropdown-navbar">
+                <ul class="ng-nav ng-nav-navbar">
+                    <li><a href="#">Support Our Work</a></li>
+                    <li><a href="#">Join Our Email List</a></li>
+                    <li><a href="#">Attend an Event</a></li>
+                    <li><a href="#">Apply for a Grant</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div class="ng-navbar-flip">
+        <a href="#" class="ng-navbar-toggle ng-navbar-toggle-alt" data-ng-toggle="{target: '#search-shim-1'}"></a>
+    </div>
+</nav>
+<div id="search-shim-1" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex" style="height: 80px">
+    <p>This is just a shim to demonstrate the search panel behavior, see
+        <a href="file:///Users/coordt/Projects/natgeo/education/ngkit/docs/section-pagemodules-globalnavigation.html#pagemodules-globalnavigation-stdsearchpanel">
+            the panel documentation
+        </a> for more information
+        <button class="ng-button ng-button-small" data-ng-toggle="{target: '#search-shim-1'}">
+            <i class='ng-icon-times'></i>
+        </button>
+    </p>
+</div>
+
+Weight: 5
+
+Styleguide PageModules.GlobalNavigation.StdSite.Navigation
+*/
+
+.ng-nav-primary {
+    padding-left: 70px;
+}
+
+.ng-nav-expanded {
+    padding-left: 30px;
+
+    ul.ng-subnav > li > a {
+        padding: 20px;
+    }
+
+    ul.ng-subnav > li > p {
+        margin-top: 20px;
+    }
+}
+
+.ng-nav-border {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+@media (min-width: $breakpoint-medium) {
+    // This below is causing the nav component to move 15px to the left and the
+    // hover effect is outside the dropdown
+    //
+    // .ng-nav-primary .ng-dropdown:not(.ng-dropdown-stack) > .ng-dropdown-grid > [class*='ng-width-'] {
+    //     padding: 0px 50px 0px 35px;
+    // }
+    .ng-nav-primary .ng-dropdown-width-2:not(.ng-dropdown-stack) {
+        width: 520px;
+    }
+    .ng-nav-primary .ng-dropdown:not(.ng-dropdown-stack) > .ng-dropdown-grid > [class*='ng-width-']:nth-child(n+2) {
+        border-left: none;
+    }
+}
+
+
+/**
+Standard Site Navigation Mobile
+
+This navigation is seen on standard non-project pages on mobile devices
+
+- Normally this is triggered via the Logo in the standard header.
+
+Markup:
+<button class="ng-button" data-ng-modal="{target:'#modal'}">Open</button>
+<div id="modal" class="ng-modal">
+    <div class="ng-modal-dialog">
+        <a href="" class="ng-modal-close ng-close"></a>
+        <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-stacked-black.min.svg" height="54" width="143" alt="National Geographic" />
+        <ul class="ng-nav ng-nav-side ng-nav-parent-icon ng-padding-top" data-ng-nav>
+            <li>
+                <form class="ng-search ng-width-1-1" data-ng-search>
+                    <input class="ng-search-field-rounded" type="search" placeholder="Search..." style="width: 100%">
+                </form>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li class="ng-parent"><a href="#">Who We Are</a>
+                <ul class="ng-nav-sub">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Explorers</a></li>
+                    <li><a href="#">Our Leadership &amp; Staff</a></li>
+                    <li><a href="#">2015 Impact Report</a></li>
+                </ul>
+            </li>
+            <li class="ng-parent"><a href="#">What We Do</a>
+                <ul class="ng-nav-sub">
+                    <li class="ng-nav-header">Projects</li>
+                    <li><a href="#">Our Human Story</a></li>
+                    <li><a href="#">Our Living Planet</a></li>
+                    <li><a href="#">Critical Species</a></li>
+                    <li><a href="#">New Frontiers</a></li>
+                    <li class="ng-nav-divider"></li>
+                    <li><a href="#">Grant Program</a></li>
+                    <li class="ng-nav-header">Education</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Curriculum</a></li>
+                    <li><a href="#">Reference</a></li>
+                    <li><a href="#">Maps</a></li>
+                    <li class="ng-nav-divider"></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </li>
+            <li class="ng-parent"><a href="#">Get Involved</i></a>
+                <ul class="ng-nav-sub">
+                    <li><a href="#">Support Our Work</a></li>
+                    <li><a href="#">Join Our Email List</a></li>
+                    <li><a href="#">Attend an Event</a></li>
+                    <li><a href="#">Apply for a Grant</a></li>
+                </ul>
+            </li>
+            <li class="ng-nav-divider"></li>
+            <li>
+                <div class="ng-text-center ng-padding-bottom">
+                    <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                    <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                </div>
+            </li>
+            <li>
+                <div class="ng-text-center">
+                    <a class="ng-button ng-button-primary ng-width-1-1" type="button">Donate</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+Weight: 6
+
+Styleguide PageModules.GlobalNavigation.StdSite.NavigationMobile
+*/
+
+/**
+Standard Header Sticky Version
+
+This header is seen on the standard non-project pages, after the normal
+navigation has disappeared from the screen. While in this example, it is not sticky,
+the header is should remain stuck to the top of the viewport.
+
+<span class="badge danger">NOTE</span> Missing from the markup is the wrapper:
+
+`<div id="stickynav" class="ng-stickynav"></div>`
+
+This wrapper, combined with class `ng-active` triggers the hiding and stickyness of the
+header.
+
+The JavaScript that must be added on the page:
+
+<pre class="code js">
+$(document).ready(function() {
+    var stickyNavTop = $('#defaultnav').offset().top + $('#defaultnav').height() + 40;
+
+    var stickyNav = function(){
+        var scrollTop = $.NGkit.$win.scrollTop();
+        if (scrollTop > stickyNavTop) {
+            $('#stickynav').addClass('ng-active');
+        } else {
+            $('#stickynav').removeClass('ng-active');
+        }
+    };
+
+    stickyNav();
+
+    $.NGkit.$doc.on('scrolling.ng.document', $.NGkit.Utils.debounce(function() {
+        stickyNav();
+    }, 50));
+
+    $.NGkit.$win.on('resize orientationchange', $.NGkit.Utils.debounce(function() {
+        stickyNav();
+    }, 100));
+});
+</pre>
+
+Markup:
+<div id="stickynav" class="ng-stickynav ng-animation-slide-top">
+    <div class="ng-flex ng-flex-middle ng-flex-space-between ng-background-contrast" style="border-bottom: 1px solid #999">
+        <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click',justify:'#global-menu'}">
+            <button id="global-menu" class="ng-button ng-button-blank">
+                <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="40" width="289" class="ng-padding-horizontal" alt="National Geographic" />
+                <i class="ng-icon-angle-down"></i>
+            </button>
+            <div class="ng-dropdown">
+                <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                    <li><a href="#">Home</a></li>
+                    <li class="ng-parent"><a href="#">Who We Are</a>
+                        <ul class="ng-nav-sub">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Explorers</a></li>
+                            <li><a href="#">Our Leadership &amp; Staff</a></li>
+                            <li><a href="#">2015 Impact Report</a></li>
+                        </ul>
+                    </li>
+                    <li class="ng-parent"><a href="#">What We Do</a>
+                        <ul class="ng-nav-sub">
+                            <li class="ng-nav-header">Projects</li>
+                            <li><a href="#">Our Human Story</a></li>
+                            <li><a href="#">Our Living Planet</a></li>
+                            <li><a href="#">Critical Species</a></li>
+                            <li><a href="#">New Frontiers</a></li>
+                            <li class="ng-nav-divider"></li>
+                            <li><a href="#" class="ng-nav-header-link">Grant Program</a></li>
+                            <li class="ng-nav-header">Education</li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Curriculum</a></li>
+                            <li><a href="#">Reference</a></li>
+                            <li><a href="#">Maps</a></li>
+                            <li class="ng-nav-divider"></li>
+                            <li><a href="#" class="ng-nav-header-link">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="ng-parent"><a href="#">Get Involved</i></a>
+                        <ul class="ng-nav-sub">
+                            <li><a href="#">Support Our Work</a></li>
+                            <li><a href="#">Join Our Email List</a></li>
+                            <li><a href="#">Attend an Event</a></li>
+                            <li><a href="#">Apply for a Grant</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ng-flex ng-flex-middle">
+            <div>
+                <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                <a href="#" class="ng-icon-button ng-icon-share"></a>
+            </div>
+            <a href="#" class="ng-button ng-button-blank" data-ng-toggle="{target: '#search-shim-2'}">
+                <i class="ng-icon-search ng-icon-small ng-padding-large-horizontal"></i>
+            </a>
+            <div>
+                <a class="ng-button ng-button-primary" type="button">Donate</a>
+            </div>
+        </div>
+    </div>
+    <div id="search-shim-2" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex" style="height: 80px">
+        <p>This is just a shim to demonstrate the search panel behavior, see
+            <a href="file:///Users/coordt/Projects/natgeo/education/ngkit/docs/section-pagemodules-globalnavigation.html#pagemodules-globalnavigation-stdsearchpanel">
+                the panel documentation
+            </a> for more information
+            <button class="ng-button ng-button-small" data-ng-toggle="{target: '#search-shim-2'}">
+                <i class='ng-icon-times'></i>
+            </button>
+        </p>
+    </div>
+</div>
+
+Weight: 20
+
+Styleguide PageModules.GlobalNavigation.StdSite.HeaderSticky
+*/
+
+.ng-stickynav {
+    display: none;
+}
+.ng-stickynav.ng-active {
+    display: block;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    border-top: 0;
+}
+
+.ng-popup-nav {
+    .ng-nav-side ul a {
+        padding: 8px 5px;
+    }
+
+    //Hide dividers here to reduce confusion due to collapsed layout
+    .ng-nav-divider {
+        display: none;
+    }
+
+    //add margin to compensate for lack of dividers
+    .ng-nav-header-link {
+        margin-top: 10px;
+    }
+
+    //increase bottom padding on subnav containers
+    ul.ng-nav-sub {
+        padding: 5px 0 15px 50px
+    }
+}
+
+/**
+Combined Mockup
+
+See the [page](/styleguide/pages/global_navigation.html).
+
+Weight: 21
+
+Styleguide PageModules.GlobalNavigation.StdSite.Mockup
+*/
+
+
+/**
+Standard Search Panel
+
+This search panel appears when toggled
+
+Markup:
+<div id="search-panel-1" class="ng-panel ng-padding ng-background-border ng-flex">
+    <form class="ng-form ng-container-center" action="" method="get">
+        <div class="ng-panel ng-contrast-color">
+            <input type="text" placeholder="Search" name="q" class="ng-form-blank ng-form-large ng-form-width-large">
+            <button type='submit' class="ng-button ng-button-blank">
+                <i class='ng-icon-search ng-icon-small ng-padding-horizontal'></i>
+            </button>
+        </div>
+    </form>
+    <a href="#" class="ng-close" data-ng-toggle="{target: '#search-panel-1'}"></a>
+</div>
+
+Weight: 10
+
+Styleguide PageModules.GlobalNavigation.StdSearchPanel
+*/
+
+/**
+Share icon behavior
+
+If only the sharing icon is visible, then the icon is rendered without the circle
+and includes the word "Share" with it.
+
+If there is more than just the sharing icon, then all the icons are rendered within
+circle icon buttons.
+
+Markup:
+<p>
+    <a href="#" class="ng-button ng-button-blank" style="height:40px">Share <i class="ng-icon-share ng-icon-small"></i></a>
+</p>
+<p>
+    <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+    <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+    <a href="#" class="ng-icon-button ng-icon-share"></a>
+</p>
+
+Weight: 15
+
+Styleguide PageModules.GlobalNavigation.ShareIconBehavior
+*/
+
+/**
+Project Navigation
+
+Weight: 25
+
+Styleguide PageModules.GlobalNavigation.ProjectNav
+*/
+
+/**
+Variation 1
+
+This header is seen on the project pages. While in this example, it is not sticky,
+it is possible that the header should remain stuck to the top of the viewport.
+
+
+Markup:
+<div class="ng-flex ng-flex-middle ng-flex-space-between" style="border-bottom: 1px solid #999">
+    <ul class="ng-subnav ng-margin-remove">
+        <li>
+            <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click',justify:'#global-menu1'}">
+                <button id="global-menu1" class="ng-button ng-button-blank">
+                    <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="37" width="267" class="ng-padding-horizontal" alt="National Geographic" />
+                    <i class="ng-icon-angle-down"></i>
+                </button>
+                <div class="ng-dropdown">
+                    <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                        <li><a href="#">Home</a></li>
+                        <li class="ng-parent"><a href="#">Who We Are</a>
+                            <ul class="ng-nav-sub">
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Explorers</a></li>
+                                <li><a href="#">Our Leadership &amp; Staff</a></li>
+                                <li><a href="#">2015 Impact Report</a></li>
+                            </ul>
+                        </li>
+                        <li class="ng-parent"><a href="#">What We Do</a>
+                            <ul class="ng-nav-sub">
+                                <li class="ng-nav-header">Projects</li>
+                                <li><a href="#">Our Human Story</a></li>
+                                <li><a href="#">Our Living Planet</a></li>
+                                <li><a href="#">Critical Species</a></li>
+                                <li><a href="#">New Frontiers</a></li>
+                                <li class="ng-nav-divider"></li>
+                                <li><a href="#">Grant Program</a></li>
+                                <li class="ng-nav-header">Education</li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Curriculum</a></li>
+                                <li><a href="#">Reference</a></li>
+                                <li><a href="#">Maps</a></li>
+                                <li class="ng-nav-divider"></li>
+                                <li><a href="#">Events</a></li>
+                            </ul>
+                        </li>
+                        <li class="ng-parent"><a href="#">Get Involved</i></a>
+                            <ul class="ng-nav-sub">
+                                <li><a href="#">Support Our Work</a></li>
+                                <li><a href="#">Join Our Email List</a></li>
+                                <li><a href="#">Attend an Event</a></li>
+                                <li><a href="#">Apply for a Grant</a></li>
+                            </ul>
+                        </li>
+                        <li class="ng-nav-divider"></li>
+                        <li>
+                            <div class="ng-text-center ng-padding-bottom">
+                                <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                                <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ng-text-center">
+                                <a class="ng-button ng-button-primary ng-width-1-1" type="button">Donate</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+        <li style="margin: 0 20px">
+            <div style="height: 33px;border-left: 1px solid #999"></div>
+        </li>
+        <li>
+            <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click'}">
+                <button class="ng-button ng-button-blank" style="height: 33px">
+                    Photo Ark
+                    <i class="ng-icon-angle-down ng-padding-horizontal"></i>
+                </button>
+                <div class="ng-dropdown">
+                    <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Get Involved</a></li>
+                        <li><a href="#">Updates</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Florida Panther</a></li>
+                    </ul>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="ng-flex ng-flex-middle">
+        <div>
+            <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+            <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+            <a href="#" class="ng-icon-button ng-icon-share"></a>
+        </div>
+        <a href="#" class="ng-button ng-button-blank" data-ng-toggle="{target: '#search-shim-3'}">
+            <i class="ng-icon-search ng-icon-small ng-padding-large-horizontal"></i>
+        </a>
+        <div>
+            <a class="ng-button ng-button-primary" type="button">Donate</a>
+        </div>
+    </div>
+</div>
+<div id="search-shim-3" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex" style="height: 80px">
+    <p>This is just a shim to demonstrate the search panel behavior, see
+        <a href="file:///Users/coordt/Projects/natgeo/education/ngkit/docs/section-pagemodules-globalnavigation.html#pagemodules-globalnavigation-stdsearchpanel">
+            the panel documentation
+        </a> for more information
+        <button class="ng-button ng-button-small" data-ng-toggle="{target: '#search-shim-3'}">
+            <i class='ng-icon-times'></i>
+        </button>
+    </p>
+</div>
+
+Weight: 25
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Variation1
+*/
+
+/**
+Variation 1 Mockup
+
+See the [page](/styleguide/pages/project_nav1.html).
+
+Weight: 26
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Variation1Mockup
+*/
+
+/**
+Variation 2
+
+This header is seen on the project pages. While in this example, it is not sticky,
+it is possible that the header should remain stuck to the top of the viewport.
+
+Markup:
+<div class="ng-flex ng-flex-middle ng-flex-space-between" style="border-bottom: 1px solid #999">
+    <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click',justify:'#global-menu2'}">
+        <button id="global-menu2" class="ng-button ng-button-blank">
+            <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="37" width="267" class="ng-padding-horizontal" alt="National Geographic" />
+            <i class="ng-icon-angle-down"></i>
+        </button>
+        <div class="ng-dropdown">
+            <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                <li><a href="#">Home</a></li>
+                <li class="ng-parent"><a href="#">Who We Are</a>
+                    <ul class="ng-nav-sub">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Explorers</a></li>
+                        <li><a href="#">Our Leadership &amp; Staff</a></li>
+                        <li><a href="#">2015 Impact Report</a></li>
+                    </ul>
+                </li>
+                <li class="ng-parent"><a href="#">What We Do</a>
+                    <ul class="ng-nav-sub">
+                        <li class="ng-nav-header">Projects</li>
+                        <li><a href="#">Our Human Story</a></li>
+                        <li><a href="#">Our Living Planet</a></li>
+                        <li><a href="#">Critical Species</a></li>
+                        <li><a href="#">New Frontiers</a></li>
+                        <li class="ng-nav-divider"></li>
+                        <li><a href="#" class="ng-nav-header-link">Grant Program</a></li>
+                        <li class="ng-nav-header">Education</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Reference</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li class="ng-nav-divider"></li>
+                        <li><a href="#" class="ng-nav-header-link">Events</a></li>
+                    </ul>
+                </li>
+                <li class="ng-parent"><a href="#">Get Involved</i></a>
+                    <ul class="ng-nav-sub">
+                        <li><a href="#">Support Our Work</a></li>
+                        <li><a href="#">Join Our Email List</a></li>
+                        <li><a href="#">Attend an Event</a></li>
+                        <li><a href="#">Apply for a Grant</a></li>
+                    </ul>
+                </li>
+                <li class="ng-nav-divider"></li>
+                <li>
+                    <div class="ng-text-center ng-padding-bottom">
+                        <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                        <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="ng-text-center">
+                        <a class="ng-button ng-button-primary ng-width-1-1" type="button">Donate</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ng-flex ng-flex-middle">
+        <div>
+            <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+            <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+            <a href="#" class="ng-icon-button ng-icon-share"></a>
+        </div>
+        <a href="#" class="ng-button ng-button-blank" data-ng-toggle="{target: '#search-shim-3'}">
+            <i class="ng-icon-search ng-icon-small ng-padding-large-horizontal"></i>
+        </a>
+        <div>
+            <a class="ng-button ng-button-primary" type="button">Donate</a>
+        </div>
+    </div>
+</div>
+<div style="border-bottom: 1px solid #999">
+    <ul class="ng-subnav ng-margin-remove">
+        <li>
+            <span><strong class="ng-padding ng-color-default">Photo Ark</strong></span>
+        </li>
+        <li class="ng-vertical-divider"></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Get Involved</a></li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Florida Panther</a></li>
+    </ul>
+</div>
+<div id="search-shim-3" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex" style="height: 80px">
+    <p>This is just a shim to demonstrate the search panel behavior, see
+        <a href="file:///Users/coordt/Projects/natgeo/education/ngkit/docs/section-pagemodules-globalnavigation.html#pagemodules-globalnavigation-stdsearchpanel">
+            the panel documentation
+        </a> for more information
+        <button class="ng-button ng-button-small" data-ng-toggle="{target: '#search-shim-3'}">
+            <i class='ng-icon-times'></i>
+        </button>
+    </p>
+</div>
+
+Weight: 30
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Variation2
+*/
+
+/**
+Variation 2 Mockup
+
+See the [page](/styleguide/pages/project_nav2.html).
+
+Weight: 31
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Variation2Mockup
+*/
+
+
+/**
+Variation 2 with dropdowns
+
+This header is seen on the project pages, and shows dropdowns in the menu. While
+in this example, it is not sticky, it is possible that the header should remain
+stuck to the top of the viewport.
+
+Markup:
+<div class="ng-flex ng-flex-middle ng-flex-space-between" style="border-bottom: 1px solid #999">
+    <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click',justify:'#global-menu3'}">
+        <button id="global-menu3" class="ng-button ng-button-blank">
+            <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-inline-black.min.svg" height="37" width="267" class="ng-padding-horizontal" alt="National Geographic" />
+            <i class="ng-icon-angle-down"></i>
+        </button>
+        <div class="ng-dropdown">
+            <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                <li><a href="#">Home</a></li>
+                <li class="ng-parent"><a href="#">Who We Are</a>
+                    <ul class="ng-nav-sub">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Explorers</a></li>
+                        <li><a href="#">Our Leadership &amp; Staff</a></li>
+                        <li><a href="#">2015 Impact Report</a></li>
+                    </ul>
+                </li>
+                <li class="ng-parent"><a href="#">What We Do</a>
+                    <ul class="ng-nav-sub">
+                        <li class="ng-nav-header">Projects</li>
+                        <li><a href="#">Our Human Story</a></li>
+                        <li><a href="#">Our Living Planet</a></li>
+                        <li><a href="#">Critical Species</a></li>
+                        <li><a href="#">New Frontiers</a></li>
+                        <li class="ng-nav-divider"></li>
+                        <li><a href="#">Grant Program</a></li>
+                        <li class="ng-nav-header">Education</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Curriculum</a></li>
+                        <li><a href="#">Reference</a></li>
+                        <li><a href="#">Maps</a></li>
+                        <li class="ng-nav-divider"></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </li>
+                <li class="ng-parent"><a href="#">Get Involved</i></a>
+                    <ul class="ng-nav-sub">
+                        <li><a href="#">Support Our Work</a></li>
+                        <li><a href="#">Join Our Email List</a></li>
+                        <li><a href="#">Attend an Event</a></li>
+                        <li><a href="#">Apply for a Grant</a></li>
+                    </ul>
+                </li>
+                <li class="ng-nav-divider"></li>
+                <li>
+                    <div class="ng-text-center ng-padding-bottom">
+                        <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+                        <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="ng-text-center">
+                        <a class="ng-button ng-button-primary ng-width-1-1" type="button">Donate</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="ng-flex ng-flex-middle">
+        <div>
+            <a href="#" class="ng-icon-button ng-icon-facebook ng-color-facebook"></a>
+            <a href="#" class="ng-icon-button ng-icon-twitter ng-color-twitter"></a>
+            <a href="#" class="ng-icon-button ng-icon-share"></a>
+        </div>
+        <a href="#" class="ng-button ng-button-blank" data-ng-toggle="{target: '#search-shim-4'}">
+            <i class="ng-icon-search ng-icon-small ng-padding-large-horizontal"></i>
+        </a>
+        <div>
+            <a class="ng-button ng-button-primary" type="button">Donate</a>
+        </div>
+    </div>
+</div>
+<div style="border-bottom: 1px solid #999">
+    <ul class="ng-subnav ng-margin-remove">
+        <li>
+            <span><strong class="ng-padding ng-color-default">Photo Ark</strong></span>
+        </li>
+        <li class="ng-vertical-divider"></li>
+        <li><a href="#">Home</a></li>
+        <li data-ng-dropdown><a href="#">Cool Things&emsp;<i class="ng-icon-angle-down"></i></a>
+            <div class="ng-dropdown ng-dropdown-close">
+                <ul class="ng-nav ng-nav-side">
+                    <li><a href="#">Daily Ideas</a></li>
+                    <li><a href="#">Innovation Lab</a></li>
+                    <li><a href="#">Interactive Globe</a></li>
+                    <li><a href="#">Love Your Park</a></li>
+                </ul>
+            </div>
+        </li>
+        <li data-ng-dropdown><a href="#">Get Involved&emsp;<i class="ng-icon-angle-down"></i></a>
+            <div class="ng-dropdown ng-dropdown-close">
+                <ul class="ng-nav ng-nav-side">
+                    <li><a href="/teaching-resources/">Teaching Resources Home</a></li>
+                    <li><a href="/idea/?audiences=1">Ideas</a></li>
+                    <li><a href="/activity/">Activities</a></li>
+                    <li><a href="/lesson/">Lessons</a></li>
+                    <li><a href="/unit/">Units</a></li>
+                    <li><a href="/guide/">Educator Guides</a></li>
+                    <li><a href="/programs/">Programs</a></li>
+                    <li><a href="/professional-development/">Professional Development</a></li>
+                    <li><a href="/national-geography-standards/">National Geography Standards</a></li>
+                    <li><a href="/programs/ng-classroom/">As Seen on NG</a></li>
+                    <li><a href="/games-and-interactives/">Educational Games</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#">Updates</a></li>
+        <li><a href="#">Education</a></li>
+    </ul>
+</div>
+<div id="search-shim-4" class="ng-hidden ng-panel ng-padding ng-background-border ng-flex" style="height: 80px">
+    <p>This is just a shim to demonstrate the search panel behavior, see
+        <a href="file:///Users/coordt/Projects/natgeo/education/ngkit/docs/section-pagemodules-globalnavigation.html#pagemodules-globalnavigation-stdsearchpanel">
+            the panel documentation
+        </a> for more information
+        <button class="ng-button ng-button-small" data-ng-toggle="{target: '#search-shim-4'}">
+            <i class='ng-icon-times'></i>
+        </button>
+    </p>
+</div>
+
+Weight: 33
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Variation3
+*/
+
+
+/**
+Project Navigation Variation Mobile
+
+This header is seen on the project pages on mobile devices.
+
+- Size is shown at iPhone 5 width of 320px
+- Outer container shadow is for device visualization only.
+- Button triggers a modal navigation
+
+Markup:
+<div style="width: 320px;box-shadow: 0 0 1em #ddd;">
+    <div class="ng-flex ng-flex-middle ng-flex-space-between" style="border-bottom: 1px solid #999;height: 60px">
+        <ul class="ng-subnav ng-margin-remove">
+            <li>
+                <div class="ng-button-dropdown" data-ng-modal="{target:'#modal'}">
+                    <button id="global-menu3" class="ng-button ng-button-blank">
+                        <img src="http://edu6258.test.education.nationalgeographic.org/static/images/logos/ngslogo-short-black.min.svg" height="37" width="93" class="ng-padding-horizontal" alt="National Geographic" />
+                        <i class="ng-icon-angle-down"></i>
+                    </button>
+            </li>
+            <li style="margin: 0 20px">
+                <div style="height: 33px;border-left: 1px solid #999"></div>
+            </li>
+            <li>
+                <div class="ng-button-dropdown" data-ng-dropdown="{mode:'click'}">
+                    <button class="ng-button ng-button-blank" style="height: 33px">
+                        Photo Ark
+                        <i class="ng-icon-angle-down ng-padding-horizontal"></i>
+                    </button>
+                    <div class="ng-dropdown">
+                        <ul class="ng-nav ng-nav-side ng-nav-parent-icon" data-ng-nav>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Get Involved</a></li>
+                            <li><a href="#">Updates</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Florida Panther</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+Weight: 35
+
+Styleguide PageModules.GlobalNavigation.ProjectNav.Mobile
+*/
+
+
+/**
+Audience Navigation Tabs
+
+Markup:
+<ul class="ng-audience-tab" data-ng-tab="">
+    <li class="ng-educators ng-active"><a href="#"><i class="ng-icon-audience"></i> Educators</a></li>
+    <li class="ng-families"><a href="#"><i class="ng-icon-audience"></i> Families</a></li>
+    <li class="ng-students"><a href="#"><i class="ng-icon-audience"></i> Students</a></li>
+</ul>
+
+Styleguide PageModules.03
+*/
+
+$audience-gradient-top:                         #0088ce !default;
+$audience-gradient-bottom:                      #0088ce !default;
+$audience-background:                           #0088ce !default;
+$audience-color:                                #fff !default;
+$ee-gradient-top:                               #0088ce !default;
+$te-gradient-top:                               #e98300 !default;
+$fm-gradient-top:                               #52BEDA !default;
+$st-gradient-top:                               #bd121a !default;
+.ng-color-engineer {
+    color: $ee-gradient-top;
+}
+.ng-color-educator {
+    color: $te-gradient-top;
+}
+.ng-color-family {
+    color: $fm-gradient-top;
+}
+.ng-color-student {
+    color: $st-gradient-top;
+}
+.ng-audience-tab {
+    @extend .ng-tab;
+    @extend .ng-float-right;
+    border: 0;
+    > li > a {
+        border: 0;
+    // }
+    // > .ng-educators,
+    // > .ng-informal-educators,
+    // > .ng-families,
+    // > .ng-students,
+    // > .ng-kids,
+    // > .ng-profesores,
+    // > .ng-familias,
+    // > .ng-alumnos {
+    //     a {
+            background: #fff;
+            color: $global-color;
+            text-shadow: none;
+            font-weight: normal;
+    //    }
+    }
+    > .ng-engineers .ng-icon-audience {
+        @extend .ng-icon-engineer-small;
+    }
+
+    > .ng-educators .ng-icon-audience,
+    > .ng-profesores .ng-icon-audience {
+        @extend .ng-icon-educator-small;
+    }
+    > .ng-families .ng-icon-audience,
+    > .ng-familias .ng-icon-audience {
+        @extend .ng-icon-family-small;
+    }
+    > .ng-students .ng-icon-audience,
+    > .ng-alumnos .ng-icon-audience {
+        @extend .ng-icon-student-small;
+    }
+    > .ng-active {
+        &.ng-engineers a {
+            background: $ee-gradient-top;
+            color: #fff;
+        }
+        &.ng-engineers .ng-icon-audience {
+            @extend .ng-icon-engineer-white-small;
+        }
+        &.ng-educators a,
+        &.ng-profesores a {
+            background: $te-gradient-top;
+            color: #fff;
+        }
+        &.ng-educators .ng-icon-audience,
+        &.ng-profesores .ng-icon-audience {
+            @extend .ng-icon-educator-white-small;
+        }
+        &.ng-students a,
+        &.ng-alumnos a {
+            background: $st-gradient-top;
+            color: #fff;
+        }
+        &.ng-students .ng-icon-audience,
+        &.ng-alumnos .ng-icon-audience {
+            @extend .ng-icon-student-white-small;
+        }
+    }
+    /*
+     * Hover
+     * 1. Apply hover style also to focus state
+     * 2. Also apply if dropdown is opened
+     */
+     > li > a:hover,
+     > li > a:focus, // 1
+     > li.ng-open > a { // 2
+        border: 0;
+        color: #fff;
+        /* 3 */
+        outline: none;
+    }
+    & > .ng-engineers > a:hover,
+    & > .ng-engineers > a:focus, // 1
+    & > .ng-engineers.ng-open > a { // 2
+        background: $ee-gradient-top;
+        .ng-icon-audience {
+            @extend .ng-icon-engineer-white-small;
+        }
+    }
+    & > .ng-educators > a:hover,
+    & > .ng-educators > a:focus, // 1
+    & > .ng-educators.ng-open > a, // 2
+    & > .ng-profesores > a:hover,
+    & > .ng-profesores > a:focus, // 1
+    & > .ng-profesores.ng-open > a { // 2
+        background: $te-gradient-top;
+        .ng-icon-audience {
+            @extend .ng-icon-educator-white-small;
+        }
+    }
+    & > .ng-students > a:hover,
+    & > .ng-students > a:focus, // 1
+    & > .ng-students.ng-open > a, // 2
+    & > .ng-alumnos > a:hover,
+    & > .ng-alumnos > a:focus, // 1
+    & > .ng-alumnos.ng-open > a { // 2
+        background: $st-gradient-top;
+        .ng-icon-audience {
+            @extend .ng-icon-student-white-small;
+        }
+    }
+    & > .ng-transparent > a:hover,
+    & > .ng-transparent > a:focus, // 1
+    & > .ng-transparent.ng-open > a { // 2
+        background: transparent;
+    }
+}
+
+/**
+Audience Navbar
+
+Markup:
+<nav class="ng-audience-navbar">
+    <ul class="ng-navbar-nav">
+        <li class="ng-parent" data-ng-dropdown><a href="#">Teaching Resources</a>
+            <div class="ng-dropdown ng-dropdown-navbar">
+                <ul class="ng-nav ng-nav-navbar">
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-divider"></li>
+                    <li><a href="#">Separated item</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="ng-parent" data-ng-dropdown><a href="#">Reference and News</a>
+            <div class="ng-dropdown ng-dropdown-navbar">
+                <ul class="ng-nav ng-nav-navbar">
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-divider"></li>
+                    <li><a href="#">Separated item</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="ng-parent" data-ng-dropdown>
+            <a href="">Mapping</a>
+            <div class="ng-dropdown ng-dropdown-navbar">
+                <ul class="ng-nav ng-nav-navbar">
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-header">Header</li>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="#">Another item</a></li>
+                    <li class="ng-nav-divider"></li>
+                    <li><a href="#">Separated item</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <div class="ng-navbar-flip">
+        <div class="ng-navbar-content">
+            <form class="ng-search" data-ng-search>
+                <input class="ng-search-field" type="search" placeholder="search..." autocomplete="off">
+                <button class="ng-search-close" type="reset"></button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+Styleguide PageModules.05
+*/
+
+.ng-audience-navbar {
+    @extend .ng-navbar;
+    @include get-audience-background();
+    border: 0;
+    .ng-navbar-nav > li > a {
+        //height: 32px;
+        //line-height: 32px;
+        /* 2 */
+        color: $audience-color;
+        text-shadow: none;
+    }
+    .ng-navbar-nav > li:hover > a,
+    .ng-navbar-nav > li > a:focus, // 1
+    .ng-navbar-nav > li.ng-open > a, // 2
+    .ng-navbar-nav > li.ng-active > a {
+        background-color: #dfeff3;  // $navbar-nav-hover-background;
+        color: $navbar-nav-hover-color;
+    }
+    .ng-navbar-content,
+    .ng-navbar-brand,
+    .ng-navbar-toggle {
+        color: $audience-color;
+        text-shadow: none;
+        height: 40px;
+    }
+    .ng-navbar-content a,
+    .ng-navbar-brand a,
+    .ng-navbar-toggle a {
+        color: $audience-color;
+        text-shadow: none;
+    }
+    .ng-search-field, .ng-search-field-rounded {
+        height: 24px;
+        line-height: 24px;
+        width: 110px;
+    }
+    .ng-search:before, .ng-search-close {
+        line-height: 24px;
+        height: 24px;
+    }
+    // Adjust the search field (probably). The ng-navbar-content contains padding
+    .ng-navbar-flip:last-child > .ng-navbar-content {
+        padding-right: 5px;
+    }
+}
+
+/**
+Expandable thumbnail
+
+Markup:
+<div class="ng-panel ng-panel-box ng-width" style="width: 350px">
+    <div class="ng-grid ng-grid-preserve">
+        <div class="ng-width-2-5">
+            <div class="ng-thumbnail">
+                <img src="http://lorempixel.com/100/75" alt="hello kitty!">
+                <div class="ng-thumbnail-caption"><h3><a href="#">Arctic Adaptations</a></h3>
+                <p>Activity</p>
+                </div>
+            </div>
+        </div>
+        <div class="ng-width-3-5">
+            <p><strong>Best For</strong> <br>
+                Grades 6-8 (Ages 11-14)
+            </p>
+            <p><strong>Subjects</strong> <br>
+                Geography, Science
+            </p>
+            <p><strong>Duration</strong> <br>
+                50 minutes
+            </p>
+            <p class="other-views"><strong>Appropriate For</strong> <br>
+                <a class="TE-view" href="/education/activity/arctic-adaptations/?ar_a=1"><abbr title="educators">T</abbr></a>&nbsp;<a class="IE-view" href="/education/activity/arctic-adaptations/?ar_a=2"><abbr title="informal educators">I</abbr></a>&nbsp;<a><abbr></abbr></a><a><abbr></abbr></a><a><abbr></abbr></a>
+            </p>
+            <p>Students learn about behavioral and biological animal adaptations, watch a video about the Arctic, and research how specific animals have adapted to this harsh environment.</p>
+        </div>
+    </div>
+</div>
+
+Styleguide PageModules.07
+*/
+
+/**
+Sharing widget
+
+The sharing widget can vary by size and location. The size options are:
+
+<table class="ng-table">
+<tr><th>mini</th><td>`.ng-sharing-mini`</td><td>20px high</td></tr>
+<tr><th>small</th><td>`.ng-sharing-small`</td><td>30px high</td></tr>
+<tr><th>normal</th><td>`.ng-sharing`</td><td>40px high</td></tr>
+<tr><th>large</th><td>`.ng-sharing-large`</td><td>50px high</td></tr>
+</table>
+
+By default the location of the sharing widget is in line with page. Adding
+`.ng-sharing-sticky-left`, `.ng-sharing-sticky-right` or `.ng-sharing-sticky-bottom`
+will cause the widget to stick to the appropriate edge of the browser.
+
+
+Markup:
+<div class="ng-sharing-mini">
+    <a class="addthis_button_twitter ng-icon-twitter ng-color-twitter" href="#" title="Click on this button to share via Twitter">
+        <span class="sr-only">Twitter</span>
+    </a>
+    <a class="addthis_button_facebook ng-icon-facebook ng-color-facebook" href="#" title="Click on this button to share via Facebook">
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a class="addthis_button_googleplus ng-icon-google-plus ng-color-googleplus" href="#" title="Click on this button to share via Google+">
+        <span class="sr-only">Google+</span>
+    </a>
+    <a class="addthis_button_email ng-icon-envelope" href="#" title="Click on this button to share via email">
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+<div class="ng-sharing-small">
+    <a class="addthis_button_twitter ng-icon-twitter ng-color-twitter" href="#" title="Click on this button to share via Twitter">
+        <span class="sr-only">Twitter</span>
+    </a>
+    <a class="addthis_button_facebook ng-icon-facebook ng-color-facebook" href="#" title="Click on this button to share via Facebook">
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a class="addthis_button_googleplus ng-icon-google-plus ng-color-googleplus" href="#" title="Click on this button to share via Google+">
+        <span class="sr-only">Google+</span>
+    </a>
+    <a class="addthis_button_email ng-icon-envelope" href="#" title="Click on this button to share via email">
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+<div class="ng-sharing">
+    <a class="addthis_button_twitter ng-icon-twitter ng-color-twitter" href="#" title="Click on this button to share via Twitter">
+        <span class="sr-only">Twitter</span>
+    </a>
+    <a class="addthis_button_facebook ng-icon-facebook ng-color-facebook" href="#" title="Click on this button to share via Facebook">
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a class="addthis_button_googleplus ng-icon-google-plus ng-color-googleplus" href="#" title="Click on this button to share via Google+">
+        <span class="sr-only">Google+</span>
+    </a>
+    <a class="addthis_button_email ng-icon-envelope" href="#" title="Click on this button to share via email">
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+<div class="ng-sharing-large">
+    <a class="addthis_button_twitter ng-icon-twitter ng-color-twitter" href="#" title="Click on this button to share via Twitter">
+        <span class="sr-only">Twitter</span>
+    </a>
+    <a class="addthis_button_facebook ng-icon-facebook ng-color-facebook" href="#" title="Click on this button to share via Facebook">
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a class="addthis_button_googleplus ng-icon-google-plus ng-color-googleplus" href="#" title="Click on this button to share via Google+">
+        <span class="sr-only">Google+</span>
+    </a>
+    <a class="addthis_button_email ng-icon-envelope" href="#" title="Click on this button to share via email">
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+<div class="ng-sharing ng-sharing-sticky-left">
+    <a class="addthis_button_twitter ng-icon-twitter ng-color-twitter" href="#" title="Click on this button to share via Twitter">
+        <span class="sr-only">Twitter</span>
+    </a>
+    <a class="addthis_button_facebook ng-icon-facebook ng-color-facebook" href="#" title="Click on this button to share via Facebook">
+        <span class="sr-only">Facebook</span>
+    </a>
+    <a class="addthis_button_googleplus ng-icon-google-plus ng-color-googleplus" href="#" title="Click on this button to share via Google+">
+        <span class="sr-only">Google+</span>
+    </a>
+    <a class="addthis_button_email ng-icon-envelope" href="#" title="Click on this button to share via email">
+        <span class="sr-only">Email</span>
+    </a>
+</div>
+
+
+Styleguide PageModules.Sharing
+*/
+
+
+// Mixins
+@mixin transition ($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+@mixin transform($string) {
+    transform: $string;
+    -webkit-transform: $string;
+    -moz-transform: $string;
+    -ms-transform: $string;
+    -o-transform: $string;
+}
+
+$sharing-padding-base: 7px;
+$sharing-font-size-base: 22px;
+$sharing-default-background: $global-link-hover-color;
+$sharing-default-dark-background: darken($sharing-default-background, 20%);
+$sharing-sticky-hover-padding: 15px;
+
+.ng-sharing > a:not(.ng-sharing-button),
+.ng-sharing-mini > a:not(.ng-sharing-button),
+.ng-sharing-small > a:not(.ng-sharing-button),
+.ng-sharing-large > a:not(.ng-sharing-button) {
+    @extend .ng-icon-button;
+}
+.ng-sharing-button {
+    @extend .ng-button;
+    padding: 0;
+}
+
+.ng-sharing-button,
+.ng-sharing-button:active,
+.ng-sharing-button:hover,
+.ng-sharing-button:focus,
+.ng-sharing-button:disabled {
+    border: 0;
+    margin: 0;
+    line-height: initial;
+    min-height: initial;
+    background-color: transparent;
+    box-shadow: none;
+}
+/* not necessary */
+.ng-sharing-mini > a:not(.ng-sharing-button) {
+ 
+}
+.ng-sharing-small > a:not(.ng-sharing-button) {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.ng-sharing-large > a:not(.ng-sharing-button) {
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+.ng-sharing-sticky-left, .ng-sharing-sticky-right, .ng-sharing-sticky-bottom {
+    top: 20%;
+    position: fixed;
+    z-index: 2000;
+    a {
+        @include transition(padding 0.1s ease-out);
+        margin: 0;
+    }
+}
+.ng-sharing-sticky-left, .ng-sharing-sticky-right {
+    a {
+        display: block;
+        clear: both;
+    }
+    &.ng-center {
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    @media (max-width: $breakpoint-medium-max) {
+        display: none;
+    }
+}
+.ng-sharing-sticky-left {
+    left: 0;
+    a + a {
+        margin-left: 0
+    }
+    a {
+        float: left;
+        &:hover { padding-left: $sharing-sticky-hover-padding; }
+    }
+}
+.ng-sharing-sticky-right {
+    right: 0;
+    a {
+        float: right;
+        &:hover { padding-right: $sharing-sticky-hover-padding; }
+    }
+}
+.ng-sharing-sticky-bottom {
+    font-size: 0;
+    top: auto;
+    bottom: 0;
+    &.ng-center {
+        left: 50%;
+        right: auto;
+        @include transform(translateX(-50%));
+    }
+    a {
+        vertical-align: bottom;
+        &:hover { padding-bottom: $sharing-sticky-hover-padding; }
+    }
+}
+
+.share-button-header {
+    margin-left: 20px;
+}
+.share-button-header a {
+    color: inherit;
+    text-decoration: none;
+}
+.share-bar {
+    font-size: 20px;
+}
+.share-bar a:nth-child(1n+2) {
+    padding-left: 20px;
+}
+.share-bar a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: $breakpoint-small-max + 1) {
+ .ng-sharing.ng-flex {
+    display: none !important;
+ }
+}
+
+
+/**
+Add This Sharing Dropdown
+
+Markup:
+<div class="ng-sharing">
+    <a href="#" class="ng-icon-button ng-icon-share" data-ng-dropdown="{mode:'click'}"></a>
+    <div class="ng-dropdown-blank ng-dropdown-bottom">
+        <div class="ng-panel ng-panel-box ng-social-sharing-dropdown">
+            <ul class="ng-nav ng-nav-side ng-nav-parent-icon addthis_toolbox addthis_32x32_style" data-ng-nav>
+                <li><a class="addthis_button_twitter"
+                       href="https://twitter.com/share?url=/path/to/page&amp;text=Page%20Title&amp;via=[via]&amp;hashtags=" target="_blank"></a></li>
+                <li><a class="addthis_button_facebook"
+                       href="http://www.facebook.com/sharer.php?u=/path/to/page" target="_blank"></a></li>
+                <li><a class="addthis_button_google_plusone_share" href="https://plus.google.com/share?url=/path/to/page" target="_blank"></a></li>
+                <li><a class="addthis_button_pinterest_share"
+                       href="https://pinterest.com/pin/create/bookmarklet/?media={{ img }}&amp;url=/path/to/page&amp;is_video=&amp;description=" target="_blank"></a></li>
+                <li><a class="addthis_button_linkedin"
+                       href="http://www.linkedin.com/shareArticle?url=/path/to/page&amp;title=Page%20Title" target="_blank"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#async=1"></script>
+<script>
+    var addthis_config = {
+        pubid: "ra-533b69011a5de587",
+        data_ga_property: "UA-3104240-2",
+        ui_header_color: "#000000",
+        ui_header_background: "#ffffff",
+        ui_508_compliant: true,
+        ui_click: true,
+        data_ga_social: true,
+        services_exclude: "print, email",
+        services_compact: "facebook,stumbleupon,digg,reddit,delicious,twitter,digo,linkedin,google_plusone_share"
+    };
+    if (typeof(addthis)!=="undefined")
+        addthis.init();
+</script>
+
+Weight: 10
+
+Styleguide PageModules.Sharing.AddThis
+*/
+
+.ng-social-sharing-dropdown {
+    @extend .ng-dropdown-blank;
+    @extend .ng-dropdown-bottom;
+
+    width:34px;
+    box-sizing: border-box;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+// .ng-social-sharing-dropdown > .ng-panel-box {
+//     margin: 0;
+// }
+
+.ng-social-sharing-dropdown .ng-nav > li > a {
+    padding: 0;
+}
+
+.ng-social-sharing-dropdown .addthis_toolbox a {
+    margin-bottom: 0;
+}
+
+// .ng-social-sharing-dropdown:first-child {
+//     margin-left: 0;
+// }
+
+.ng-item-container {
+    @extend .ng-container;
+    padding: 60px 15px;
+}
+
+@media (max-width: $breakpoint-medium-max) {
+    .ng-item-container {
+        padding: 45px 15px;
+    }
+}
+@media (max-width: $breakpoint-small-max) {
+    .ng-item-container {
+        padding: 35px 25px;
+    }
+    .ng-container .ng-item-container {
+        padding: 35px 0;
+    }
+}
+
+
+.ng-module-divider {
+    margin: 0;
+    padding: 0;
+}
+
+/**
+Article Sharing Widget
+
+Markup:
+<div class="ng-toolbar" data-ng-toolbar>
+    <ul class="ng-toolbar-nav">
+        <li>
+            <a href="#comment">
+                <i class="ng-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M26 23h6V1H0v22h16v8"/></svg></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="ng-toolbar" data-ng-toolbar>
+    <ul class="ng-toolbar-nav">
+        <li>
+            <a class="addthis_button_twitter" href="https://twitter.com/share?url=#&amp;text=#&amp;" target="_blank">
+            </a>
+        </li>
+        <li>
+            <a class="addthis_button_facebook" href="http://www.facebook.com/sharer.php?u=#" target="_blank">
+            </a>
+        </li>
+        <li>
+            <a class="addthis_button_google_plusone_share" href="https://plus.google.com/share?url=#" target="_blank">
+            </a>
+        </li>
+        <li>
+            <a class="addthis_button_pinterest_share" href="https://pinterest.com/pin/create/bookmarklet/?media=#&amp;url=#&amp;is_video=&amp;description=#" target="_blank">
+            </a>
+        </li>
+        <li>
+            <a href="#print_link" class="addthis_button_print" title="Click on this button to get to the printer friendly version">
+                <span class="sr-only">Print</span>
+                <i class="ng-icon-print"></i>
+            </a>
+        </li>
+        <li>
+            <a href="#archive_link" title="Click on this button to download all the materials in an archive.">
+                <span class="sr-only">Download</span>
+                <i class="ng-icon-download"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+Styleguide PageModules.Sharing.Article
+*/

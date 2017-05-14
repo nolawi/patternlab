@@ -1,0 +1,49 @@
+$modal-z-index:                                 ($global-z-index + 10) !default;
+$modal-background:                              rgba(0,0,0,0.6) !default;
+
+$modal-dialog-margin-vertical:                  50px !default;
+$modal-dialog-padding:                          20px !default;
+$modal-dialog-width:                            600px !default;
+$modal-dialog-background:                       $global-background !default;
+
+$modal-dialog-large-width:                      930px !default;
+$modal-dialog-large-width-large:                1130px !default;
+
+$modal-header-margin-bottom:                    $global-margin !default;
+
+$modal-footer-margin-top:                       $global-margin !default;
+
+$modal-caption-margin-bottom:                   -10px !default;
+$modal-caption-color:                           $global-contrast-color;
+
+.ng-modal-dialog-background {background: $modal-dialog-background;}
+.ng-modal-background {background: $modal-background;color: #fff}
+.ng-modal-caption-color {background: $modal-caption-color}
+
+@mixin hook-modal(){}
+@mixin hook-modal-dialog(){
+    border-radius: $global-border-radius;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+@mixin hook-modal-dialog-lightbox(){
+    border-radius: 0;
+}
+@mixin hook-modal-header(){
+    margin: (-$modal-dialog-padding) (-$modal-dialog-padding) $modal-header-margin-bottom (-$modal-dialog-padding);
+    padding: $modal-dialog-padding;
+    border-bottom: 1px solid $global-border;
+    border-radius: $global-border-radius $global-border-radius 0 0;
+    background: #fafafa;
+}
+@mixin hook-modal-footer(){
+    margin: $modal-footer-margin-top (-$modal-dialog-padding) (-$modal-dialog-padding) (-$modal-dialog-padding);
+    padding: $modal-dialog-padding;
+    border-top: 1px solid $global-border;
+    border-radius: 0 0 $global-border-radius $global-border-radius;
+    background: #fafafa;
+}
+@mixin hook-modal-caption(){}
+@mixin hook-modal-spinner(){}
+@mixin hook-modal-misc(){}
+
+@import "core/modal";
